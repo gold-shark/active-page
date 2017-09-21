@@ -1,0 +1,20 @@
+
+.body-scroll{overflow:hidden;}
+.qfang-scroll{overflow:hidden;}
+.qfang-scroll-body{background:url(../img/body-bg.jpg);}
+.qfang-scroll-one{position:relative; background:url(../img/one-bg.jpg) 50% 0 no-repeat;}
+.qfang-scroll-two{position:relative; background:url(../img/two-bg.jpg) 50% 50% no-repeat;}
+.qfang-scroll-three{position:relative; background:url(../img/three-bg.jpg) 50% 50% no-repeat;}
+.qfang-scroll-four{position:relative; background:url(../img/four-bg.jpg) 50% 50% no-repeat;}
+.position-but{position:absolute; top:50%; left:50%; background:url(../img/buts.jpg) no-repeat;}
+.one-but1{top:0; margin:290px 0 0 65px; width:172px; height:40px; background-position:0 0;}
+.one-but2{top:0; margin:290px 0 0 253px; width:172px; height:40px; background-position:0 -40px;}
+.two-but1{margin:55px 0 0 -400px; width:225px; height:40px; border:none; font-size:14px; text-indent:10px; background-position:0 -80px;}
+.two-but2{margin:55px 0 0 -175px; width:165px; height:40px; border:none; cursor:pointer; background-position:-225px -80px;}
+.three-but1{margin:25px 0 0 65px; width:173px; height:40px; background-position:0 -120px;}
+.four-but1{margin:25px 0 0 -385px; width:173px; height:40px; background-position:0 -160px;}
+.two-text{position:absolute; top:50%; left:50%; margin:65px 0 0 -390px; color:#f69888; font-size:14px;}
+.qfang-items-right{position:absolute; top:45%; right:20px;}
+.qfang-items-right span{margin-bottom:11px; display:block; width:11px; height:11px; cursor:pointer; background:url(../img/items-right.jpg) 0 0 no-repeat;}
+.qfang-items-right span.current{background:url(../img/items-right.jpg) -11px 0 no-repeat;}
+/* end index */

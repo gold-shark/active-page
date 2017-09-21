@@ -1,0 +1,118 @@
+.time-select {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9999;
+	background-color: rgba(0, 0, 0, .5);
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	box-align: center;
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	box-pack: center;
+}
+
+.time-content {
+	border-radius: 5px;
+	background-color: #fff;
+	box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+
+.time-header {
+	padding: 10px;
+	border-bottom: 1px solid #ddd;
+}
+
+.time-header h5 {
+	font-size: 16px;
+	line-height: 1.5;
+	color: #333;
+}
+
+.time-body {
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	width: 120px;
+	padding: 10px 60px;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	box-align: center;
+}
+
+.time-items {
+	height: 150px;
+	overflow: hidden;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	box-flex: 1;
+}
+
+.time-items p {
+	height: 30px;
+	font-size: 16px;
+	line-height: 30px;
+	color: #999;
+	text-align: center;
+}
+
+.time-items .current {
+	color: #333;
+}
+
+.time-symbol {
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	box-align: center;
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	box-pack: center;
+}
+
+.time-symbol p {
+	height: 30px;
+	font-size: 16px;
+	line-height: 30px;
+	color: #333;
+	text-align: center;
+}
+
+.time-footer {
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	padding: 10px;
+	border-top: 1px solid #ddd;
+}
+
+.time-footer a {
+	display: block;
+	padding: 10px;
+	font-size: 16px;
+	line-height: 1;
+	text-align: center;
+	border-radius: 2px;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	box-flex: 1;
+}
+
+.time-footer .cancel {
+	margin-right: 3px;
+	color: #666;
+	background: #ccc;
+}
+
+.time-footer .ok {
+	margin-left: 3px;
+	color: #fff;
+	background: #8bc7ee;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta http-equiv="Page-Enter" content="revealTrans(duration=x, transition=10)">
+		<meta http-equiv="Page-Exit" content="revealTrans(duration=x, transition=2)"> 
+		<title>菜单</title>
+		<link rel="stylesheet" href="css/base.css" />
+		<style type="text/css">
+			body{background:rgba(255,255,255,1);}
+			.menu{position:fixed; top:0; right:0; bottom:0; left:0; z-index:2; overflow:hidden;}
+			.menu ul{padding:1.0em; width:60%; height:100%; background:rgba(255,255,255,1);}
+			.menu ul li{line-height:3.0em; border-bottom:0.1em dotted #007FD0;}
+			.menu ul li a{display:block; font-size:1.6em;}
+			.wrapper{position:fixed; top:0; right:0; bottom:0; left:0; z-index:1; padding-top:5.0em; overflow:hidden;}
+			.top{position:fixed; top:0; right:0; bottom:auto; left:0; z-index: 10; background:rgba(0,0,0,1); border-bottom:0.2rem solid #0FF;}
+			.top ul{display:-webkit-box; display:-moz-box; display:box; width:100%;}
+			.top ul li{line-height:4.8em; -webkit-box-flex:inherit; -moz-box-flex:initial; box-flex:initial;}
+			.top ul li.button{width:20%;}
+			.top ul li.title{width:60%;}
+			.top ul li h1{color:#fff; text-align:center; font-size:1.8em;}
+			.top ul li a{display:block;}
+			.top ul li a.menu-but{background:url(img/menu.png) 10% 50% / 40% auto no-repeat;}
+			.top ul li a.search-but{background:url(img/search.png) 90% 50% / 40% auto no-repeat;}			
+			.wrap{}
+			.wrap img{ width:100%; height:auto;}
+			.refresh{position:absolute; top:5.0em; right:0; bottom:auto; left:0; z-index:-1;}
+			.refresh p{line-height:3.0em; text-align:center; font-size:1.4em; background:rgba(0,0,0,0.5);}
+			.loading{display:none;}
+			.loading p{line-height:3.0em; text-align:center; font-size:1.4em; background:rgba(0,0,0,0.5);}
+			.two img{margin:0 auto; width:80%; height:auto;}
+.two .top{position:absolute; top:0; left:0; width:100%; height:60%;}
+.two .element1{position:absolute; top:3.5em; left:20%; z-index:6; width:58%;}
+.two .element2{position:absolute; top:7.5em; left:41%; z-index:5; width:17%;}
+.two .element3{position:absolute; top:9.5em; left:32%; z-index:4; width:36%;}
+.two .element4{position:absolute; top:2.5em; left:4%; z-index:3; width:32%;}
+.two .element5{position:absolute; top:2.0em; right:4%; z-index:2; width:32%;}
+.two .bottom{position:absolute; bottom:0; left:0; width:100%; height:60%;}
+.two .text{position:absolute; bottom:0; left:0; z-index:1; width:100%; background:#34376b;}
+		</style>
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				(function(){
+					var oldVal = 0,//每一次拖动前的值
+						b = false,//是否触发了拖动
+						startPosition = {x:0, y:0},//开始坐标位置					
+						endPosition = {x:0, y:0},//结束坐标位置
+						startTime = 0,//开始时间
+						endTime = 0;//结束时间					
+					$(".wrapper").on("touchstart", function(e){//触控开始
+						$.extend(startPosition, {x: e.touches[0].pageX, y: e.touches[0].pageY});
+						startTime = new Date();
+					});
+					$(".wrapper").on("touchmove", function(e){//触控移动
+						e.preventDefault();
+						b = Math.abs(e.touches[0].pageY - startPosition.y) > 10;
+						if(b){
+							$.extend(endPosition, {x: e.touches[0].pageX, y: e.touches[0].pageY});
+							var newVal = endPosition.y - startPosition.y + oldVal;							
+							$(".wrap").css({
+								"-webkit-transform": "translateY(" + newVal + "px)",
+								"-moz-transform": "translateY(" + newVal + "px)",
+								"-ms-transform": "translateY(" + newVal + "px)",
+								"-o-transform": "translateY(" + newVal + "px)",
+								"transform": "translateY(" + newVal + "px)"
+							});
+						}
+					});
+					$(".wrapper").on("touchend", function(e){//触控结束
+						if(b){
+							endTime = new Date();						
+							var speed = (endPosition.y - startPosition.y) / (endTime - startTime),
+								time = 500,
+								distance = speed * time / 2,
+								maxVal = 0,
+								minVal = $(".wrapper").height() - $(".wrap").height() - $(".top").height(),
+								pullSize = 30,
+								state = 0;
+							oldVal = endPosition.y - startPosition.y + distance + oldVal; //计算后的值赋给oldVal						
+							if(oldVal > maxVal){								
+//								if(oldVal > maxVal + pullSize){
+//									$(".refresh").css({"position": "static"});//显示刷新层
+//									state = 1;
+//									//alert("刷新成功！");
+//									//$(".refresh").css({"position": "fixed"})//隐藏刷新层	
+//								}
+								oldVal = maxVal;
+							} else if(oldVal < minVal){
+//								if(oldVal < minVal - pullSize){
+//									//$(".loading").css({"display": "block"});//显示加载层
+//									//state = 2;
+//									//alert("加载成功！");
+//									//$(".loading").css({"position": "fixed"})//隐藏加载层	
+//								}
+								oldVal = minVal;
+							}
+							$(".wrap").animate({
+								"-webkit-transform": "translateY(" + oldVal + "px)",
+								"transform": "translateY(" + oldVal + "px)",
+							}, time, "ease-out");
+							b = false;//重置状态
+//							switch(state){
+//								case 1: 
+//									setTimeout(function(){
+//										alert("刷新成功！");
+//										$(".refresh").css({"position": "fixed"});
+//									}, 3000);									
+//									break;
+//								case 2:
+//									//setTimeout(function(){
+//									//	alert("加载成功！");
+//									//	$(".loading").css({"display": "none"});
+//									//}, 3000);									
+//									break;
+//							}
+						}
+					});
+				}());
+				$(".menu-but").on("tap", function(e){
+					e.stopPropagation();
+					//$(".menu").show();
+					$(".wrapper").animate({"-webkit-transform": "translateX(200px) scale3d(0.8,0.8,1)"}, 300, "ease-out");
+					$(".menu").show(300);
+				});
+				$(".menu").on("tap", function(){
+					$(".wrapper").animate({"-webkit-transform": "translateX(0) scale3d(1,1,1)"}, 300, "ease-out");
+					$(".menu").hide(300)
+				});
+				$(".menu").find("ul").on("tap",function(e){
+					e.stopPropagation();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="menu" style="display:none;">
+			<ul>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="javascript:void(0);">二手房</a></li>
+				<li><a href="javascript:void(0);">租房</a></li>
+				<li><a href="javascript:void(0);">买房</a></li>
+				<li><a href="javascript:void(0);">卖房</a></li>
+				<li><a href="javascript:void(0);">新房</a></li>
+				<li><a href="javascript:void(0);">旧房</a></li>
+				<li><a href="javascript:void(0);">小区房</a></li>
+				<li><a href="javascript:void(0);">别墅房</a></li>
+				<li><a href="javascript:void(0);">山顶房</a></li>
+			</ul>
+		</div>
+		<div class="wrapper" id="wrapper">
+			<div class="top">
+				<ul>
+					<li class="button"><a href="javascript:void(0);" class="menu-but">&nbsp;</a></li>
+					<li class="title"><h1>二手房列表</h1></li>
+					<li class="button"><a href="index.html" class="search-but">&nbsp;</a></li>
+				</ul>
+			</div>	<div class="refresh">
+				<p>刷新</p>
+			</div>		
+			<div class="wrap">
+				<img src="img/4.jpg" />
+				<img src="img/4.jpg" />
+				<div class="loading">
+					<p>加载中...</p>
+				</div>
+			</div>	
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>商品列表</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.sliding.js" ></script>
+		<script type="text/javascript" src="js/banner.js" ></script>
+		<script type="text/javascript" src="js/common.js" ></script>
+		<script type="text/javascript" src="js/general.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".goods-info").find(".car").click(function(){
+					$(".backp-cover").show();
+					$(".popup-up").show().animate({"marginTop": 0}, 250, "linear");
+				});
+				$(".popup-close,.backp-cover").click(function(){
+					$(".popup-up").animate({"marginTop": "100%"}, 250, "linear", function(){
+						$(this).hide();
+						$(".backp-cover").hide();
+					});
+				});				
+
+				$(".sel").find("span").click(function(){
+					$(this).siblings().removeClass();
+					$(this).addClass("current");
+					Pand();
+				});
+				$(".num").find("a").first().click(function(){
+					if(parseInt($(this).next().val()) <= $("#min").val()){
+						$(this).next().val($("#min").val());
+					} else {
+						$(this).next().val(parseInt($(this).next().val()) - 1);
+					}
+					Pand();
+				});
+				$(".num").find("a").last().click(function(){
+					if(parseInt($(this).prev().val()) >= $("#max").val()){
+						$(this).prev().val($("#max").val());
+					} else {
+						$(this).prev().val(parseInt($(this).prev().val()) + 1);
+					}
+					Pand();
+				});
+				function Pand(){
+					var price = parseFloat($("#pirce").val());
+					var discount = parseFloat($("#discount").val());
+					$(".sel .current").find("input:hidden").each(function(){
+						price += parseFloat($(this).val());
+					});
+					price = price * parseInt($(".num").find("p").find("input").val());
+					var oldprice = price/discount;
+					$(".pack-down").find("em").html("￥" + changeTwoDecimal(price));
+					$(".pack-down").find("label").html("￥" + Math.round(oldprice));
+				}
+				
+				$(".screening1").height($(".screening").outerHeight());
+				$(".screening-show").click(function(){
+					$(this).stop().hide();
+					$(".screening").stop().slideDown(300, function(){
+						$(".screening1").stop().show();
+					});					
+				});
+				$(".screening").find(".hide").click(function(){
+					$(this).parent().stop().slideUp(300, function(){
+						$(".screening-show").stop().show();						
+					});	
+					$(".screening1").stop().hide();
+				});
+				$(".screening").find("span").click(function(){
+					$(this).siblings().removeClass();
+					$(this).addClass("current");
+				});
+				$(document).scroll(function(){
+					if(a){
+						clearTimeout(a);
+					}
+					var a = setTimeout(function (){
+						if($(this).scrollTop() <= $(".screening").outerHeight() + $(".top").outerHeight()){
+							if($(".screening").css("display") == "none"){
+								$(".screening-show").click();
+							}
+						} else {
+							if($(".screening").css("display") == "block"){
+								$(".screening").find(".hide").click();
+							}
+						}
+					}, 100);
+				});			
+			});
+		</script>
+	</head>
+	<body>
+		<div class="top">
+			<h1>奶粉</h1>
+			<a href="personal.html" id="user"><img src="img/user.png" width="48" height="48" alt="用户中心" /></a>
+			<a href="index.html" id="home"><img src="img/home-top.png" width="48" height="48" alt="主页" /></a>
+		</div>
+		<div class="screening-show">
+			<p>筛选</p>
+		</div>
+		<div class="screening">
+			<label>品牌：</label>
+			<p><span class="current">Nutrilon诺优能</span><span>Aptamil爱他美</span></p>
+			<div class="clear"></div>
+			<label>年龄：</label>
+			<p><span class="current">1段(0~6月)</span><span>2段(7~12月)</span><span>3段(12~18月)</span><span>4段(18~24月)</span></p>
+			<div class="clear"></div>
+			<a class="screenBut" href="#">筛选吧！</a>
+			<div class="hide"></div>
+		</div>
+		<div class="screening1"></div>
+		<div class="goods-info">
+			<ul>
+				<li>
+					<a href="goodsdetail.html">
+						<div class="img">
+							<img class="pic" data-src="img/pic1.png" src="img/126x126.png" alt="" />
+							<span>7折</span>
+						</div>
+						<p class="tit">Karicare可瑞康新西兰原装原罐进口2段牛奶粉900g</p>
+						<p class="cot"><em>￥220.00</em><span>￥340</span></p>
+						<div class="clear"></div>
+					</a>
+					<a href="#" class="car"></a>
+				</li>
+				<li>
+					<a href="goodsdetail.html">
+						<div class="img">
+							<img class="pic" data-src="img/pic1.png" src="img/126x126.png" alt="" />
+							<span>7折</span>
+						</div>
+						<p class="tit">Karicare可瑞康新西兰原装原罐进口2段牛奶粉900gKaricare可瑞康新西兰原装原罐进口2段牛奶粉900g</p>
+						<p class="cot"><em>￥220.00</em><span>￥340</span><img src="img/hot.png"/><img src="img/new.png"/></p>
+						<div class="clear"></div>
+					</a>
+					<a href="#" class="car"></a>
+				</li>
+				<li>
+					<a href="goodsdetail.html">
+						<div class="img">
+							<img class="pic" data-src="img/pic1.png" src="img/126x126.png" alt="" />
+						</div>
+						<p class="tit">Karicare可瑞康新西兰原装原罐进口2段牛奶粉900g</p>
+						<p class="cot"><em>￥220.00</em><span>￥340</span></p>
+						<div class="clear"></div>
+					</a>
+					<a href="#" class="car"></a>
+				</li>
+				<li>
+					<a href="goodsdetail.html">
+						<div class="img">
+							<img class="pic" data-src="img/pic1.png" src="img/126x126.png" alt="" />
+						</div>
+						<p class="tit">Karicare可瑞康新西兰原装原罐进口2段牛奶粉900g</p>
+						<p class="cot"><em>￥220.00</em><span>￥340</span></p>
+						<div class="clear"></div>
+					</a>
+					<a href="#" class="car"></a>
+				</li>
+				<li>
+					<a href="goodsdetail.html">
+						<div class="img">
+							<img class="pic" data-src="img/pic1.png" src="img/126x126.png" alt="" />
+						</div>
+						<p class="tit">Karicare可瑞康新西兰原装原罐进口2段牛奶粉900g</p>
+						<p class="cot"><em>￥220.00</em><span>￥340</span></p>
+						<div class="clear"></div>
+					</a>
+					<a href="#" class="car"></a>
+				</li>
+				<li>
+					<a href="goodsdetail.html">
+						<div class="img">
+							<img class="pic" data-src="img/pic1.png" src="img/126x126.png" alt="" />
+						</div>
+						<p class="tit">Karicare可瑞康新西兰原装原罐进口2段牛奶粉900g</p>
+						<p class="cot"><em>￥220.00</em><span>￥340</span></p>
+						<div class="clear"></div>
+					</a>
+					<a href="#" class="car"></a>
+				</li>
+				<li>
+					<a href="goodsdetail.html">
+						<div class="img">
+							<img class="pic" data-src="img/pic1.png" src="img/126x126.png" alt="" />
+						</div>
+						<p class="tit">Karicare可瑞康新西兰原装原罐进口2段牛奶粉900g</p>
+						<p class="cot"><em>￥220.00</em><span>￥340</span></p>
+						<div class="clear"></div>
+					</a>
+					<a href="#" class="car"></a>
+				</li>
+				<li>
+					<a href="goodsdetail.html">
+						<div class="img">
+							<img class="pic" data-src="img/pic1.png" src="img/126x126.png" alt="" />
+						</div>
+						<p class="tit">Karicare可瑞康新西兰原装原罐进口2段牛奶粉900g</p>
+						<p class="cot"><em>￥220.00</em><span>￥340</span></p>
+						<div class="clear"></div>
+					</a>
+					<a href="#" class="car"></a>
+				</li>
+				<li>
+					<a href="goodsdetail.html">
+						<div class="img">
+							<img class="pic" data-src="img/pic1.png" src="img/126x126.png" alt="" />
+						</div>
+						<p class="tit">Karicare可瑞康新西兰原装原罐进口2段牛奶粉900g</p>
+						<p class="cot"><em>￥220.00</em><span>￥340</span></p>
+						<div class="clear"></div>
+					</a>
+					<a href="#" class="car"></a>
+				</li>
+				<li>
+					<a href="goodsdetail.html">
+						<div class="img">
+							<img class="pic" data-src="img/pic1.png" src="img/126x126.png" alt="" />
+						</div>
+						<p class="tit">Karicare可瑞康新西兰原装原罐进口2段牛奶粉900g</p>
+						<p class="cot"><em>￥220.00</em><span>￥340</span></p>
+						<div class="clear"></div>
+					</a>
+					<a href="#" class="car"></a>
+				</li>
+				<li>
+					<a href="goodsdetail.html">
+						<div class="img">
+							<img class="pic" data-src="img/pic1.png" src="img/126x126.png" alt="" />
+						</div>
+						<p class="tit">Karicare可瑞康新西兰原装原罐进口2段牛奶粉900g</p>
+						<p class="cot"><em>￥220.00</em><span>￥340</span></p>
+						<div class="clear"></div>
+					</a>
+					<a href="#" class="car"></a>
+				</li>
+				<li>
+					<a href="goodsdetail.html">
+						<div class="img">
+							<img class="pic" data-src="img/pic1.png" src="img/126x126.png" alt="" />
+						</div>
+						<p class="tit">Karicare可瑞康新西兰原装原罐进口2段牛奶粉900g</p>
+						<p class="cot"><em>￥220.00</em><span>￥340</span></p>
+						<div class="clear"></div>
+					</a>
+					<a href="#" class="car"></a>
+				</li>
+				<li>
+					<a href="goodsdetail.html">
+						<div class="img">
+							<img class="pic" data-src="img/pic1.png" src="img/126x126.png" alt="" />
+						</div>
+						<p class="tit">Karicare可瑞康新西兰原装原罐进口2段牛奶粉900g</p>
+						<p class="cot"><em>￥220.00</em><span>￥340</span></p>
+						<div class="clear"></div>
+					</a>
+					<a href="#" class="car"></a>
+				</li>
+			</ul>
+		</div>
+		<div class="loading">
+			<p>&nbsp;</p>
+		</div>
+		<div class="shopping-cart"><a></a><span>2</span></div>
+		<div class="go-top"><a></a></div>
+		
+		<div class="backp-cover"></div>
+		<div class="popup-up">
+			<div class="popup-close"></div>
+			<div class="popup-content">
+				<!--<div class="banner" id="orange">
+					<ul>
+						<li><img class="pic" data-src="img/banner-1.png" src="img/600x280.png" /></li>
+						<li><img class="pic" data-src="img/banner-2.png" src="img/600x280.png" /></li>
+						<li><img class="pic" data-src="img/banner-3.png" src="img/600x280.png" /></li>
+						<li><img class="pic" data-src="img/banner-4.png" src="img/600x280.png" /></li>
+					</ul>
+				</div>
+				<div class="pack-block">
+					<p class="tit">新西兰Karicare Aptamil爱他美新生儿婴儿奶粉1段2罐 新包装<span>7折</span><input id="discount" type="hidden" value="0.7" /></p>
+					<p class="txt">帮助增强抵抗力，同时益生元能软化大便减少便秘机会。</p>
+					<div class="sel">
+						<label>选择：</label>
+						<p>
+							<span>1段900g<input type="hidden" value="100" /></span>
+							<span class="current">1段900g<input type="hidden" value="200" /></span>
+							<span>1段1800g<input type="hidden" value="300" /></span>
+							<span>1段3600g<input type="hidden" value="400" /></span>
+							<span>1段5400g<input type="hidden" value="500" /></span>
+						</p>
+						<div class="clear"></div>
+					</div>
+					<div class="num">
+						<label>数量：</label>
+						<p><a>-</a><input type="number" value="1" /><a>+</a></p>
+						<span>剩余238件<input type="hidden" id="min" value="2"><input type="hidden" id="max" value="10"></span>
+						<div class="clear"></div>
+					</div>					
+				</div>
+				<p style="padding-bottom: 3.0em;"></p>
+				<div class="down-fixed">
+					<p class="pack-down"><em>￥640.00</em><label>￥780</label><input id="pirce" type="hidden" value="640" /><a href="#" class="inst">下一个(1/5)</a></p>
+				</div>
+			</div>-->
+			<div class="popup-loading"><p>努力加载中...</p></div>
+		</div>		
+	</body>
+</html>

@@ -1,0 +1,491 @@
+$font-family: "\5fae\8f6f\96c5\9ed1", "Microsoft YaHei", helvetica, tahoma, arial, verdana, sans-serif;
+
+@mixin display-box{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: box;
+}
+
+@mixin box-align{
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	box-align: center;
+}
+
+@mixin box-pack{
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	box-pack: center;
+}
+
+@mixin box-flex{
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-ms-flex: 1;
+	box-flex: 1;
+}
+
+@mixin box-orient{
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	box-orient: vertical;
+}
+
+@mixin line-clamp{
+	-webkit-line-clamp: 2;
+	-moz-line-clamp: 2;
+	line-clamp: 2;
+}
+
+html,
+body,
+div,
+p,
+ul,
+ol,
+dl,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+}
+
+div,
+ul,
+ol {
+	display: block;
+	width: auto;
+	height: auto;
+}
+
+html {
+	font-size: 12px;
+	font-family: $font-family
+}
+
+body {
+	font-size: 100%;
+	color: #000;
+	background: #fff;
+}
+
+a {
+	color: #1a66b3;
+	text-decoration: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a:hover {
+	color: #009dda;
+}
+
+ul,
+ol,
+dl {
+	list-style-type: none;
+}
+
+img {
+	display: block;
+	border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+em,
+i {
+	font-style: normal;
+}
+
+.clear:after {
+	display: block;
+	content: "";
+	clear: both;
+}
+
+.ellips {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.ellipss {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	@include display-box;
+	@include box-orient;
+	@include line-clamp;
+}
+
+
+/* float */
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+
+/* font-size */
+
+.fs14 {
+	font-size: 14px;
+}
+
+.fs16 {
+	font-size: 16px;
+}
+
+.fs18 {
+	font-size: 18px;
+}
+
+.fs20 {
+	font-size: 20px;
+}
+
+
+/* text-align */
+
+.tal {
+	text-align: left;
+}
+
+.tac {
+	text-align: center;
+}
+
+.tar {
+	text-align: right;
+}
+
+
+/* color */
+
+.red {
+	color: red;
+}
+
+.green {
+	color: green;
+}
+
+.orange {
+	color: orange;
+}
+
+.white {
+	color: white;
+}
+
+
+/* background-color */
+
+.bgd {
+	background-color: #ddd;
+}
+
+.bge {
+	background-color: #eee;
+}
+
+.bgf2 {
+	background-color: #f2f2f2;
+}
+
+.bgf8 {
+	background-color: #f8f8f8;
+}
+
+.bgf {
+	background-color: #fff;
+}
+
+
+/* position */
+
+.relative {
+	position: relative;
+}
+
+.fixed {
+	position: fixed;
+}
+
+.absolute {
+	position: absolute;
+}
+
+/* margin */
+
+.m5 {
+	margin: 5px;
+}
+
+.mt5 {
+	margin-top: 5px;
+}
+
+.mr5 {
+	margin-right: 5px;
+}
+
+.mb5 {
+	margin-bottom: 5px;
+}
+
+.ml5 {
+	margin-left: 5px;
+}
+
+.m10 {
+	margin: 10px;
+}
+
+.mt10 {
+	margin-top: 10px;
+}
+
+.mr10 {
+	margin-right: 10px;
+}
+
+.mb10 {
+	margin-bottom: 10px;
+}
+
+.ml10 {
+	margin-left: 10px;
+}
+
+.m20 {
+	margin: 20px;
+}
+
+.mt20 {
+	margin-top: 20px;
+}
+
+.mr20 {
+	margin-right: 20px;
+}
+
+.mb20 {
+	margin-bottom: 20px;
+}
+
+.ml20 {
+	margin-left: 20px;
+}
+
+.m30 {
+	margin: 30px;
+}
+
+.mt30 {
+	margin-top: 30px;
+}
+
+.mr30 {
+	margin-right: 30px;
+}
+
+.mb30 {
+	margin-bottom: 30px;
+}
+
+.ml30 {
+	margin-left: 30px;
+}
+
+
+/* padding */
+
+.p5 {
+	padding: 5px;
+}
+
+.pt5 {
+	padding-top: 5px;
+}
+
+.pr5 {
+	padding-right: 5px;
+}
+
+.pb5 {
+	padding-bottom: 5px;
+}
+
+.pl5 {
+	padding-left: 5px;
+}
+
+.p10 {
+	padding: 10px;
+}
+
+.pt10 {
+	padding-top: 10px;
+}
+
+.pr10 {
+	padding-right: 10px;
+}
+
+.pb10 {
+	padding-bottom: 10px;
+}
+
+.pl10 {
+	padding-left: 10px;
+}
+
+.p20 {
+	padding: 20px;
+}
+
+.pt20 {
+	padding-top: 20px;
+}
+
+.pr20 {
+	padding-right: 20px;
+}
+
+.pb20 {
+	padding-bottom: 20px;
+}
+
+.pl20 {
+	padding-left: 20px;
+}
+
+.p30 {
+	padding: 30px;
+}
+
+.pt30 {
+	padding-top: 30px;
+}
+
+.pr30 {
+	padding-right: 30px;
+}
+
+.pb30 {
+	padding-bottom: 30px;
+}
+
+.pl30 {
+	padding-left: 30px;
+}
+
+
+/* border */
+
+.bs1 {
+	border: 1px solid #ddd;
+}
+
+.bst1 {
+	border-top: 1px solid #ddd;
+}
+
+.bsr1 {
+	border-right: 1px solid #ddd;
+}
+
+.bsb1 {
+	border-bottom: 1px solid #ddd;
+}
+
+.bsl1 {
+	border-left: 1px solid #ddd;
+}
+
+.bd1 {
+	border: 1px dashed #ddd;
+}
+
+.bdt1 {
+	border-top: 1px dashed #ddd;
+}
+
+.bdr1 {
+	border-right: 1px dashed #ddd;
+}
+
+.bdb1 {
+	border-bottom: 1px dashed #ddd;
+}
+
+.bdl1 {
+	border-left: 1px dashed #ddd;
+}
+
+
+/* css3 style */
+
+.horizontal {
+	@include display-box;
+}
+
+.vertical {
+	@include display-box;
+	@include box-orient;
+}
+
+.pack-align {
+	@include display-box;
+	@include box-align;
+	@include box-pack;
+}
+
+.pack-middel {
+	@include display-box;
+	@include box-align;
+}
+
+.flex {
+	@include box-flex;
+}
+
+
+/* -webkit-scrollbar */
+
+*::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: #aaa;
+	border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background-color: #939393;
+}
+
+*::-webkit-scrollbar-track-piece {
+	background-color: #ddd;
+	border-radius: 0;
+}

@@ -1,0 +1,65 @@
+html,body,div,p,ul,ol,dl,input,h1,h2,h3,h4,h5,h6,textarea,select,header,article,aside,nav,section,footer,hgroup,figcaption,figure{margin:0; padding:0;}
+div,header,article,aside,nav,section,footer,hgroup,figcaption,figure,ul,ol{width:auto; height:auto; display:block;}
+html{font-size:62.5%; font-family:"\5fae\8f6f\96c5\9ed1","Microsoft YaHei",helvetica,tahoma,arial,verdana,sans-serif;}
+body{font-size:100%;}
+a{text-decoration:none;}
+ul,ol,dl{list-style-type:none;}
+img{border:none; display:block;}
+h1,h2,h3,h4,h5,h6,strong{font-size:100%; font-weight:normal;}
+em,i{font-style:normal;}
+input,textarea{border-radius:0; -webkit-appearance:none; outline:none;}
+input[type=radio]{border-radius:50%;}
+input[type=checkbox]{border-radius:30%;}
+table{border-collapse:collapse; border-spacing:0;}
+.fl{float:left;}
+.fr{float:right;}
+.clearfix:before,.clearfix:after{content:""; display:table;}
+.clearfix:after{clear:both;}
+.clearfix{*zoom:1;}
+
+body{background:url(../img/1.jpg) center 0 no-repeat;}
+.fly-header{height:55px; background:#333;}
+.fly-way{margin-top:660px; background:url(../img/2.jpg) center top no-repeat;}
+.way-body{position:relative; margin:0 auto; width:1000px; height:628px;}
+.way-body a{position:absolute; width:204px; height:53px; background:url(../img/8.jpg) no-repeat;}
+.way-body a.login{top:440px; right:155px; background-position:0 0;}
+.way-body a.login:hover{ background-position:-204px 0;}
+.way-body a.register{top:502px; right:155px; background-position:0 -53px;}
+.way-body a.register:hover{background-position:-204px -53px;}
+.fly-rule{margin:10px 0 50px;}
+.rule-body{margin:0 auto; width:1000px;}
+.rule{padding:100px 35px 0 35px; width:600px; height:682px; float:left; background:url(../img/3.jpg) no-repeat;}
+.rule-lines{clear:both; *zoom:1;}
+.rule-lines p{margin:0 0 18px 35px; font-size:20px; color:#2e2e2e; line-height:29px;}
+.rule-lines p em{color:#c00;}
+.rule-lines p img{display:block; margin-top:20px; width:560px; height:182px;}
+.rule-lines i{display:block; width:29px; height:29px; float:left; background:url(../img/8.jpg) no-repeat;}
+.rule-lines i.a{background-position:0 -106px;}
+.rule-lines i.b{background-position:-29px -106px;}
+.rule-lines i.c{background-position:-58px -106px;}
+.rule-lines i.d{background-position:-87px -106px;}
+.rule-lines i.e{background-position:-116px -106px;}
+.rule-lines i.f{background-position:-145px -106px;}
+.rule-lines i.g{background-position:-174px -106px;}
+.order{padding:100px 25px 0 25px; width:269px; height:452px; float:right; background:url(../img/4.jpg) no-repeat;}
+.order ul{width:269px; height:420px; overflow:hidden; overflow-y:auto;}
+.order ul li{margin-bottom:15px; padding-bottom:15px; border-bottom:1px solid #eee;}
+.order ul li .order-text{width:220px; float:right;}
+.order ul li p{margin-bottom:6px; font-size:14px;}
+.order ul li p.name{font-size:18px;}
+.order ul li p em{color:#c00;}
+.order ul li img{margin-right:15px; display:block; float:left; border:1px solid #eee;}
+.order ul li i{display:block; width:20px; height:18px; float:left; color:#fff; text-align:center; font-size:12px; font-weight:600; background:#f60;}
+.order .none img{margin:0 auto;}
+.advertising{margin-top:10px; float:right;}
+*html .fly-translucent{position:absolute; width:100%; height:expression(eval(document.documentElement.scrollHeight));}
+.fly-translucent{position:fixed; top:0; right:0; bottom:0; left:0; z-index:1001;}
+.fly-translucent{filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#B2000000', endColorstr='#B2000000');}
+:root .fly-translucent{filter:none; background-color:rgba(0,0,0,0.5);}
+*html .fly-end{position:absolute; top:expression(eval(document.documentElement.scrollTop + document.documentElement.clientHeight/2)); left:expression(eval(document.documentElement.clientWidth/2));}
+.fly-end{position:fixed; top:50%; left:50%; z-index:1002; margin:-147px 0 0 -328px; width:656px; height:294px; border-radius:10px; background:url(../img/10.jpg) 50px 0 no-repeat #fff;}
+.fly-end p{margin-left:300px; line-height:1.5em;}
+.fly-end p.a{margin-top:80px; font-size:28px;}
+.fly-end p.b{margin-bottom:10px; font-size:40px; color:#f60;}
+.fly-end p.c{font-size:16px;}
+.fly-end p.c em{color:#f60;}

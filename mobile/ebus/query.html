@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+		<title>查询</title>
+		<link type="text/css" rel="stylesheet" href="css/base.css" />
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#users').on('click', function() {
+					$('#transparent').show();
+					$('#users-menu').css({
+						"-webkit-transform": "translateX(0)",
+						"-moz-transform": "translateX(0)",
+						"transform": "translateX(0)"
+					});
+				});
+				$('#close-menu').on('click', function() {
+					$('#transparent').hide();
+					$('#users-menu').css({
+						"-webkit-transform": "translateX(-100%)",
+						"-moz-transform": "translateX(-100%)",
+						"transform": "translateX(-100%)"
+					});
+				});
+				$('#hot').on('click', function() {
+					$('#transparent').show();
+					$('#hot-body').show();
+				});
+				$('#transparent').on('click', function() {
+					$('#transparent').hide();
+					$('#hot-body').hide();
+					$('#users-menu').css({
+						"-webkit-transform": "translateX(-100%)",
+						"-moz-transform": "translateX(-100%)",
+						"transform": "translateX(-100%)"
+					});
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<article class="article-body">
+			<div class="title-body relative">
+				<h1>查询</h1>
+				<a class="absolute users" id="users" href="javascript:void(0);"></a>
+				<a class="absolute hot" id="hot" href="javascript:void(0);">HOT</a>
+			</div>
+			<div class="form-body">
+				<div class="items">
+					<p class="pack-middel red">
+						<input class="text flex" type="text" placeholder="我的位置" />
+						<i class="clear-text"></i>
+					</p>
+				</div>
+				<div class="items">
+					<p class="pack-middel green">
+						<input class="text flex" type="text" placeholder="终点位置" />
+						<i class="clear-text"></i>
+					</p>
+				</div>
+				<div class="items">
+					<a class="btn submit-btn" href="javascript:void(0);">查询班车</a>
+				</div>
+			</div>
+			<div class="module-header">
+				<p>常用线路</p>
+			</div>
+			<div class="classes-body">
+				<div class="time">
+					<p>
+						<em>7:30始发</em>
+						<span>15公里约55分钟</span>
+					</p>
+				</div>
+				<div class="horizontal">
+					<div class="route relative flex">
+						<div class="items pack-middel">
+							<i></i>
+							<p class="flex">风和日丽（途径）</p>
+						</div>
+						<div class="items pack-middel">
+							<i></i>
+							<p class="flex">深圳北门（途径）</p>
+						</div>
+						<div class="price absolute">
+							<em>￥2元</em>
+							<span>￥7元</span>
+						</div>
+					</div>
+					<div class="buy-btn">
+						<a class="green" href="javascript:void(0);">购</a>
+					</div>
+				</div>
+			</div>
+			<div class="classes-body">
+				<div class="time">
+					<p>
+						<em>7:30始发</em>
+						<span>15公里约55分钟</span>
+					</p>
+				</div>
+				<div class="horizontal">
+					<div class="route relative flex">
+						<div class="items pack-middel">
+							<i></i>
+							<p class="flex">风和日丽（途径）</p>
+						</div>
+						<div class="items pack-middel">
+							<i></i>
+							<p class="flex">深圳北门（途径）</p>
+						</div>
+						<div class="price absolute">
+							<em>￥2元</em>
+							<span>￥7元</span>
+						</div>
+					</div>
+					<div class="buy-btn">
+						<a class="green" href="javascript:void(0);">购</a>
+					</div>
+				</div>
+			</div>
+		</article>
+		<section class="transparent" id="transparent" style="display:none;"></section>
+		<div class="users-menu" id="users-menu" style="-webkit-transform:translateX(-100%); -moz-transform: translateX(-100%); transform:translateX(-100%);">
+			<div class="title-body relative">
+				<h1 class="user">186****5812</h1>
+				<a class="absolute close" id="close-menu" href="javascript:void(0);"></a>
+			</div>
+			<div class="menu-body">
+				<div class="pack-middel">
+					<i class="start"></i>
+					<a class="flex" href="javascript:void(0);">我的发起线路</a>
+				</div>
+				<div class="pack-middel">
+					<i class="enroll"></i>
+					<a class="flex" href="javascript:void(0);">我的报名线路</a>
+				</div>
+				<div class="pack-middel">
+					<i class="map"></i>
+					<a class="flex" href="javascript:void(0);">我的跟团线路</a>
+				</div>
+				<div class="pack-middel">
+					<i class="tong"></i>
+					<a class="flex" href="javascript:void(0);">深圳通卡绑定</a>
+				</div>
+				<div class="pack-middel">
+					<i class="over"></i>
+					<a class="flex" href="javascript:void(0);">退出登录</a>
+				</div>
+			</div>
+		</div>
+		<div class="hot-body" id="hot-body" style="display:none;">
+			<h5>热点区域</h5>
+			<div class="horizontal">
+				<a class="items flex" href="javascript:void(0);">龙华汽车站</a>
+				<a class="items flex" href="javascript:void(0);">淘金地</a>
+				<a class="items flex" href="javascript:void(0);">深圳北</a>
+			</div>
+			<div class="horizontal">
+				<a class="items flex" href="javascript:void(0);">龙华汽车站</a>
+				<a class="items flex" href="javascript:void(0);">淘金地</a>
+				<a class="items flex" href="javascript:void(0);">深圳北</a>
+			</div>
+			<div class="horizontal">
+				<a class="items flex" href="javascript:void(0);">龙华汽车站</a>
+				<a class="items flex" href="javascript:void(0);">淘金地</a>
+				<a class="items flex" href="javascript:void(0);">深圳北</a>
+			</div>
+			<div class="horizontal">
+				<a class="items flex" href="javascript:void(0);">龙华汽车站</a>
+				<a class="items flex" href="javascript:void(0);">淘金地</a>
+				<a class="items flex" href="javascript:void(0);">深圳北</a>
+			</div>
+			<div class="horizontal">
+				<a class="items flex" href="javascript:void(0);">龙华汽车站</a>
+				<a class="items flex" href="javascript:void(0);">淘金地</a>
+				<a class="items flex" href="javascript:void(0);">深圳北</a>
+			</div>
+			<div class="horizontal">
+				<a class="items flex" href="javascript:void(0);">龙华汽车站</a>
+				<a class="items flex" href="javascript:void(0);">淘金地</a>
+				<a class="items flex" href="javascript:void(0);">深圳北</a>
+			</div>
+			<div class="horizontal">
+				<a class="items flex" href="javascript:void(0);">龙华汽车站</a>
+				<a class="items flex" href="javascript:void(0);">淘金地</a>
+				<a class="items flex" href="javascript:void(0);">深圳北</a>
+			</div>
+			<div class="horizontal">
+				<a class="items flex" href="javascript:void(0);">龙华汽车站</a>
+				<a class="items flex" href="javascript:void(0);">淘金地</a>
+				<a class="items flex" href="javascript:void(0);">深圳北</a>
+			</div>
+		</div>
+	</body>
+
+</html>

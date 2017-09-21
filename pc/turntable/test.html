@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>zepto</title>
+	<style type="text/css">
+		body{margin: 0;padding: 0;}
+		#canvas1{margin:5%; width: 90%; height: auto;}
+	</style>
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+	<script type="text/javascript">		
+		var turntable = function(){
+			return new turntable.prototype.init();
+		};
+		turntable.prototype = {
+			init: function(){
+				return this;
+			},
+			draw: function(canvas, cxt){
+				console.log(Math.cos(180*Math.PI/180));
+				var img = new Image();
+				img.src = "img/turntable-bg.png";
+				img.onload = function(){
+					cxt.rotate(180*Math.PI/180);
+					cxt.translate(625 * Math.cos(180*Math.PI/180), 625 * Math.cos(180*Math.PI/180));
+					cxt.drawImage(img, 0, 0);
+				};
+			}
+		};
+		turntable.prototype.init.prototype = turntable.prototype;
+		
+		$(function(){
+			var canvas = document.getElementById("canvas1");
+			var cxt = canvas.getContext("2d");
+		    turntable().draw(canvas, cxt);
+			
+			$("#canvas1").tap(function(e){
+				var a = new turntable(canvas, cxt);
+				var number = Math.ceil(Math.random() * 10);
+				number =  number == 10 ? 1 : number;
+				console.log(number)
+				a.rotating(9, function(){
+					a.rotating(9, function(){
+						a.rotating(number);
+					});
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<canvas id="canvas1" width="625" height="625"></canvas>
+</body>
+</html>

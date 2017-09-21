@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="viewport">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-width=1, maxni-width=1, user-scalable=no">
+        <title>1</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                $(".link").on("click", function(){
+                    $(".translucent,.popup-body").show();
+                });
+                $(".popup-body").find(".close a").on("click", function(){
+                    $(".translucent,.popup-body").hide();
+                });
+            });
+        </script>
+    </head>
+    <body class="body1">
+        <div class="header">
+            <div class="logo"><img src="img/1youku.png" width="199" height="40" /></div>
+            <div class="link"><a href="javascript:void(0);">活动说明</a></div>
+        </div>
+        <div class="title">
+            <img src="img/1title.png" width="461" height="182" />
+        </div>
+        <div class="one">
+            <img src="img/1text.png" width="426" height="26" /> 
+        </div>
+        <div class="two">
+            <a href="2.html"><img src="img/button.gif" width="415" height="117" /></a> 
+        </div>
+        <div class="three">
+            <img src="img/1bg2.png" width="463" height="129" />
+            <div class="item1"><img src="img/2cc.gif" width="350" height="450" /></div>
+            <div class="item2"><img src="img/1pic2.png" width="315" height="332" /></div>
+        </div>
+        <div class="translucent"></div>
+        <div class="popup-body">
+            <div class="content">
+                <div class="items"><img src="img/1text2.png" width="524" height="680" /></div>
+                <div class="items but"><a href="2.html"><img src="img/button.gif" width="415" height="117" /></a></div>
+                <div class="items"><p>本活动最终解释权归优酷所有</p></div>    
+            </div>
+            <div class="close">
+                <a href="javascript:void(0);"><img src="img/1del.png" width="38" height="38" /></a>
+            </div>
+        </div>
+    </body>
+</html>

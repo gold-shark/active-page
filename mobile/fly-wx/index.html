@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>师傅·带你飞</title>
+		<meta name="description" content="师傅带你飞带1个徒弟送10元现金" />
+		<link type="text/css" rel="stylesheet" href="css/fly.css" />
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<script type="text/javascript">
+			wx.config({
+			    debug: false, 
+			    appId: "wx6d7ea42348e0a28d", 
+			    timestamp: $timestamp, 
+			    nonceStr: $wxnonceStr, 
+			    signature: $wxSha1,
+			    jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo'] // 功能列表，我们要使用JS-SDK的什么功能
+			});
+			wx.ready(function(){
+			    // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
+			    wx.onMenuShareTimeline({
+			        title: '师傅·带你飞', // 分享标题
+			        link:"",
+			        imgUrl: "img/share.jpg" // 分享图标
+			    });
+			    // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
+			    wx.onMenuShareAppMessage({
+			        title: '师傅·带你飞', // 分享标题
+			        desc: "师傅带你飞带1个徒弟送10元现金", // 分享描述
+			        link:"",
+			        imgUrl: "img/share.jpg", // 分享图标
+			        type: 'link', // 分享类型,music、video或link，不填默认为link
+			    });
+			});
+		</script>
+	</head>
+	<body class="body">
+		<div style="display:none;"><img src="img/share.jpg" width="300" height="300" /></div>
+		<div class="fly-header">
+			<a href="http://m.qfang.com/download/app/qfang/index.html"><img src="img/5.png" width="640" height="117" /></a>
+		</div>		
+		<div class="fly-body">			
+			<div class="fly-time">
+				<p>活动时间：4月9日-5月8日</p>				
+			</div>
+			<div class="fly-items">
+				<div class="fly-invita"><img src="img/2.png" width="390" height="74" /></div>
+				<p>每邀请<em>1</em>位徒弟注册Q房网并发布<em>10</em>条以上房源，奖励<em>10</em>元现金，不设封顶</p>
+			</div>
+			<div class="fly-items">
+				<div class="fly-order"><img src="img/3.png" width="353" height="74" /></div>
+				<p>活动截止，每城市累计奖金数排名前<em>3</em>名，且带徒弟奖金达<em>100元</em>以上（含100元），赢取师傅封神大奖</p>
+			</div>
+			<div class="fly-prize">
+				<img src="img/4.png" width="467" height="257" />
+			</div>
+		</div>
+		<div class="relust">
+			<img src="img/6.png" width="640" height="428" />
+			<div class="re-items">
+				<div class="left">
+					<p><em>01</em><span>如何奖励</span></p>
+				</div>
+				<div class="right">
+					<p>师傅每成功邀请<em>1位</em>徒弟（经纪人）注册Q房网且在线房源达<em>10套</em>，奖励<em>10元</em>现金，不设封顶；徒弟在线房源低于<em>10套</em>，不奖励；</p>
+				</div>
+			</div>
+			<div class="re-items">
+				<div class="left">
+					<p><em>02</em><span class="two">如何成为师傅</span></p>
+				</div>
+				<div class="right">
+					<p>下载注册或登录Q房网<em>盘客通端口APP</em>，发布<em>40条</em>房源成为师傅，进入活动页面，点击<em>“立即发送邀请”</em>将带有邀请码的链接分享给好友。</p>
+				</div>
+			</div>
+			<div class="re-items">
+				<div class="left">
+					<p><em>03</em><span>如何邀请</span></p>
+				</div>
+				<div class="right">
+					<p class="two">登陆<em>经纪人后台</em>，领取邀请码，通过微信扫描二维码或复制链接分享进行邀请；</p>
+				</div>
+			</div>
+		</div>
+		<div class="fly-footer">
+			<p>活动城市：北京 上海 广州 苏州 南京</p>
+		</div>
+	</body>
+</html>

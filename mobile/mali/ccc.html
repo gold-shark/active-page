@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>灰度处理</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				var huidu = function(src) {
+					var c = document.createElement("canvas");
+					var cxt = c.getContext("2d");
+					var img = new Image(),
+						pic = new Image();
+					var imgdata, data;
+					img.src = src;
+					img.onload = img.onerror = function() {
+						c.width = img.naturalWidth;
+						c.height = img.naturalHeight;
+						cxt.drawImage(img, 0, 0);
+						imgdata = cxt.getImageData(0, 0, c.width, c.height);
+						data = imgdata.data;
+						for (var i = 0; i < data.length; i += 4) {
+							var a = (data[i] + data[i + 1] + data[i + 2]) / 3;
+							data[i] = a;
+							data[i + 1] = a;
+							data[i + 2] = a;
+							//data[i + 3] = 255;
+							//console.log((data[i] + data[i +1] +data[i+2])/3)
+						}
+						cxt.putImageData(imgdata, 0, 0);
+						$("body").append("<img src='" + c.toDataURL() + "' />");
+					}
+				}
+				huidu("img/1.png");
+			});
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+
+</html>

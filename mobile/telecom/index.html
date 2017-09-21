@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<title>三网免费流量，全国共享 - Q房网</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				//活动规则
+				$(".main-body .cloud").find("a").on("tap", function(){
+					window.scroll(0,0);
+					$(".main-body").css({"display": "none"});
+					$(".rules-body").css({"display": "block"}).animate({"translateX": "0"}, 300);
+				});
+				//关闭规则
+				$(".rules-body .title").find("a").on("tap", function(){
+					window.scroll(0,0);					
+					$(".rules-body").animate({"translateX": "500px"}, 300, "ease-in", function(){
+						$(this).css({"display": "none"});
+						$(".main-body").css({"display": "block"});						
+					});
+				});
+				//选择区域
+				$(".area").find("a").on("tap", function(){
+					$(".translucent").css({"display": "block"});
+					$("#area").css({"display": "block"});
+				});
+				$("#area").find("a").on("tap", function(){
+					$(".area").find("a").html($(this).html());
+					$(".translucent").css({"display": "none"});
+					$("#area").css({"display": "none"});
+				});
+				//选择价格
+				$(".price").find("a").on("tap", function(){
+					$(".translucent").css({"display": "block"});
+					$("#price").css({"display": "block"});
+				});
+				$("#price").find("a").on("tap", function(){
+					$(".price").find("a").html($(this).html());
+					$(".translucent").css({"display": "none"});
+					$("#price").css({"display": "none"});
+				});
+				//关闭弹窗
+				$(".success-body,.select-body").find(".close").on("tap", function(){
+					$(".translucent").css({"display": "none"});
+					$(this).parent().css({"display": "none"});
+				});
+				$(".translucent").on("tap", function(){
+					$(this).css({"display": "none"});
+					$(".success-body,.select-body").css({"display": "none"});
+				});
+				//单选事件
+				$(".intention").find(".radio").on("tap", function(){
+					$(".intention").find(".radio").removeClass("current");
+					$(this).addClass("current");
+					$(this).find("input").prop("checked", true);					
+				});
+				//手机格式
+				$(".phone").find("input").on("blur", function(){
+					var reg = /^1\d{10}$/;
+					if(!(reg.test($(this).val()))){
+						$(this).css({"border-color": "#ff2400"});
+						$(this).next("em").css({"display": "block"});
+					} else {
+						$(this).css({"border-color": "#d5d5d5"});
+						$(this).next("em").css({"display": "none"});
+					}
+				});
+				//成功
+				$(".submit").find("input").on("tap", function(){
+					$(".translucent").css({"display": "block"});
+					$(".success-body").css({"display": "block"});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="main-body">
+			<div style="display:none;"><img src="img/share.png" width="300" height="300" /></div>
+			<div class="sun-body">
+				<div class="sun-light"><img src="img/sun-light.png"/></div>
+			</div>
+			<div class="yellow-light"><img src="img/2.png"/></div>
+			<div class="logo"><img src="img/1.png"/></div>
+			<div class="title"><img src="img/3.png"/></div>
+			<div class="pic1 anima1"><img src="img/6.png"/></div>
+			<div class="pic2 anima2"><img src="img/7.png"/></div>
+			<div class="pic3 anima3"><img src="img/8.png"/></div>
+			<div class="pic4 anima4"><img src="img/9.png"/></div>
+			<div class="pic5 anima5"><img src="img/10.png"/></div>
+			<div class="introduce">
+				<p>Q房网送豪礼！填写买/卖房意向，最高可获</p>
+				<p><em>200MB</em>三网全国通用流量！</p>
+				<p>超大流量+海量房源 一箭双雕！</p>
+			</div>
+			<div class="text-body">
+				<img src="img/11.png" />
+				<div class="figure"><img src="img/4.png"/></div>
+				<div class="voice"><img src="img/5.png"/></div>
+				<div class="form-body">
+					<p class="phone">
+						<label>手机号码</label>
+						<span>
+							<input type="tel" placeholder="请输入手机号码" />
+							<em>手机号码格式有误</em>
+						</span>
+					</p>
+					<p class="intention">
+						<label>我的意向</label>
+						<span class="clear">
+							<a href="javascript:void(0);" class="radio fl"><input type="radio" id="buy" name="intention" value="1" />买房</a>
+							<a href="javascript:void(0);" class="radio fr current"><input type="radio" id="sell" name="intention" value="2" />卖房</a>
+						</span>
+					</p>
+					<p class="area">
+						<label>目标区域</label>
+						<span>
+							<a href="javascript:void(0);" class="checkbox">请选择区域<i></i></a>
+						</span>
+					</p>
+					<p class="price">
+						<label>目标价格</label>
+						<span>
+							<a href="javascript:void(0);" class="checkbox">请选择价格区间<i></i></a>
+						</span>
+					</p>
+					<p class="submit">
+						<span><input type="button" value="领取流量" /></span>
+					</p>
+				</div>
+				<div class="cloud">
+					<img src="img/15.png"/>
+					<a href="javascript:void(0);">活动规则 <i></i></a>
+				</div>
+			</div>
+		</div>
+		<div class="rules-body">
+			<div class="title clear">
+				<h3 class="fl">活动规则</h3>
+				<a href="javascript:void(0);" class="fr">闭关</a>
+			</div>
+			<div class="content">
+				<div class="items">
+					<div class="number"><img src="img/21.png"/></div>
+					<div class="text">
+						<p><label>活动时间：</label></p>
+						<p><em>2015年5月20日～2015年6月20日</em></p>
+					</div>
+				</div>
+				<div class="items">
+					<div class="number"><img src="img/22.png"/></div>
+					<div class="text">
+						<p><label>参与方法：</label></p>
+						<p>填写您的意向信息，提交后即可随机获得30~200MB流量</p>
+					</div>
+				</div>
+				<div class="items">
+					<div class="number"><img src="img/23.png"/></div>
+					<div class="text">
+						<p><label>参与范围：</label></p>
+						<p>电信、移动、联通三网手机<span>（欠费、停机用户除外）</span></p>
+					</div>
+				</div>
+				<div class="items">
+					<div class="number"><img src="img/24.png"/></div>
+					<div class="text">
+						<p><label>到账时间：</label></p>
+						<p>7个工作日内</p>
+					</div>
+				</div>
+				<div class="items">
+					<div class="number"><img src="img/25.png"/></div>
+					<div class="text">
+						<p><label>流量属性：</label></p>
+						<p>三网通用流量<span>（当月有效，全国通用）</span></p>
+					</div>
+				</div>
+				<div class="items">
+					<div class="number"><img src="img/26.png"/></div>
+					<div class="text">
+						<p><label>客服联系：</label></p>
+						<p>4000-911-609<span>（7x8小时)</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				<p>本次活动最终解释权归中国电信股份有限公司广东分公司所有，提交信息即表示您愿意参与活动并接受Q房网提供的相应服务。</p>
+			</div>
+		</div>
+		<div class="translucent"></div>
+		<div class="success-body">
+			<div class="success">
+				<h5>领取成功</h5>
+				<p>30～200M流量将于7个工作日内到账</p>
+				<a href="javascript:void(0);">知道了，去看房</a>
+			</div>
+			<div class="close"></div>
+		</div>
+		<div class="select-body" id="area">
+			<div class="select">
+				<h5>选择区域</h5>
+				<div class="items">
+					<p><a href="javascript:void(0);">天河</a></p>
+					<p><a href="javascript:void(0);">福田</a></p>
+					<p><a href="javascript:void(0);">天河</a></p>
+					<p><a href="javascript:void(0);">天河</a></p>
+					<p><a href="javascript:void(0);">天河</a></p>
+					<p><a href="javascript:void(0);">天河</a></p>
+					<p><a href="javascript:void(0);">天河</a></p>
+					<p><a href="javascript:void(0);">天河</a></p>
+				</div>
+			</div>
+			<div class="close"></div>
+		</div>
+		<div class="select-body" id="price">
+			<div class="select">
+				<h5>选择价格</h5>
+				<div class="items">
+					<p><a href="javascript:void(0);">1000-2000</a></p>
+					<p><a href="javascript:void(0);">2000-3000</a></p>
+					<p><a href="javascript:void(0);">3000-4000</a></p>
+					<p><a href="javascript:void(0);">4000-5000</a></p>
+					<p><a href="javascript:void(0);">5000-6000</a></p>
+					<p><a href="javascript:void(0);">6000-7000</a></p>
+					<p><a href="javascript:void(0);">7000-8000</a></p>
+					<p><a href="javascript:void(0);">8000-9000</a></p>
+				</div>
+			</div>
+			<div class="close"></div>
+		</div>
+	</body>
+</html>

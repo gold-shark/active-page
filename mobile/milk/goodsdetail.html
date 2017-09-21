@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>商品列表</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.sliding.js" ></script>
+		<script type="text/javascript" src="js/banner.js" ></script>
+		<script type="text/javascript" src="js/common.js" ></script>
+		<script type="text/javascript" src="js/general.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$("body").css("background-color", "#FFF");
+				$(".sel").find("span").click(function(){
+					$(this).siblings().removeClass();
+					$(this).addClass("current");
+					Pand();
+				});
+				$(".num").find("a").first().click(function(){
+					if(parseInt($(this).next().val()) <= $("#min").val()){
+						$(this).next().val($("#min").val());
+					} else {
+						$(this).next().val(parseInt($(this).next().val()) - 1);
+					}
+					Pand();
+				});
+				$(".num").find("a").last().click(function(){
+					if(parseInt($(this).prev().val()) >= $("#max").val()){
+						$(this).prev().val($("#max").val());
+					} else {
+						$(this).prev().val(parseInt($(this).prev().val()) + 1);
+					}
+					Pand();
+				});
+				function Pand(){
+					var price = parseFloat($("#pirce").val());
+					var discount = parseFloat($("#discount").val());
+					$(".sel .current").find("input:hidden").each(function(){
+						price += parseFloat($(this).val());
+					});
+					price = price * parseInt($(".num").find("p").find("input").val());
+					var oldprice = price/discount;
+					$(".pri").find("em").html("￥" + changeTwoDecimal(price));
+					$(".pri").find("span").html("￥" + Math.round(oldprice));
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div class="top">
+			<h1>商品详情</h1>
+			<a href="personal.html" id="user"><img src="img/user.png" width="48" height="48" alt="用户中心" /></a>
+			<a href="index.html" id="home"><img src="img/home-top.png" width="48" height="48" alt="主页" /></a>
+		</div>
+		<div class="banner">
+			<ul>
+				<li><img src="img/banner-1.png" /></li>
+				<li><img src="img/banner-2.png" /></li>
+				<li><img src="img/banner-3.png" /></li>
+			</ul>
+		</div>
+		<div class="detail-block">
+			<p class="tit">新西兰Karicare Aptamil爱他美新生儿婴儿奶粉1段2罐 新包装<span>7折</span><input id="discount" type="hidden" value="0.7" /></p>
+			<p class="pri"><em>￥640.00</em><span>￥780</span><label>销量：3288</label><input id="pirce" type="hidden" value="640" /></p>
+		</div>
+		<div class="detail-block">
+			<div class="sel">
+				<label>选择：</label>
+				<p>
+					<span>1段900g<input type="hidden" value="100" /></span>
+					<span class="current">1段900g<input type="hidden" value="200" /></span>
+					<span>1段1800g<input type="hidden" value="300" /></span>
+					<span>1段3600g<input type="hidden" value="400" /></span>
+					<span>1段5400g<input type="hidden" value="500" /></span>
+				</p>
+				<div class="clear"></div>
+			</div>
+			<div class="sel">
+				<label>类型：</label>
+				<p>
+					<span>1段900g<input type="hidden" value="100" /></span>
+					<span class="current">1段900g<input type="hidden" value="200" /></span>
+					<span>1段1800g<input type="hidden" value="300" /></span>
+					<span>1段3600g<input type="hidden" value="400" /></span>
+					<span>1段5400g<input type="hidden" value="500" /></span>
+				</p>
+				<div class="clear"></div>
+			</div>
+			<div class="num">
+				<label>数量：</label>
+				<p><a>-</a><input type="number" value="1" /><a>+</a></p>
+				<span>剩余238件<input type="hidden" id="min" value="1"><input type="hidden" id="max" value="5"></span>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="detail-block">
+			<div class="info">
+				<p>1.蕴含FOS/GOS益生元专利组合，能促进肠道益生菌生长及抑制害菌数量，帮助增强抵抗力，同时益生元能软化大便减少便秘机会。</p>
+				<p>2.蕴含FOS/GOS益生元专利组合，能促进肠道益生菌生长及抑制害菌数量，帮助增强抵抗力，同时益生元能软化大便减少便秘机会。</p>
+				<p>3.蕴含FOS/GOS益生元专利组合，能促进肠道益生菌生长及抑制害菌数量，帮助增强抵抗力，同时益生元能软化大便减少便秘机会。</p>
+				<p><img src="img/banner-1.png" width="500" height="500" /><img src="img/banner-1.png" width="500" height="500" /></p>
+			</div>
+		</div>
+		<p style="padding-bottom: 3.0em;"></p>
+		<div class="down-fixed">
+			<p class="goodsdetail-down"><a href="shopping.html" class="cart"><span>2</span></a><em>￥640.00</em><label>￥780</label><a href="#" class="inst">加入购物车</a></p>
+		</div>
+		<div class="go-top"><a></a></div>
+	</body>
+</html>

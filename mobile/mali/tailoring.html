@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>图片裁剪</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<style type="text/css">
+			.tailor-cover{ position: fixed; top: 0; right: 0; bottom: 0; left: 0; background-color: #000; opacity: 0.7; z-index: 1000;}
+			.tailor-popup {position: absolute; top: 0; right: 0; bottom: auto; left: 0; z-index: 1050;}
+			.tailor-body{ margin: 100px auto; width: 70%; min-width: 700px; height: auto; border-radius: 5px; background-color: #FFF;}
+			.tailor-content{ margin: 0 auto; padding: 50px; width: 700px; height: auto;}
+			.tailor-img{ width: auto; height: auto; position: relative;}
+			.tailor-img canvas{ position: absolute; top: 0; left: 0;}
+			.tailor-txt{ margin: 30px auto 0 auto; width: auto; height: auto;}
+			.tailor-txt label{ color: #2C2C2C;}
+			.tailor-txt input{ margin-right: 20px; width: 50px; height: auto; font-size: 1.0em; line-height: 1.8em; text-align: center;}
+			.tailor-but{ margin: 30px auto 0 auto; width: auto; height: auto;}
+			.tailor-but input{ margin-right: 50px; width:125px; height:35px; cursor: pointer; font-size: 1.0em; border-radius: 4px;}
+			.tailor-but input#tailor-ok{ color: #FFF; border:1px solid #51aaFF; background-color:#51aded;}
+			.tailor-but input#tailor-no{ color: #666; border:1px solid #AAA; box-sizing: border-box; background-color:#CCC;}
+		</style>
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+		<script type="text/javascript">
+			(function($, undefined){
+				var data = "img/1.png";
+				$.tailor = {
+					show: function(options){
+						$.extend(data, options);
+						var html = "<div class='tailor-cover'></div><div class='tailor-popup'><div class='tailor-body'><div class='tailor-content'><div class='tailor-img'>"
+								 + "<canvas id='tailor-canvas'></canvas></div><div class='tailor-txt'><label>X：</label><input type='text' id='tailor-x' value='0' />" 
+								 + "<label>Y：</label><input type='text' id='tailor-y' value='0' /><label>W：</label><input type='text' id='tailor-w' value='100' />"
+								 + "<label>H：</label><input type='text' id='tailor-h' value='100' /></div><div class='tailor-but'><input type='button' id='tailor-ok' value='确定' />"
+								 + "<input type='button' id='tailor-no' value='取消' /></div></div></div></div>";
+						$("body").append(html);
+						var _width, _height;
+						var pic = new Image();
+						var n = {x1: 0, y1: 0, x2: 0, y2: 0};
+						var k = 0;
+						var obj = $(".tailor-img");
+						var c = $("#tailor-canvas")[0];
+						var cxt = c.getContext("2d");
+						pic.onload = function(){
+							_width = c.width = pic.naturalWidth;
+							_height = c.height = pic.naturalHeight;
+							obj.css({"width": _width, "height": _height, "background-image": "url('" + data + "')"});
+						};
+						pic.src = data;						
+						$("#tailor-canvas").bind("mousedown", function(e){
+							n.x1 = e.pageX - $(this).offset().left;
+							n.y1 = e.pageY- $(this).offset().top;
+							k = 1;
+							RemoveDiv();
+						});						
+						$("#tailor-canvas").bind("mousemove", function(e){
+							if(k == 1){
+								n.x2 = e.pageX- $(this).offset().left;
+								n.y2 = e.pageY- $(this).offset().top;
+								DrawTailor(n);
+							}
+						});						
+						$("#tailor-canvas").bind("mouseup", function(e){
+							if(k == 1){
+								n.x2 = e.pageX- $(this).offset().left;
+								n.y2 = e.pageY- $(this).offset().top;
+								DrawTailor(n);
+								k = 0;
+								CreateDiv(n);
+							}
+						});
+						$("#tailor-canvas").bind("mouseout", function(){
+							k = 0;
+							CreateDiv(n);
+						});
+						var DrawTailor = function(n){
+							var x = n.x1 > n.x2 ? n.x2 : n.x1,
+								y = n.y1 > n.y2 ? n.y2 : n.y1,
+								w = Math.abs(n.x2 - n.x1),
+								h = Math.abs(n.y2 - n.y1);							
+							cxt.clearRect(0, 0, _width, _height);
+							cxt.fillStyle = "rgba(0, 0, 0, 0.7)";
+							cxt.fillRect(0, 0, _width, _height);
+							cxt.clearRect(x, y, w, h);						
+						 	$("#tailor-x").val(x);
+						 	$("#tailor-y").val(y);
+						 	$("#tailor-w").val(w);
+						 	$("#tailor-h").val(h);						 
+						};
+						var CreateDiv = function(n){
+							var x = n.x1 > n.x2 ? n.x2 : n.x1,
+								y = n.y1 > n.y2 ? n.y2 : n.y1,
+								w = Math.abs(n.x2 - n.x1),
+								h = Math.abs(n.y2 - n.y1);
+							if(obj.find(".tailor-this").length == 0){
+								obj.append("<div class='tailor-this'></div>");
+							}
+							obj.find(".tailor-this").css({
+								"position": "absolute",
+								"left": x, 
+								"top": y,
+								"width": w,
+								"height": h,
+								"border": "1px dotted #CCC",
+								"box-sizing": "border-box"
+							});
+							var o = {x1: 0, y1: 0, x2: 0, y2: 0};
+							var p = 0;
+							$(".tailor-this").bind("mousedown", function(e){
+								o.x1 = e.pageX - $(this).offset().left;
+								o.y1 = e.pageY- $(this).offset().top;
+								p = 1;
+							});
+							$(".tailor-this").bind("mousemove", function(e){
+								if(p == 1){
+									o.x2 = e.pageX- $(this).offset().left;
+									o.y2 = e.pageY- $(this).offset().top;
+									cxt.clearRect(0, 0, _width, _height);
+									cxt.fillStyle = "rgba(0, 0, 0, 0.7)";
+									cxt.fillRect(0, 0, _width, _height);
+									cxt.clearRect(x + o.x2 - o.x1, y + o.y2 - o.y1, w, h);	
+								}
+							});
+							$(".tailor-this").bind("mouseup", function(e){
+								if(p == 1){
+									o.x2 = e.pageX- $(this).offset().left;
+									o.y2 = e.pageY- $(this).offset().top;
+									cxt.clearRect(0, 0, _width, _height);
+									cxt.fillStyle = "rgba(0, 0, 0, 0.7)";
+									cxt.fillRect(0, 0, _width, _height);
+									cxt.clearRect(x + o.x2 - o.x1, y + o.y2 - o.y1, w, h);	
+									p = 0;
+								}
+							});
+							$(".tailor-this").bind("mouseout", function(){
+								p = 0;
+							});
+						};
+						var RemoveDiv = function(){
+							if(obj.find(".tailor-this").length > 0){
+								obj.find(".tailor-this").remove();
+							}
+						};
+					}
+				}
+			}(jQuery));
+			$(function(){	
+//				var pic = document.createElement("img");
+//				pic.onload = pic.onerror = function(e){
+//					console.log(e.target);
+//				}
+//				pic.src = "img/1.png";
+
+				var mydiv = document.getElementById("mydiv");
+				var mytxt = document.getElementById("mytxt");
+				mydiv.ontouchmove = function(e){
+					mytxt.value = e.targetTouches.length;
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<input type="button" id="mybut" value="裁剪" />
+		<input type="text" id="mytxt" value="" />
+		<div id="mydiv" style=" width:auto; height: 300px;background: #51AAFF;">
+			
+		</div>
+		<!--<div class='tailor-cover'></div>
+		<div class="tailor-popup">
+			<div class="tailor-body">
+				<div class="tailor-content">
+					<div class="tailor-img">
+						<canvas id="tailor-canvas"></canvas>
+					</div>
+					<div class="tailor-txt">
+						<label>X：</label><input type="text" id="tailor-x" value="0" />
+						<label>Y：</label><input type="text" id="tailor-y" value="0" />
+						<label>W：</label><input type="text" id="tailor-w" value="100" />
+						<label>H：</label><input type="text" id="tailor-h" value="100" />
+					</div>
+					<div class="tailor-but">
+						<input type="button" id="tailor-ok" value="确定" />
+						<input type="button" id="tailor-no" value="取消" />
+					</div>
+				</div>
+			</div>
+		</div>-->
+	</body>
+</html>

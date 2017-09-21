@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>测试1</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style type="text/css">
+      .banner {
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        -webkit-transform-style: preserve-3d;
+      }
+      
+      .banner ul {
+        margin-left: -100%;
+        width: 600%;
+        height: auto;
+        display: table;
+      }
+      
+      .banner ul li {
+        display: table-cell;
+      }
+      
+      .banner ul li img {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.sliding.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        var _width = $(window).width(),
+          _length = $(".banner").find("li").length;
+        var n = 1;
+        $(".banner").touch({
+          start: function(data) {},
+          move: function(data) {
+            data.obj.find("ul").css("margin-left", -n * _width - (data.spc.x - data.epc.x));
+          },
+          end: function(data) {
+            if ((data.spc.x - data.epc.x) > 30) { //向右滑动
+              if (n >= _length - 2) {
+                data.obj.find("ul").stop().animate({
+                  "marginLeft": -(_length - 1) * _width
+                }, "fast", "linear", function() {
+                  data.obj.find("ul").css({
+                    "margin-left": -_width
+                  });
+                  n = 1;
+                });
+              } else {
+                n++;
+                data.obj.find("ul").stop().animate({
+                  "margin-left": -n * _width
+                }, "fast", "linear");
+              }
+            } else if ((data.spc.x - data.epc.x) < -30) { //向左滑动
+              if (n <= 1) {
+                data.obj.find("ul").stop().animate({
+                  "margin-left": 0
+                }, "fast", "linear", function() {
+                  data.obj.find("ul").css({
+                    "margin-left": -(_length - 2) * _width
+                  });
+                  n = _length - 2;
+                });
+              } else {
+                n--;
+                data.obj.find("ul").stop().animate({
+                  "margin-left": -n * _width
+                }, "fast", "linear");
+              }
+            } else {
+              data.obj.find("ul").stop().animate({
+                "margin-left": -n * _width
+              }, "fast", "linear");
+            }
+          }
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="banner">
+      <ul>
+        <li style="-webkit-transform: translateZ(380px);"><img src="img/4.png" width="400" height="650" alt="" /></li>
+        <li style="-webkit-transform: translateZ(380px);"><img src="img/1.png" width="400" height="650" alt="" /></li>
+        <li style="-webkit-transform: translateZ(380px);"><img src="img/2.png" width="400" height="650" alt="" /></li>
+        <li style="-webkit-transform: translateZ(380px);"><img src="img/3.png" width="400" height="650" alt="" /></li>
+        <li style="-webkit-transform: translateZ(380px);"><img src="img/4.png" width="400" height="650" alt="" /></li>
+        <li style="-webkit-transform: translateZ(380px);"><img src="img/1.png" width="400" height="650" alt="" /></li>
+      </ul>
+    </div>
+  </body>
+
+</html>

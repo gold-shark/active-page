@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>添加文章</title>
+		<link type="text/css" rel="stylesheet" href="../css/base.css" />
+		<link type="text/css" rel="stylesheet" href="../css/form.css" />
+		<link type="text/css" rel="stylesheet" href="../css/table.css" />
+	</head>
+
+	<body>
+		<div class="p30">
+			<div class="mb10">
+				<label class="mr10 label very-small tar"><i class="red-i">*</i>标题：</label>
+				<input class="text five-width" id="article-title" type="text" />
+			</div>
+			<div class="mb10">
+				<label class="mr10 label very-small tar">发布日期：</label>
+				<input class="text default date-text" id="issued-date" readonly="readonly" type="text" />
+			</div>
+			<div class="mb10">
+				<label class="mr10 label very-small tar"><i class="red-i">*</i>国家：</label>
+				<div class="five-width" style="display:inline-block; vertical-align:top;">
+					<p>
+						<input class="checkbox" id="all-countries" type="checkbox" />
+						<label class="mr20 for-label" for="all-countries">全部</label>
+					</p>
+					<p id="countries-items">
+						<input class="checkbox" id="dubai" type="checkbox" />
+						<label class="mr20 for-label" for="dubai">迪拜</label>
+						<input class="checkbox" id="america" type="checkbox" />
+						<label class="mr20 for-label" for="america">美国</label>
+						<input class="checkbox" id="japan" type="checkbox" />
+						<label class="mr20 for-label" for="japan">日本</label>
+						<input class="checkbox" id="australia" type="checkbox" />
+						<label class="mr20 for-label" for="australia">澳洲</label>
+					</p>
+				</div>
+			</div>
+			<div class="mb10">
+				<label class="mr10 label very-small tar"><i class="red-i">*</i>来源：</label>
+				<input class="text default" id="source" type="text" />
+			</div>
+			<div class="mb10">
+				<label class="mr10 label very-small tar"><i class="red-i">*</i>缩略图片：</label>
+				<div class="bs1" style="display:inline-block; width:160px; height:120px; vertical-align:text-top;">
+					<img id="article-picture" src="../img/2.jpg" />
+				</div>
+				<div class="ml20" style="display:inline-block; padding-top:91px; vertical-align:text-top;">
+					<a class="btn orange-btn very-small" id="upload-picture" href="javascript:void(0);">上传图片</a>
+					<label class="ml20 label green">图片大小：80 * 120</label>
+				</div>
+			</div>
+			<div class="mb10">
+				<label class="mr10 label very-small tar"><i class="red-i">*</i>文章导语：</label>
+				<textarea class="textarea" id="article-introduction" style="height:100px;"></textarea>
+			</div>
+			<div class="mb10">
+				<label class="mr10 label very-small tar"><i class="red-i">*</i>编辑内容：</label>
+				<textarea class="textarea" id="edit-content" style="height: 300px;"></textarea>
+			</div>
+			<div class="mt20 mb10">
+				<label class="mr10 label very-small">&nbsp;</label>
+				<input class="btn orange-btn very-small" id="ok-article" type="button" value="确定" />
+				<input class="ml10 btn very-small" id="cancel" type="button" value="取消" />
+				<input class="ml10 btn very-small" id="preview" type="button" value="预览" />
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="../js/layer/layer.js"></script>
+		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+		<script type="text/javascript" src="../js/kindeditor-4.1.10/kindeditor-min.js"></script>
+    <script type="text/javascript" src="../js/kindeditor-4.1.10/lang/zh_CN.js"></script>
+		<script type="text/javascript" src="../js/information-manage.js"></script>
+	</body>
+
+</html>

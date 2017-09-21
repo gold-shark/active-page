@@ -1,0 +1,20 @@
+body{margin: 0; padding: 0; font-size: 62.5%; font-family: "\5fae\8f6f\96c5\9ed1","Microsoft YaHei",helvetica,tahoma,arial,verdana,sans-serif;}
+ul,ol,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd,form,input,fieldset,select,textarea,object,embed{margin:0; padding:0;}
+input{-webkit-appearance:none; -webkit-transition-property:none;outline:none;}
+a{text-decoration: none;}
+.qfang-body{ background: url("../img/prize-bg.jpg") no-repeat scroll 0 0 / 100% auto #6f1225;}
+.qfang-body img{ width: 100%; height:auto; border:none; display: block;}
+.qfang-logo{margin:0.6em auto 0 auto; width: 20%; height: auto;}
+.qfang-prize{margin:2.0em auto; width:90%; height: auto;}
+.qfang-prize .prize-top{width: auto; height: 3.2em; background: url("../img/prize-record.png") no-repeat scroll 0 0 / 100% auto;}
+.qfang-prize .prize-miidle{margin-left: 0.75%; padding: 0 5%; width: auto; height: auto; background: #fff;}
+.prize-miidle p{font-size: 1.4em; color: #b10101; text-align: right; line-height: 2.5em;}
+.prize-miidle table{ margin-bottom:1.0em; width:100%; border-collapse: collapse; border: none;}
+.prize-miidle table tr{font-size:1.2em; line-height: 2.5em;}
+.prize-miidle table tr.tr0{ background: #f5f5f5;}
+.prize-miidle table tr.tr1{ background: #fff;}
+.prize-miidle table th{padding-left: 4%; background: #d6d6d6; text-align: left; font-weight: 400;}
+.prize-miidle table td{padding-left: 4%; word-wrap: normal; overflow: hidden; white-space:nowrap;text-overflow:ellipsis;}
+.prize-miidle table td.c{color: #999;}
+.prize-miidle .relust{margin: 0 auto; width: 40%; height: auto; display: block;}
+.qfang-prize .prize-bottom{width: auto; height: 1.5em; background: url("../img/prize-record.png") no-repeat scroll 0 100% / 100% auto;}

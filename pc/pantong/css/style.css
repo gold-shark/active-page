@@ -1,0 +1,41 @@
+html,body,div,p,ul,ol,dl,input,h1,h2,h3,h4,h5,h6,textarea,select,header,article,aside,nav,section,footer,hgroup,figcaption,figure{margin:0; padding:0;}
+div,header,article,aside,nav,section,footer,hgroup,figcaption,figure,ul,ol{width:auto; height:auto; display:block;}
+html{font-size:12px; font-family:"\5fae\8f6f\96c5\9ed1","Microsoft YaHei",helvetica,tahoma,arial,verdana,sans-serif;}
+body{font-size:100%; color:#333; background:#fff;}
+a{text-decoration:none; color:#333;}
+a:hover{color:#666;}
+ul,ol,dl{list-style-type:none;}
+img{border:none; display:block;}
+h1,h2,h3,h4,h5,h6,strong{font-size:100%; font-weight:normal;}
+em,i{font-style:normal;}
+input,textarea{border-radius:0; -webkit-appearance:none; outline:none;}
+input[type=radio]{border-radius:50%;}
+input[type=checkbox]{border-radius:30%;}
+table{border-collapse:collapse; border-spacing:0;}
+.fl{float:left;}
+.fr{float:right;}
+.clear:after{content:""; display:block; clear:both;}
+
+.header-body{height:53px; border-bottom:2px solid #f39920; background:#323232;}
+.article-body{background:#fff;}
+.article{margin:0 auto; width:1000px;}
+.article .title-body{padding:15px 0;}
+.article .title-body h2{font-size:24px; line-height:1.0em;}
+.article .content-body{background:#fff;}
+.article .content-body .muen{width:238px; min-height:800px; border:1px solid #ddd; background:#f7f7f7;}
+.article .content-body .muen .items{}
+.article .content-body .muen .items h3{padding:11px 20px; font-size:18px; line-height:1.0em; color:#fff; background:url(../img/icon-items.jpg) no-repeat #595959;}
+.article .content-body .muen .items h3.pc{background-position:195px 0;}
+.article .content-body .muen .items h3.app{background-position:195px -40px;}
+.article .content-body .muen .items p{border-bottom:1px solid #ddd;}
+.article .content-body .muen .items p a{padding:15px 20px; display:block; font-size:15px; line-height:1.0em;}
+
+.article .content-body .content{width:738px; min-height:800px; border:1px solid #ddd;}
+.article .content-body .content .tit{padding:10px 25px; border-bottom:1px solid #ddd; background:#f7f7f7;}
+.article .content-body .content .tit h3{font-size:18px; line-height:1.0em;}
+.article .content-body .content .txt{padding:15px 25px;}
+.article .content-body .content .txt p{line-height:2.0em;}
+.article .content-body .content .txt p.t{font-size:16px;}
+.article .content-body .content .txt p.q{margin-bottom:10px; font-size:14px;}
+.article .content-body .content .txt p.p{margin:10px 0;}
+.article .content-body .content .txt p.f{font-size:12px; color:#595959;}

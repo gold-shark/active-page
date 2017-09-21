@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+<script type="text/javascript" src="js/exif.js"></script>
+
+</head>
+<body>
+Upload a local file to read Exif data.
+<br/>
+<input id="file-input" type="file" />
+<br/><br/>
+
+Click the images to read Exif data. The first image tests reading single tags, while the other two simply show all available data.
+<br/><br/>
+Note: these examples will not work if running from a local file:// URL.
+<br/><br/>
+<img src="img/1111.jpg" id="img1" />
+<br/>
+<img src="img/can.png" id="img2" />
+<br/>
+<img src="img/popup.png" id="img3" /><br/>
+<br/>
+<button id="objecturltest">Object URL Test</button><br/>
+<br/>
+<button id="blobtest">Blob Test</button><br/>
+<br/>
+<button id="base64test">Base64 Test</button><br/>
+
+
+<script>
+document.getElementById("img1").onclick = function() {
+    EXIF.getData(this, function() {
+        var make = EXIF.getTag(this, "Make"),
+            model = EXIF.getTag(this, "Model");
+        alert("I was taken by a " + make + " " + model);
+    });
+}
+document.getElementById("img2").onclick = function() {
+    EXIF.getData(this, function() {
+        alert(EXIF.pretty(this));
+    });
+}
+document.getElementById("img3").onclick = function() {
+    EXIF.getData(this, function() {
+        alert(EXIF.pretty(this));
+    });
+}
+document.getElementById("file-input").onchange = function(e) {
+    var file = e.currentTarget.files[0];
+    var reader = new FileReader();
+    reader.onload = function (e) {
+    	var pic = new Image();
+    	pic.onload = function(){
+		    EXIF.getData(pic, function() {
+		        alert(EXIF.getTag(this,"Orientation"));
+		    });
+	    }
+    	pic.src = e.target.result;
+    	alert(e.target.result)
+    }
+    reader.readAsDataURL(file);
+}
+document.getElementById("base64test").onclick = function() {
+    var image = new Image();
+    image.onload = function() {
+        EXIF.getData(image, function() {
+            alert(EXIF.pretty(this));
+        });
+    };
+    image.src = "img/111.jpg"
+}
+document.getElementById("objecturltest").onclick = function() {
+    var http = new XMLHttpRequest();
+    http.open("GET", "DSCN0614_small.jpg", true);
+    http.responseType = "blob";
+    http.onload = function(e) {
+        if (this.status === 200) {
+            var image = new Image();
+            image.onload = function() {
+                EXIF.getData(image, function() {
+                    alert(EXIF.pretty(this));
+                });
+            };
+            image.src = URL.createObjectURL(http.response);
+        }
+    };
+    http.send();
+}
+document.getElementById("blobtest").onclick = function() {
+    var http = new XMLHttpRequest();
+    http.open("GET", "DSCN0614_small.jpg", true);
+    http.responseType = "blob";
+    http.onload = function(e) {
+        if (this.status === 200) {
+            EXIF.getData(http.response, function() {
+                alert(EXIF.pretty(this));
+            });
+        }
+    };
+    http.send();
+}
+</script>
+
+
+
+</body>
+</html>

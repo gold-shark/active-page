@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>图片延迟加载</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript">
+			$(function(){				
+				$(document).scroll(function(){
+					if(a){
+						clearTimeout(a);
+					}
+					var a = setTimeout(function(){
+						$(".pic").each(function(i, e){
+							if($(e).offset().top < $(document).scrollTop() + $(window).height()){
+								var pic = new Image();
+								pic.src = $(e).data("src");
+								pic.onload = function(){
+									$(e).attr("src", pic.src).removeClass("pic");
+								}
+							}
+						});
+					}, 10);
+				});
+			});
+		</script>		
+	</head>
+	<body>
+		<div style=" margin: 900px 0 0 100px; width:300px; height: 300px; background-color: rgba(0,0,0,0.5);">
+			<img class="pic" src="img/126x126.png" style="width: 100%; height: auto;" data-src="img/1231313.jpg"  />
+		</div>
+		<div style=" margin: 900px 0 0 100px; width:300px; height: 300px; background-color: rgba(0,0,0,0.5);">
+			<img class="pic" src="img/126x126.png" style="width: 100%; height: auto;" data-src="img/111.jpg"  />
+		</div>
+	</body>
+</html>

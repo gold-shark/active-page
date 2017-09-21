@@ -1,0 +1,191 @@
+.header-body {
+  background-color: #1a1d22;
+}
+
+.date-items a {
+  display: block;
+  padding: 5px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.date-items a.current {
+  color: #000;
+  background-color: #ffd100;
+}
+
+.date-items .date,
+.date-items .week {
+  display: block;
+  text-align: center;
+}
+
+.date-items .week {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.article-body {
+  padding-bottom: 54px;
+}
+
+.list-items {
+  margin-left: 10px;
+  padding: 10px 10px 10px 0;
+  border-bottom: 1px solid #3e4249;
+}
+
+.list-items:last-child {
+  border: none;
+}
+
+.list-items .left {
+  position: relative;
+  margin-right: 10px;
+  width: 100px;
+  overflow: hidden;
+}
+
+.list-items .left img {
+  width: 100px;
+  height: 75px;
+}
+
+.list-items .left p {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  z-index: 100;
+  padding: 2px 8px;
+  line-height: 1.5;
+  text-align: center;
+  background-color: #ffd100;
+}
+
+.list-items .center {
+  height: 75px;
+  overflow: hidden;
+}
+
+.list-items .center h5 {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.list-items .center h5 span {
+  display: block;
+}
+
+.list-items .center h5 em {
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffd100;
+}
+
+.list-items .center p {
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  color: rgba(255, 255, 255, .6);
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-line-clamp: 3;
+  -moz-line-clamp: 3;
+  line-clamp: 3;
+}
+
+.list-items .right {
+  margin-left: 10px;
+  width: 80px;
+}
+
+.list-items .right span {
+  display: block;
+  text-align: right;
+}
+
+.list-items .right em {
+  color: #ffd100;
+}
+
+.list-items .right .blue-btn {
+  display: block;
+  margin: 5px 0;
+  padding: 5px 10px;
+  text-align: center;
+  background-color: #3599fb;
+}
+
+.footer-body {
+  position: fixed;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 500;
+}
+
+.menu-body {
+  padding: 5px 0;
+  background-color: #1a1d22;
+}
+
+.menu-body a {
+  display: block;
+  width: 25%;
+  padding-top: 30px;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.menu-body a.current {
+  color: #ffd100;
+}
+
+.menu-body .gym {
+  background: url(../img/gym.png) 50% 0 no-repeat;
+  background-size: 30px auto;
+}
+
+.menu-body .group {
+  background: url(../img/group.png) 50% 0 no-repeat;
+  background-size: 30px auto;
+}
+
+.menu-body .trainer {
+  background: url(../img/trainer.png) 50% 0 no-repeat;
+  background-size: 30px auto;
+}
+
+.menu-body .health {
+  background: url(../img/health.png) 50% 0 no-repeat;
+  background-size: 30px auto;
+}
+
+.menu-body .gym.current {
+  background: url(../img/gym-c.png) 50% 0 no-repeat;
+  background-size: 30px auto;
+}
+
+.menu-body .group.current {
+  background: url(../img/group-c.png) 50% 0 no-repeat;
+  background-size: 30px auto;
+}
+
+.menu-body .trainer.current {
+  background: url(../img/trainer-c.png) 50% 0 no-repeat;
+  background-size: 30px auto;
+}
+
+.menu-body .health.current {
+  background: url(../img/health-c.png) 50% 0 no-repeat;
+  background-size: 30px auto;
+}

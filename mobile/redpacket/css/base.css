@@ -1,0 +1,35 @@
+html,body,div,p,ul,ol,dl,input,h1,h2,h3,h4,h5,h6,textarea,select,header,article,aside,nav,section,footer,hgroup,figcaption,figure{margin:0; padding:0;}
+div,header,article,aside,nav,section,footer,hgroup,figcaption,figure,ul,ol{width:auto; height:auto; display:block;}
+html{font-size:62.5%; font-family:"\5fae\8f6f\96c5\9ed1","Microsoft YaHei",helvetica,tahoma,arial,verdana,sans-serif;}
+body{font-size:100%; background:#fff;}
+a{text-decoration:none; line-height:1em; -webkit-tap-highlight-color:rgba(0,0,0,0);}
+ul,ol,dl{list-style-type:none;}
+img{display:block; width:100%; border:none;}
+h1,h2,h3,h4,h5,h6,strong{font-size:100%; font-weight:normal; line-height:1em;}
+em,i{font-style:normal;}
+input,textarea{border-radius:0; line-height:1.2em; -webkit-appearance:none; outline:none; box-sizing:border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);}
+table{width:100%; border-collapse:collapse; border-spacing:0;}
+.clear:after{display:block; content:""; clear:both;}
+.fl{float:left;}
+.fr{float:right;}
+.ellips{overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.ellipss{overflow:hidden; text-overflow:ellipsis; display:-webkit-box; display:-moz-box; display:box; -webkit-box-orient:vertical; -moz-box-orient:vertical; box-orient:vertical; -webkit-line-clamp:2; -moz-line-clamp:2; line-clamp:2;}
+.horizontal{display:-webkit-box; display:-moz-box; display:box;}
+.vertical{display:-webkit-box; display:-moz-box; display:box; -webkit-box-orient:vertical; -moz-box-orient:vertical; box-orient:vertical;}
+.pack-align{display:-webkit-box; display:-moz-box; display:box; -webkit-box-align:center; -moz-box-align:center; box-align:center; -webkit-box-pack:center; -moz-box-pack:center; box-pack:center;}
+.flex{-webkit-box-flex:1; -moz-box-flex:1; box-flex:1;}
+.fixed{position:fixed; top:0; right:0; bottom:0; left:0;}
+.absolute{position:absolute; top:0; right:0; bottom:0; left:0;}
+.translucent{position:fixed; top:0; right:0; bottom:0; left:0; z-index:1000; display:none; background:rgba(0,0,0,.7);}
+
+.section{position:relative;}
+.starts{position:absolute; top:75%; left:18%; display:block; width:66%;}
+.stop{position:absolute; top:85%; left:18%; display:block; width:66%;}
+
+.popup{position:absolute; top:50%; left:17.5%; width:65%; -webkit-transform:translateY(-50%); -moz-transform:translateY(-50%) transform:translateY(-50%);}
+.text-body{position:absolute; top:62%; left:5%; width:90%; height:12%;}
+.text{display:block; padding:0 3%; font-size:1.6em; border:none; box-sizing:border-box;}
+.login{position:absolute; top:78%; left:5%; width:90%;}
+.close{position:absolute; top:0; right:0; width:2em; height:2em; border-radius:50%; background:#fff;}
+.close:before{position:absolute; top:.4em; left:.95em; content:""; width:.1em; height:1.2em; background:#333; -webkit-transform:rotateZ(45deg);}
+.close:after{position:absolute; top:.4em; left:.95em; content:""; width:.1em; height:1.2em; background:#333; -webkit-transform:rotateZ(-45deg);-webkit-transform:rotateZ(-45deg); transform:rotateZ(-45deg);}

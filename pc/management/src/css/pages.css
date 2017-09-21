@@ -1,0 +1,50 @@
+/* pages style */
+.pages {
+  height: 30px;
+}
+
+.page-record p {
+  line-height: 30px;
+}
+
+.page-record em {
+  padding: 0 3px;
+  color: #f90;
+}
+
+.page-list span, .page-list a {
+  margin-left: 4px;
+  padding: 5px 10px;
+  height: 30px;
+  line-height: 30px;
+  color: #999;
+  cursor: default;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+.page-list a {
+  color: #333;
+  cursor: pointer;
+}
+
+.page-list a:hover {
+  border: 1px solid #ddd;
+  border-color: #f90;
+}
+
+.page-list i {
+  margin-left: 4px;
+  padding: 5px 10px;
+  height: 30px;
+  line-height: 30px;
+  color: #999;
+  cursor: default;
+}
+
+.page-list .current {
+  color: #fff;
+  border: 1px solid #ddd;
+  border-color: #f90;
+  background: #f90;
+}

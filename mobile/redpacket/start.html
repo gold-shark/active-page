@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>抢红包</title>
+		<link type="text/css" rel="stylesheet" href="css/base.css" />
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".starts").on("click", function(){
+					$(".translucent").show();
+				});
+				$(".close").on("click", function(){
+					$(this).parents(".translucent").hide();
+				});
+			});
+		</script>
+	</head>
+	<body style="background:#f92a2a;">
+		<section class="section">
+			<img src="img/bg1.png" />
+			<a href="javascript:void(0);" class="starts"><img src="img/1.png"/></a>
+			<a href="javascript:void(0);" class="stop"><img src="img/2.png"/></a>
+		</section>
+		<div class="translucent">
+			<div class="popup">
+				<img src="img/pbg.png" />
+				<p class="pack-align text-body"><input type="password" placeholder="请输入密码" class="flex text" /></p>
+				<a href="javascript:void(0);" class="login"><img src="img/3.png"/></a>
+				<a href="javascript:void(0);" class="close"></a>
+			</div>
+		</div>
+	</body>
+</html>

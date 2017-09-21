@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>百万Q币等你赢·点房成金</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript">			
+			$(function(){
+				var n = 0, //当前页码
+					m = 0, //之前页码
+					b = false, //移动状态
+					wid = $(window).width(), //宽
+					heg = $(window).height(), //高
+					leg = 2, //长度
+					startPosition = {x: 0, y: 0}, //开始位置
+					endPosition = {x: 0, y: 0}; //结束位置					
+				$(".game-home,.game-rule").css({"width": wid, "height": heg});
+				var animas = function(n){
+					if(n === 0){
+						$(".game-home .pic2").addClass("animas1");
+						setTimeout(function(){
+							$(".game-home .pic2").removeClass("animas1");
+						},1000);
+					} else {
+						$(".game-rule .pic2").addClass("animas3");
+						setTimeout(function(){
+							$(".game-rule .pic2").removeClass("animas3");
+						},1000);
+					}
+				};
+				animas(0);
+				/* 触控事件 */
+				$(".game-body").on("touchstart", function(e){
+					$.extend(startPosition, {x: e.touches[0].pageX, y: e.touches[0].pageY});
+				});
+				$(".game-body").on("touchmove", function(e){					
+					e.preventDefault();
+					b = true;
+					$.extend(endPosition, {x: e.touches[0].pageX, y: e.touches[0].pageY});
+					$(".game-list").animate({"translateY": (-n * heg + endPosition.y - startPosition.y)+"px"}, 10);					
+				});
+				$(".game-body").on("touchend", function(e){
+					if(b){
+						b = false;
+						if(endPosition.y - startPosition.y > 30){
+							if(n > 0){
+								n--;
+							}
+						} else if(endPosition.y - startPosition.y < -30){
+							if(n < leg - 1){
+								n++;
+							}
+						};
+						$(".game-list").animate({"translateY": -n * heg +"px"}, 100);
+						if(n != m){
+							animas(n);
+							m = n;
+						}
+					}
+				});
+				//tap
+				$(".game-home .pic4").on("tap", function(){
+					n = 1;
+					$(".game-list").animate({"translateY": -n * heg +"px"}, 100);
+				});
+				$(".game-home .pic3").on("tap", function(){
+					if(isWeiXin()){
+						$("#remind").css({"display": "block"});
+					}
+				});
+				$("#remind").on("tap", function(){
+					$(this).css({"display": "none"});
+				});
+				
+				function isWeiXin(){ 
+					var ua = window.navigator.userAgent.toLowerCase(); 
+					if(ua.match(/MicroMessenger/i) == 'micromessenger'){ 
+						return true; 
+					}else{ 
+						return false; 
+					} 
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div class="game-body">
+			<div style="display:none;"><img src="img/share.png" width="300" height="300" /></div>
+			<div class="game-list">
+				<div class="game-home">
+					<div class="pic1"><img src="img/3.png" /></div>
+					<div class="pic2"><img src="img/2.png" /></div>
+					<div class="pic3"><a href="javascript:void(0);"><img src="img/4.png" /></a></div>
+					<div class="pic4 animas2"><img src="img/5.png" /></div>
+				</div>
+				<div class="game-rule">
+					<div class="pic1"><img src="img/7.png" /></div>
+					<div class="pic2"><a href="javascript:void(0);"><img src="img/8.gif" /></a></div>
+				</div>
+			</div>
+		</div>
+		<div class="translucent" id="remind">
+			<div class="remind"><img src="img/open.png"/></div>
+		</div>
+		<!-- Google Tag Manager -->
+		<noscript>
+			<iframe src="//www.googletagmanager.com/ns.html?id=GTM-5NGTRL"
+				height="0" width="0" style="display: none; visibility: hidden"></iframe>
+		</noscript>
+		<script>
+			(function(w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({
+					'gtm.start' : new Date().getTime(),
+					event : 'gtm.js'
+				});
+				var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', 'GTM-5NGTRL');
+		</script>
+		<!-- End Google Tag Manager -->
+	</body>
+</html>

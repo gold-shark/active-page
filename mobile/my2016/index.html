@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta itemprop="name" content="Q房日记-我的2016" />
+    <meta itemprop="image" content="http://agent.qfang.com/agent-management/mobile/my2016/img/share.jpg" />
+    <meta itemprop="description" name="description"  content="2016年你一定不知道！原来我在Q房网有这么耀眼的瞬间！快来围观我的Q房日记吧！" />
+    <title>Q房日记-我的2016</title>
+    <link type="text/css" rel="stylesheet" href="css/font.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery.phone.js"></script>
+    <script src="js/jquery.book.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/index.js"></script>
+  </head>
+
+  <body>
+    <section style="display:none;">
+      <img src="img/share.jpg" />
+    </section>
+    <section class="loading">
+      <div class="progress">
+        <div class="prog"></div>
+      </div>
+    </section>
+    <section class="box-align body">
+      <div class="book-body">
+        <div class="pages-body cover">
+          <div class="open-page">
+            <img src="img/open-page.png" />
+          </div>
+          <div class="arrows hide" data-anima="arrows-anima">
+            <img src="img/arrows.png" />
+          </div>
+          <div class="laevo hide" data-anima="laevo-anima">
+            <img src="img/finger.png" />
+          </div>
+          <div class="clock hide" data-anima="clock-anima">
+            <img src="img/clock.png" />
+          </div>
+          <img src="img/cover.png" />
+        </div>
+        <div class="pages-body one">
+          <div class="content">
+            <p class="txt hide" data-anima="one-text1-anima"><em id="entryDate">XXXX年XX月XX日</em>我在Q房网开始了崭新的一天。</p>
+            <p class="txt hide" data-anima="one-text2-anima"><em id="firstCustomerDate">XXXX年XX月XX日</em>我在Q房网迎来了今年的第一个客户。</p>
+            <p class="txt hide" data-anima="one-text4-anima">这一年，我与<em id="newCustomerCount">XX</em>位素不相识的客户成为了朋友。</p>
+          </div>
+          <div class="pattern hide" data-anima="pattern-anima">
+            <img src="img/pattern1.png" />
+          </div>
+          <div class="head hide" data-anima="head-anima">
+            <img src="img/head.png" />
+          </div>
+          <img src="img/page.png" />
+        </div>
+        <div class="pages-body two">
+          <div class="content">
+            <p class="txt hide" data-anima="two-text1-anima"><em>2016</em>年，我与客户结伴同行，<em id="leadCount">XX</em>次的出发只为找到客户心中最温馨的家。</p>
+            <p class="txt hide" data-anima="two-text2-anima">这一年、共有<em id="cusDealCount">XX</em>位客户在我的帮助下接过新家的钥匙。</p>
+            <p class="txt hide" data-anima="two-text3-anima">他们的信任让我忘记了，曾经踏破了多少双鞋。</p>
+          </div>
+          <div class="head1 hide" data-anima="head1-anima">
+            <img src="img/head1.png" />
+            <div class="key hide" data-anima="key-anima">
+              <img src="img/key.png" />
+            </div>
+          </div>
+          <div class="head2 hide" data-anima="head2-anima">
+            <img src="img/head2.png" />
+          </div>
+          <div class="shoe1 hide" data-anima="shoe1-anima">
+            <img src="img/shoe1.png" />
+          </div>
+          <div class="shoe2 hide" data-anima="shoe2-anima">
+            <img src="img/shoe2.png" />
+          </div>
+          <img src="img/page.png" />
+        </div>
+        <div class="pages-body three">
+          <div class="content">
+            <p class="txt hide" data-anima="three-text1-anima"><em>2016</em>年，我与战友并肩战<em id="cooCount">XX</em>次，成功合作<em id="cooDealCount">XX</em>次。
+            </p>
+            <p class="txt hide" data-anima="three-text2-anima">在Q房，我愿意义无反顾地将后背交给我的伙伴。</p>
+          </div>
+          <div class="seal hide" data-anima="seal-anima">
+            <img src="img/seal.png" />
+          </div>
+          <div class="handshake hide" data-anima="handshake-anima">
+            <img src="img/handshake.png" />
+          </div>
+          <img src="img/page.png" />
+        </div>
+        <div class="pages-body four">
+          <div class="content">
+            <p class="txt hide" data-anima="four-text1-anima"><em id="firstHouseDate">XXXX年XX月XX日</em>，我在Q房网放了今年第一个盘。</p>
+            <p class="txt hide" data-anima="four-text2-anima">满怀着理想与希望，就让我吹响今年前进的第一声号角。</p>
+          </div>
+          <div class="horn hide" data-anima="horn1-anima">
+            <img src="img/horn1.png" />
+          </div>
+          <div class="horn hide" data-anima="horn2-anima">
+            <img src="img/horn2.png" />
+          </div>
+          <div class="picture1 hide" data-anima="picture1-anima">
+            <img src="img/picture1.png" />
+          </div>
+          <div class="picture2 hide" data-anima="picture2-anima">
+            <img src="img/picture2.png" />
+          </div>
+          <div class="picture3 hide" data-anima="picture2-anima">
+            <img src="img/picture2.png" />
+          </div>
+          <div class="head hide" data-anima="head3-anima">
+            <img src="img/head.png" />
+          </div>
+          <img src="img/page.png" />
+        </div>
+        <div class="pages-body five">
+          <div class="content">
+            <p class="txt hide" data-anima="five-text1-anima"><em>2016</em>年，我已超越全国<em id="moreThanPer">XX%</em>的经纪人，胜不骄，败不馁，能够打败我的只有我自己。</p>
+          </div>
+          <div class="charts hide" id="charts" data-anima="charts-anima"></div>
+          <a class="see-details hide" id="see-details" data-mark="查看成交能力" data-anima="see-details-anima" href="javascript:void(0);">
+            <img src="img/see-details.png" />
+          </a>
+          <img src="img/page.png" />
+        </div>
+        <div class="pages-body six">
+          <div class="content">
+            <p class="txt hide" data-anima="six-text1-anima"><em>2016</em>年，在我手指缝中共溜走盘源<em id="houseInvalidCount">XX</em>套，共被跳出维护盘<em id="mainTainMissCount">XX</em>个。</p>
+            <p class="txt hide" data-anima="six-text2-anima">那些稍不留神，让我丢掉了<em id="customerPublicCount">XX</em>个客户，转公后被成交<em id="customerPublicDealCount">XX</em>个。</p>
+            <p class="txt hide" data-anima="six-text3-anima">如果当初再多努力一点，或许遗憾会少一些。</p>
+          </div>
+          <div class="winebottle hide" data-anima="winebottle-anima">
+            <img src="img/winebottle.png" />
+          </div>
+          <div class="cry hide" data-anima="cry1-anima">
+            <img src="img/cry1.png" />
+          </div>
+          <div class="cry hide" data-anima="cry2-anima">
+            <img src="img/cry2.png" />
+          </div>
+          <div class="cry hide" data-anima="cry3-anima">
+            <img src="img/cry3.png" />
+          </div>
+          <div class="cry hide" data-anima="cry4-anima">
+            <img src="img/cry4.png" />
+          </div>
+          <div class="cry hide" data-anima="cry5-anima">
+            <img src="img/cry5.png" />
+          </div>
+          <img src="img/page.png" />
+        </div>
+        <div class="pages-body seven">
+          <div class="content">
+            <p class="txt hide" data-anima="seven-text1-anima"><em id="firstDealDate">XXXX年XX月XX日</em>，我在Q房网成交了今年第一单。</p>
+            <p class="txt hide" data-anima="seven-text2-anima"><em id="bigDealDate">XXXX年XX月XX日</em>，来自<em class="family" id="bigDealGardenName">XX</em>小区，我成交了今年的最大单。</p>
+            <p class="txt hide" data-anima="seven-text3-anima">“老板，来份鲍鱼肠粉，加个荷包蛋”！</p>
+          </div>
+          <div class="sun hide" data-anima="sun1-anima">
+            <img src="img/sun1.png" />
+          </div>
+          <div class="sun hide" data-anima="sun2-anima">
+            <img src="img/sun2.png" />
+          </div>
+          <div class="rice hide" data-anima="rice-anima">
+            <img src="img/rice.png" />
+          </div>
+          <div class="poached-egg hide" data-anima="poached-egg-anima">
+            <img src="img/poached-egg.png" />
+          </div>
+          <img src="img/page.png" />
+        </div>
+        <div class="pages-body eight">
+          <div class="content">
+            <p class="txt hide" data-anima="eight-text1-anima">这一年，我成交的房源总面积<em id="dealAreaSum">XX</em>㎡，覆盖<em id="dealAreaBas">XX</em>个篮球场。</p>
+            <div class="basketball-court hide" data-anima="basketball-court-anima">
+              <img src="img/basketball-court.png" />
+            </div>
+            <p class="txt hide" data-anima="eight-text2-anima">这一年，我成交的房源总价值<em id="dealValueSum">XX</em>万可以买<em id="dealValueFer">XX</em>辆法拉利。</p>
+            <div class="car hide" data-anima="car-anima">
+              <img src="img/car.png" />
+            </div>
+            <p class="txt hide" data-anima="eight-text3-anima">这一年，<em id="dialCount">XX</em>次的电话拨打， <em id="followCount">XX</em>次的跟进敲写，
+              <!--<em id="loginCount">XX</em>次的系统登录，-->都是为了让我遇见明天更好的自己。</p>
+          </div>
+          <img src="img/page.png" />
+        </div>
+        <div class="pages-body nine">
+          <div class="content">
+            <p class="txt hide" data-anima="nine-text1-anima"><em>2016</em>这一年</p>
+            <p class="txt hide" data-anima="nine-text2-anima">也许，难免还会有些许遗憾。</p>
+            <p class="txt hide" data-anima="nine-text3-anima">也许，再往前就是一片蔚蓝。</p>
+            <p class="txt hide" data-anima="nine-text4-anima">也许，不会像当初一般多愁善感。</p>
+            <p class="txt hide" data-anima="nine-text5-anima">也许，我比从前又多了一份勇敢。</p>
+            <p class="txt hide" data-anima="nine-text6-anima">也许生活除了也许，还有更多的期盼。</p>
+          </div>
+          <div class="person hide" data-anima="person-anima">
+            <img src="img/person.png" />
+          </div>
+          <div class="cloud1 hide" data-anima="cloud1-anima">
+            <img src="img/cloud1.png" />
+          </div>
+          <div class="cloud2 hide" data-anima="cloud2-anima">
+            <img src="img/cloud.png" />
+          </div>
+          <div class="cloud3 hide" data-anima="cloud3-anima">
+            <img src="img/cloud.png" />
+          </div>
+          <div class="cloud4 hide" data-anima="cloud4-anima">
+            <img src="img/cloud.png" />
+          </div>
+          <img src="img/page.png" />
+        </div>
+        <img src="img/book.png" />
+      </div>
+      <div class="back-book" style="display:none;">
+        <div class="logo">
+          <img src="img/logo.png" />
+        </div>
+        <div class="content">
+          <input id="personId" type="hidden" />
+          <p>我是Q房网经纪人<em class="family" id="personName">XXX</em></p>
+        </div>
+        <div class="txt">
+          <img src="img/text.png" />
+        </div>
+        <a class="see-diary" id="see-diary" data-mark="查看我的日记" href="javascript:void(0);" style="display:none;">
+          <img src="img/see-diary.png" />
+        </a>
+        <a class="flaunt" id="flaunt" data-mark="向同事炫耀一下" href="javascript:void(0);" style="display:none;">
+          <img src="img/flaunt.png" />
+        </a>
+        <a class="keep-diary" id="keep-diary" data-mark="喊同事写日记" href="javascript:void(0);" style="display:none;">
+          <img src="img/keep-diary.png" />
+        </a>
+        <img src="img/back-book.png" />
+      </div>
+    </section>
+    <section class="music">
+      <div class="music-but">
+        <img src="img/music2.png" class="music-bg bg" />
+        <a href="javascript:void(0);"><img src="img/music1.png" /></a>
+      </div>
+      <audio id="music-audio" class="music-audio" autoplay="autoplay" preload="auto" loop="loop">
+        <source src="img/music.mp3" type="audio/mp3" />
+        <source src="img/music.ogg" type="audio/ogg" />
+        <source src="img/music.wav" type="audio/vnd.wave" />
+      </audio>
+    </section>
+    <section class="overlay" id="share">
+      <div class="share">
+        <img src="img/share.png" />
+      </div>
+    </section>
+    <section class="box-align popup-body" style="display:none;">
+      <div class="content-body">
+        <a class="close" data-mark="close" href="javascript:void(0);">
+          <img src="img/close.png" />
+        </a>
+        <div class="content">
+          <div class="box items">
+            <p class="flex">我是<em id="cusDealPointDesc">XXXX</em></p>
+          </div>
+          <div class="box items">
+            <p class="flex">我的成交能力：</p>
+            <p class="rig"><em id="cusDealPoint">XX</em>分</p>
+          </div>
+          <div class="box items">
+            <p class="flex">我的全年成交数：</p>
+            <p class="rig"><em id="cusDealCount1">XX</em>单</p>
+          </div>
+          <div class="box items">
+            <p class="flex">我的平均成交周期：</p>
+            <p class="rig"><em id="avgCusDealDay">XX</em>天</p>
+          </div>
+          <a class="next" data-mark="查看接盘能力" href="javascript:void(0);">
+            <img src="img/see-down.png" />
+          </a>
+        </div>
+        <div class="content" style="display:none;">
+          <div class="box items">
+            <p class="flex">我是<em id="houseRecPointDesc">XXXX</em></p>
+          </div>
+          <div class="box items">
+            <p class="flex">我的接盘能力：</p>
+            <p class="rig"><em id="houseRecPoint">XX</em>分</p>
+          </div>
+          <div class="box items">
+            <p class="flex">我的接盘总数：</p>
+            <p class="rig"><em id="receiveHouseCount">XX</em>个</p>
+          </div>
+          <div class="box items">
+            <p class="flex">我的接盘成交数：</p>
+            <p class="rig"><em id="dealHouseCount">XX</em>个</p>
+          </div>
+          <div class="box items">
+            <p class="flex">我的平均成交时间：</p>
+            <p class="rig"><em id="avgDealDay">XX</em>天</p>
+          </div>
+          <a class="next" data-mark="查看实勘能力" href="javascript:void(0);">
+            <img src="img/see-down.png" />
+          </a>
+        </div>
+        <div class="content" style="display:none;">
+          <div class="box items">
+            <p class="flex">我是<em id="surveryPointDesc">XXXX</em></p>
+          </div>
+          <div class="box items">
+            <p class="flex">我的实勘能力：</p>
+            <p class="rig"><em id="surveryPoint">XX</em>分</p>
+          </div>
+          <div class="box items">
+            <p class="flex">我的实勘总数：</p>
+            <p class="rig"><em id="surveryCount">XX</em>个</p>
+          </div>
+          <div class="box items">
+            <p class="flex">我的实勘成交数：</p>
+            <p class="rig"><em id="surveryDealCount">XX</em>个</p>
+          </div>
+          <div class="box items">
+            <p class="flex">我的实勘图数量：</p>
+            <p class="rig"><em id="surveryImageCount">XX</em>张</p>
+          </div>
+          <div class="box items">
+            <p class="flex">我的实勘图占比：</p>
+            <p class="rig"><em id="surveryImageRatio">XX</em>%</p>
+          </div>
+          <a class="next" data-mark="查看维护能力" href="javascript:void(0);">
+            <img src="img/see-down.png" />
+          </a>
+        </div>
+        <div class="content" style="display:none;">
+          <div class="box items">
+            <p class="flex">我的维护能力：</p>
+            <p class="rig"><em id="mainTainPoint">XX</em>分</p>
+          </div>
+          <div class="box items">
+            <p class="flex">我的维护总数：</p>
+            <p class="rig"><em id="mainTainCount">XX</em>个</p>
+          </div>
+          <div class="box items">
+            <p class="flex">我的维护成交数：</p>
+            <p class="rig"><em id="mainTainDealCount">XX</em>个</p>
+          </div>
+          <div class="box items">
+            <p class="flex">我的平均维护时间：</p>
+            <p class="rig"><em id="avgMainTainDay">XX</em>时</p>
+          </div>
+          <div class="box items">
+            <p class="flex">我的维护主动跳出数：</p>
+            <p class="rig"><em id="mainTainGiveUpCount">XX</em>个</p>
+          </div>
+          <div class="box items">
+            <p class="flex">我的维护被动跳出数：</p>
+            <p class="rig"><em id="mainTainCancelCount">XX</em>个</p>
+          </div>
+          <a class="next" data-mark="查看钥匙能力" href="javascript:void(0);">
+            <img src="img/see-down.png" />
+          </a>
+        </div>
+        <div class="content" style="display:none;">
+          <div class="box items">
+            <p class="flex">我是<em id="keyPointDesc">XXXX</em></p>
+          </div>
+          <div class="box items">
+            <p class="flex">我的钥匙能力：</p>
+            <p class="rig"><em id="keyPoint">XX</em>分</p>
+          </div>
+          <div class="box items">
+            <p class="flex">我的钥匙总数：</p>
+            <p class="rig"><em id="keyCount">XX</em>个</p>
+          </div>
+          <div class="box items">
+            <p class="flex">我的钥匙成交数：</p>
+            <p class="rig"><em id="keyDealCount">XX</em>个</p>
+          </div>
+          <a class="next-close" data-mark="关闭" href="javascript:void(0);">
+            <img src="img/next-close.png" />
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+
+</html>

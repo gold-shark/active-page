@@ -1,0 +1,212 @@
+.banner {
+  overflow: hidden;
+}
+
+.banner ul li {
+  height: 200px;
+}
+
+.article-body {
+  padding-bottom: 54px;
+}
+
+.base-info {
+  padding: 10px;
+}
+
+.base-info p {
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.base-info span {
+  display: block;
+}
+
+.base-info em {
+  color: #ffd100;
+}
+
+.subimt-body {
+  padding: 10px;
+}
+
+.subimt-body .subimt {
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.5;
+  text-align: center;
+  background-color: #3599fb;
+  border: 1px solid #3599fb;
+  border-radius: 5px;
+}
+
+.subimt-body p {
+  padding: 10px 0;
+  font-size: 12px;
+  color: #999;
+  text-align: right;
+  line-height: 1.5;
+}
+
+.subimt-body .more {
+  margin-left: 5px;
+  color: #ffd100;
+}
+
+.items-list {
+  margin-top: 10px;
+}
+
+.items-list .title {
+  padding: 10px;
+  background-color: #1a1d22;
+}
+
+.items-list .title p {
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.items-list .content {
+  padding: 10px;
+}
+
+.items-list .content p {
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.teacher-info .pic {
+  margin-right: 10px;
+}
+
+.teacher-info .pic img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.teacher-info .info h5 {
+  font-size: 16px;
+  color: #ffd100;
+  line-height: 1.5;
+}
+
+.teacher-info .info p {
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.items-list .map span {
+  display: block;
+}
+
+.items-list .map a {
+  display: block;
+  color: #ffd100;
+}
+
+.items-list .steps {
+  display: inline-block;
+  width: 12em;
+  padding-left: 1em;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #f60;
+}
+
+.items-list .line {
+  position: relative;
+  margin: 5px 6.5em 10px;
+  width: 2px;
+  height: 30px;
+  background-color: #fff;
+}
+
+.items-list .line:after {
+  position: absolute;
+  bottom: -1px;
+  left: -4px;
+  display: block;
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+  -webkit-transform: rotateZ(45deg);
+}
+
+.footer-body {
+  position: fixed;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 500;
+}
+
+.menu-body {
+  padding: 5px 0;
+  background-color: #1a1d22;
+}
+
+.menu-body a {
+  display: block;
+  width: 25%;
+  padding-top: 30px;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.menu-body a.current {
+  color: #ffd100;
+}
+
+.menu-body .gym {
+  background: url(../img/gym.png) 50% 0 no-repeat;
+  background-size: 30px auto;
+}
+
+.menu-body .group {
+  background: url(../img/group.png) 50% 0 no-repeat;
+  background-size: 30px auto;
+}
+
+.menu-body .trainer {
+  background: url(../img/trainer.png) 50% 0 no-repeat;
+  background-size: 30px auto;
+}
+
+.menu-body .health {
+  background: url(../img/health.png) 50% 0 no-repeat;
+  background-size: 30px auto;
+}
+
+.menu-body .gym.current {
+  background: url(../img/gym-c.png) 50% 0 no-repeat;
+  background-size: 30px auto;
+}
+
+.menu-body .group.current {
+  background: url(../img/group-c.png) 50% 0 no-repeat;
+  background-size: 30px auto;
+}
+
+.menu-body .trainer.current {
+  background: url(../img/trainer-c.png) 50% 0 no-repeat;
+  background-size: 30px auto;
+}
+
+.menu-body .health.current {
+  background: url(../img/health-c.png) 50% 0 no-repeat;
+  background-size: 30px auto;
+}

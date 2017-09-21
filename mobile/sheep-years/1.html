@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<title>羊年赢大奖</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#share").on("tap", function(){
+					var reg = /^\d{6}$/;
+					if($("#code").val() == ""){
+						alert("请输入邀请码");
+					} else if(!reg.test($("#code").val())){
+						alert("邀请码有误");
+					} else {
+						window.location.href = "2.html?inviteCode=" + $("#code").val();
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="instruc-body">
+			<div class="text">
+				<input type="tel" id="code" placeholder="请输入师傅带你飞的邀请码" />
+			</div>
+			<div class="share">
+				<a href="javascript:void(0);" id="share"><img src="img/7.png"/></a>
+				<p><img src="img/8.png"/></p>
+			</div>
+			<div class="footer">
+				<a href="http://h5.qfang.com/fly-wx/"><img src="img/5.png"/></a>
+			</div>
+		</div>
+		<div class="translucent"></div>
+		<div class="instruc-popup">
+			<img src="img/9.png" />
+		</div>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+.items-list {
+  margin: 10px 0;
+  padding: 0 15px;
+  background-color: #6f7783;
+}
+
+.items-list .title {
+  padding: 10px 0;
+  border-bottom: 1px solid #9da6b4;
+}
+
+.items-list .title p{
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+}
+
+.items-list .content {
+  padding: 10px 0;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.items-list .content .box {
+  margin-bottom: 5px;
+}
+
+.items-list .content label {
+  display: block;
+  color: #aaa;
+}
+
+.items-list .content span {
+  display: block;
+}
+
+.items-list .content em {
+  color: #ffd100;
+}

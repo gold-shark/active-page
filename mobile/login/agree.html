@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>软件协议</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<style type="text/css">
+			.banner-body{padding:10px;}
+			.banner{position:relative; overflow:hidden;}
+			.banner ul{overflow:hidden;}
+			.banner ul li{position:relative; float:left;}
+			.banner ul li a{display:block;}
+			.banner ul li img{width:100%; height:auto; display:block; border-radius:0.5rem;}
+			.banner .items{position:absolute; top:auto; right:0; bottom:5px; left:0;}
+			.banner .items p{text-align:center; line-height:1.0em;}
+			.banner .items p span{display:inline-block; margin:0 0.5rem; width:10px; height:10px; border-radius:50%; background:rgba(0,0,0,0.7);}
+			.banner .items p span.current{background:rgba(255,255,255,0.9);}
+		</style>
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				(function(){
+					var n = 0, //当前页码
+						b = false, //移动状态
+						wid = $(".banner").width(), //宽
+						heg = $(".banner").height(), //高
+						leg = $(".banner").find("li").length, //长度
+						startPosition = {x: 0, y: 0}, //开始位置
+						endPosition = {x: 0, y: 0}, //结束位置
+						startTime = 0, //开始时间
+						endTime = 0; //结束时间
+					if(leg > 1){
+						$(".banner").find("ul").prepend($(".banner").find("li").last().clone()).append($(".banner").find("li").eq(1).clone());
+						$(".banner").find("ul").css({"width": wid * (leg + 2), "margin-left": -(n + 1) * wid});
+						$(".banner").find("li").css({"width": wid});
+						for(var i = 0; i < leg; i++){
+							$(".items").find("p").append("<span></span>");
+						}
+						$(".items").find("span").first().addClass("current");
+						var autoplay = setInterval(function(){
+							if(n < leg){
+								n++;
+							}
+							$(".items").find("span").removeClass("current").eq(n).addClass("current");
+							$(".banner").find("ul").animate({"marginLeft": -(n + 1) * wid}, 300, "linear", function(){
+								if(n === leg){
+									n = 0;
+								}
+								$(".banner").find("ul").css({"margin-left": -(n + 1) * wid});
+							});
+						}, 3000);
+						
+						/* 触控事件 */
+						$(".banner").on("touchstart", function(e){
+							e.stopPropagation();
+							$.extend(startPosition, {x: e.touches[0].pageX, y: e.touches[0].pageY});
+							startTime = new Date();
+						});
+						$(".banner").on("touchmove", function(e){
+							e.preventDefault();
+							e.stopPropagation();
+							if(typeof e.touches[0] === "object"){
+								b = true;
+							}			
+							$.extend(endPosition, {x: e.touches[0].pageX, y: e.touches[0].pageY});
+							$(".banner").find("ul").css({"margin-left": -(n + 1) * wid + endPosition.x - startPosition.x});
+						});
+						$(".banner").on("touchend", function(e){
+							e.stopPropagation();
+							if(b){
+								b = false;
+								endTime = new Date();
+								if(endPosition.x - startPosition.x > 30){
+									if(n > -1){
+										n--;
+									}
+								} else if(endPosition.x - startPosition.x < -30){
+									if(n < leg){
+										n++;
+									}
+								};					
+								$(".banner").find("ul").animate({"marginLeft": -(n + 1) * wid}, 300, "linear", function(){
+									if(n === -1){
+										n = leg - 1;
+									} else if(n === leg){
+										n = 0;
+									}
+									$(".banner").find("ul").css({"margin-left": -(n + 1) * wid});
+									$(".items").find("span").removeClass("current").eq(n).addClass("current");
+								});
+							}
+						});
+					}
+				}());
+			});
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1>软件协议</h1>
+			<a href="javascript:void(0);" class="back"></a>
+		</header>
+		<article>
+			<div class="banner-body">
+				<div class="banner">
+					<ul>
+						<li><a href="javascript:void(0)"><img src="img/gddfgds.png" width="640" height="150" /></a></li>
+						<li><a href="javascript:void(0)"><img src="img/gddfgds.png" width="640" height="150" /></a></li>
+						<li><a href="javascript:void(0)"><img src="img/gddfgds.png" width="640" height="150" /></a></li>
+					</ul>
+					<div class="items"><p></p></div>
+				</div>
+			</div>
+			<div class="agree-body">
+				<p>请您在使用本软件前仔细阅读如下条款。包括免除或者限制作者责任的免责条款及对用户的权利限制。您的安装使用行为将视为对本《协议》的接受，并同意接受本《协议》各项条款的约束。</p>
+				<p>本《用户许可协议》（以下称《协议》）是您（个人或单一机构团体）与上述 桌面日历秀XDeskCal 软件（以下称“软件”或“软件产品”）版权所有 鱼鱼软件 之间的法律协议。在您使用本软件产品之前,请务必阅读此《协议》，任何与《协议》有关的软件、电子文档等都应是按本协议的条款而授予您的，同时本《协议》亦适用于任何有关本软件产品的后期发行和升级。您一旦安装、复制、下裁、访问或以其它方式使用本软件产品，即表示您同意接受本《协议》各项条款的约束。如果您拒绝接受本《协议》条款，请您停止下载、安装或使用本软件及其相关服务。软件协议的文字产品提供，以上仅是效果。</p>
+			</div>
+		</article>
+	</body>
+</html>

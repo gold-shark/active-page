@@ -1,0 +1,58 @@
+.banner {
+  overflow: hidden;
+}
+
+.banner ul li {
+  height: 200px;
+}
+
+.title {
+  padding: 10px;
+  background-color: #1a1d22;
+}
+
+.title p {
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.remaining {
+  padding: 10px;
+}
+
+.remaining p {
+  font-size: 20px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.remaining p em {
+  color: #ffd100;
+}
+
+.content {
+  padding: 10px;
+}
+
+.content p {
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.subimt-body {
+  padding: 20px 10px;
+}
+
+.subimt-body .subimt {
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.5;
+  text-align: center;
+  background-color: #3599fb;
+  border: 1px solid #3599fb;
+  border-radius: 5px;
+}

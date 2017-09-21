@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>师傅带你飞</title>
+		<link type="text/css" rel="stylesheet" href="css/fly.css" />
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".tabs-title").find("span").on("tap", function(){
+					$(".tabs-title").find("span").removeClass("current");
+					$(this).addClass("current");
+					if($(this).index() === 0){
+						$(".tabs-order").show();
+						$(".tabs-rule").hide();
+					} else {
+						$(".tabs-order").hide();
+						$(".tabs-rule").show();
+					}
+				});
+				$(".photo").each(function(){
+					$(this).css("height",$(this).width());
+				});
+			});
+		</script>
+	</head>
+	<body class="body2">
+		<div class="fly-invite">
+			<div class="fly-portrait">
+				<img src="img/12.png" width="116" height="116" class="photo" />
+			</div>
+			<p class="a">我是小潘子:</p>
+			<p class="b">邀请你参加师傅·带你飞</p>
+			<p class="c">我已收23个徒弟，获得奖励230元现金</p>
+			<p class="d"><a href="javascript:void(0);">马上参加活动</a></p>
+			<!--<p class="e"><a href="javascript:void(0);">活动已结束</a></p>-->
+		</div>
+		<div class="fly-tabs">
+			<div class="tabs-title">
+				<p><span class="current">师傅封神榜</span><span>活动规则</span></p>
+			</div>
+			<div class="tabs-order">
+				<!--<div class="none"><img src="img/25.png" width="600" height="480" /></div>-->
+				<ul>
+					<li>
+						<div class="pic"><img src="img/12.png"  width="116" height="116" class="photo" /></div>
+						<div class="name"><p>艾薇儿</p><p>奖金：<em>500.00元</em></p></div>
+						<div class="num one">1</div>
+					</li>
+					<li>
+						<div class="pic"><img src="img/12.png"  width="116" height="116" class="photo" /></div>
+						<div class="name"><p>艾薇儿</p><p>奖金：<em>500.00元</em></p></div>
+						<div class="num two">2</div>
+					</li>
+					<li>
+						<div class="pic"><img src="img/12.png"  width="116" height="116" class="photo" /></div>
+						<div class="name"><p>艾薇儿</p><p>奖金：<em>500.00元</em></p></div>
+						<div class="num three">3</div>
+					</li>
+					<li>
+						<div class="pic"><img src="img/12.png"  width="116" height="116" class="photo" /></div>
+						<div class="name"><p>艾薇儿</p><p>奖金：<em>500.00元</em></p></div>
+						<div class="num">4</div>
+					</li>
+					<li>
+						<div class="pic"><img src="img/12.png"  width="116" height="116" class="photo" /></div>
+						<div class="name"><p>艾薇儿</p><p>奖金：<em>500.00元</em></p></div>
+						<div class="num">5</div>
+					</li>
+					<li>
+						<div class="pic"><img src="img/12.png"  width="116" height="116" class="photo" /></div>
+						<div class="name"><p>艾薇儿</p><p>奖金：<em>500.00元</em></p></div>
+						<div class="num">6</div>
+					</li>
+					<li>
+						<div class="pic"><img src="img/12.png"  width="116" height="116" class="photo" /></div>
+						<div class="name"><p>艾薇儿</p><p>奖金：<em>500.00元</em></p></div>
+						<div class="num">7</div>
+					</li>
+					<li>
+						<div class="pic"><img src="img/12.png"  width="116" height="116" class="photo" /></div>
+						<div class="name"><p>艾薇儿</p><p>奖金：<em>500.00元</em></p></div>
+						<div class="num">8</div>
+					</li>
+					<li>
+						<div class="pic"><img src="img/12.png"  width="116" height="116" class="photo" /></div>
+						<div class="name"><p>艾薇儿</p><p>奖金：<em>500.00元</em></p></div>
+						<div class="num">9</div>
+					</li>
+					<li>
+						<div class="pic"><img src="img/12.png"  width="116" height="116" class="photo" /></div>
+						<div class="name"><p>艾薇儿</p><p>奖金：<em>500.00元</em></p></div>
+						<div class="num">10</div>
+					</li>
+				</ul>
+			</div>
+			<div class="tabs-rule">
+				<div class="rule-lines"><i>01</i><p>活动时间： 4月9日-5月8日</p></div>
+				<div class="rule-lines"><i>02</i><p>每<em>邀请一位</em>徒弟注册Q房网并<em>发布10条</em>以上房源，奖励<em>10元现金</em>，不设封顶。</p></div>
+				<div class="rule-lines"><i>03</i><p>活动截止，每城市累计奖金数排名前3名，赢取<em>师傅封神榜大奖</em>（至少获取奖金100元以上）：<img src="img/19.png" width="560" height="182" /></p></div>
+				<div class="rule-lines"><i>04</i><p>本次活动支持北京、上海、南京、苏州城市。</p></div>
+				<div class="rule-lines"><p style="color:#999;">本次活动最终解释权归深圳市云房网络科技有限公司。</p></div>
+			</div>
+		</div>
+		<div class="fly-footer"></div>
+	</body>
+</html>

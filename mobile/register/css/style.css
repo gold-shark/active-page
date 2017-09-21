@@ -1,0 +1,62 @@
+html,body,div,p,ul,ol,dl,input,h1,h2,h3,h4,h5,h6,textarea,select,header,article,aside,nav,section,footer,hgroup,figcaption,figure{margin:0; padding:0;}
+div,header,article,aside,nav,section,footer,hgroup,figcaption,figure,ul,ol{width:auto; height:auto; display:block;}
+html{font-size:62.5%; font-family:"\5fae\8f6f\96c5\9ed1","Microsoft YaHei",helvetica,tahoma,arial,verdana,sans-serif;}
+body{font-size:100%;}
+a{text-decoration:none; -webkit-tap-highlight-color:rgba(0,0,0,0);}
+ul,ol,dl{list-style-type:none;}
+img{border:none; display:block;}
+h1,h2,h3,h4,h5,h6,strong{font-size:100%; font-weight:normal;}
+em,i{font-style:normal;}
+input,textarea{border-radius:0; -webkit-appearance:none; outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0);}
+input[type=radio]{border-radius:50%;}
+input[type=checkbox]{border-radius:30%;}
+table{border-collapse:collapse; border-spacing:0;}
+.clear:after{clear:both;}
+.translucent{position:fixed; top:0; right:0; bottom:0; left:0; z-index:500; display:none; background:rgba(0,0,0,0.7);}
+
+body{color:#000; background:#fff;}
+body.gray{background:#f3f3f3;}
+header{position:fixed; top:0; right:0; bottom:auto; left:0; z-index:100; padding:1.5rem 0; background:#4fbb0f;}
+header h1{font-size:1.6em; line-height:1.0em; text-align:center; color:#fff;}
+header a{position:absolute; top:0; bottom:0; width:4.6rem;}
+header a.back{left:0; right:auto; background:url(../img/back.png) 50% 50% / auto 50% no-repeat;}
+article{margin-top:4.6rem;}
+article .text-body{position:relative; padding:4.6rem 0 5.0rem;}
+article .text-body p{font-size:1.2em;}
+article .text-body p.info{position:absolute; top:0; right:0; bottom:auto; left:0; padding:1.0rem 1.5rem; color:#444; background:#fff3bb;}
+article .text-body p.agree{position:absolute; top:auto; right:0; bottom:0; left:0; padding:1.0rem 1.5rem; color:#878787;}
+article .text-body p.agree a{color:#576b95;}
+article .text-body p.rel{position:relative;}
+article .text-body p.rela{position:relative; top:-0.1rem;}
+article .text-body p span.clear{position:absolute; top:0; right:0; bottom:0; left:auto; width:4.5rem; background:url(../img/clear.png) 50% 50% no-repeat; background-size:auto 50%;}
+article .but-body{margin-bottom:3.0rem;}
+article .but-body p{padding:1.0rem 1.5rem;}
+article .phone-body{padding:3.0rem 0;}
+article .phone-body img{margin:0 auto; width:30%; height:auto;}
+article .phone-body p{margin-top:2.0rem; font-size:1.4em; text-align:center; color:#878787;}
+article .agree-body{padding:1.5rem;}
+article .agree-body p{margin-bottom:1.0rem; font-size:1.4em; color:#444; text-indent:2.0em; line-height:1.5em;}
+article input.text{display:block; padding:1.5rem 0; width:100%; font-size:1.4rem; text-indent:1.5rem; border:none; border-top:0.1rem solid #ccc; border-bottom:0.1rem solid #ccc; background:#fff;}
+article input.user{text-indent:4.0rem; background:url(../img/phone-icon.png) 1.5rem 50% / auto 45% no-repeat #fff;}
+article input.pwd{text-indent:4.0rem; background:url(../img/pass-icon.png) 1.5rem 50% / auto 40% no-repeat #fff;}
+article input.submit{display:block; padding:1.5rem 0; width:100%; border-radius:0.5rem; line-height:1.0em; font-size:1.4rem;}
+article input.grenn{border:0.1rem solid #4fbb0f; color:#fff; background:#4fbb0f;}
+article input.gray{border:0.1rem solid #c6c6c6; color:#a4a4a4; background:#ebebeb;}
+article input.valid{position:absolute; top:0.8rem; right:1.5rem; bottom:0.8rem; left:auto; display:block; font-size:1.4rem; color:#444; padding:0 1.0rem; border:0.1rem solid #ccc; border-radius:0.5rem; background:transparent;}
+
+.guide-body{position:fixed; top:0; right:0; bottom:0; left:0; overflow:hidden;}
+.guide-body img{margin:0 auto; width:100%; height:auto;}
+.guide-page{display:-webkit-box; display:-moz-box; display:box;}
+.guide-page .guide{position:relative; z-index:1; -webkit-box-flex:1; -moz-box-flex:1; box-flex:1;}
+.guide-page .one{background:url(../img/guide1.png) 50% 20% no-repeat #75c4b1; background-size:auto 70%;}
+.guide-page .two{background:url(../img/guide2.png) 50% 20% no-repeat #7dc2e1; background-size:auto 70%;}
+.guide-page .but{position:absolute; top:auto; right:0; bottom:10%; left:0;}
+.guide-page .but a{display:block; margin:0 auto; width:50%}
+.guide-items{position:fixed; top:auto; right:0; bottom:5%; left:0;}
+.guide-items p{display:-webkit-box; display:-moz-box; display:box; padding:0 45%;}
+.guide-items p span{margin:0 0.3rem; display:block; width:1.0rem; height:1.0rem; border-radius:50%; background:rgba(255,255,255,0.5);}
+.guide-items p span.current{background:rgba(255,255,255,1);}
+
+.share{position:fixed; top:0; right:0; bottom:0; left:0; z-index:500; background:rgba(0,0,0,0.7);}
+.share img{margin:5% 0 0 25%; width:70%;}
+

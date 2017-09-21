@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>添加账号</title>
+		<link type="text/css" rel="stylesheet" href="../css/base.css" />
+		<link type="text/css" rel="stylesheet" href="../css/form.css" />
+	</head>
+
+	<body>
+		<div class="p30">
+			<p class="mb10">
+				<label class="mr10 label very-small tar"><i class="red-i">*</i>部门：</label>
+				<input class="text" id="department" type="text" />
+				<label class="mr10 label very-small tar"><i class="red-i">*</i>姓名：</label>
+				<input class="text" id="user-name" type="text" />
+			</p>
+			<p class="mb10">
+				<label class="mr10 label very-small tar"><i class="red-i">*</i>岗位：</label>
+				<select class="select default" id="job-post">
+					<option value="">请选择岗位</option>
+					<option value="1">管理员</option>
+					<option value="2">运营</option>
+					<option value="3">客服</option>
+				</select>
+				<label class="mr10 label very-small tar">员工工号：</label>
+				<input class="text" id="job-number" type="text" />
+			</p>
+			<p class="mb30">
+				<label class="mr10 label very-small tar">联系方式：</label>
+				<input class="text" id="contact-way" type="text" />
+			</p>
+			<p class="mb10 pt20 bdt1">
+				<label class="mr10 label very-small tar"><i class="red-i">*</i>账号名称：</label>
+				<input class="text" id="account-name" type="text" />
+				<label class="mr10 label very-small tar"><i class="red-i">*</i>密码：</label>
+				<input class="text" id="account-password" type="password" />
+			</p>
+			<p class="mb30">
+				<label class="mr10 label very-small tar">是否启用：</label>
+				<input class="radio" id="isY" name="yes-no" type="radio" value="1" checked="checked" />
+				<label class="for-label mr30" for="isY">启用</label>
+				<input class="radio" id="isN" name="yes-no" type="radio" value="0" />
+				<label class="for-label" for="isN">禁用</label>
+			</p>
+			<p>
+				<label class="mr10 label very-small">&nbsp;</label>
+				<input class="btn orange-btn very-small" id="ok-account" type="button" value="保存" />
+			</p>
+		</div>
+		<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="../js/layer/layer.js"></script>
+		<script type="text/javascript" src="../js/authority-manage.js"></script>
+	</body>
+
+</html>

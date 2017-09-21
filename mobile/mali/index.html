@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>玛莉隔壁加班拍立得</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<link type="text/css" rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.sliding.js" ></script>
+		<script type="text/javascript" src="js/index.js" ></script>		
+		<script type="text/javascript">
+			$(function(){
+				///我变变变
+				$(".popup-block").click(function(){
+					$("body").append("<div class='popup-module'></div><div class='popup-body'><div class='popup-content'><div class='dog-block'><ul><li><div class='round'style='background-color: #9DC6DD;'><img src='img/round.png'/></div><div class='dog'><img src='img/dog/1.png'/></div><div class='arc'></div></li><li><div class='round'style='background-color: #C1E26A;'><img src='img/round.png'/></div><div class='dog current'><img src='img/dog/2.png'/></div><div class='arc'></div></li><li><div class='round'style='background-color: #FE7673;'><img src='img/round.png'/></div><div class='dog'><img src='img/dog/3.png'/></div><div class='arc'></div></li></ul><ul><li><div class='round'style='background-color: #C1E26A;'><img src='img/round.png'/></div><div class='dog'><img src='img/dog/4.png'/></div><div class='arc'></div></li><li><div class='round'style='background-color: #51D0AD;'><img src='img/round.png'/></div><div class='dog'><img src='img/dog/5.png'/></div><div class='arc'></div></li><li><div class='round'style='background-color: #FED268;'><img src='img/round.png'/></div><div class='dog'><img src='img/dog/6.png'/></div><div class='arc'></div></li></ul><ul><li><div class='round'style='background-color: #FE7673;'><img src='img/round.png'/></div><div class='dog'><img src='img/dog/7.png'/></div><div class='arc'></div></li><li><div class='round'style='background-color: #FED268;'><img src='img/round.png'/></div><div class='dog'><img src='img/dog/8.png'/></div><div class='arc'></div></li><li><div class='round'style='background-color: #9DC6DD;'><img src='img/round.png'/></div><div class='dog'><img src='img/dog/9.png'/></div><div class='arc'></div></li></ul><ul><li><div class='round'style='background-color: #51D0AD;'><img src='img/round.png'/></div><div class='dog'><img src='img/dog/10.png'/></div><div class='arc'></div></li><li><div class='round'style='background-color: #FE7673;'><img src='img/round.png'/></div><div class='dog'><img src='img/dog/11.png'/></div><div class='arc'></div></li><li><div class='round'style='background-color: #C1E26A;'><img src='img/round.png'/></div><div class='dog'><img src='img/dog/12.png'/></div><div class='arc'></div></li></ul></div></div><div class='popup-close'><img src='img/x.png'/></div></div>");
+					$(".dog-block").find(".dog").each(function(i){
+						var a = $(this).find("img").attr("src").split('/');
+						var b = data.pic4.src.split('/');
+						if(a[a.length - 1] == b[b.length - 1]){
+							$(".dog").removeClass("current");
+							$(this).addClass("current");
+						}
+					});
+					$(".popup-body").fadeIn("slow");
+					$(".dog-block").find("li").bind("click", function(){
+						$(".dog-block").find(".dog").removeClass("current");
+						$(this).find(".dog").addClass("current");
+					});	
+					$(".popup-close").bind("click", function(){
+						var a = $(".current").find("img").attr("src").split('/');
+						$(".popup-body").fadeOut("slow",function(){
+							$(".popup-module, .popup-body").remove();
+						});
+						var pic = new Image();
+						pic.src = "img/dog2/" + a[a.length - 1];
+						data.pic4 = pic;
+						drawImg(data);
+					});
+				});
+				///上传图片
+				$(".upload-block").click(function(){
+					$("#file1").click();
+				});
+				$('#file1').on('change', function (e) {
+				    var file = e.currentTarget.files[0];
+				    var reader = new FileReader();
+				    reader.onload = function (e) {
+				        $.ajax({
+							url: "bc_upload.aspx",
+							type: "post",
+							data: "word=" + encodeURIComponent(e.target.result),
+							dataType: "json",
+							beforeSend: function(){
+								$("body").append("<div class='loading'><img src='img/loading.gif' /></div>");
+							},
+							complete: function(){
+								$(".loading").remove();
+							},
+							success: function(info){
+								$("body").append("<div class='new-block'><div class='new-canvas'><img src='img/bg.png'/><canvas id='canvas2'></canvas></div><div class='new-button'><a id='xuanzhuan'><img src='img/xuanzhuan.png'/></a><a id='quxiao'><img src='img/quxiao.png'/></a><a id='queding'><img src='img/queding.png'/></a></div></div>");
+								var c2 = $("#canvas2")[0];
+								var cxt2 = c2.getContext("2d");
+								var imgs2 = new Image();								
+								var w = info.width, h = info.height, step = 0;
+								imgs2.src = info.src;
+								imgs2.onload = function(){
+									c2.width = w;
+									c2.height = h;
+									cxt2.clearRect(0, 0, w, h);
+									cxt2.drawImage(imgs2, 0, 0, w, h);
+								}
+								//旋转图片
+								$("#xuanzhuan").bind("click", function(){
+						            step++;
+						            if(step > 3){
+						            	step = 0;
+						            }
+						            var degree = step * 90 * Math.PI / 180;
+						            var k = w;
+						            w = h;
+						            h = k;
+									c2.width = w;
+									c2.height = h;
+						            switch (step) {  
+							            case 0:
+							                cxt2.drawImage(imgs2, 0, 0);  
+							                break;  
+							            case 1:
+							                cxt2.rotate(degree);  
+							                cxt2.drawImage(imgs2, 0, -w);  
+							                break;  
+							            case 2:
+							                cxt2.rotate(degree); 
+							                cxt2.drawImage(imgs2, -w, -h);  
+							                break;  
+							            case 3:  
+							                cxt2.rotate(degree); 
+							                cxt2.drawImage(imgs2, -h, 0);  
+							                break;  
+							        } 
+								});
+								//取消
+								$("#quxiao").bind("click", function(){
+									$(".new-block").remove();
+								});
+								//确定
+								$("#queding").bind("click", function(){
+									$.ajax({
+										url: "rotation.aspx",
+										type: "post",
+										data: "name=" + imgs2.src + "&cl=" + step,
+										dataType: "json",
+										beforeSend: function(){
+											$("body").append("<div class='loading'><img src='img/loading.gif' /></div>");
+										},
+										complete: function(){
+											$(".loading").remove();
+											$(".new-block").remove();
+										},
+										success: function(info){
+											var pic = new Image();
+											pic.src = info.src;
+											pic.onload = function(){
+												data.pic1 = pic;
+												data.tion.w = info.width;
+												data.tion.h = info.height;
+												drawImg(data);
+											}
+										},
+										error: function(){
+											alert("error");
+										}
+									});									
+								});
+							},
+							error: function(){
+								alert("error");
+							}
+						});
+				    };
+				    reader.readAsDataURL(file);
+				});
+				///黑色
+				$(".black").click(function(){
+					var a = $(this).css("background-image").split('/');
+					if(a[a.length - 1].slice(0, -1) != "black.png"){
+						$(this).css("background-image", "url(img/black.png)");
+						$(".white").css("background-image", "url(img/white-not.png)");
+
+						var pic = new Image();
+						pic.src = "img/logo-black.png";
+						data.pic3 = pic;
+						data.tcolor = "rgb(0, 0, 0)";
+						data.rcolor = "rgba(255, 255, 255, 0.5)";
+						drawImg(data);
+					}
+					
+				});
+				///白色
+				$(".white").click(function(){
+					var a = $(this).css("background-image").split('/');
+					if(a[a.length - 1].slice(0, -1) != "white.png"){
+						$(this).css("background-image", "url(img/white.png)");
+						$(".black").css("background-image", "url(img/black-not.png)");
+
+						var pic = new Image();
+						pic.src = "img/logo-white.png";
+						data.pic3 = pic;
+						data.tcolor = "rgb(255, 255, 255)";
+						data.rcolor = "rgba(0, 0, 0, 0.5)";
+						drawImg(data);
+					}
+				});
+				///文字
+				$(".text1").change(function(){
+					if($(this).val().trim() == ""){
+						data.txt1 = "加班";
+					} else {
+						data.txt1 = $(this).val().trim();
+					}
+					drawImg(data);
+				});
+				$(".text2").change(function(){
+					if($(this).val().trim() == ""){
+						data.txt2 = "那又怎么样...";
+					} else if($(this).val().trim().length > 8) {
+						data.txt2 = $(this).val().trim().substr(0,8);
+					} else {
+						data.txt2 = $(this).val().trim();
+					}
+					drawImg(data);
+				});
+				$(".text3").change(function(){
+					if($(this).val().trim() == ""){
+						data.txt3 = "我醉了";
+					} else if($(this).val().trim().length > 8) {
+						data.txt3 = $(this).val().trim().substr(0,8);
+					} else {
+						data.txt3 = $(this).val().trim();
+					}
+					drawImg(data);
+				});
+				$(".text4").change(function(){
+					if($(this).val().trim() == ""){
+						data.txt4 = "BY:海边那只羊";
+					} else if($(this).val().trim().length > 10){
+						data.txt4 = "BY:" + $(this).val().trim().substr(0,10);
+					} else {
+						data.txt4 = "BY:" + $(this).val().trim();
+					}
+					drawImg(data);
+				});
+				//保存图片
+				$(".save").click(function(){
+					var canvas1 = $("#canvas1")[0];
+	                // here is the most important part because if you dont replace you will get a DOM 18 exception.  
+	                //var images = canvas1.toDataURL("image/png").replace("image/png", "image/octet-stream;Content-Disposition: attachment;filename=foobar.png");  
+	                //var images = canvas1.toDataURL("image/png").replace("image/png", "image/octet-stream"); 
+	                var images = canvas1.toDataURL("image/png");
+	                //window.location.href = images; // it will save locally  
+	                $.ajax({
+						url: "upload.aspx",
+						type: "post",
+						data: "word=" + encodeURIComponent(images),
+						dataType: "text",
+						beforeSend: function(){
+							$("body").append("<div class='loading'><img src='img/loading.gif' /></div>");
+						},
+						complete: function(){
+							$(".loading").remove();
+						},
+						success: function(info){							
+							window.location.href = "pic/"+ info;
+						},
+						error: function(){
+							alert("error");
+						}
+					});
+				});
+				//拖动画布
+				var x = 0, y = 0;
+				$("#canvas1").touch({
+					start: function(data1){
+						x = data.tion.x;
+						y = data.tion.y;
+					},
+					move: function(data1){
+						var c = $("#canvas1")[0];
+						var cxt=c.getContext("2d");
+						cxt.clearRect(0,0,657,881);
+						cxt.drawImage(data.pic1, x + data1.epc.x - data1.spc.x, y + data1.epc.y - data1.spc.y, data.tion.w, data.tion.h);		
+						cxt.drawImage(data.pic3, 20, 33);
+						cxt.drawImage(data.pic4, 369, 585);
+						cxt.drawImage(data.pic2, 0, 0, 657,881);
+						cxt.fillStyle = data.tcolor;
+						cxt.font = "81px Arial";
+						cxt.fillText(data.txt1, 25, 285);
+						cxt.font = "48px Arial";
+						cxt.fillText(data.txt2, 30, 366);
+						cxt.font = "48px Arial";
+						cxt.fillText(data.txt3, 30, 435);
+						cxt.font = "33px Arial";
+						cxt.fillText(data.txt4, 30, 507);
+					},
+					end: function(data1){
+						data.tion.x += data1.epc.x - data1.spc.x;
+						data.tion.y += data1.epc.y - data1.spc.y;
+						if(data.tion.x > 0){
+							data.tion.x = 0;
+						} else if(data.tion.x < -data.tion.w + 657) {
+							data.tion.x = -data.tion.w + 657;
+						}						
+						if(data.tion.y > 0){
+							data.tion.y = 0;
+						} else if(data.tion.y < -data.tion.h + 881){
+							data.tion.y = -data.tion.h + 881;
+						}
+						drawImg(data);
+					}
+				});	
+			});
+		</script>
+	</head>
+	<body>
+		<div class="body-block">
+			<div class="left-block">
+				<img src="img/bg.png" />
+				<div class="canvas-block">					
+					<canvas id="canvas1" width="657" height="881"></canvas>
+					
+				</div>
+			</div>
+			<div class="right-block">
+				<div class="popup-block">
+					<img src="img/popup.png" />
+				</div>
+				<div class="upload-block">
+					<img src="img/upload.png" />					
+				</div>
+				<input id="file1" type="file" accept="image/*" style=" position: absolute; top:0; left:0; width:0; height: 0; opacity: 0;" />
+				<div class="radio-block">
+					<div class="radio-title">
+						<img src="img/font.png" />
+					</div>
+					<div class="radio-text">
+						<img src="img/radio-bg.png" />
+						<a class="black"></a>
+						<a class="white"></a>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="info-block">
+				<img src="img/info.png" />
+			</div>
+			<div class="text-block">
+				<img src="img/text-bg.png" />
+				<div class="input-block">
+					<p>
+						<input type="text" class="text1" value="加班" readonly="readonly" />
+						<input type="text" class="text2" maxlength="8" value="" placeholder="那又怎么样..." />
+					</p>
+					<p>
+						<input type="text" class="text3" value="" maxlength="8" placeholder="我醉了" />
+						<label class="lable1">BY:</label><input type="text" class="text4" value="" maxlength="10" placeholder="海边那只羊" />
+					</p>
+				</div>				
+			</div>
+			<div class="button-block">
+				<p><a class="save"><img src="img/save.png" /></a></p>
+				<p><a class="join" href="http://www.weiguanyi.com/module_site.php?m=MaryChallenge&c=Site&a=challengeDetail&rid=10628&id=21"><img src="img/join.png" /></a></p>
+			</div>
+			<div class="rule-block">
+				<img src="img/rule.png" />
+			</div>
+			<div class="bottom-block">
+				<img src="img/bottom.png" />
+			</div>
+		</div>		
+	</body>
+</html>

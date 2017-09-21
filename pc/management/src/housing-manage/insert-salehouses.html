@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>发布二手房</title>
+		<link type="text/css" rel="stylesheet" href="../css/base.css" />
+		<link type="text/css" rel="stylesheet" href="../css/form.css" />
+		<link type="text/css" rel="stylesheet" href="../css/table.css" />
+		<link type="text/css" rel="stylesheet" href="../css/upload.css" />
+	</head>
+
+	<body>
+		<div class="p30">
+			<div class="mb10">
+				<label class="mr10 label very-small tar"><i class="red-i">*</i>楼盘名称：</label>
+				<input class="text five-width" id="houses-name" type="text" />
+			</div>
+			<div class="mb10">
+				<label class="mr10 label very-small tar"><i class="red-i">*</i>地址：</label>
+				<select class="select very-small" id="countries">
+					<option value="">请选择</option>
+					<option value="美国">美国</option>
+				</select>
+				<select class="select small" id="city">
+					<option value="">请选择</option>
+					<option value="波士顿">波士顿</option>
+				</select>
+				<select class="select small" id="area">
+					<option value="">请选择</option>
+					<option value="西区">西区</option>
+				</select>
+			</div>
+			<div class="mb10">
+				<label class="mr10 label very-small tar"><i class="red-i">*</i>二手房标题：</label>
+				<input class="text five-width" id="salehouses-title" type="text" />
+			</div>
+			<div class="mb10">
+				<label class="mr10 label very-small tar"><i class="red-i">*</i>房型：</label>
+				<input class="text small-five" id="house-number" type="text" />
+				<label class="mr10 ml10 label">卧</label>
+				<input class="text very-small" id="house-desc" type="text" />
+			</div>
+			<div class="mb10">
+				<label class="mr10 label very-small tar"><i class="red-i">*</i>价格：</label>
+				<input class="text default" id="house-price" type="text" />
+				<label class="ml10 label">万美元</label>
+			</div>
+			<div class="mb10">
+				<label class="mr10 label very-small tar">房屋参数：</label>
+				<div class="fixation-table" style="width:600px;">
+					<table>
+						<tr>
+							<td>类型</td>
+							<td>
+								<select class="mt5 select small" id="house-type">
+									<option>联排别墅</option>
+								</select>
+							</td>
+							<td>上市时间</td>
+							<td><input class="mt5 text date-text small" id="listed-time" readonly="readonly" type="text" /></td>
+						</tr>
+						<tr>
+							<td>建成年份</td>
+							<td><input class="mt5 text small" id="built-year" type="text" /></td>
+							<td>使用面积</td>
+							<td><input class="mt5 text small" id="using-area" type="text" /><i class="ml10">平米</i></td>
+						</tr>
+						<tr>
+							<td>房屋层数</td>
+							<td><input class="mt5 text small" id="floor-number" type="text" /></td>
+							<td>产权说明</td>
+							<td>
+								<select class="mt5 select small" id="permis-instruc">
+									<option>永久产权</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>装修状况</td>
+							<td>
+								<select class="mt5 select small" id="decorate-condition">
+									<option>精装修</option>
+								</select>
+							</td>
+							<td>车位信息</td>
+							<td><input class="mt5 text small" id="parking-info" type="text" /></td>
+						</tr>
+						<tr>
+							<td>开发商</td>
+							<td><input class="mt5 text small" id="developers" type="text" /></td>
+							<td>房产类型</td>
+							<td>
+								<select class="mt5 select small" id="property-type">
+									<option>新房</option>
+									<option>二手房</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>回报率</td>
+							<td><input class="mt5 text small" id="return-rate" type="text" /><i class="ml10">%</i></td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="mb10" id="houses-tag">
+				<label class="mr10 label very-small tar">标签：</label>
+				<input class="checkbox" id="exclusive" type="checkbox" />
+				<label class="mr20 for-label" for="exclusive">独家</label>
+				<input class="checkbox" id="invest" type="checkbox" />
+				<label class="mr20 for-label" for="invest">投资</label>
+				<input class="checkbox" id="education" type="checkbox" />
+				<label class="mr20 for-label" for="education">教育</label>
+				<input class="checkbox" id="migrate" type="checkbox" />
+				<label class="mr20 for-label" for="migrate">移居</label>
+			</div>
+			<div class="mb10">
+				<label class="mr10 label very-small tar">详细介绍：</label>
+				<textarea class="textarea" id="edit-content" style="height: 300px;"></textarea>
+			</div>
+			<div class="mb10">
+				<label class="mr10 label very-small tar">外景图片：</label>
+				<div class="pb10 bdb1" style="display:inline-block; width: 525px; vertical-align:text-top;">
+					<div class="clear" style="max-height:265px; overflow:hidden; overflow-y:auto;">
+						<div class="mr10 mb10 bs1 relative picture fl">
+              <img src="../img/1.jpg" />
+              <div class="cover absolute"></div>
+            </div>
+            <div class="mr10 mb10 bs1 relative picture fl">
+              <img src="../img/1.jpg" />
+              <div class="tool absolute clear">
+                <a class="fl" href="javascript:void(0);">设为封面</a>
+                <a class="fr" href="javascript:void(0);">删除</a>
+              </div>
+            </div>
+					</div>
+					<label class="mb10 label">公共库：</label>
+					<div class="clear" style="max-height:265px; overflow:hidden; overflow-y:auto;">
+						<div class="mr10 mb10 bs1 relative picture fl"><img src="../img/1.jpg" /></div>
+						<div class="mr10 mb10 bs1 relative picture fl"><img src="../img/1.jpg" /></div>
+						<div class="mr10 mb10 bs1 relative picture fl"><img src="../img/1.jpg" /></div>
+						<div class="mr10 mb10 bs1 relative picture fl"><img src="../img/1.jpg" /></div>
+						<div class="mr10 mb10 bs1 relative picture fl"><img src="../img/1.jpg" /></div>
+						<div class="mr10 mb10 bs1 relative picture fl"><img src="../img/1.jpg" /></div>
+					</div>
+				</div>
+			</div>
+			<div class="mb10">
+				<label class="mr10 label very-small tar">室内图片：</label>
+				<div class="pb10 bdb1" style="display:inline-block; width: 525px; vertical-align:text-top;">
+					<div class="clear" style="max-height:265px; overflow:hidden; overflow-y:auto;">
+						<div class="mr10 mb10 bs1 relative picture fl">
+              <img src="../img/2.jpg" />
+              <div class="cover absolute"></div>
+            </div>
+            <div class="mr10 mb10 bs1 relative picture fl">
+              <img src="../img/2.jpg" />
+              <div class="tool absolute clear">
+                <a class="fl" href="javascript:void(0);">设为封面</a>
+                <a class="fr" href="javascript:void(0);">删除</a>
+              </div>
+            </div>
+					</div>
+					<div class="mt10">
+						<a class="btn orange-btn very-small" href="javascript:void(0);">上传图片</a>
+						<label class="ml20 label green">图片大小：1600 * 450</label>
+					</div>
+				</div>
+			</div>
+			<div class="mb10">
+				<label class="mr10 label very-small tar">户型图片：</label>
+				<div class="pb10 bdb1" style="display:inline-block; width: 525px; vertical-align:text-top;">
+					<div class="clear" style="max-height:265px; overflow:hidden; overflow-y:auto;">
+						<div class="mr10 mb10 bs1 relative picture fl">
+              <img src="../img/3.jpg" />
+              <div class="cover absolute"></div>
+            </div>
+            <div class="mr10 mb10 bs1 relative picture fl">
+              <img src="../img/3.jpg" />
+              <div class="tool absolute clear">
+                <a class="fl" href="javascript:void(0);">设为封面</a>
+                <a class="fr" href="javascript:void(0);">删除</a>
+              </div>
+            </div>
+					</div>
+					<label class="mb10 label">公共库：</label>
+					<div class="clear" style="max-height:265px; overflow:hidden; overflow-y:auto;">
+						<div class="mr10 mb10 bs1 relative picture fl"><img src="../img/3.jpg" /></div>
+						<div class="mr10 mb10 bs1 relative picture fl"><img src="../img/3.jpg" /></div>
+						<div class="mr10 mb10 bs1 relative picture fl"><img src="../img/3.jpg" /></div>
+						<div class="mr10 mb10 bs1 relative picture fl"><img src="../img/3.jpg" /></div>
+						<div class="mr10 mb10 bs1 relative picture fl"><img src="../img/3.jpg" /></div>
+						<div class="mr10 mb10 bs1 relative picture fl"><img src="../img/3.jpg" /></div>
+					</div>
+				</div>
+			</div>
+			<div class="mt20 mb10">
+				<label class="mr10 label very-small">&nbsp;</label>
+				<input class="btn orange-btn very-small" id="ok-salehouses" type="button" value="确定" />
+				<input class="ml10 btn very-small" id="cancel" type="button" value="取消" />
+				<input class="ml10 btn very-small" id="preview" type="button" value="预览" />
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+		<script type="text/javascript" src="../js/layer/layer.js"></script>
+		<script type="text/javascript" src="../js/kindeditor-4.1.10/kindeditor-min.js"></script>
+    <script type="text/javascript" src="../js/kindeditor-4.1.10/lang/zh_CN.js"></script>
+		<script type="text/javascript" src="../js/houses-manage.js"></script>
+	</body>
+
+</html>

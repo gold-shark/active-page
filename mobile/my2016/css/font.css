@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "DFwawa-dospy";
+    src: url("./font/DFwawa-dospy.eot");
+    src: url("./font/DFwawa-dospy.eot?#iefix") format("embedded-opentype"),
+    url("./font/DFwawa-dospy.woff") format("woff"),
+    url("./font/DFwawa-dospy.ttf") format("truetype"),
+    url("./font/DFwawa-dospy.svg#DFwawa-dospy") format("svg");
+    font-style: normal;
+    font-weight: normal;
+}
+
+

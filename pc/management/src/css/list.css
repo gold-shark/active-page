@@ -1,0 +1,49 @@
+.tab-btn {
+  display: block;
+  padding: 0 20px;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+  color: #333;
+  text-align: center;
+  background: #fafafa;
+  box-sizing: border-box;
+}
+
+.tab-btn-cur {
+  font-weight: 600;
+  color: #f90;
+}
+
+.tab-btn-cur:hover {
+  color: #f90;
+}
+
+.parities {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: top;
+  background: url(../img/parities.png) no-repeat;
+}
+
+.add-items {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: top;
+  border: 1px solid #ddd;
+  background: url(../img/parities.png) -31px -1px no-repeat;
+  box-sizing: border-box;
+}
+
+.sub-items {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-left: 8px;
+  vertical-align: top;
+  border: 1px solid #ddd;
+  background: url(../img/parities.png) -61px -1px no-repeat;
+  box-sizing: border-box;
+}

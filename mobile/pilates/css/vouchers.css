@@ -1,0 +1,57 @@
+.items-list {
+  position: relative;
+  margin: 10px 0;
+  padding: 15px;
+  background-color: #6f7783;
+}
+
+.items-list .current{
+  display: block;
+  background: url(../img/4.png) 100% 100% no-repeat;
+  background-size: 30px auto;
+}
+
+.items-list .desc p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.items-list .desc .name {
+  font-size: 1.6em;
+  color: #ffd100;
+}
+
+.items-list .desc .time {
+  margin-top: 5px;
+  font-size: 1em;
+}
+
+.items-list .desc .tip {
+  margin-top: 15px;
+}
+
+.items-list .price {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.items-list .price p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.items-list .price p em {
+  font-size: 3em;
+  color: #ffd100;
+}
+
+.items-list .overdue p {
+  color: #aaa !important;
+}
+
+.items-list .overdue em {
+  color: #aaa !important;
+}

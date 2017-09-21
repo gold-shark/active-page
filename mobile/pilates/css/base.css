@@ -1,0 +1,208 @@
+html,
+body,
+div,
+p,
+ul,
+ol,
+dl,
+input,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+textarea,
+select,
+header,
+article,
+aside,
+nav,
+section,
+footer,
+hgroup,
+figcaption,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+div,
+header,
+article,
+aside,
+nav,
+section,
+footer,
+hgroup,
+figcaption,
+figure,
+ul,
+ol {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+html {
+  font-size: 12px;
+  font-family: "\5fae\8f6f\96c5\9ed1", "Microsoft YaHei", Arial, sans-serif;
+}
+
+body {
+  font-size: 100%;
+  background: #292d33;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+ul,
+ol,
+dl {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+input,
+textarea {
+  line-height: 1.2;
+  border-radius: 0;
+  -webkit-appearance: none;
+  outline: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #ccc;
+  line-height: 1.2;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #ccc;
+  line-height: 1.2;
+}
+
+select {
+  -webkit-appearance: none;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.clear:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.ellips {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.box {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+}
+
+.box-vertical {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+}
+
+.box-middel {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+}
+
+.box-align {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+}
+
+.flex {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+}
+
+.unit {
+  display: inline-block;
+  width: .5em;
+}
+
+.units {
+  display: inline-block;
+  width: 1em;
+}
+
+.translucence {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  background: rgba(0, 0, 0, .3);
+}

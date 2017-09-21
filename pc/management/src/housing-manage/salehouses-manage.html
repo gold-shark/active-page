@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>新房管理</title>
+		<link type="text/css" rel="stylesheet" href="../css/base.css" />
+		<link type="text/css" rel="stylesheet" href="../css/table.css" />
+		<link type="text/css" rel="stylesheet" href="../css/pages.css" />
+		<link type="text/css" rel="stylesheet" href="../css/form.css" />
+	</head>
+
+	<body>
+		<div class="p10">
+			<div class="mb10 pt10 pl10 pr10 bs1 bgf8">
+				<div class="mb10 clear">
+					<p class="fl mr10">
+						<label class="label">国家：</label>
+						<select class="select very-small">
+							<option>全部</option>
+						</select>
+					</p>
+					<p class="fl mr10">
+						<label class="label">城市：</label>
+						<select class="select very-small">
+							<option>全部</option>
+						</select>
+					</p>
+					<p class="fl mr10">
+						<label class="label">区域：</label>
+						<select class="select very-small">
+							<option>全部</option>
+						</select>
+					</p>
+					<p class="fl mr10">
+						<label class="label">标签：</label>
+						<select class="select very-small">
+							<option>全部</option>
+						</select>
+					</p>
+					<p class="fl mr10">
+						<label class="label">状态：</label>
+						<select class="select very-small">
+							<option>全部</option>
+						</select>
+					</p>
+				</div>
+				<div class="mb10 clear">
+					<p class="fl mr10">
+						<label class="label">二手房ID：</label>
+						<input class="text very-small" type="text" />
+					</p>
+					<p class="fl mr10">
+						<label class="label">二手房名称：</label>
+						<input class="text long" type="text" />
+					</p>
+					<p class="fl mr10">
+						<label class="label">创建时间：</label>
+						<input class="text date-text small" id="stratTime" readonly="readonly" type="text" /> -
+						<input class="text date-text small" id="endTime" readonly="readonly" type="text" />
+					</p>
+					<p class="fl mr10">
+						<input class="btn" type="button" value="查询" />
+					</p>
+				</div>
+			</div>
+			<div class="mb10 clear">
+				<a class="btn orange-btn fr" id="add-salehouses" href="javascript:void(0);">发布二手房</a>
+			</div>
+			<div class="mb10" style="overflow:hidden; overflow-x:auto;">
+				<div style="min-width:1250px;">
+					<div class="table-head">
+						<table>
+							<tr>
+								<th style="width:40px;">
+									<input class="checkbox" type="checkbox" />
+								</th>
+								<th style="width:40px;">ID</th>
+								<th style="width:auto;">二手房名称</th>
+								<th style="width:80px;">房型</th>
+								<th style="width:80px;">国家</th>
+								<th style="width:80px;">城市</th>
+								<th style="width:80px;">区域</th>
+								<th style="width:80px;">标签</th>
+								<th style="width:80px;">状态</th>
+								<th style="width:80px;">访问数</th>
+								<th style="width:150px;">刷新日期</th>
+								<th style="width:150px;">创建时间</th>
+								<th style="width:150px;">操作</th>
+							</tr>
+						</table>
+					</div>
+					<div class="table-body">
+						<table>
+							<tr>
+								<td style="width:40px;">
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td style="width:40px;">10</td>
+								<td style="width:auto;">美国波士顿海洋别墅</td>
+								<td style="width:80px;">1房厅</td>
+								<td style="width:80px;">美国</td>
+								<td style="width:80px;">波士顿</td>
+								<td style="width:80px;">城西区</td>
+								<th style="width:80px;">独家</th>
+								<th style="width:80px;">上架</th>
+								<th style="width:80px;">103</th>
+								<th style="width:150px">2015-10-20 15:26:20</th>
+								<td style="width:150px;">2015-01-10 15:30:30</td>
+								<td style="width:150px;"><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">下架</a> | <a href="javascript:void(0);">刷新</a> | <a href="javascript:void(0);">删除</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>10</td>
+								<td>美国波士顿海洋别墅</td>
+								<td>1房厅</td>
+								<td>美国</td>
+								<td>波士顿</td>
+								<td>城西区</td>
+								<td>独家</td>
+								<td>上架</td>
+								<td>103</td>
+								<td>2015-10-20 15:26:20</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">下架</a> | <a href="javascript:void(0);">刷新</a> | <a href="javascript:void(0);">删除</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>10</td>
+								<td>美国波士顿海洋别墅</td>
+								<td>1房厅</td>
+								<td>美国</td>
+								<td>波士顿</td>
+								<td>城西区</td>
+								<td>独家</td>
+								<td>上架</td>
+								<td>103</td>
+								<td>2015-10-20 15:26:20</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">下架</a> | <a href="javascript:void(0);">刷新</a> | <a href="javascript:void(0);">删除</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>10</td>
+								<td>美国波士顿海洋别墅</td>
+								<td>1房厅</td>
+								<td>美国</td>
+								<td>波士顿</td>
+								<td>城西区</td>
+								<td>独家</td>
+								<td>上架</td>
+								<td>103</td>
+								<td>2015-10-20 15:26:20</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">下架</a> | <a href="javascript:void(0);">刷新</a> | <a href="javascript:void(0);">删除</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>10</td>
+								<td>美国波士顿海洋别墅</td>
+								<td>1房厅</td>
+								<td>美国</td>
+								<td>波士顿</td>
+								<td>城西区</td>
+								<td>独家</td>
+								<td>上架</td>
+								<td>103</td>
+								<td>2015-10-20 15:26:20</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">下架</a> | <a href="javascript:void(0);">刷新</a> | <a href="javascript:void(0);">删除</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>10</td>
+								<td>美国波士顿海洋别墅</td>
+								<td>1房厅</td>
+								<td>美国</td>
+								<td>波士顿</td>
+								<td>城西区</td>
+								<td>独家</td>
+								<td>上架</td>
+								<td>103</td>
+								<td>2015-10-20 15:26:20</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">下架</a> | <a href="javascript:void(0);">刷新</a> | <a href="javascript:void(0);">删除</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>10</td>
+								<td>美国波士顿海洋别墅</td>
+								<td>1房厅</td>
+								<td>美国</td>
+								<td>波士顿</td>
+								<td>城西区</td>
+								<td>独家</td>
+								<td>上架</td>
+								<td>103</td>
+								<td>2015-10-20 15:26:20</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">下架</a> | <a href="javascript:void(0);">刷新</a> | <a href="javascript:void(0);">删除</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>10</td>
+								<td>美国波士顿海洋别墅</td>
+								<td>1房厅</td>
+								<td>美国</td>
+								<td>波士顿</td>
+								<td>城西区</td>
+								<td>独家</td>
+								<td>上架</td>
+								<td>103</td>
+								<td>2015-10-20 15:26:20</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">下架</a> | <a href="javascript:void(0);">刷新</a> | <a href="javascript:void(0);">删除</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>10</td>
+								<td>美国波士顿海洋别墅</td>
+								<td>1房厅</td>
+								<td>美国</td>
+								<td>波士顿</td>
+								<td>城西区</td>
+								<td>独家</td>
+								<td>上架</td>
+								<td>103</td>
+								<td>2015-10-20 15:26:20</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">下架</a> | <a href="javascript:void(0);">刷新</a> | <a href="javascript:void(0);">删除</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>10</td>
+								<td>美国波士顿海洋别墅</td>
+								<td>1房厅</td>
+								<td>美国</td>
+								<td>波士顿</td>
+								<td>城西区</td>
+								<td>独家</td>
+								<td>上架</td>
+								<td>103</td>
+								<td>2015-10-20 15:26:20</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">下架</a> | <a href="javascript:void(0);">刷新</a> | <a href="javascript:void(0);">删除</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>10</td>
+								<td>美国波士顿海洋别墅</td>
+								<td>1房厅</td>
+								<td>美国</td>
+								<td>波士顿</td>
+								<td>城西区</td>
+								<td>独家</td>
+								<td>上架</td>
+								<td>103</td>
+								<td>2015-10-20 15:26:20</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">下架</a> | <a href="javascript:void(0);">刷新</a> | <a href="javascript:void(0);">删除</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>10</td>
+								<td>美国波士顿海洋别墅</td>
+								<td>1房厅</td>
+								<td>美国</td>
+								<td>波士顿</td>
+								<td>城西区</td>
+								<td>独家</td>
+								<td>上架</td>
+								<td>103</td>
+								<td>2015-10-20 15:26:20</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">下架</a> | <a href="javascript:void(0);">刷新</a> | <a href="javascript:void(0);">删除</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>10</td>
+								<td>美国波士顿海洋别墅</td>
+								<td>1房厅</td>
+								<td>美国</td>
+								<td>波士顿</td>
+								<td>城西区</td>
+								<td>独家</td>
+								<td>上架</td>
+								<td>103</td>
+								<td>2015-10-20 15:26:20</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">下架</a> | <a href="javascript:void(0);">刷新</a> | <a href="javascript:void(0);">删除</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>10</td>
+								<td>美国波士顿海洋别墅</td>
+								<td>1房厅</td>
+								<td>美国</td>
+								<td>波士顿</td>
+								<td>城西区</td>
+								<td>独家</td>
+								<td>上架</td>
+								<td>103</td>
+								<td>2015-10-20 15:26:20</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">下架</a> | <a href="javascript:void(0);">刷新</a> | <a href="javascript:void(0);">删除</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>10</td>
+								<td>美国波士顿海洋别墅</td>
+								<td>1房厅</td>
+								<td>美国</td>
+								<td>波士顿</td>
+								<td>城西区</td>
+								<td>独家</td>
+								<td>上架</td>
+								<td>103</td>
+								<td>2015-10-20 15:26:20</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">下架</a> | <a href="javascript:void(0);">刷新</a> | <a href="javascript:void(0);">删除</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>10</td>
+								<td>美国波士顿海洋别墅</td>
+								<td>1房厅</td>
+								<td>美国</td>
+								<td>波士顿</td>
+								<td>城西区</td>
+								<td>独家</td>
+								<td>上架</td>
+								<td>103</td>
+								<td>2015-10-20 15:26:20</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">下架</a> | <a href="javascript:void(0);">刷新</a> | <a href="javascript:void(0);">删除</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>10</td>
+								<td>美国波士顿海洋别墅</td>
+								<td>1房厅</td>
+								<td>美国</td>
+								<td>波士顿</td>
+								<td>城西区</td>
+								<td>独家</td>
+								<td>上架</td>
+								<td>103</td>
+								<td>2015-10-20 15:26:20</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">下架</a> | <a href="javascript:void(0);">刷新</a> | <a href="javascript:void(0);">删除</a></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="pages clear">
+				<div class="page-record fl">
+					<p>每页<em>20</em>条，共有<em>303</em>条记录</p>
+				</div>
+				<div class="page-list fr">
+					<span>首页</span>
+					<span>上一页</span>
+					<span class="current">1</span>
+					<a href="javascript:void(0);">2</a>
+					<a href="javascript:void(0);">3</a>
+					<i>...</i>
+					<a href="javascript:void(0);">12</a>
+					<a href="javascript:void(0);">13</a>
+					<a href="javascript:void(0);">下一页</a>
+					<a href="javascript:void(0);">末页</a>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+		<script type="text/javascript" src="../js/houses-manage.js"></script>
+	</body>
+
+</html>

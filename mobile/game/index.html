@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>点房成金</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript" src="js/loading.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var n = 0, //当前页码
+					m = 0, //之前页码
+					b = false, //移动状态
+					wid = $(window).width(), //宽
+					heg = $(window).height(), //高
+					leg = 2, //长度
+					startPosition = {x: 0, y: 0}, //开始位置
+					endPosition = {x: 0, y: 0}; //结束位置					
+				$(".game-home").css({"width": wid, "height": heg});
+				$(".game-rule").css({"width": wid, "height": heg})
+				/* 触控事件 */
+				$(".game-body").on("touchstart", function(e){
+					$.extend(startPosition, {x: e.touches[0].pageX, y: e.touches[0].pageY});
+				});
+				$(".game-body").on("touchmove", function(e){
+					if(typeof e.touches[0] === "object"){
+						b = true;
+					}
+					e.preventDefault();
+					$.extend(endPosition, {x: e.touches[0].pageX, y: e.touches[0].pageY});
+					//$(".game-list").animate({"translateY": (-n * heg + endPosition.y - startPosition.y)+"px"}, 100, "linear");					
+				});
+				$(".game-body").on("touchend", function(e){
+					if(b){
+						b = false;
+						if(endPosition.y - startPosition.y > 30){
+							if(n > 0){
+								n--;
+							}
+						} else if(endPosition.y - startPosition.y < -30){
+							if(n < leg - 1){
+								n++;
+							}
+						};
+						$(".game-list").animate({"translateY": -n * heg +"px"}, 100);
+					}
+				});
+				//活动规则
+				$(".pic11").on("click", function(){
+					n = 1;
+					$(".game-list").animate({"translateY": -n * heg +"px"}, 100);
+				});
+				//兑换
+				$(".pic10").on("click", function(){
+					$(".translucent").css({"display": "block"});
+					$("#login").css({"display": "block", "-webkit-transform": "scale(0,0)"}).animate({"-webkit-transform": "scale(1,1)"}, 100, "linear", function(){
+						$("#login,.translucent").css({"display": "block"});
+						//禁止屏幕拖动
+						$("#login,.translucent").on("touchmove", function(e){
+							e.preventDefault();
+						});
+					});
+				});
+				//记录
+				$(".pic4").on("click", function(){
+					$(".translucent").css({"display": "block"});
+					$("#record").css({"display": "block", "-webkit-transform": "scale(0,0)"}).animate({"-webkit-transform": "scale(1,1)"}, 100, "linear", function(){
+						$("#record,.translucent").css({"display": "block"});
+						$("#record,.translucent").on("touchmove", function(e){
+							e.preventDefault();
+						});
+					});
+				});
+				//关闭弹层
+				$(".translucent,.popup-close a").on("click", function(){
+					$(".popup-body").animate({"-webkit-transform": "scale(0,0)"}, 100, "linear", function(){
+						$(".popup-body,.translucent").css({"display": "none"});
+					});
+				});
+				//获得焦点
+				$("input").on("focus", function(){
+					$(document).scrollTop($(this).offset().top);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class='loading'>
+			<p>loading...</p>
+			<div class="a">				
+				<div class="b">
+					<div class="c rotat"></div>
+				</div>
+				<div class="d"><img src="img/36.png" width="151" height="44" /></div>
+			</div>
+		</div>
+		<div class="game-body">
+			<div class="game-list">
+				<div class="game-home">
+					<div class="top">
+						<div class="pic pic1 none-anima"><img src="img/1.png" width="668" height="332"/></div>
+						<div class="pic pic61 transl1"><img src="img/6-1.png" width="149" height="55"/></div>
+						<div class="pic pic62 transl2"><img src="img/6-2.png" width="134" height="45"/></div>
+						<div class="pic pic63 transl2"><img src="img/6-3.png" width="159" height="57"/></div>
+						<div class="pic pic64 transl1"><img src="img/6-4.png" width="148" height="40"/></div>
+						<div class="pic pic65 transl2"><img src="img/6-5.png" width="152" height="48"/></div>
+						<div class="pic pic66 transl3"><img src="img/6-6.png" width="134" height="47"/></div>
+						<div class="pic pic67 transl4"><img src="img/6-7.png" width="134" height="47"/></div>
+						<div class="pic pic68 transl4"><img src="img/6-8.png" width="132" height="47"/></div>
+						<div class="pic pic610 transl1"><img src="img/6-10.png" width="194" height="68"/></div>	
+						<div class="pic pic611 transl2"><img src="img/6-11.png" width="194" height="69"/></div>	
+					</div>
+					<div class="bottom">
+						<div class="pic pic69 transl5"><img src="img/6-9.png" width="104" height="37"/></div>
+						<div class="pic pic2 none-anima"><img src="img/2.png" width="750" height="944"/></div>
+						<a href="game.html" class="pic pic3 none-anima"><img src="img/3.png" width="265" height="113" /></a>
+						<a href="javascript:void(0);" class="pic pic4 none-anima"><img src="img/4.png" width="168" height="46" /></a>
+						<div class="pic pic51 flying1"><img src="img/5-1.png" width="62" height="61"/></div>
+						<div class="pic pic52 flying2"><img src="img/5-2.png" width="54" height="53"/></div>
+						<div class="pic pic53 flying3"><img src="img/5-3.png" width="61" height="61"/></div>				
+						<label class="pic num none-anima">5</label>
+						<a href="javascript:void(0);" class="pic pic10 none-anima"><img src="img/10.png" width="136" height="52" /></a>
+						<a href="javascript:void(0);" class="pic pic11 dwon">活动规则<i>&nbsp;</i></a>					
+						<div class="pic pic8">
+							<div><img src="img/8.png" width="750" height="812" /></div>
+							<div class="pic pic81 drop1"><img src="img/8-1.png" width="113" height="96" /></div>
+							<div class="pic pic82 drop2"><img src="img/8-2.png" width="162" height="176"/></div>
+							<div class="pic pic83 drop3"><img src="img/8-3.png" width="100" height="132"/></div>
+							<div class="pic pic84 drop4"><img src="img/8-4.png" width="29" height="28"/></div>
+							<div class="pic pic85 drop5"><img src="img/8-5.png" width="73" height="61"/></div>
+							<div class="pic pic86 drop6"><img src="img/8-6.png" width="54" height="54"/></div>
+							<div class="pic pic87 drop7"><img src="img/8-7.png" width="75" height="50"/></div>
+							<div class="pic pic88 drop7"><img src="img/8-8.png" width="91" height="87"/></div>
+							<div class="pic pic89 drop6"><img src="img/8-9.png" width="54" height="60"/></div>
+							<div class="pic pic810 drop5"><img src="img/8-10.png" width="54" height="65"/></div>
+							<div class="pic pic811 drop4"><img src="img/8-11.png" width="41" height="45"/></div>
+							<div class="pic pic812 drop3"><img src="img/8-12.png" width="54" height="60"/></div>
+							<div class="pic pic813 drop2"><img src="img/8-13.png" width="41" height="45"/></div>
+							<div class="pic pic814 drop1"><img src="img/8-14.png" width="46" height="29"/></div>
+						</div>
+					</div>
+					<div class="pic pic9 rotating"><img src="img/9.png" width="1005" height="1005" /></div>
+				</div>
+				<div class="game-rule">
+					<div class="rules">
+						<h3>活动规则</h3>
+						<p class="tit">一、玩法介绍</p>
+						<p class="txt">限定时间内，点击对应的房子可加分，减分或加时：</p>
+						<p class="txt"><span class="s1">豪宅<em>+10</em>分</span><span class="s2">别墅<em>+10</em>分</span></p>
+						<p class="txt"><span class="s3">公寓<em>+5</em>分</span><span class="s4">平房<em>+3</em>分</span></p>
+						<p class="txt"><span class="s5">烂尾楼<em>-5</em>分</span><span class="s6">破草屋<em>-3</em>分</span></p>
+						<p class="txt"><span class="s7">加时器<em>+5</em>秒</span></p>
+						<p class="txt">游戏结束后得到相应积分，400积分可兑换一枚Q币，单局游戏积分不累积，用户每日最多可参加5次游戏。</p>
+						<p class="tit">二、朋友分享</p>
+						<p class="txt">游戏结束炫耀到微信朋友圈，可额外增加2次机会。</p>
+						<p class="tit">三、兑换规则</p>
+						<p class="txt">兑换的Q币5个工作日到账，其它活动奖品将于活动结束后5天内发出，请各位小主耐心等待哟!</p>
+						<p class="txt"><img src="img/42.png"/></p>
+						<p class="tit">四、活动时间</p>
+						<p class="txt"><em>2015年05月20日-2015年5月30日</em></p>
+						<p class="txt">活动最终解释权归深圳市云房网络科技有限公司所有；</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="translucent"></div>
+		<div class="popup-body" id="login">
+			<div class="login-body">
+				<div class="title"><h3>我要兑换</h3></div>
+				<div class="content">
+					<div class="info"><p>本次可兑换5Q币</p></div>
+					<div class="text">
+						<p><label>QQ号码</label><input type="tel" placeholder="您充值的QQ号" /></p>
+						<p class="line readonly"><label>手&nbsp;机&nbsp;号</label><input type="tel" placeholder="手机号" value="12698745633" readonly="readonly" /></p>
+						<p class="pstu"><label>验&nbsp;证&nbsp;码</label><input type="tel" placeholder="验证码" /><input type="button" value="获取验证码" class="code" /></p>
+					</div>
+					<div class="sbut"><input type="button" value="兑 换" /></div>
+				</div>
+			</div>
+			<div class="popup-close"><a href="javascript:void(0);"></a></div>
+		</div>
+		<div class="popup-body" id="record">
+			<div class="record-body">
+				<div class="title"><h3>游戏记录</h3></div>
+				<div class="table">
+					<table>
+						<tr>
+							<th style="width:30%;">时间</th>
+							<th style="width:30%;">积分</th>
+							<th style="width:30%;">兑换Q币数</th>
+						</tr>
+						<tr>
+							<td>13:01</td>
+							<td>1800</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td>13:01</td>
+							<td>1800</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td>13:01</td>
+							<td>1800</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td>13:01</td>
+							<td>1800</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td>13:01</td>
+							<td>1800</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td>13:01</td>
+							<td>1800</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td>13:01</td>
+							<td>1800</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td>13:01</td>
+							<td>1800</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td>13:01</td>
+							<td>1800</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td>13:01</td>
+							<td>1800</td>
+							<td>4</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="popup-close"><a href="javascript:void(0);"></a></div>
+		</div>
+		<div class="alert-body">
+			<div class="alert">
+				<p class="info">活动最终解释权归深圳市云房网络科技有限</p>
+				<p class="ok"><a href="javascript:void(0);">确&nbsp;&nbsp;定</a></p>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>添加广告</title>
+    <link type="text/css" rel="stylesheet" href="../css/base.css" />
+    <link type="text/css" rel="stylesheet" href="../css/form.css" />
+    <link type="text/css" rel="stylesheet" href="../css/table.css" />
+  </head>
+
+  <body>
+    <div class="p30">
+      <div class="mb10">
+        <label class="mr10 label very-small tar"><i class="red-i">*</i>标题：</label>
+        <input class="text very-long" id="ad-title" type="text" />
+      </div>
+      <div class="mb10">
+        <label class="mr10 label very-small tar"><i class="red-i">*</i>版面：</label>
+        <select class="select default" id="ad-layout">
+          <option value="">请选择</option>
+          <option value="首页">首页</option>
+        </select>
+      </div>
+      <div class="mb10">
+        <label class="mr10 label very-small tar"><i class="red-i">*</i>位置：</label>
+        <select class="select default" id="ad-site">
+          <option value="">请选择</option>
+          <option value="轮播图">轮播图</option>
+        </select>
+      </div>
+      <div class="mb10">
+        <label class="mr10 label very-small tar"><i class="red-i">*</i>国家：</label>
+        <div class="very-long" style="display:inline-block; vertical-align:top;">
+          <p>
+            <span style="white-space:nowrap;">
+              <input class="checkbox" id="all-countries" type="checkbox" />
+              <label class="mr20 for-label" for="all-countries">全部</label>
+            </span>
+          </p>
+          <p id="countries-items">
+            <span style="white-space:nowrap;">
+						  <input class="checkbox" id="dubai" type="checkbox" />
+						  <label class="mr20 for-label" for="dubai">迪拜迪拜迪拜迪拜</label>
+						</span>
+            <span style="white-space:nowrap;">
+						<input class="checkbox" id="america" type="checkbox" />
+						<label class="mr20 for-label" for="america">美国</label>
+						</span>
+            <span style="white-space:nowrap;">
+						<input class="checkbox" id="japan" type="checkbox" />
+						<label class="mr20 for-label" for="japan">日本</label>
+						</span>
+            <span style="white-space:nowrap;">
+						<input class="checkbox" id="australia" type="checkbox" />
+						<label class="mr20 for-label" for="australia">澳洲</label>
+						</span>
+          </p>
+        </div>
+      </div>
+      <div class="mb10">
+        <label class="mr10 label very-small tar">链接：</label>
+        <input class="text very-long" id="ad-link" type="text" />
+      </div>
+      <div class="mb10">
+        <label class="mr10 label very-small tar"><i class="red-i">*</i>图片：</label>
+        <div class="bs1" style="display:inline-block; width:160px; height:120px; vertical-align:text-top;">
+          <img id="ad-picture" src="../img/2.jpg" />
+        </div>
+        <div class="ml20" style="display:inline-block; padding-top:91px; vertical-align:text-top;">
+          <a class="btn orange-btn very-small" id="upload-picture" href="javascript:void(0);">上传图片</a>
+          <label class="ml20 label green">图片大小：80 * 120</label>
+        </div>
+      </div>
+      <div class="mb10">
+        <label class="mr10 label very-small tar">权重：</label>
+        <input class="text default" id="ad-weight" type="text" />
+      </div>
+      <div class="mb10">
+        <label class="mr10 label very-small tar"><i class="red-i">*</i>开始时间：</label>
+        <input class="text date-text small" id="stratTime" readonly="readonly" type="text" />
+      </div>
+      <div class="mb10">
+        <label class="mr10 label very-small tar"><i class="red-i">*</i>结束时间：</label>
+        <input class="text date-text small" id="endTime" readonly="readonly" type="text" />
+      </div>
+      <div class="mt20 mb10">
+        <label class="mr10 label very-small">&nbsp;</label>
+        <input class="btn orange-btn very-small" id="ok-ad" type="button" value="确定" />
+        <input class="ml10 btn very-small" id="cancel" type="button" value="取消" />
+      </div>
+    </div>
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../js/layer/layer.js"></script>
+    <script type="text/javascript" src="../js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="../js/advertising-manage.js"></script>
+  </body>
+
+</html>

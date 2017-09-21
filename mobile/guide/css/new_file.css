@@ -1,0 +1,98 @@
+.body{position:fixed; top:0; right:0; bottom:0; left:0; overflow:hidden; z-index:1; background:rgba(255,255,255,1);}
+.list{background:rgba(39,41,80,1);}
+.guide{position:relative;}
+.one{background:url(../img/bg1.jpg) no-repeat 0 0 / 100% 100%;}
+.one .logo{position:absolute; top:1.41%; left:3.12%; width:13.75%; height:3.17%; background:url(../img/logo.png) no-repeat 0 0 / 100% 100%;}
+.one .element1{position:absolute; top:7.39%; right:0; width:83.75%; height:49.91%; background:url(../img/one1.png) no-repeat 0 0 / 100% 100%;}
+.one .element2{position:absolute; bottom:24.92%; left:9.68%; width:58.75%; height:7.48%; background:url(../img/one2.png) no-repeat 0 0 / 100% 100%;}
+.one .element3{position:absolute; bottom:18.05%; right:5.25%; width:67.5%; height:5.28%; background:url(../img/one3.png) no-repeat 0 0 / 100% 100%;}
+.one .todown{position:absolute; bottom:5.28%; left:46.875%; width:9.375%; height:4.225%; background:url(../img/todown.png) no-repeat 0 0 / 100% 100%;}
+.two{}
+.two .element1{position:absolute; top:15.228%; left:20.93%; width:58.437%; height:32.922%; background:url(../img/two1.png) no-repeat 0 0 / 100% 100%;}
+.two .element2{position:absolute; top:26.848%; left:41.562%; width:17.656%; height:2.465%; background:url(../img/two2.png) no-repeat 0 0 / 100% 100%;}
+.two .element3{position:absolute; top:30.193%; left:32.187%; width:36.562%; height:2.553%; background:url(../img/two3.png) no-repeat 0 0 / 100% 100%;}
+.two .element4{position:absolute; top:11.883%; left:4.843%; width:32.343%; height:6.69%; background:url(../img/two4.png) no-repeat 0 0 / 100% 100%;}
+.two .element5{position:absolute; top:9.507%; right:4.531%; width:32.656%; height:6.338%; background:url(../img/two5.png) no-repeat 0 0 / 100% 100%;}
+.two .text{position:absolute; bottom:0; right:0; width:100%; height:37.852%; background:url(../img/two-text.jpg) no-repeat 0 0 / 100% 100%;}
+.three{}
+.three .element1{position:absolute; top:15.228%; left:20.93%; width:58.437%; height:32.922%; background:url(../img/three1.png) no-repeat 0 0 / 100% 100%;}
+.three .element2{position:absolute; top:26.848%; left:32.587%; width:36.25%; height:2.553%; background:url(../img/three2.png) no-repeat 0 0 / 100% 100%;}
+.three .element3{position:absolute; top:30.193%; left:32.187%; width:36.562%; height:2.553%; background:url(../img/three3.png) no-repeat 0 0 / 100% 100%;}
+.three .element4{position:absolute; top:11.883%; left:4.843%; width:32.343%; height:6.69%; background:url(../img/three4.png) no-repeat 0 0 / 100% 100%;}
+.three .element5{position:absolute; top:9.507%; right:4.531%; width:32.656%; height:6.338%; background:url(../img/three5.png) no-repeat 0 0 / 100% 100%;}
+.three .text{position:absolute; bottom:0; right:0; width:100%; height:37.852%; background:url(../img/three-text.jpg) no-repeat 0 0 / 100% 100%;}
+.four{}
+.four .element1{position:absolute; top:9.419%; left:2.5%; width:92.187%; height:39.261%; background:url(../img/four1.png) no-repeat 0 0 / 100% 100%;}
+.four .element2{position:absolute; bottom:51.5%; left:23.75%; width:8.593%; height:26.848%; background:url(../img/four2.png) no-repeat 0 0 / 100% 100%;}
+.four .element3{position:absolute; bottom:51.5%; left:48.75%; width:8.593%; height:10.211%; background:url(../img/four3.png) no-repeat 0 0 / 100% 100%;}
+.four .element4{position:absolute; bottom:51.5%; right:17.343%; width:8.593%; height:19.366%; background:url(../img/four4.png) no-repeat 0 0 / 100% 100%;}
+.four .element5{position:absolute; bottom:47.535%; left:25%; width:50%; height:1.761%; background:url(../img/four5.png) no-repeat 0 0 / 100% 100%;}
+.four .element6{position:absolute; top:16.021%; left:18.593%; width:18.906%; height:5.193%; background:url(../img/four6.png) no-repeat 0 0 / 100% 100%;}
+.four .element7{position:absolute; top:32.482%; left:44.593%; width:15.781%; height:5.193%; background:url(../img/four7.png) no-repeat 0 0 / 100% 100%;}
+.four .element8{position:absolute; top:23.503%; right:12.587%; width:15.781%; height:5.193%; background:url(../img/four8.png) no-repeat 0 0 / 100% 100%;}
+.four .element9{position:absolute; top:33.186%; left:25.156%; width:6.25%; height:1.496%; background:url(../img/four9.png) no-repeat 0 0 / 100% 100%;}
+.four .element10{position:absolute; top:41.99%; left:50.118%; width:6.25%; height:1.496%; background:url(../img/four10.png) no-repeat 0 0 / 100% 100%;}
+.four .element11{position:absolute; top:37.94%; right:18.44%; width:6.25%; height:1.496%; background:url(../img/four11.png) no-repeat 0 0 / 100% 100%;}
+.four .text{position:absolute; bottom:0; right:0; width:100%; height:37.852%; background:url(../img/four-text.jpg) no-repeat 0 0 / 100% 100%;}
+.five{}
+.five .element1{position:absolute; top:10.123%; left:4.375%; width:82.031%; height:38.556%; background:url(../img/five1.png) no-repeat 0 0 / 100% 100%;}
+.five .element2{position:absolute; bottom:43.75%; left:23.59%; width:46.875%; height:1.761%; background:url(../img/five2.png) no-repeat 0 0 / 100% 100%;}
+.five .element3{position:absolute; top:7.394%; right:7.81%; width:11.25%; height:1.584%; background:url(../img/five3.png) no-repeat 0 0 / 100% 100%;}
+.five .element4{position:absolute; top:10.12%; right:7.81%; width:11.25%; height:1.584%; background:url(../img/five4.png) no-repeat 0 0 / 100% 100%;}
+.five .element5{position:absolute; bottom:48.327%; left:24.375%; width:15.625%; height:1.761%; background:url(../img/five5.png) no-repeat 0 0 / 100% 100%;}
+.five .element6{position:absolute; bottom:48.327%; right:28.59%; width:12.343%; height:1.761%; background:url(../img/five6.png) no-repeat 0 0 / 100% 100%;}
+.five .element7{position:absolute; bottom:51.496%; left:23.593%; width:11.875%; height:29.313%; background:url(../img/five7.png) no-repeat 0 0 / 100% 100%;}
+.five .element8{position:absolute; bottom:51.496%; right:30.78%; width:11.875%; height:18.75%; background:url(../img/five8.png) no-repeat 0 0 / 100% 100%;}
+.five .element9{position:absolute; bottom:51.496%; left:29.531%; width:11.875%; height:16.197%; background:url(../img/five9.png) no-repeat 0 0 / 100% 100%;}
+.five .element10{position:absolute; bottom:51.496%; right:25.15%; width:11.875%; height:14.964%; background:url(../img/five10.png) no-repeat 0 0 / 100% 100%;}
+.five .element11{position:absolute; top:12.147%; left:26.875%; width:46.56%; height:5.985%; background:url(../img/five11.png) no-repeat 0 0 / 100% 100%;}
+.five .element12{position:absolute; top:22.975%; right:3.75%; width:43.593%; height:6.161%; background:url(../img/five12.png) no-repeat 0 0 / 100% 100%;}
+.five .element13{position:absolute; top:21.214%; left:25.156%; width:8.75%; height:1.496%; background:url(../img/five13.png) no-repeat 0 0 / 100% 100%;}
+.five .element14{position:absolute; top:31.161%; right:32.65%; width:8.75%; height:1.496%; background:url(../img/five14.png) no-repeat 0 0 / 100% 100%;}
+.five .element15{position:absolute; top:35.211%; left:31.25%; width:8.75%; height:1.496%; background:url(../img/five15.png) no-repeat 0 0 / 100% 100%;}
+.five .element16{position:absolute; top:36.355%; right:26.39%; width:8.75%; height:1.496%; background:url(../img/five16.png) no-repeat 0 0 / 100% 100%;}
+.five .text{position:absolute; bottom:0; right:0; width:100%; height:37.852%; background:url(../img/five-text.jpg) no-repeat 0 0 / 100% 100%;}
+.six{}
+.six .element1{position:absolute; top:9.243%; left:2.5%; width:92.968%; height:42.253%; background:url(../img/six1.png) no-repeat 0 0 / 100% 100%;}
+.six .element2{position:absolute; bottom:43.75%; left:21.72%; width:59.375%; height:1.761%; background:url(../img/six2.png) no-repeat 0 0 / 100% 100%;}
+.six .element3{position:absolute; bottom:51.496%; left:22.656%; width:3.75%; height:2.816%; background:url(../img/six3.png) no-repeat 0 0 / 100% 100%;}
+.six .element4{position:absolute; bottom:51.496%; left:33.281%; width:3.75%; height:19.63%; background:url(../img/six4.png) no-repeat 0 0 / 100% 100%;}
+.six .element5{position:absolute; bottom:51.496%; left:43.751%; width:3.75%; height:22.88%; background:url(../img/six5.png) no-repeat 0 0 / 100% 100%;}
+.six .element6{position:absolute; bottom:51.496%; left:54.375%; width:3.75%; height:26.85%; background:url(../img/six6.png) no-repeat 0 0 / 100% 100%;}
+.six .element7{position:absolute; bottom:51.496%; right:31.25%; width:3.75%; height:27.29%; background:url(../img/six7.png) no-repeat 0 0 / 100% 100%;}
+.six .element8{position:absolute; bottom:51.496%; right:20.78%; width:3.75%; height:29.49%; background:url(../img/six8.png) no-repeat 0 0 / 100% 100%;}
+.six .element9{position:absolute; bottom:51.496%; right:10.15%; width:3.75%; height:27.99%; background:url(../img/six9.png) no-repeat 0 0 / 100% 100%;}
+.six .element10{position:absolute; top:16.197%; left:24.21%; width:64.375%; height:26.76%; background:url(../img/six10.png) no-repeat 0 0 / 100% 100%;}
+.six .text{position:absolute; bottom:0; right:0; width:100%; height:37.852%; background:url(../img/six-text.jpg) no-repeat 0 0 / 100% 100%;}
+.seven{}
+.seven .element1{position:absolute; top:10.123%; left:4.375%; width:91.25%; height:41.549%; background:url(../img/seven1.png) no-repeat 0 0 / 100% 100%;}
+.seven .element2{position:absolute; bottom:43.75%; left:27.81%; width:43.75%; height:1.761%; background:url(../img/seven2.png) no-repeat 0 0 / 100% 100%;}
+.seven .element3{position:absolute; top:12.147%; left:17.965%; width:77.343%; height:30.105%; background:url(../img/seven3.png) no-repeat 0 0 / 100% 100%;}
+.seven .element4{position:absolute; top:9.419%; left:17.965%; width:78.281%; height:12.235%; background:url(../img/seven4.png) no-repeat 0 0 / 100% 100%;}
+.seven .element5{position:absolute; top:37.588%; left:17.965%; width:78.75%; height:6.954%; background:url(../img/seven5.png) no-repeat 0 0 / 100% 100%;}
+.seven .text{position:absolute; bottom:0; right:0; width:100%; height:37.852%; background:url(../img/seven-text.jpg) no-repeat 0 0 / 100% 100%;}
+.eight{}
+.eight .element1{position:absolute; top:9.419%; left:4.375%; width:91.562%; height:42.165%; background:url(../img/eight1.png) no-repeat 0 0 / 100% 100%;}
+.eight .element2{position:absolute; bottom:45.246%; left:27.65%; width:43.75%; height:1.761%; background:url(../img/eight2.png) no-repeat 0 0 / 100% 100%;}
+.eight .element3{position:absolute; top:1.936%; left:5.15%; width:36.562%; height:1.668%; background:url(../img/eight3.png) no-repeat 0 0 / 100% 100%;}
+.eight .element4{position:absolute; top:4.665%; left:5.15%; width:25.132%; height:1.584%; background:url(../img/eight4.png) no-repeat 0 0 / 100% 100%;}
+.eight .element5{position:absolute; top:37.323%; left:11.406%; width:81.25%; height:10.211%; background:url(../img/eight5.png) no-repeat 0 0 / 100% 100%;}
+.eight .element6{position:absolute; top:30.985%; left:11.406%; width:82.03%; height:16.197%; background:url(../img/eight6.png) no-repeat 0 0 / 100% 100%;}
+.eight .element7{position:absolute; top:27.992%; left:8.906%; width:15.468%; height:5.193%; background:url(../img/eight7.png) no-repeat 0 0 / 100% 100%;}
+.eight .element8{position:absolute; top:28.169%; left:30.156%; width:15.156%; height:7.922%; background:url(../img/eight8.png) no-repeat 0 0 / 100% 100%;}
+.eight .element9{position:absolute; top:2.464%; left:48.281%; width:18.593%; height:7.922%; background:url(../img/eight9.png) no-repeat 0 0 / 100% 100%;}
+.eight .element10{position:absolute; top:28.169%; right:27.656%; width:15.156%; height:7.922%; background:url(../img/eight10.png) no-repeat 0 0 / 100% 100%;}
+.eight .element11{position:absolute; top:2.992%; right:9.687%; width:17.812%; height:7.922%; background:url(../img/eight11.png) no-repeat 0 0 / 100% 100%;}
+.eight .element12{position:absolute; top:26.408%; right:1.093%; width:14.687%; height:7.922%; background:url(../img/eight12.png) no-repeat 0 0 / 100% 100%;}
+.eight .text{position:absolute; bottom:0; right:0; width:100%; height:42.341%; background:url(../img/eight-text.jpg) no-repeat 0 0 / 100% 100%;}
+.nine{}
+.nine .element1{position:absolute; top:3.521%; left:6.875%; width:11.25%; height:3.169%; background:url(../img/nine1.png) no-repeat 0 0 / 100% 100%;}
+.nine .element2{position:absolute; top:9.859%; left:6.875%; width:85.781%; height:27.728%; background:url(../img/nine2.png) no-repeat 0 0 / 100% 100%;}
+.nine .element3{position:absolute; top:47.535%; left:12.96%; width:72.343%; height:26.232%; background:url(../img/nine3.png) no-repeat 0 0 / 100% 100%;}
+.nine .element4{position:absolute; bottom:3.521%; left:40.156%; width:53.75%; height:7.834%; background:url(../img/nine4.png) no-repeat 0 0 / 100% 100%;}
+.nine .logo{position:absolute; bottom:4.313%; left:7.5%; width:26.718%; height:6.07%; background:url(../img/logo.png) no-repeat 0 0 / 100% 100%;}
+.ten{}
+.ten .element1{position:absolute; top:12.94%; left:32.968%; width:34.062%; height:19.19%; background:url(../img/ten1.png) no-repeat 0 0 / 100% 100%;}
+.ten .element2{position:absolute; bottom:28.609%; left:32.968%; width:34.062%; height:19.19%; background:url(../img/ten2.png) no-repeat 0 0 / 100% 100%;}
+.ten .element3{position:absolute; top:33.978%; left:24.21%; width:51.875%; height:8.802%; background:url(../img/ten3.png) no-repeat 0 0 / 100% 100%;}
+.ten .element4{position:absolute; bottom:17.957%; left:15.01%; width:69.687%; height:8.802%; background:url(../img/ten4.png) no-repeat 0 0 / 100% 100%;}

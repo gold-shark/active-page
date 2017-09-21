@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+		<title>华南高尔夫-发送消息</title>
+		<link type="text/css" rel="stylesheet" href="css/base.css" />
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".message-add").on("click", function(){
+					
+					if($(".add-content").css("display") === "none"){
+						$(".add-content").show(300);
+					} else {
+						$(".add-content").hide(300);
+					}
+				});
+			});
+		</script>
+	</head>
+	<body class="body-gray fixed vertical">
+		<header class="header">
+			<div class="title">
+				<h1>洋洋</h1>
+				<a href="javascript:void(0);" class="go-back absolute"></a>
+				<a href="javascript:void(0);" class="friends-info absolute"></a>
+			</div>
+		</header>
+		<article class="article flex">
+			<div class="send-message">
+				<div class="friend-message clear">
+					<div class="pic fl"><img src="img/portrait.png"/></div>
+					<div class="message-content fl">
+						<p>好的...</p>
+					</div>
+				</div>
+				<div class="my-message clear">
+					<div class="pic fr"><img src="img/portrait.png"/></div>
+					<div class="message-content fr">
+						<p>当你觉得孤独无助时，想一想还有几十万亿的细胞只为了你一个人而活。这是我今天看到最温暖的话，突然被自己感动了</p>
+					</div>
+				</div>
+				<div class="friend-message clear">
+					<div class="pic fl"><img src="img/portrait.png"/></div>
+					<div class="message-content fl">
+						<p>哈哈哈</p>
+					</div>
+				</div>
+				<div class="my-message clear">
+					<div class="pic fr"><img src="img/portrait.png"/></div>
+					<div class="message-content fr">
+						<p>我去打球啦。你来吗？</p>
+					</div>
+				</div>
+				<div class="friend-message clear">
+					<div class="pic fl"><img src="img/portrait.png"/></div>
+					<div class="message-content fl">
+						<p>在哪？</p>
+					</div>
+				</div>
+			</div>	
+		</article>
+		<footer class="footer">
+			<div class="message-div horizontal">
+				<div class="pack-middel">
+					<a href="javascript:void(0);" class="message-add"><img src="img/add-b.png"/></a>
+					<a href="javascript:void(0);" class="message-face"><img src="img/face.png"/></a>
+				</div>
+				<input type="text" class="message-text flex" />
+				<input type="button" value="发送" class="message-but" />
+			</div>
+			<div class="add-content horizontal">
+				<div class="picture">
+					<a href="javascript:void(0);">
+						<img src="img/picture.png" />
+						<p>照片</p>
+					</a>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

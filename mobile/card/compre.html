@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>名片</title>
+		<link type="text/css" rel="stylesheet" href="css/sale.css" />
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".tab-body .items").find("a").on("tap", function(){
+					$(".tab-body .items").find("a").removeClass("current");
+					$(this).addClass("current");
+					$(".itesm-list").removeClass("show");
+					$(".itesm-list").eq($(this).parent().index()).addClass("show");
+				});
+				$(".homes-list").on("scroll", function(){
+					if($(this).scrollTop() >= $(this).find(".items").height() * $(this).find(".items").length - $(this).height()){
+						$(this).find(".loading").css({"display":"block"});
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<section class="list-body">
+			<header class="header clear">
+				<div class="logo fl"><img src="img/logo.png"/></div>
+				<div class="traffic fr"><p>访问量：<em>1125</em></p></div>
+			</header>
+			<article class="article">
+				<!-- 红色的 -->
+				<!--<div class="personal-red clear">
+					<div class="portrait fl"><a href="javascript:void(0);"><img src="img/portrait.png"/></a></div>
+					<div class="info fl">
+						<p class="name">李满江<span>Q房网高级置业顾问</span></p>
+						<p class="item">主营片区：福田香蜜湖</p>
+						<p class="item">从业年限：10年</p>
+					</div>
+				</div>-->
+				<!-- 蓝色的 -->
+				<div class="personal-blue clear">
+					<div class="portrait fl"><a href="javascript:void(0);"><img src="img/banner.png"/></a></div>
+					<div class="info fl">
+						<p class="name">李满江<span>Q房网高级置业顾问</span></p>
+						<p class="item">主营片区：福田香蜜湖</p>
+						<p class="item">从业年限：10年</p>
+					</div>
+				</div>
+				<div class="tab-body">
+					<div class="items">
+						<a href="javascript:void(0);" class="current">二手房<i></i></a>
+					</div>
+					<div class="items">
+						<a href="javascript:void(0);">出租房<i></i></a>
+					</div>
+					<div class="items">
+						<a href="javascript:void(0);">委托<i></i></a>
+					</div>
+					<div class="items">
+						<a href="javascript:void(0);">估价<i></i></a>
+					</div>
+				</div>
+				<div class="itesm-list homes-list show">
+					<!--<div class="items">
+						<a href="javascript:void(0);">
+							<div class="pic"><img src="img/pic1.png" /></div>
+							<div class="txt">
+								<h3><span>东海花园一期东海花园一期东海花园一期</span><em>560万</em></h3>
+								<p><span>2房2厅</span><span>60㎡</span></p>
+								<p><span>中式装修</span><span>安静花园</span><span>学位没有用过</span><span>学位没有用过</span></p>
+							</div>
+						</a>
+					</div>
+					<div class="items">
+						<a href="javascript:void(0);">
+							<div class="pic"><img src="img/pic1.png" /></div>
+							<div class="txt">
+								<h3><span>东海花园一期</span><em>560万</em></h3>
+								<p><span>2房2厅</span><span>60㎡</span></p>
+								<p><span>中式装修</span><span>安静花园</span><span>学位没有用过</span></p>
+							</div>
+						</a>
+					</div>
+					<div class="items">
+						<a href="javascript:void(0);">
+							<div class="pic"><img src="img/pic1.png" /></div>
+							<div class="txt">
+								<h3><span>东海花园一期</span><em>560万</em></h3>
+								<p><span>2房2厅</span><span>60㎡</span></p>
+								<p><span>中式装修</span><span>安静花园</span><span>学位没有用过</span></p>
+							</div>
+						</a>
+					</div>
+					<div class="items">
+						<a href="javascript:void(0);">
+							<div class="pic"><img src="img/pic1.png" /></div>
+							<div class="txt">
+								<h3><span>东海花园一期</span><em>560万</em></h3>
+								<p><span>2房2厅</span><span>60㎡</span></p>
+								<p><span>中式装修</span><span>安静花园</span><span>学位没有用过</span></p>
+							</div>
+						</a>
+					</div>
+					<div class="items">
+						<a href="javascript:void(0);">
+							<div class="pic"><img src="img/pic1.png" /></div>
+							<div class="txt">
+								<h3><span>东海花园一期</span><em>560万</em></h3>
+								<p><span>2房2厅</span><span>60㎡</span></p>
+								<p><span>中式装修</span><span>安静花园</span><span>学位没有用过</span></p>
+							</div>
+						</a>
+					</div>
+					<div class="loading">
+						<p>加载中...</p>
+					</div>-->
+					<div class="none-items"><img src="img/none.png" /></div>
+				</div>			
+				<div class="itesm-list homes-list">
+					<div class="items">
+						<a href="javascript:void(0);">
+							<div class="pic"><img src="img/pic1.png" /></div>
+							<div class="txt">
+								<h3><span>东海花园一期东海花园一期东海花园一期</span><em>5000元/月</em></h3>
+								<p><span>2房2厅</span><span>60㎡</span></p>
+								<p><span>中式装修</span><span>安静花园</span><span>学位没有用过</span><span>学位没有用过</span></p>
+							</div>
+						</a>
+					</div>
+					<div class="items">
+						<a href="javascript:void(0);">
+							<div class="pic"><img src="img/pic1.png" /></div>
+							<div class="txt">
+								<h3><span>东海花园一期</span><em>5000元/月</em></h3>
+								<p><span>2房2厅</span><span>60㎡</span></p>
+								<p><span>中式装修</span><span>安静花园</span><span>学位没有用过</span></p>
+							</div>
+						</a>
+					</div>
+					<div class="items">
+						<a href="javascript:void(0);">
+							<div class="pic"><img src="img/pic1.png" /></div>
+							<div class="txt">
+								<h3><span>东海花园一期</span><em>5000元/月</em></h3>
+								<p><span>2房2厅</span><span>60㎡</span></p>
+								<p><span>中式装修</span><span>安静花园</span><span>学位没有用过</span></p>
+							</div>
+						</a>
+					</div>
+					<div class="items">
+						<a href="javascript:void(0);">
+							<div class="pic"><img src="img/pic1.png" /></div>
+							<div class="txt">
+								<h3><span>东海花园一期</span><em>5000元/月</em></h3>
+								<p><span>2房2厅</span><span>60㎡</span></p>
+								<p><span>中式装修</span><span>安静花园</span><span>学位没有用过</span></p>
+							</div>
+						</a>
+					</div>
+					<div class="items">
+						<a href="javascript:void(0);">
+							<div class="pic"><img src="img/pic1.png" /></div>
+							<div class="txt">
+								<h3><span>东海花园一期</span><em>5000元/月</em></h3>
+								<p><span>2房2厅</span><span>60㎡</span></p>
+								<p><span>中式装修</span><span>安静花园</span><span>学位没有用过</span></p>
+							</div>
+						</a>
+					</div>
+					<div class="loading">
+						<p>加载中...</p>
+					</div>
+				</div>			
+				<div class="itesm-list homes-input">
+					<div class="text-body">
+						<div class="items">
+							<label>小<i style="display:inline-block; width:.5em;"></i>区<i style="display:inline-block; width:.5em;"></i>名：</label>
+							<input type="text" placeholder="请输入小区名称" class="text selected" />
+						</div>
+						<div class="items">
+							<label style="width:40%;">户<i style="display:inline-block; width:2em;"></i>型：</label>
+							<input type="tel" placeholder="" class="text" />
+							<span>室</span>
+							<input type="tel" placeholder="" class="text" />
+							<span>厅</span>
+							<input type="tel" placeholder="" class="text" />
+							<span>卫</span>
+						</div>
+						<div class="items">
+							<label>面<i style="display:inline-block; width:2em;"></i>积：</label>
+							<input type="tel" placeholder="" class="text" />
+							<span >m<sup>2</sup></span>
+						</div>
+						<div class="items">
+							<label>期望售价：</label>
+							<input type="tel" placeholder="" class="text" />
+							<span>万元</span>
+						</div>
+						<div class="items">
+							<label>联<i style="display:inline-block; width:.5em;"></i>系<i style="display:inline-block; width:.5em;"></i>人：</label>
+							<input type="text" placeholder="" class="text" />
+						</div>
+						<div class="items">
+							<label>手<i style="display:inline-block; width:2em;"></i>机：</label>
+							<input type="tel" placeholder="" class="text" />
+						</div>
+					</div>
+					<div class="buts-body">
+						<input type="button" value="提 交" class="but blue" />
+					</div>
+				</div>	
+				<div class="itesm-list homes-input">
+					<div class="text-body">
+						<div class="items">
+							<label>小区名：</label>
+							<input type="text" placeholder="请输入小区名称" class="text selected" />
+						</div>
+						<div class="items">
+							<label style="width:40%;">户<i style="display:inline-block; width:1em;"></i>型：</label>
+							<input type="tel" placeholder="" class="text" />
+							<span>室</span>
+							<input type="tel" placeholder="" class="text" />
+							<span>厅</span>
+							<input type="tel" placeholder="" class="text" />
+							<span>卫</span>
+						</div>
+						<div class="items">
+							<label>面<i style="display:inline-block; width:1em;"></i>积：</label>
+							<input type="tel" placeholder="" class="text" />
+							<span >m<sup>2</sup></span>
+						</div>
+						<div class="items">
+							<label>联系人：</label>
+							<input type="text" placeholder="" class="text" />
+						</div>
+						<div class="items">
+							<label>手<i style="display:inline-block; width:1em;"></i>机：</label>
+							<input type="tel" placeholder="" class="text" />
+						</div>
+					</div>
+					<div class="buts-body">
+						<input type="button" value="提 交" class="but red" />
+					</div>
+				</div>	
+				<footer class="footer">
+					<div class="items tell"><a href="javascript:void(0);">打电话</a></div>
+					<div class="items message"><a href="javascript:void(0);">发短信</a></div>
+				</footer>
+			</article>
+		</section>
+	</body>
+</html>

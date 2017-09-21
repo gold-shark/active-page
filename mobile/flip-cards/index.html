@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>我爱小Q</title>
+		<link type="text/css" rel="stylesheet" href="css/base.css" />
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/jquery.phone.js"></script>
+		<script type="text/javascript" src="js/loading.js"></script>
+		<script type="text/javascript" src="js/game.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var arr = new Array(1,2,3);
+				var b = arr.every(function(n){
+					return n > 2;
+				});
+				console.log(b);
+				
+				$("body").on("touchmove", function(e){
+					e.preventDefault();
+				});
+				$(".starts").on("touchstart", function(){
+					$(".game-begin").hide();
+					$.game();
+				});				
+				$(".reg").on("touchstart", function(){
+					window.location.reload();
+				});
+				$(".share-a").on("touchstart", function(){
+					$(".share-body").show();					
+				});
+				$(".share-body").on("touchstart", function(){
+					$(this).hide();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<section class="fixed loading pack-align">
+			<div class="content">
+				<div class="qz qz-anima"><img src="img/19.png"/></div>
+				<p>loading...</p>
+				<div class="a">				
+					<div class="b"></div>
+				</div>
+			</div>
+		</section>
+		<section class="fixed game-begin">
+			<div class="translucent pack-align">
+				<div class="content">
+					<div class="pic1 anima1"><img src="img/5.png" /></div>
+					<div class="pic2 anima2">
+						<img src="img/2.png" />
+						<a href="javascript:void(0);" class="starts">
+							<div class="pic3 go-anima1"><img src="img/4.png"/></div>
+							<div class="pic3 go-anima2"><img src="img/3.png"/></div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="fixed game-area vertical">
+			<div class="game-header horizontal">
+				<div class="status horizontal flex">
+					<time id="times">00:30</time>
+					<span>×<em id="integral">0</em></span>
+				</div>
+				<div class="again"><a href="javascript:void(0);" class="reg"><img src="img/8.png"/></a></div>
+			</div>
+			<div class="game-body vertical flex">
+				<div class="rows horizontal flex">
+					<div class="cell pack-end flex">
+						<div class="portrait one"><img src="img/portrait/1-2.png"/></div>
+						<div class="portrait two"><img src="img/portrait/1.png"/><div class="hand hand-anima1"><img src="img/portrait/1-1.png"/></div></div>
+					</div>
+					<div class="cell pack-end flex">
+						<div class="portrait one"><img src="img/portrait/3-2.png"/></div>
+						<div class="portrait two"><img src="img/portrait/3.png"/><div class="hand hand-anima3"><img src="img/portrait/3-1.png"/></div></div>
+					</div>
+					<div class="cell pack-end flex">
+						<div class="portrait one"><img src="img/portrait/10-2.png"/></div>
+						<div class="portrait two"><img src="img/portrait/10.png"/><div class="hand hand-anima10"><img src="img/portrait/10-1.png"/></div></div>
+					</div>
+				</div>
+				<div class="rows horizontal flex">
+					<div class="cell pack-end flex">
+						<div class="portrait one"><img src="img/portrait/9-2.png"/></div>
+						<div class="portrait two"><img src="img/portrait/9.png"/><div class="hand hand-anima9"><img src="img/portrait/9-1.png"/></div></div>
+					</div>
+					<div class="cell pack-end flex">
+						<div class="portrait one"><img src="img/portrait/11-2.png"/></div>
+						<div class="portrait two"><img src="img/portrait/11.png"/><div class="hand hand-anima11"><img src="img/portrait/11-1.png"/></div></div>
+					</div>
+					<div class="cell pack-end flex">
+						<div class="portrait one"><img src="img/portrait/8-2.png"/></div>
+						<div class="portrait two"><img src="img/portrait/8.png"/><div class="hand hand-anima8"><img src="img/portrait/8-1.png"/></div></div>
+					</div>
+				</div>
+				<div class="rows horizontal flex">
+					<div class="cell pack-end flex">
+						<div class="portrait one"><img src="img/portrait/6-2.png"/></div>
+						<div class="portrait two"><img src="img/portrait/6.png"/><div class="hand hand-anima6"><img src="img/portrait/6-1.png"/></div></div>
+					</div>
+					<div class="cell pack-end flex">
+						<div class="portrait one"><img src="img/portrait/4-2.png"/></div>
+						<div class="portrait two"><img src="img/portrait/4.png"/><div class="hand hand-anima4"><img src="img/portrait/4-1.png"/></div></div>
+					</div>
+					<div class="cell pack-end flex">
+						<div class="portrait one"><img src="img/portrait/2-2.png"/></div>
+						<div class="portrait two"><img src="img/portrait/2.png"/><div class="hand hand-anima2"><img src="img/portrait/2-1.png"/></div></div>
+					</div>
+				</div>
+				<div class="rows horizontal flex">
+					<div class="cell pack-end flex">
+						<div class="portrait one"><img src="img/portrait/7-2.png"/></div>
+						<div class="portrait two"><img src="img/portrait/7.png"/><div class="hand hand-anima7"><img src="img/portrait/7-1.png"/></div></div>
+					</div>
+					<div class="cell pack-end flex">
+						<div class="portrait one"><img src="img/portrait/12-2.png"/></div>
+						<div class="portrait two"><img src="img/portrait/12.png"/><div class="hand hand-anima12"><img src="img/portrait/12-1.png"/></div></div>
+					</div>
+					<div class="cell pack-end flex">
+						<div class="portrait one"><img src="img/portrait/5-2.png"/></div>
+						<div class="portrait two"><img src="img/portrait/5.png"/><div class="hand hand-anima5"><img src="img/portrait/5-1.png"/></div></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="fixed game-over">
+			<div class="absolute pack-align">
+				<div class="content">
+					<div class="logo anima4"><img src="img/14.png"/></div>
+					<div class="pic31 anima3"><img src="img/15.png" /></div>
+					<div class="pic32 anima4"><img src="img/17.png" /></div>
+				</div>
+			</div>
+			<div class="translucent pack-align anima5">
+				<div class="content anima6">
+					<p class="maxval">目前最高记录：<em>73</em>个</p>
+					<p class="minval">小菜鸟，还要继续努力哦！</p>
+					<div class="pic33">
+						<img src="img/16.png"/>
+						<p>32</p>
+					</div>
+					<div class="pic34"><img src="img/13.png"/></div>
+					<div class="horizontal buts">
+						<div class="pic35 anima7"><a href="javascript:void(0);" class="reg"><img src="img/11.png"/></a></div>
+						<div class="pic35 anima7"><a href="javascript:void(0);" class="share-a"><img src="img/10.png"/></a></div>
+					</div>
+				</div>
+			</div>
+			<div class="translucent share-body">
+				<div class="share"><img src="img/20.png"/></div>
+			</div>
+		</section>
+	</body>
+</html>

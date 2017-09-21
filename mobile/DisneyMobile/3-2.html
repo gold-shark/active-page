@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="viewport">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-width=1, maxni-width=1, user-scalable=no">
+        <title>3</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/megapix-image.js"></script>
+        <script type="text/javascript" src="js/exif.js"></script>
+        <script type="text/javascript" src="js/pictrue.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                $("#mother,#mcanvas").on("click", function(){
+                    $("#mcanvas").hide();
+                    $("#file1").val("");
+                    $("#file1").click();
+                });
+                $("#child,#ccanvas").on("click", function(){
+                    $("#ccanvas").hide();
+                    $("#file2").val("");
+                    $("#file2").click();
+                });
+                $("#file1").on("change", function(e){
+                    innerhtml({boxwid: 234, boxheg: 234, canvas: document.getElementById("mcanvas"), canwid: 336, canheg: 394, x: 54, y: 153, pic: "img/2tou1-red.png", obj: $("#mcanvas"), stark:1});
+                    uploadfile(e);
+                });
+                $("#file2").on("change", function(e){
+                    innerhtml({boxwid: 132, boxheg: 120, canvas: document.getElementById("ccanvas"), canwid: 211, canheg: 205, x: 42, y: 78, pic: "img/2tou2-red.png", obj: $("#ccanvas"), stark:2});
+                    uploadfile(e);
+                });
+                $(".but2").find("a").on("click", function(){
+                    if($("#mcanvas").css("display") !== "none" && $("#ccanvas").css("display") !== "none"){
+                        var c1 = document.getElementById("mcanvas");
+                        var c2 = document.getElementById("ccanvas");
+                        var pic1 = c1.toDataURL("image/png");
+                        var pic2 = c2.toDataURL("image/png");
+                        $.ajax({
+                            url: "upload.aspx",
+                            type: "post",
+                            data: "pic1=" + encodeURIComponent(pic1) + "&pic2=" + encodeURIComponent(pic2) + "&m=" + picscale.m + "&n=" + picscale.n,
+                            dataType: "text",
+                            beforeSend: function(){
+                                $("body").append("<div class='loading'><img src='img/loading.gif' /></div>");
+                            },
+                            complete: function(){
+                                $(".loading").remove();
+                            },
+                            success: function(info){                            
+                                window.location.href = "pic/"+ info;
+                            },
+                            error: function(){
+                                alert("error");
+                            }
+                        });
+                    } else {
+                        alert("请先传好图片！");
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body class="body3">
+        <div class="upload-body">
+            <img src="img/22bg.png" width="580" height="583" />
+            <div class="mother2">
+                <a href="javascript:void(0);" id="mother"><img src="img/2tou1_p.png" width="224" height="263" /></a>
+                <canvas id="mcanvas" width="336" height="394"></canvas>
+                <input type="file" id="file1" name="file1" />
+            </div>
+            <div class="child2">
+                <a href="javascript:void(0);" id="child"><img src="img/2tou2_p.png" width="141" height="137" /></a>
+                <canvas id="ccanvas" width="211" height="205" ></canvas>
+                <input type="file" id="file2" name="file2" />
+            </div>
+        </div>
+        <div class="pic">
+            <img src="img/3mark.png" width="285" height="107" />
+        </div>
+        <div class="buts">
+            <div class="but1">
+                <a href="2.html"><img src="img/3btn.png" width="278" height="110" /></a>
+            </div>
+            <div class="but2">
+                <a href="javascript:void(0);"><img src="img/3btn_2.png" width="278" height="110" /></a>
+            </div>
+        </div>
+    </body>
+</html>

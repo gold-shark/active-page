@@ -1,0 +1,114 @@
+<!doctype html> 
+<html> 
+<head> 
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /> 
+<title>Image preview example</title> 
+<link rel="stylesheet" href="css/style.css" />
+<script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+<script type="text/javascript">
+$(function(){
+	var result=document.getElementById("result");
+	var file=document.getElementById("file");
+	
+	//判断浏览器是否支持FileReader接口
+	if(typeof FileReader == 'undefined'){
+	    result.InnerHTML="<p>你的浏览器不支持FileReader接口！</p>";
+	    //使选择控件不可操作
+	    file.setAttribute("disabled","disabled");
+	}
+	
+	$("#qq").click(function(){
+		var file = document.getElementById("tuo");
+		var reader = new FileReader();
+		reader.readAsDataURL(file.files[0]);
+		reader.onload = function(e){			
+			$.ajax({
+				url: "upload.aspx",
+				data: $("#form1").serialize() + "&file=" + file.files[0], //e.target.result
+				dataType: "json",
+				type: "post",
+				contentType: "multiple/form-data",
+				password: "123456",
+				success: function(data){
+					console.log(data);
+				},
+				error: function(){
+					console.log("error");
+				}
+			});
+		}
+	});
+	
+	$("input[type=button]").eq(0).click(function readAsDataURL(){
+	    //检验是否为图像文件
+	    var file = document.getElementById("file").files[0];
+	    var reg = /^image\/\w+$/;
+	    if(!reg.test(file.type)){
+	        alert("看清楚，这个需要图片！");
+	        return false;
+	    }
+	    var reader = new FileReader();
+	    //将文件以Data URL形式读入页面
+	    reader.readAsDataURL(file);
+	    reader.onload=function(e){
+	    	console.log(document.getElementById("file").files.length);
+	        console.log(e.target.result);
+	    }
+	});
+	
+	$("input[type=button]").eq(1).click(function readAsBinaryString(){
+	    var file = document.getElementById("file").files[0];
+	    var reader = new FileReader();
+	    //将文件以二进制形式读入页面
+	    reader.readAsBinaryString(file);
+	    reader.onload=function(e){
+	        console.log(e.target.result);
+	    }
+	});
+	
+	$("input[type=button]").eq(2).click(function readAsText(){
+	    var file = document.getElementById("file").files[0];
+	    var reader = new FileReader();
+	    //将文件以文本形式读入页面
+	    reader.readAsText(file);
+	    reader.onload=function(e){
+	        console.log(e.target.result);
+	    }
+	});
+});
+</script>
+
+</head> 
+<body> 	
+	<p>
+	    <label>请选择一个文件：</label>
+	    <input type="file" id="file" multiple="multiple" />
+	    <input type="button" value="读取图像" />
+	    <input type="button" value="读取二进制数据" />
+	    <input type="button" value="读取文本文件"  />
+	</p>
+	<div id="result" name="result"></div>
+	
+	<form id="form1" enctype="multipart/form-data">
+		<input type="text" name="name" value="" />
+		<input type="text" name="age" value="" />
+		<input type="file" name="file" id="tuo" />
+		<select name="sex">
+			<option value="1">男</option>
+			<option value="0">女</option>
+		</select>
+		<input type="button" id="qq" value="上传" />
+		
+	</form>
+	
+	<svg height="32px" width="32px">	
+	  <g>
+	  	<path d = "M27,2.5c1.4,0,2.5,1.1,2.5,2.5v22.2c0,1.4-1.1,2.5-2.5,2.5H4.8c-1.4,0-2.5-1.1-2.5-2.5V4.9
+		c0-1.4,1.1-2.5,2.5-2.5H27 M27,0H4.8C2.1,0-0.1,2.2-0.1,4.9v22.2c0,2.7,2.2,4.9,4.9,4.9H27c2.7,0,4.9-2.2,4.9-4.9V4.9
+		C31.9,2.2,29.7,0,27,0L27,0z"></path>
+		<path d = "M17.6,23.2c0,0.5-0.4,0.9-0.9,0.9h-1.4c-0.5,0-0.9-0.4-0.9-0.9l0,0c0-0.5,0.4-0.9,0.9-0.9h1.4
+		C17.2,22.3,17.6,22.7,17.6,23.2L17.6,23.2z"></path>
+	  </g>
+	</svg>
+</body> 
+</html> 

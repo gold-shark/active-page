@@ -1,0 +1,100 @@
+.base-info {
+  padding: 10px;
+}
+
+.base-info .left {
+  margin-right: 10px;
+}
+
+.base-info .left img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.base-info .right p {
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.base-info .right p label {
+  display: block;
+}
+
+.base-info .right p span {
+  display: block;
+}
+
+.base-info .right p em {
+  color: #ffd100;
+}
+
+.subimt-body {
+  padding: 10px;
+}
+
+.subimt-body .subimt {
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.5;
+  text-align: center;
+  background-color: #3599fb;
+  border: 1px solid #3599fb;
+  border-radius: 5px;
+}
+
+.popup-body {
+  width: 80%;
+  height: auto;
+  background-color: #fff;
+}
+
+.popup-body .title {
+  position: relative;
+  padding: 10px;
+  background-color: #eee;
+}
+
+.popup-body .title p {
+  font-size: 16px;
+  color: #000;
+  line-height: 1.5;
+}
+
+.popup-body .title .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  z-index: 100;
+  width: 45px;
+  background: url(../img/close-gray.png) 50% 50% no-repeat;
+  background-size: 25px auto;
+}
+
+.popup-body .content {
+  padding: 20px 10px 10px;
+}
+
+.popup-body .content p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.popup-body .content p a {
+  display: inline-block;
+  padding: 5px 20px;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+  text-align: center;
+  background-color: #3599fb;
+  border-radius: 3px;
+}

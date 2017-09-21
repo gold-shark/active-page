@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>荣超英隆大厦</title>
+		<link type="text/css" rel="stylesheet" href="http://shenzhen.qfang.com/themes/default/styles/frontend/qfang-base.css" />
+		<link type="text/css" rel="stylesheet" href="css/style.css" />		
+		<script type="text/javascript" src="http://shenzhen.qfang.com/themes/default/scripts/frontend/qfang-common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var wid = $(".banner").width(), 
+					leg = $(".banner").find("li").length, 
+					n = 0,
+					inHtml = "", 
+					firstLi = "", 
+					lastLi = "";		
+				for(var i = 0; i < leg; i++){
+					if(i === 0){
+						inHtml += "<span class='current'></span>"
+					} else {
+						inHtml += "<span></span>";
+					}
+				}
+				$(".banner").find(".point").append(inHtml);
+				firstLi = $(".banner").find("li").first().clone();
+				lastLi = $(".banner").find("li").last().clone();
+				$(".banner").find("ul").append(firstLi).prepend(lastLi);
+				$(".banner").find("ul").css({"width": wid * (leg + 2)});
+				$(".banner").find("ul").css({"margin-left": -wid});
+				var a = setInterval(function(){
+					n++;
+					animas();
+				}, 5000);
+				
+				$(".banner").mouseover(function(){
+					clearInterval(a);
+					$(".banner .prev").show();
+					$(".banner .next").show();
+				});
+				$(".banner").mouseout(function(){
+					a = setInterval(function(){
+						n++;
+						animas();
+					}, 5000);
+					$(".banner .prev").hide();
+					$(".banner .next").hide();
+				});
+				
+				$(".banner .prev").find("a").on("click", function(){
+					n--;
+					animas();
+				});
+				$(".banner .next").find("a").on("click", function(){
+					n++;
+					animas();
+				});
+				function animas(){
+					$(".banner").find("ul").stop().animate({"marginLeft": -wid * (n + 1)}, 300, "linear", function(){
+						if(n < 0){
+							n = leg - 1;								
+						} else if(n >= leg) {
+							n = 0;
+						}
+						$(".banner").find("ul").css({"margin-left": -wid * (n + 1)});
+						$(".banner .point").find("span").removeClass("current");
+						$(".banner .point").find("span").eq(n).addClass("current");
+					});
+				}
+				
+				$("#activity").click(function() {
+			        $.andyDialog.DialogShow("toAskDialog");
+			    });
+			    $("#toAskDialogClose").click(function() {
+			        $.andyDialog.DialogClose("toAskDialog");
+			    }); 
+			});
+		</script>
+	</head>
+	<body>
+		<div class="header-body">
+			<div class="header">
+				<div class="logo"><a href="javascript:void(0);"></a></div>
+				<div class="nav">
+					<ul>					
+						<li><a href="http://shenzhen.qfang.com/">首页</a></li>
+						<li><a href="http://shenzhen.qfang.com/sale">二手房</a></li>
+						<li><a href="http://shenzhen.qfang.com/newhouse">新房</a></li>
+						<li><a href="http://shenzhen.qfang.com/rent">租房</a></li>
+						<li><a href="http://shenzhen.qfang.com/office">写字楼</a></li>
+						<li><a href="http://shenzhen.qfang.com/garden">小区</a></li>
+						<li><a href="http://shenzhen.qfang.com/tycoon">经纪人</a></li>						
+						<li><a href="http://shenzhen.qfang.com/info">新资讯</a></li>						
+						<li><a href="http://shenzhen.qfang.com/join">特许加盟</a></li>
+						<li class="login"><a href="http://my.qfang.com/user/toLogin">登录</a></li>
+					</ul>
+				</div>
+			</div>			
+		</div>
+		<div class="middel-body">
+			<div class="middel">
+				<div class="naviga">
+					<a href="http://www.qfang.com/">首页</a>
+					<i>></i>
+					<a href="http://shenzhen.qfang.com/office/sale">写字楼出售</a>
+					<i>></i>
+					<span>荣超英隆大厦</span>
+				</div>
+				<div class="title-body">
+					<h1>[荣超英隆大厦] 龙岗中心城唯一在售甲级写字楼<em>12万抵40万独家钜惠</em></h1>
+				</div>
+				<div class="banner-body clear">
+					<div class="banner fl">
+						<ul>
+							<li><a href="javascript:void(0);"><img src="img/banner1.jpg" width="640" height="460" /></a></li>
+							<li><a href="javascript:void(0);"><img src="img/banner2.jpg" width="640" height="460" /></a></li>
+							<li><a href="javascript:void(0);"><img src="img/banner3.jpg" width="640" height="460" /></a></li>
+							<li><a href="javascript:void(0);"><img src="img/banner4.jpg" width="640" height="460" /></a></li>
+						</ul>
+						<p class="prev"><a href="javascript:void(0);"></a></p>
+						<p class="next"><a href="javascript:void(0);"></a></p>
+						<p class="point"></p>
+					</div>
+					<div class="info fr">
+						<h3>荣超英隆大厦</h3>
+						<p>市场均价：23000元•平米起</p>
+						<p>主推户型：100-300平米，整层1200-1400平米</p>
+						<p>开  发  商：荣超地产</p>
+						<p>物业公司：荣超物业</p>
+						<p>项目地址：龙岗区龙翔大道和龙福路交汇处西南角（龙岗区政府旁，珠江皇冠假日酒店旁）</p>
+					</div>
+					<div class="activity">
+						<a href="javascript:void(0);" id="activity"></a>
+						<p><i></i>优惠截止时间：2015年6月30日</p>
+					</div>					
+				</div>
+				<div class="module-title">
+					<h3>项目亮点</h3>
+				</div>
+				<div class="module-content">
+					<div class="project-items clear">
+						<div class="icon one fl"></div>
+						<div class="txt fl">
+							<p class="q">位于龙岗中心城最核心地段</p>
+							<p class="a">拥有优质政务资源，周围写字楼林立，商务氛围浓郁！项目位于龙岗的心脏地带，东南方便是龙岗区政府等政务配套，集中了龙岗最齐全、最便利、最精华的交通、政务、办公、商业、公共及文化配套。</p>
+						</div>
+					</div>
+					<div class="project-items clear">
+						<div class="icon two fl"></div>
+						<div class="txt fl">
+							<p class="q">带租约精装修现楼，100%名企入驻率，企业自用可解除租约</p>
+							<p class="a">目前多数项目均为1年半后交房，且均为毛坯，英隆大厦约1000元/平米装修标准，投资将多获得约108万租金收益!</p>
+						</div>
+					</div>
+					<div class="project-items clear">
+						<div class="icon three fl"></div>
+						<div class="txt fl">
+							<p class="q">完善的交通路网，高效利用商务时间，即刻通达各区域</p>
+							<p class="a">从龙岗中心城出发，15分钟即可到达东莞，25分钟到达惠州，30分钟到达罗湖，40分钟即可到达福田、南山。 </p>
+						</div>
+					</div>
+					<div class="project-items clear">
+						<div class="icon four fl"></div>
+						<div class="txt fl">
+							<p class="q">双地铁环绕、周边700万旧改、深圳价值洼地，升值潜力无限</p>
+							<p class="a">12号线即将修建，与3号线将本区域联动全深圳，辐射珠三角。周边更有百万旧改，如万科广场、莱蒙都会、回龙埔等大型城市综合体项目。</p>
+						</div>
+					</div>
+					<div class="project-items clear">
+						<div class="icon five fl"></div>
+						<div class="txt fl">
+							<p class="q">荣超地产专注写字楼二十二年，中国写字楼专家</p>
+							<p class="a">荣超地产——十一座七十万平米的商务写字楼开发量，均位于中心区核心位置，直接服务六百多家知名品牌。</p>
+						</div>
+					</div>
+					<div class="project-status">
+						<h3>项目现状</h3>
+						<p>本项目<em>自由租转售，2个月不到的时间去化近5000平，去化速度龙岗之最。企业入驻率达到100%，其中有8个整层客户，品质龙岗之最，</em>并且大部分均是名企，如：光大证券、前海人寿、中投证券、五矿证券、深圳人才交流中心等。</p>
+					</div>
+				</div>
+				<div class="module-title">
+					<h3>楼盘概况</h3>
+				</div>
+				<div class="module-content">
+					<div class="situation">
+						<h3>龙岗写字楼品质之最</h3>
+						<p><em>大堂：</em>龙岗唯一南北双大堂，高11.1米，面积690平米，大堂墙面、地面为意大利进口石材，整楼吊顶均采用铝扣板材料，诠释龙岗写字楼顶尖品质。</p>
+						<p><em>车位：</em>停车位共计480个，为龙岗唯一拥有地下3层停车位的写字楼，并拥有龙岗最高车位配比（82：1），引领龙岗最优泊车效率。</p>
+						<p><em>电梯：</em>7部三菱高速电梯 ，4m/s缔造龙岗最高运行速度，等候时间不超过30秒。另按国际超甲级写字楼标准设无障碍按钮，人文关怀透漏在每个细节。</p>
+						<p><em>空调：</em>国际知名品牌空调—大金VRV系统，日夜皆享舒适办公环境，自动调温，比传统中央空调节能性高，省电30%以上。</p>
+						<p><em>户型：</em>标准层1190-1398平左右，60—1398平米自由组合，方正无柱，正南正北朝向，南北通透，采光风水极佳。且一层拥有10个产权，组合方便灵活。</p>
+						<p><em>风水：</em>正南正北方位，风帆型外立面一帆风顺，水景资源，招财纳气！ </p>
+						<p><em>物管：</em>一级资质权威物管，超物业拥有国家一级物业管理资质，专注商务物业服务17年，积累丰富经验，为客户提供全面、细致的管理服务。</p>
+						<p><em>交楼标准：</em>精装现楼，带稳定租约，企业自用可解除</p>
+					</div>
+				</div>
+				<div class="module-title">
+					<h3>楼盘基础信息</h3>
+				</div>
+				<div class="module-content">
+					<div class="basic-info clear">
+						<div class="pic fl"><img src="img/pic.jpg"/></div>
+						<div class="txt fr">
+							<p><i></i><span>项目名称：</span>荣超英隆大厦</p>
+							<p><i></i><span>物业级别：</span>纯商务甲级写字楼</p>
+							<p><i></i><span>地理位置：</span>龙岗区龙翔大道和龙福路交汇处西南角</p>
+							<p><i></i><span>开发商：</span>深圳市荣超房地产开发有限公司</p>
+							<p><i></i><span>物业管理：</span>深圳市荣超物业管理有限公司</p>
+							<p><i></i><span>占地面积：</span>10727㎡<span style="margin-left:30px;">建筑面积：</span>64700㎡</p>
+							<p><i></i><span>平层面积：</span>整层面积1190—1398平方，分为10个单位，10本独立房产证</p>
+							<p><i></i><span>入伙时间：</span>2013年11月</p>
+							<p><i></i><span>产权年限：</span>50年（2011年-2062年）</p>
+							<p><i></i><span>停车位：</span>480个 </p>
+							<p><i></i><span>电梯：</span>7部（三菱高速）</p>
+							<p><i></i><span>物业费：</span>8元/平方米*月</p>
+							<p><i></i><span>空调费：</span>中央空调计流量 </p>
+							<p><i></i><span>使用率：</span>约70%</p>
+							<p><i></i><span>层高：</span>总层高3.9米，净高2.9米</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-body">
+			<p>Copyright © 2013 <a href="http://www.qfang.com">www.qfang.com</a>. All Rights Reserved</p>
+		</div>
+		<!--<div class="translucent"></div>-->
+		<!-- dialog -->
+		<div class="dialog-show-wrapper popup-win" id="toAskDialog">
+			<div class="dialog-show-inner">
+				<div class="icons-dialogshow dialog-show-title">
+					<div class="dialog-show-title-text">
+						<h3>Q房独家代理，限时钜惠</h3>
+					</div>
+					<p class="btn-dialogclose"><a href="javascript:;" id="toAskDialogClose"><i class="icons-dialogshow"></i></a></p>
+				</div>
+				<div class="popup-txt">
+					<p class="a"><span><i></i>8万抵20万</span><span><i></i>10万抵30万</span><span style="margin:0;"><i></i>12万抵40万</span></p>
+					<p class="b">马上致电索取优惠</p>
+					<p class="c">400-020-0668(转)2626</p>
+				</div>
+			</div>
+		</div>
+		<!-- end dialog -->
+		<!-- Google Tag Manager -->
+		<noscript>
+		<iframe src="//www.googletagmanager.com/ns.html?id=GTM-5NGTRL"
+		height="0" width="0" style="display: none; visibility: hidden"></iframe>
+		</noscript>
+		<script>
+		(function(w, d, s, l, i) {
+		w[l] = w[l] || [];
+		w[l].push({
+		'gtm.start' : new Date().getTime(),
+		event : 'gtm.js'
+		});
+		var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+		j.async = true;
+		j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+		f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-5NGTRL');
+		</script>
+		<!-- End Google Tag Manager -->
+
+	</body>
+</html>

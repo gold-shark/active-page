@@ -1,0 +1,29 @@
+body{ padding-top: 4.4rem; font-family: "arial, helvetica, sans-serif"; font-size: 1.4em; color: #434343;}
+header{ position: fixed; top: 0; right: 0; bottom: auto; left: 0; z-index: 1000; padding: 1.0rem; box-sizing: border-box; border-bottom:1px solid #EB5515; background-color: rgba(255,255,255,0.9);}
+header a{ width: 2.0rem; display: block;}
+header img{ width: 100%; height: auto;}
+header span{ display: block; text-align: center; font-size: 1.6rem; line-height: 2.3rem;}			
+nav{ position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1001; display: none; background-color: rgba(0,0,0,0.5);}
+nav div.nav-body{ width: 70%; height: 100%; position: relative; background-color: #FFF;}
+nav div.title{ padding: 1.0rem; border-bottom: 1px solid #EB5515;}
+nav a.menu{ width: 2.0rem; display: block;}
+nav a.menu img{ width: 100%; height: auto;}
+nav a.close{ width: 2.0rem; height: 2.0rem; display: block; background: url(../img/close.png) 50% 50% no-repeat; background-size: auto 100%;}
+nav ul{ margin: 1.0rem 0; padding: 1.0rem;}
+nav ul li{ padding: 0.5rem 0; line-height: 1.5em;}
+nav ul li a{ display: block; font-size: 1.6rem; color: #434343;}
+nav p{ padding: 0 1.0rem; position: relative;}
+nav p input[type=search]{ padding: 0.5rem; width: 100%; line-height: 1.5rem; border: 1px solid #00A0E8; border-radius: 0.5rem; box-sizing: border-box;}
+nav p input[type=button]{ position: absolute; top: 0.1rem; right: 1.1rem; width: 2.5rem; height: 2.5rem; border: none; border-left: 1px solid #00A0E8; border-radius: 0; background: url(../img/search.png) 50% 50% no-repeat; background-size: 70% auto;}
+article div.banner{ overflow: hidden;}
+article div.banner img{ width: 100% !important; height: auto !important;}
+article div.module{ margin: 1.0rem; padding: 1.0rem; box-sizing: border-box; border:1px solid #00A0E8; border-radius: 0.5rem 0 0.5rem 0;}
+article div.module .title{ margin-bottom: 0.5rem; font-size: 1.6rem;}
+article div.module ul li{ line-height: 1.5em;}
+article div.module ul li a{ display: block; color: #434343; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+footer{ padding: 2.0rem; border-top:2px solid #EB5515; background-color: #00A0E8;}
+footer ul{ width: 100%; display: table;}
+footer ul li{ display: table-cell; text-align: center;}
+footer ul li em{ margin-left: 0.5rem; font-style: normal; color: #FFFFFF;}
+footer ul li span{ width: 2.0rem; display: inline-block; vertical-align: bottom;}
+footer ul li img{ width: 100%; height: auto;}

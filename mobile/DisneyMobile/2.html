@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-width=1, maxni-width=1, user-scalable=no">
+        <title>2</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript">
+            $(function(){                
+                var oneshow = function(){
+                    $(".one").fadeIn(300);
+                    $(".two").fadeOut(300);
+                    $(".tab1").css({"margin-top": "0", "width": "53.0%"});
+                    $(".tab2").css({"margin-top": "5%", "width": "40.7%"});                    
+                    $(".tab1").find("a").empty().append("<img src='img/2pic3_p.png' width='161' height='114' />");
+                    $(".tab2").find("a").empty().append("<img src='img/2pic4.png' width='124' height='87' />");
+                };
+                var twoshow = function(){
+                    $(".one").fadeOut(300);
+                    $(".two").fadeIn(300);
+                    $(".tab1").css({"margin-top": "5%", "width": "40.7%"});
+                    $(".tab2").css({"margin-top": "0", "width": "53.0%"});
+                    $(".tab1").find("a").empty().append("<img src='img/2pic3.png' width='124' height='87' />");
+                    $(".tab2").find("a").empty().append("<img src='img/2pic4_p.png' width='161' height='114' />");
+                };
+                var updwon = function(){
+                    if($(".one").css("display") === "none"){
+                        oneshow();
+                    } else {
+                        twoshow();
+                    }
+                };
+                $(".tab1").on("click", oneshow);
+                $(".tab2").on("click", twoshow);
+                $(".up,.dwon").on("click", updwon);
+            });
+        </script>
+    </head>
+    <body class="body2">
+        <div class="title">
+            <img src="img/2text.png" width="417" height="59" />
+        </div>
+        <div class="tabs-body">
+            <div class="items one">
+                <img src="img/2pic.png" width="468" height="541" />
+            </div>
+            <div class="items two">
+                <img src="img/2pic2.png" width="468" height="541" />
+            </div>
+            <div class="tabs">
+                <div class="tab1">
+                    <a href="javascript:void(0);"><img src="img/2pic3_p.png" width="161" height="114" /></a>
+                </div>
+                <div class="tab2">
+                    <a href="javascript:void(0);"><img src="img/2pic4.png" width="124" height="87" /></a>
+                </div>
+            </div>
+            <div class="buts up">
+                <a href="javascript:void(0);"><img src="img/2left.png" width="81" height="81" /></a>
+            </div>
+            <div class="buts dwon">
+                <a href="javascript:void(0);"><img src="img/2right.png" width="81" height="81" /></a>
+            </div>
+        </div>
+        <div class="simat">
+            <div class="one">
+                <a href="3-1.html"><img src="img/2btn.png" width="466" height="110" /></a>
+            </div>
+            <div class="two">
+                <a href="3-2.html"><img src="img/2btn.png" width="466" height="110" /></a>
+            </div>
+        </div>
+    </body>
+</html>

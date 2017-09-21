@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>点房成金</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript" src="js/game.js"></script>
+		<script type="text/javascript">	
+			$(function(){				
+				$.countdown($.game);		
+				
+				//禁止屏幕拖动
+				$(".game-interface").on("touchmove", function(e){
+					e.preventDefault();
+				});
+				
+				$(".over-close").on("tap", function(){
+					$(".game-over").hide();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="game-interface">
+			<div class="game-state none-anima">
+				<img src="img/14.png" width="750" height="144" />
+				<label id="integral">0</label>
+				<time id="times">00 : 30</time>
+			</div>
+			<div class="sun-light light"><img src="img/9.png" width="1005" height="1005" /></div>
+			<div class="white-cloud">
+				<div class="cloud cloud1"><img src="img/6-6.png" width="134" height="47"/></div>
+				<div class="cloud cloud2"><img src="img/6-7.png" width="134" height="47"/></div>
+				<div class="cloud cloud3"><img src="img/6-8.png" width="132" height="47"/></div>
+				<div class="cloud cloud4"><img src="img/6-9.png" width="104" height="37"/></div>
+				<div class="cloud cloud5"><img src="img/6-10.png" width="194" height="68"/></div>
+				<div class="cloud cloud6"><img src="img/6-11.png" width="194" height="69"/></div>
+			</div>
+			<div class="game-area none-anima">
+				<div class="cell-rows">
+					<div class="cell"></div>
+					<div class="cell"></div>
+				</div>
+				<div class="cell-rows">
+					<div class="cell"></div>
+					<div class="cell"></div>
+				</div>
+				<div class="cell-rows">
+					<div class="cell"></div>
+					<div class="cell"></div>
+				</div>
+			</div>
+			<div class="game-over none-anima">
+				<div class="over">
+					<img src="img/35.png" width="750" height="1113" class="over-bg" />
+					<div class="pic-a"><img src="img/38.png" width="750" height="512" /></div>					
+					<div class="pic-c"><img src="img/40.png" width="265" height="265" /></div>
+					<div class="pic-b"><img src="img/39.png" width="206" height="205" /></div>
+					<div class="pic-d"><img src="img/41.png" width="750" height="545" /></div>
+					<p class="over-count">还剩余<em>5</em>次机会！</p>
+					<p class="over-number">320</p>
+					<p class="over-text"><span>…(⊙_⊙;)…</span><span>看嘛~~看就是真的技术宅哒~这也不中。</span><span>~伦家神马都不会说哒~~再来一盘把~~~~</span></p>
+					<a href="javascript:void(0)" class="over-a"><img src="img/31.png" width="145" height="145"/></a>
+					<a href="javascript:void(0)" class="over-b"><img src="img/32.png" width="211" height="211"/></a>
+					<a href="javascript:void(0)" class="over-c"><img src="img/33.png" width="145" height="145"/></a>
+					<a href="javascript:void(0);" class="over-close"><img src="img/34.png" /></a>
+				</div>
+			</div>			
+		</div>		
+	</body>
+</html>

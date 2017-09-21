@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>奶牛家</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.sliding.js" ></script>
+		<script type="text/javascript">
+			$(function(){				
+				var n = 0;
+				var leg = $(".guide-img").find("li").length;
+				var heg = $(".guide-img").height();
+				var wid = $(".guide-img").width();
+				var k = (wid * 1008) / (heg * 640);
+				$(".guide-img").find("li").css({"height": heg});
+				if(k > 1){
+					$(".guide-img").find("img").css({"width": "auto", "height": "100%"});
+				} else {
+					$(".guide-img").find("img").css({"width": "100%", "height": "auto"});
+					$(".guide-img").find("li").prepend("<div style='height: " + ((1 - k) * heg / 2) 
+					+ "px;'></div>");
+				}
+				$(".guide-img").touch({
+					start: function(data){},
+					move: function(data){
+						if((data.epc.y - data.spc.y) > 0){//向下滑动
+							if(n > 0){
+								data.obj.find("ul").css({"margin-top": -heg * n + Math.abs(data.spc.y - data.epc.y)});
+								data.obj.find("li").eq(n).css({"width": wid*(heg - Math.abs(data.spc.y - data.epc.y))/heg, "height": heg - Math.abs(data.spc.y - data.epc.y), "margin-bottom": Math.abs(data.spc.y - data.epc.y)});
+								data.obj.find("li").eq(n).find("div").css({"height": ((1 - k) * heg / 2)*(heg - Math.abs(data.spc.y - data.epc.y))/heg});
+								data.obj.find(".guide-b,.guide-c").fadeOut("normal");
+							}
+						} else if((data.epc.y - data.spc.y) < 0){//向上滑动
+							if(n < leg - 1){
+								data.obj.find("ul").css({"margin-top": -heg * n - Math.abs(data.spc.y - data.epc.y)});
+								data.obj.find("li").eq(n).css({"width": wid*(heg - Math.abs(data.spc.y - data.epc.y))/heg, "height": heg - Math.abs(data.spc.y - data.epc.y), "margin-top": Math.abs(data.spc.y - data.epc.y)});
+								data.obj.find("li").eq(n).find("div").css({"height": ((1 - k) * heg / 2)*(heg - Math.abs(data.spc.y - data.epc.y))/heg});
+								data.obj.find(".guide-b,.guide-c").fadeOut("normal");
+							}
+						}
+					},
+					end: function(data){						
+						if((data.epc.y - data.spc.y) > 50){//向下滑动
+							if(n > 0) {
+								n--;
+								data.obj.find("li").eq(n + 1).animate({"width": 0, "height": 0, "marginBottom": heg}, "normal", "linear");
+								data.obj.find("li").eq(n + 1).find("div").animate({"height": 0}, "normal", "linear");
+								data.obj.find("ul").stop().animate({"marginTop": -heg * n}, "normal", "linear", function(){
+									data.obj.find("li").css({"width": wid, "height": heg, "margin-bottom": 0});
+									data.obj.find("li").find("div").css({"height": (1 - k) * heg / 2});
+									if(n == leg - 2){
+										data.obj.find(".guide-a,.guide-c").fadeIn("normal");
+										data.obj.find(".guide-b").fadeOut("normal");
+									} else {
+										data.obj.find(".guide-a,.guide-c").fadeIn("normal");
+										data.obj.find(".guide-b").fadeOut("normal");
+									}
+								});
+							}
+						} else if((data.epc.y - data.spc.y) < -50){//向上滑动
+							if(n < leg - 1) {
+								n++;
+								data.obj.find("li").eq(n - 1).animate({"width": 0, "height": 0, "marginTop": heg}, "normal", "linear");
+								data.obj.find("li").eq(n - 1).find("div").animate({"height": 0}, "normal", "linear");
+								data.obj.find("ul").stop().animate({"marginTop": -heg * n}, "normal", "linear", function(){
+									data.obj.find("li").css({"width": wid, "height": heg, "marginTop": 0});
+									data.obj.find("li").find("div").css({"height": (1 - k) * heg / 2});
+									if( n == leg - 1){
+										data.obj.find(".guide-a,.guide-c").fadeOut("normal");
+										data.obj.find(".guide-b").fadeIn("normal");
+									} else {
+										data.obj.find(".guide-c").fadeIn("normal");
+										data.obj.find(".guide-b").fadeOut("normal");
+									}
+								});
+							}
+						} else {
+							data.obj.find("ul").stop().animate({"marginTop": -heg * n}, "normal", "linear");
+							data.obj.find("li").stop().animate({"width": wid, "height": heg, "marginTop": 0}, "normal", "linear");
+							data.obj.find("li").find("div").stop().animate({"height": (1 - k) * heg / 2}, "normal", "linear");
+							if( n == leg - 1){
+								data.obj.find(".guide-a,.guide-c").fadeOut("normal");
+								data.obj.find(".guide-b").fadeIn("normal");
+							} else {
+								data.obj.find(".guide-c").fadeIn("normal");
+								data.obj.find(".guide-b").fadeOut("normal");
+							}
+						}						
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="guide-img">
+			<ul>
+				<li><img src="img/p1.png" width="640" height="1008" alt="奶牛家" /></li>
+				<li><img src="img/p2.png" width="640" height="1008" alt="奶牛家" /></li>
+				<li><img src="img/p3.png" width="640" height="1008" alt="奶牛家" /></li>
+				<li><img src="img/p4.png" width="640" height="1008" alt="奶牛家" /></li>
+				<li><img src="img/p5.png" width="640" height="1008" alt="奶牛家" /></li>
+				<li><img src="img/p6.png" width="640" height="1008" alt="奶牛家" /></li>
+				<li><img src="img/p7.png" width="640" height="1008" alt="奶牛家" /></li>
+				<li><img src="img/p8.png" width="640" height="1008" alt="奶牛家" /></li>
+			</ul>
+			<div class="guide-a"><a href="index.html">跳过，直接进入奶牛家</a></div>
+			<div class="guide-b"><a href="index.html">进入奶牛家</a></div>
+			<div class="guide-c"></div>
+		</div>
+	</body>
+</html>

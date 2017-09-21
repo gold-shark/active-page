@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+		<title>首页</title>  
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var n = 0, leg = $(".item").length;				
+				function autoPlay(){					
+					$(".item").fadeOut(500);
+					$(".item").eq(n).fadeIn(500);
+					if($(".item").eq(n).data("tag")){
+						$(".item").eq(n).find("video")[0].play();
+					}
+					setTimeout(autoPlay, $(".item").eq(n).data("time"));
+					
+					if(n === leg - 1){
+						n = 0;
+					} else {
+						n++;
+					}
+					
+				};				
+				autoPlay()				
+			});
+		</script>
+	</head>
+	<body>
+		<div class="main">
+			<div class="item show" data-time="2000"><img src="img/1.jpg"/></div>
+			<div class="item" data-time="2000"><img src="img/2.jpg"/></div>
+			<div class="item" data-time="2000"><img src="img/3.jpg"/></div>
+			<div class="item" data-time="2000"><img src="img/4.jpg"/></div>
+			<div class="item" data-time="5000" data-tag="true"><video src="img/movie.ogg" controls="controls"></video></div>
+		</div>
+	</body>
+</html>

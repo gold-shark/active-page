@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>交易查询</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.phone.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/screening.js"></script>
+    <!--<script type="text/javascript" src="js/list.js"></script>-->
+  </head>
+
+  <body class="gray-body">
+    <header class="header-body">
+      <h1 class="title">交易查询</h1>
+      <a href="javascript:void(0);" class="go-back"></a>
+      <a href="search.html" class="search"></a>
+    </header>
+    <section class="screening-body">
+      <div class="screening box">
+        <a href="javascript:void(0);" class="box-align flex"><span class="ellips">过户单状态</span></a>
+        <a href="javascript:void(0);" class="box-align flex"><span class="ellips">确认按揭费</span></a>
+        <a href="javascript:void(0);" class="box-align flex"><span class="ellips">预警节点</span></a>
+        <a href="javascript:void(0);" class="box-align flex"><span class="ellips">更多</span></a>
+      </div>
+    </section>
+    <article class="article-body">
+      <div class="list-items">
+        <a href="handling.html">
+          <h3 class="box-middel">凯旋豪庭A座1006</h3>
+          <p class="box-middel">
+            <label>成交价/面积：</label>
+            <span class="flex">3,000,000元/80平米</span>
+            <span class="dealt">办理中</span>
+          </p>
+          <p class="box-middel">
+            <label>客户：</label>
+            <span class="flex">曹操</span>
+            <span class="orange">可过户</span>
+          </p>
+          <p class="box-middel">
+            <label>业主：</label>
+            <span class="flex">周瑜</span>
+          </p>
+          <p class="box-middel">
+            <label>过户步骤：</label>
+            <span class="red flex">放贷款(15天)</span>
+          </p>
+        </a>
+      </div>
+      <div class="list-items">
+        <a href="javascript:void(0)">
+          <h3 class="box-middel">凯旋豪庭A座1006</h3>
+          <p class="box-middel">
+            <label>成交价/面积：</label>
+            <span class="flex">3,000,000元/80平米</span>
+            <span class="dealt">办理中</span>
+          </p>
+          <p class="box-middel">
+            <label>客户：</label>
+            <span class="flex">曹操</span>
+            <span class="orange">可过户审批中</span>
+          </p>
+          <p class="box-middel">
+            <label>业主：</label>
+            <span class="flex">周瑜</span>
+          </p>
+          <p class="box-middel">
+            <label>过户步骤：</label>
+            <span class="red flex">取新证(8天)</span>
+          </p>
+        </a>
+      </div>
+      <div class="list-items">
+        <a href="javascript:void(0)">
+          <h3 class="box-middel">凯旋豪庭A座1006</h3>
+          <p class="box-middel">
+            <label>成交价/面积：</label>
+            <span class="flex">3,000,000元/80平米</span>
+            <span class="complete">已完成</span>
+          </p>
+          <p class="box-middel">
+            <label>客户：</label>
+            <span class="flex">曹操</span>
+          </p>
+          <p class="box-middel">
+            <label>业主：</label>
+            <span class="flex">周瑜</span>
+          </p>
+          <p class="box-middel">
+            <label>过户步骤：</label>
+            <span class="flex">已完成</span>
+          </p>
+        </a>
+      </div>
+      <div class="list-items">
+        <a href="javascript:void(0)">
+          <h3 class="box-middel">凯旋豪庭A座1006</h3>
+          <p class="box-middel">
+            <label>成交价/面积：</label>
+            <span class="flex">3,000,000元/80平米</span>
+            <span class="complete">已完成</span>
+          </p>
+          <p class="box-middel">
+            <label>客户：</label>
+            <span class="flex">曹操</span>
+          </p>
+          <p class="box-middel">
+            <label>业主：</label>
+            <span class="flex">周瑜</span>
+          </p>
+          <p class="box-middel">
+            <label>过户步骤：</label>
+            <span class="flex">已完成</span>
+          </p>
+        </a>
+      </div>
+    </article>
+    <div class="translucence" id="translucence"></div>
+    <section class="screening-popup" id="screening-popup">
+      <div class="screening box">
+        <a href="javascript:void(0);" class="box-align flex current"><span class="ellips">过户单状态</span></a>
+        <a href="javascript:void(0);" class="box-align flex"><span class="ellips">确认按揭费</span></a>
+        <a href="javascript:void(0);" class="box-align flex"><span class="ellips">预警节点</span></a>
+        <a href="javascript:void(0);" class="box-align flex"><span class="ellips">更多</span></a>
+      </div>
+      <div class="screening-list">
+        <div class="box-vertical">
+          <div class="box flex">
+            <div class="cell flex">
+              <div class="cel" data-number="0">
+                <a href="javascript:void(0);" class="current ellips">不限</a>
+                <a href="javascript:void(0);" class="ellips">未启动办理</a>
+                <a href="javascript:void(0);" class="ellips">办理中</a>
+                <a href="javascript:void(0);" class="ellips">已完成</a>
+                <a href="javascript:void(0);" class="ellips">已挂起</a>
+                <a href="javascript:void(0);" class="ellips">已撤单</a>
+                <a href="javascript:void(0);" class="ellips">客户自找申请中</a>
+                <a href="javascript:void(0);" class="ellips">客户自找审批完成</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="screening-list">
+        <div class="box-vertical">
+          <div class="box flex">
+            <div class="cell flex">
+              <div class="cel" data-number="0">
+                <a href="javascript:void(0);" class="current ellips">不限</a>
+                <a href="javascript:void(0);" class="ellips">是</a>
+                <a href="javascript:void(0);" class="ellips">否</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="screening-list">
+        <div class="box-vertical">
+          <div class="box flex">
+            <div class="cell flex">
+              <div class="cel" data-number="0">
+                <a href="javascript:void(0);" class="current ellips">不限</a>
+                <a href="javascript:void(0);" class="ellips">过户</a>
+                <a href="javascript:void(0);" class="ellips">取新证</a>
+                <a href="javascript:void(0);" class="ellips">放贷款</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="screening-list">
+        <div class="box-vertical">
+          <div class="cell-title">
+            <div class="box tab">
+              <a class="current flex" href="javascript:void(0);">接收日期</a>
+              <a class="flex" href="javascript:void(0);">过户日期</a>
+            </div>
+            <div class="box week">
+              <span class="flex">日</span>
+              <span class="flex">一</span>
+              <span class="flex">二</span>
+              <span class="flex">三</span>
+              <span class="flex">四</span>
+              <span class="flex">五</span>
+              <span class="flex">六</span>
+            </div>
+          </div>
+          <div class="box flex">
+            <div class="cell flex">
+              <div class="cel" data-number="0">
+                <div class="date">
+                  <div class="month">
+                    <h5>2016年2月</h5>
+                    <table>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                      </tr>
+                      <tr>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                      </tr>
+                      <tr>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="month">
+                    <h5>2016年3月</h5>
+                    <table>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                      </tr>
+                      <tr>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                      </tr>
+                      <tr>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="month">
+                    <h5>2016年3月</h5>
+                    <table>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                      </tr>
+                      <tr>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                      </tr>
+                      <tr>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+</html>

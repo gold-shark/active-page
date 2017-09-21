@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<title>html5 + css3</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.phone.js" ></script>
+		<script type="text/javascript" src="js/jquery.transit.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.banner.js" ></script>
+		<script type="text/javascript" src="js/index.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".banner").cube3d({
+					width: $(window).width(), 
+					height: $(window).width() * (400 / 640),
+					
+					//perspective_origin: {x: "left", y: "bottom"},
+					direction: 0
+				});
+			});
+		</script>
+		
+	</head>
+	<body>
+		<header>
+			<a class="menu fl"><img src="img/logo-html5-icon.png" /></a>						
+			<a class="gotop fr"><img src="img/logo-css3-icon.png" /></a>
+			<span>Home</span>
+		</header>		
+		<nav>
+			<div class="nav-body">
+				<div class="title">
+					<a class="close fr"></a>
+					<a class="menu"><img src="img/logo-html5-icon.png" /></a>					
+				</div>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="article.html">Article</a></li>
+					<li><a href="detailed.html">Detailed</a></li>
+				</ul>
+				<p>
+					<input type="search" name="search" placeholder="jquery" />
+					<input type="button" value="" />
+				</p>
+			</div>
+		</nav>		
+		<article>
+			<div class="banner">
+				<div class="cube">
+					<div><a href="#"><img src="img/1.jpg" /></a></div>
+					<div><a href="#"><img src="img/2.jpg" /></a></div>
+					<div><a href="#"><img src="img/3.jpg" /></a></div>
+					<div><a href="#"><img src="img/4.jpg" /></a></div>
+					<div><a href="#"><img src="img/3.jpg" /></a></div>
+				</div>
+			</div>
+			<div class="module">
+				<div class="title">HTML5</div>
+				<ul>
+					<li><a href="#">HTML5语义标签</a></li>
+					<li><a href="#">HTML5视频与音频</a></li>
+					<li><a href="#">HTML5“canvas”和“svg”</a></li>
+				</ul>
+			</div>
+			<div class="module">
+				<div class="title">CSS3</div>
+				<ul>
+					<li><a href="#">HTML5语义标签</a></li>
+					<li><a href="#">HTML5视频与音频</a></li>
+					<li><a href="#">HTML5“canvas”和“svg”</a></li>
+				</ul>
+			</div>
+			<div class="module">
+				<div class="title">jQuery</div>
+				<ul>
+					<li><a href="#">HTML5语义标签HTML5语义标签HTML5语义标签HTML5语义标签HTML5语义标签HTML5语义标签</a></li>
+					<li><a href="#">HTML5视频与音频</a></li>
+					<li><a href="#">HTML5“canvas”和“svg”</a></li>
+				</ul>
+			</div>
+		</article>
+		<footer>
+			<ul>
+				<li><span><img src="img/phone.png" /></span><em>18617166210</em></li>
+				<li><span><img src="img/mail.png" /></span><em>376497829@qq.com</em></li>
+			</ul>
+		</footer>
+	</body>
+</html>

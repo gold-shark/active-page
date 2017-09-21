@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>画布的旋转、缩放等功能。</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.transit.min.js" ></script>
+    <script type="text/javascript" src="js/jquery.sliding.js" ></script>
+    <script type="text/javascript" src="js/jquery.banner.js" ></script>
+    <script type="text/javascript">
+    	$(function(){
+    		$(".banner").cube3d({direction:0});
+    	});
+    </script>
+</head>
+<body>
+	<div class="banner">
+		<div class="cube">
+			<div id="sur1" class="surface" style="background: red;">前</div>
+			<div id="sur2" class="surface"style="background: #51AAFF;">右</div>
+			<div id="sur3" class="surface"style="background: #00FF00;">上</div>
+			<div id="sur4" class="surface"style="background: #FFFF00;">后</div>			
+			<div id="sur5" class="surface"style="background: #F0F;">下</div>
+			<div id="sur6" class="surface"style="background: #00F;">左</div>
+		</div>
+	</div>
+</body>
+</html>

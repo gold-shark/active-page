@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>购物车</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+		<script type="text/javascript" src="js/common.js" ></script>
+		<script type="text/javascript" src="js/general.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".num").find(".a").click(function(){
+					if(parseInt($(this).next().val()) <= 1){
+						$(this).next().val(1);
+					} else {
+						$(this).next().val(parseInt($(this).next().val()) - 1);
+					}
+				});
+				$(".num").find(".c").click(function(){
+					if(parseInt($(this).prev().val()) >= 100){
+						$(this).prev().val(100);
+					} else {
+						$(this).prev().val(parseInt($(this).prev().val()) + 1);
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="top">
+			<h1>购物车</h1>
+			<a href="personal.html" id="user"><img src="img/user.png" width="48" height="48" alt="用户中心" /></a>
+			<a href="index.html" id="home"><img src="img/home-top.png" width="48" height="48" alt="主页" /></a>
+		</div>
+		<div class="hotline">
+			<p>客服热线：<span>400-256-2348</span></p>
+		</div>
+		<div class="shopping-info">
+			<ul>
+				<li>
+					<div class="img">
+						<a href="goodsdetail.html"><img src="img/pic1.png" width="126" height="126" alt="牛奶粉" /></a>
+					</div>
+					<div class="oper">
+						<p>￥220.00</p>
+						<div class="del"></div>
+					</div>
+					<p class="tit"><a href="goodsdetail.html">Karicare可瑞康新西兰原装原罐进口2段牛奶粉900g</a></p>	
+					<p class="num"><a class="a">-</a><span class="b">1</span><a class="c">+</a></p>
+					<div class="clear"></div>
+				</li>
+				<li>
+					<div class="img">
+						<a href="goodsdetail.html"><img src="img/pic2.png" width="126" height="126" alt="牛奶粉" /></a>
+					</div>
+					<div class="oper">
+						<p>￥380.00</p>
+						<div class="del"></div>
+					</div>
+					<p class="tit"><a href="goodsdetail.html">新西兰Karicare Aptamil爱他美新生儿婴儿奶粉1段2罐 新包装</a></p>
+					<p class="num"><a class="a">-</a><input type="number" value="1" /><a class="c">+</a></p>
+					<div class="clear"></div>
+				</li>
+				<li>
+					<div class="img">
+						<a href="goodsdetail.html"><img src="img/pic2.png" width="126" height="126" alt="牛奶粉" /></a>
+					</div>
+					<div class="oper">
+						<p>￥380.00</p>
+						<div class="del"></div>
+					</div>
+					<p class="tit"><a href="goodsdetail.html">新西兰Karicare Aptamil爱他美新生儿婴儿奶粉1段2罐 新包装</a></p>
+					<p class="num"><a class="a">-</a><span class="b">1</span><a class="c">+</a></p>
+					<div class="clear"></div>
+				</li>
+			</ul>
+		</div>
+		<p style="padding-bottom: 3.0em;"></p>
+		<div class="down-fixed">
+			<p class="shopping-down">共2件商品    合计:<em>￥600.00</em><a href="order.html" class="inst">去结算</a></p>
+		</div>
+	</body>
+</html>

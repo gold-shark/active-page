@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Q房网APP</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(window).on("load", function(){
+					var chig = $("header").height() + $("article").height() + $("footer").height();
+					var whig = $(window).height();
+					if(chig < whig){
+						$(".major-nav").css({"position": "fixed"});
+					} else {
+						$(".major-nav").css({"position": "static"});
+					}
+				});				
+			});
+		</script>
+	</head>
+	<body>
+		<header class="app-title">
+			<div class="app"><img src="img/5.png" width="393" height="86" /></div>
+			<p>Q房网APP</p>
+		</header>
+		<article class="app-content">
+			<img src="img/6.png" width="640" height="531" />
+			<p>
+				<a href="https://itunes.apple.com/cn/app/id858955179?mt=8"><img src="img/8-1.png" width="261" height="77" /></a>
+				<a href="http://shenzhen.qfang.com/download/QfangPalm.apk"><img src="img/8-2.png" width="261" height="77" /></a>
+			</p>
+		</article>
+		<footer class="major-nav">
+			<p class="one"><a href="index.html">我是买房者</a><a href="broker.html">我是经纪人</a></p>
+		</footer>
+		<!-- Google Tag Manager -->
+		<noscript>
+			<iframe src="//www.googletagmanager.com/ns.html?id=GTM-5NGTRL"
+				height="0" width="0" style="display: none; visibility: hidden"></iframe>
+		</noscript>
+		<script>
+			(function(w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({
+					'gtm.start' : new Date().getTime(),
+					event : 'gtm.js'
+				});
+				var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', 'GTM-5NGTRL');
+		</script>
+		<!-- End Google Tag Manager -->
+	</body>
+</html>

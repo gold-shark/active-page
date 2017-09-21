@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+		<title>华南高尔夫-好友</title>
+		<link type="text/css" rel="stylesheet" href="css/base.css" />
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".add-friend").on("click", function(e){
+					e.stopPropagation();
+					$(".scan-body").show();
+				});
+				$(document).on("click", function(){
+					$(".scan-body").hide();
+				});
+			});
+		</script>
+	</head>
+	<body class="body-gray fixed  vertical">
+		<header class="header">
+			<div class="title">
+				<h1>好友</h1>
+				<a href="javascript:void(0);" class="go-back absolute"></a>
+				<a href="javascript:void(0);" class="add-friend absolute"></a>
+				<div class="absolute scan-body" style="display:none;">
+					<a href="friends-add1.html" class="friend">添加好友</a>
+					<a href="javascript:void(0);" class="scan">扫一扫</a>
+				</div>
+			</div>
+		</header>
+		<article class="article flex">
+			<div class="friends-search horizontal"><input type="text" class="text flex" /></div>
+			<div class="friends-list">
+				<div class="items">
+					<a href="javascript:void(0);" class="horizontal">
+						<div class="pic"><img src="img/club.png"/></div>
+						<div class="name pack-middel flex"><p>球会</p></div>
+					</a>
+				</div>
+				<div class="items">
+					<a href="javascript:void(0);" class="horizontal">
+						<div class="pic"><img src="img/ball.png"/></div>
+						<div class="name pack-middel flex"><p>球队</p></div>
+					</a>
+				</div>
+			</div>
+			<div class="friends-list">
+				<div class="title"><p>A</p></div>
+				<div class="items">
+					<a href="javascript:void(0);" class="horizontal">
+						<div class="pic"><img src="img/portrait.png"/></div>
+						<div class="name pack-middel flex"><p>Anglebaby</p></div>
+					</a>
+				</div>
+				<div class="items">
+					<a href="javascript:void(0);" class="horizontal">
+						<div class="pic"><img src="img/portrait.png"/></div>
+						<div class="name pack-middel flex"><p>A-len</p></div>
+					</a>
+				</div>
+				<div class="items">
+					<a href="javascript:void(0);" class="horizontal">
+						<div class="pic"><img src="img/portrait.png"/></div>
+						<div class="name pack-middel flex"><p>阿伦</p></div>
+					</a>
+				</div>
+				<div class="items">
+					<a href="javascript:void(0);" class="horizontal">
+						<div class="pic"><img src="img/portrait.png"/></div>
+						<div class="name pack-middel flex"><p>安以轩</p></div>
+					</a>
+				</div>
+			</div>
+			<div class="friends-list">
+				<div class="title"><p>B</p></div>
+				<div class="items">
+					<a href="javascript:void(0);" class="horizontal">
+						<div class="pic"><img src="img/portrait.png"/></div>
+						<div class="name pack-middel flex"><p>Baby</p></div>
+					</a>
+				</div>
+				<div class="items">
+					<a href="javascript:void(0);" class="horizontal">
+						<div class="pic"><img src="img/portrait.png"/></div>
+						<div class="name pack-middel flex"><p>Ben</p></div>
+					</a>
+				</div>
+			</div>
+			<div class="friends-list">
+				<div class="title"><p>C</p></div>
+				<div class="items">
+					<a href="javascript:void(0);" class="horizontal">
+						<div class="pic"><img src="img/portrait.png"/></div>
+						<div class="name pack-middel flex"><p>CBaby</p></div>
+					</a>
+				</div>
+				<div class="items">
+					<a href="javascript:void(0);" class="horizontal">
+						<div class="pic"><img src="img/portrait.png"/></div>
+						<div class="name pack-middel flex"><p>CBen</p></div>
+					</a>
+				</div>
+			</div>
+		</article>
+		<footer class="footer">
+			<nav class="nav horizontal">
+				<a href="message-list.html" class="flex"><i class="message"></i>消息</a>
+				<a href="friends-list.html" class="flex current"><i class="friends"></i>好友</a>
+				<a href="index.html" class="flex"><i class="homes"></i>首页</a>
+				<a href="javascript:void(0);" class="flex"><i class="search"></i>发现</a>
+				<a href="personal-list.html" class="flex"><i class="personal"></i>我的</a>
+			</nav>
+		</footer>
+		<section class="directory fixed vertical">
+			<a href="javascript:void(0);" class="flex">A</a>
+			<a href="javascript:void(0);" class="flex">B</a>
+			<a href="javascript:void(0);" class="flex">C</a>
+			<a href="javascript:void(0);" class="flex">D</a>
+			<a href="javascript:void(0);" class="flex">E</a>
+			<a href="javascript:void(0);" class="flex">F</a>
+			<a href="javascript:void(0);" class="flex">G</a>
+			<a href="javascript:void(0);" class="flex">H</a>
+			<a href="javascript:void(0);" class="flex">I</a>
+			<a href="javascript:void(0);" class="flex">J</a>
+			<a href="javascript:void(0);" class="flex">K</a>
+			<a href="javascript:void(0);" class="flex">L</a>
+			<a href="javascript:void(0);" class="flex">M</a>
+			<a href="javascript:void(0);" class="flex">N</a>
+			<a href="javascript:void(0);" class="flex">O</a>
+			<a href="javascript:void(0);" class="flex">P</a>
+			<a href="javascript:void(0);" class="flex">Q</a>
+			<a href="javascript:void(0);" class="flex">R</a>
+			<a href="javascript:void(0);" class="flex">S</a>
+			<a href="javascript:void(0);" class="flex">T</a>
+			<a href="javascript:void(0);" class="flex">U</a>
+			<a href="javascript:void(0);" class="flex">V</a>
+			<a href="javascript:void(0);" class="flex">W</a>
+			<a href="javascript:void(0);" class="flex">X</a>
+			<a href="javascript:void(0);" class="flex">Y</a>
+			<a href="javascript:void(0);" class="flex">Z</a>
+			<a href="javascript:void(0);" class="flex">#</a>
+		</section>
+	</body>
+</html>

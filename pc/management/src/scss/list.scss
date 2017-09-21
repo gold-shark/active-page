@@ -1,0 +1,52 @@
+$bg-url: url(../img/parities.png);
+$border: 1px solid #ddd;
+$size: 30px;
+$color: #f90;
+.tab-btn {
+	display: block;
+	padding: 0 20px;
+	height: $size;
+	line-height: $size;
+	cursor: pointer;
+	color: #333;
+	text-align: center;
+	background: #fafafa;
+	box-sizing: border-box;
+}
+
+.tab-btn-cur {
+	font-weight: 600;
+	color: $color;
+}
+
+.tab-btn-cur:hover {
+	color: $color;
+}
+
+.parities {
+	display: inline-block;
+	width: $size;
+	height: $size;
+	vertical-align: top;
+	background: $bg-url no-repeat;
+}
+
+.add-items {
+	display: inline-block;
+	width: $size;
+	height: $size;
+	vertical-align: top;
+	border: $border;
+	background: $bg-url -31px -1px no-repeat;
+	box-sizing: border-box;
+}
+.sub-items {
+	display: inline-block;
+	width: $size;
+	height: $size;
+	margin-left: 8px;
+	vertical-align: top;
+	border: $border;
+	background: $bg-url -61px -1px no-repeat;
+	box-sizing: border-box;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>经纪人登录</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $(".advertising").find("ul").css({
+          "height": $(".advertising").find("li").height()
+        });
+        var n = 0,
+          leg = $(".advertising").find("li").length;
+        var a = setInterval(function() {
+          if (n < leg - 1) {
+            n++;
+            $(".advertising").find("li").fadeOut(300);
+            $(".advertising").find("li").eq(n).fadeIn(300);
+          } else {
+            n = 0;
+            $(".advertising").find("li").fadeOut(300);
+            $(".advertising").find("li").eq(n).fadeIn(300);
+          }
+        }, 2500);
+        $('#submit').on('click', function() {
+          var uName = $('#uname').val().trim();
+          var pwd = $('#pwd').val().trim();
+          $.ajax({
+            url: 'http://192.168.0.241:7878/qfang-tradeapi/login/toLogin',
+            type: 'post',
+            dataType: 'json',
+            data: {
+              'userName': uName,
+              'password': pwd
+            },
+            success: function(data){
+              console.log(data.toString());
+            }
+          });
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <h1>经纪人登录</h1>
+      <a href="register.html" class="back"></a>
+      <a href="javascript:void(0);" class="over">立即注册</a>
+    </header>
+    <article>
+      <div class="text-body">
+        <p class="text">
+          <span class="user"></span>
+          <input type="tel" placeholder="账号" id="uname" class="text icon" />
+          <span class="clear"></span>
+        </p>
+        <p class="text bbotm">
+          <span class="lock"></span>
+          <input type="password" placeholder="密码" id="pwd" class="text icon" />
+        </p>
+      </div>
+      <div class="but-body">
+        <p>
+          <input type="button" value="登录" id="submit" class="submit yellow" />
+        </p>
+        <p class="pass"><a href="javascript:void(0);">忘记密码？</a></p>
+      </div>
+      <div class="ad-bottom">
+        <div class="contact">
+          <p>如遇到问题，请拨<em>4008-556-550</em></p>
+        </div>
+        <div class="advertising">
+          <ul>
+            <li>
+              <a href="javascript:void(0);"><img src="img/ad.jpg" width="640" height="68" /></a>
+            </li>
+            <li>
+              <a href="javascript:void(0);"><img src="img/pkt.jpg" width="640" height="68" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </body>
+
+</html>

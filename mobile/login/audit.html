@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>资料审核</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript" src="js/check.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>资料审核</h1>
+			<a href="javascript:void(0);" class="back"></a>
+		</header>
+		<article>
+			<div class="error-body">
+				<p class="audit">您提交的资料不符合要求:</p>
+				<p><span class="item"></span>无身份证照或身份证信息错误</p>
+				<p><span class="item"></span>公司或店铺错误</p>
+				<p><span class="item"></span>无头像或头像不合规</p>
+				<p><span class="item"></span>无名片或名片不符合规格</p>
+				<p class="audit">请重新提交，谢谢！</p>
+			</div>
+			<div class="personal-body">
+				<p><label>姓名</label><input type="text" value="张三" class="text"/></p>
+				<p class="not"><label>城市（修改请联系客户经理）</label><span>上海</span></p>
+				<p><label>公司</label><input type="text" value="21世纪不动产" readonly="readonly" class="text" /><sup class="sel"></sup></p>
+				<p><label>区域</label><input type="text" value="浦东   陆家嘴" readonly="readonly" class="text" /><sup class="sel"></sup></p>
+				<p class="none"><label>店铺</label><input type="text" value="东海花园分行" readonly="readonly" class="text" /><sup class="sel"></sup></p>
+			</div>
+			<div class="personal-body">
+				<p><label>性别</label><i class="nan">帅哥</i><i class="nv">美女</i><input type="radio" value="男" name="sex" id="nan" class="hide" /><input type="radio" value="女" name="sex" id="nv" class="hide" /></p>
+				<p><label>身份证号</label><input type="text" placeholder="身份证号" class="text" /></p>
+				<div class="upload-body">
+					<p class="title">认证资料<span>（点击图片修改）</span></p>
+					<div class="upload">
+						<div class="item">
+							<img src="img/beauty.png" width="184" height="184" />
+							<input type="file" class="hide" />
+						</div>
+						<div class="item">
+							<img src="img/beauty.png" width="184" height="184" />
+							<input type="file" class="hide" />
+						</div>
+						<div class="item">
+							<img src="img/beauty.png" width="184" height="184" />
+							<input type="file" class="hide" />
+						</div>
+					</div>
+					<p class="tions">1.头像为正面照。</p>
+					<p class="tions">2.身份证清晰可辨，不可PS、涂改。</p>
+					<p class="tions">3.名片清晰可辩，无涂改，名片信息与注册信息一致。</p>
+				</div>
+			</div>
+			<div class="but-body">
+				<p class="agree">点击“提交”即表示你同意<a href="javascript:void(0);">《Q房网服务协议》</a></p>
+				<p><input type="button" value="提交" class="submit yellow" /></p>
+			</div>
+		</article>
+	</body>
+</html>

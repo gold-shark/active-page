@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Q房网实时成交</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<header class="header">
+			<h1><img src="img/logo.png"/>Q房网实时成交</h1>
+		</header>
+		<article class="article">
+			<div class="table-head">
+				<table class="data-table">
+					<tr>
+						<th class="th10 align-l">城市</th>
+						<th class="th25 align-l">跟进楼盘</th>
+						<th class="th25 align-l">成交均价</th>
+						<th class="th20 align-l">类型</th>
+						<th class="th20 align-c">时间</th>
+					</tr>
+				</table>
+			</div>
+			<div class="table-body">
+				<table class="data-table">
+					<tbody>
+					<!--<tr class="tr1">
+						<td class="th10 align-l">深圳</td>
+						<td class="th25 align-l">承翰半山海</td>
+						<td class="th25 align-l yellow">39,000元/平</td>
+						<td class="th20 align-l">新房</td>
+						<td class="th20 align-c">2015-05-03 12:30</td>
+					</tr>
+					<tr>
+						<td class="align-l">深圳</td>
+						<td class="align-l">承翰半山海</td>
+						<td class="align-l yellow">9,000元/平</td>
+						<td class="align-l">二手房</td>
+						<td class="align-c">2015-05-03 12:30</td>
+					</tr>
+					<tr class="tr1">
+						<td class="align-l">深圳</td>
+						<td class="align-l">承翰半山海</td>
+						<td class="align-l yellow">39,000元/平</td>
+						<td class="align-l">新房</td>
+						<td class="align-c">2015-05-03 12:30</td>
+					</tr>
+					<tr>
+						<td class="align-l">深圳</td>
+						<td class="align-l">承翰半山海</td>
+						<td class="align-l yellow">9,000元/平</td>
+						<td class="align-l">二手房</td>
+						<td class="align-c">2015-05-03 12:30</td>
+					</tr>
+					<tr class="tr1">
+						<td class="align-l">深圳</td>
+						<td class="align-l">承翰半山海</td>
+						<td class="align-l yellow">39,000元/平</td>
+						<td class="align-l">新房</td>
+						<td class="align-c">2015-05-03 12:30</td>
+					</tr>
+					<tr>
+						<td class="align-l">深圳</td>
+						<td class="align-l">承翰半山海</td>
+						<td class="align-l yellow">9,000元/平</td>
+						<td class="align-l">二手房</td>
+						<td class="align-c">2015-05-03 12:30</td>
+					</tr>
+					<tr class="tr1">
+						<td class="align-l">深圳</td>
+						<td class="align-l">承翰半山海</td>
+						<td class="align-l yellow">39,000元/平</td>
+						<td class="align-l">新房</td>
+						<td class="align-c">2015-05-03 12:30</td>
+					</tr>
+					<tr>
+						<td class="align-l">深圳</td>
+						<td class="align-l">承翰半山海</td>
+						<td class="align-l yellow">9,000元/平</td>
+						<td class="align-l">二手房</td>
+						<td class="align-c">2015-05-03 12:30</td>
+					</tr>
+					<tr class="tr1">
+						<td class="align-l">深圳</td>
+						<td class="align-l">承翰半山海</td>
+						<td class="align-l yellow">39,000元/平</td>
+						<td class="align-l">新房</td>
+						<td class="align-c">2015-05-03 12:30</td>
+					</tr>
+					<tr>
+						<td class="align-l">深圳</td>
+						<td class="align-l">承翰半山海</td>
+						<td class="align-l yellow">9,000元/平</td>
+						<td class="align-l">二手房</td>
+						<td class="align-c">2015-05-03 12:30</td>
+					</tr>-->
+					</tbody>
+				</table>
+			</div>
+		</article>
+		<footer class="footer">
+			<p>今日服务客户数:<em>20,153,232</em></p>
+		</footer>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+        	$(function(){
+                var runtime = 10000;
+                var minlen = 10;
+        		var jsona = [
+        			{no: 1, city: "南京", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"},
+        			{no: 2, city: "苏州", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"},
+        			{no: 3, city: "青岛", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"},
+        			{no: 4, city: "上海", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"},
+        			{no: 5, city: "深圳", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"},
+        			{no: 6, city: "南京", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"}
+        		];
+        		var jsonb = [
+        			{no: 1, city: "南京", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"},
+        			{no: 2, city: "苏州", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"},
+        			{no: 3, city: "青岛", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"},
+        			{no: 4, city: "上海", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"},
+        			{no: 5, city: "深圳", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"},
+        			{no: 6, city: "南京", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"},
+        			{no: 7, city: "苏州", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"},
+        			{no: 8, city: "青岛", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"},
+        			{no: 9, city: "上海", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"},
+        			{no: 10, city: "深圳", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"},
+        			{no: 11, city: "南京", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"},
+        			{no: 12, city: "苏州", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"},
+        			{no: 13, city: "青岛", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"},
+        			{no: 14, city: "上海", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"},
+        			{no: 15, city: "深圳", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"},
+        			{no: 16, city: "南京", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"},
+        			{no: 17, city: "苏州", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"},
+        			{no: 18, city: "青岛", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"},
+        			{no: 19, city: "上海", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"},
+        			{no: 20, city: "深圳", name: "承翰半山海", price: "39,000元/平", type: "新房", time: "2015-05-03 12:30"}
+        		];
+        		//加载数据
+        		function loadData(arr){
+        			var str = "";
+                    if(arr == undefined){
+                        arr = [];
+                    }
+        			var nonejson = {no: "&nbsp;", city: "&nbsp;", name: "&nbsp;", price: "&nbsp;", type: "&nbsp;", time: "&nbsp;"};
+        			switch(arr.length % minlen){
+        				case 1: arr.push(nonejson, nonejson, nonejson, nonejson, nonejson, nonejson, nonejson, nonejson, nonejson); break;
+        				case 2: arr.push(nonejson, nonejson, nonejson, nonejson, nonejson, nonejson, nonejson, nonejson); break;
+        				case 3: arr.push(nonejson, nonejson, nonejson, nonejson, nonejson, nonejson, nonejson); break;
+        				case 4: arr.push(nonejson, nonejson, nonejson, nonejson, nonejson, nonejson); break;
+        				case 5: arr.push(nonejson, nonejson, nonejson, nonejson, nonejson); break;
+        				case 6: arr.push(nonejson, nonejson, nonejson, nonejson); break;
+        				case 7: arr.push(nonejson, nonejson, nonejson); break;
+        				case 8: arr.push(nonejson, nonejson); break;
+        				case 9: arr.push(nonejson); break;
+        			}
+        			$.each(arr, function(i, e){
+        				str += "<tr class='" + (i % 2 === 0 ? "tr1" : "tr0") 
+        					+ "'><td class='th10 align-l'>" + e.city
+    						+ "</td><td class='th25 align-l'>" + e.name
+    						+ "</td><td class='th25 align-l yellow'>" + e.price
+    						+ "</td><td class='th20 align-l'>" + e.type
+    						+ "</td><td class='th20 align-c' nowrap>" + e.time
+    						+ "</td></tr>";
+        			});
+        			$(".table-body").find("tbody").empty().append(str);
+        		}
+        		//表格滚动
+        		function animTable(){
+        			var n = 0, heg = $(".table-body").height(), leg = $(".table-body").find("tr").length;
+        			if(leg > minlen){
+        			    getClone();
+        				var a = setInterval(function(){
+		        			n++;
+		        			$(".table-body").find("table").animate({"marginTop": -n * heg}, 300, "linear", function(){
+		        				if(n >= Math.ceil(leg / minlen)){   
+		        					n = 0;
+		        					$(".table-body").find("table").css({"marginTop": 0});
+		        					clearInterval(a);
+		        					loadData(jsonb);
+		        					animTable();
+		        				}
+		        			});
+	        			}, runtime);
+        			} else {
+        				setTimeout(function(){
+        					loadData(jsonb);
+		        			animTable();
+        				}, runtime);
+        			}
+        		};
+        		//添加克隆数据
+        		function getClone(){
+                    $(".table-body tbody").append($(".table-body tr:lt("  + (minlen - 1) + ")").clone());
+        		};
+        		loadData(jsona);
+        		animTable();
+        	});
+        </script>
+	</body>
+</html>

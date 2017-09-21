@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+		<title>发起路线</title>
+		<link type="text/css" rel="stylesheet" href="css/base.css" />
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<link type="text/css" rel="stylesheet" href="css/time-select.css" />
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/time-select.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#time').tap(function() {
+					$.timeSelect(function() {
+						var str = '';
+						$('.current').each(function() {
+							str += $(this).html();
+						});
+						$('#time').val(str);
+					});
+				});
+				$('.clear-text').on('click', function() {
+					$(this).prev().val('');
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<article class="article-body">
+			<div class="title-body">
+				<h1>发起路线</h1>
+			</div>
+			<div class="form-body">
+				<div class="items">
+					<p class="pack-middel red">
+						<input class="text flex" type="text" placeholder="我的位置" />
+						<i class="clear-text"></i>
+					</p>
+				</div>
+				<div class="items">
+					<p class="pack-middel green">
+						<input class="text flex" type="text" placeholder="终点位置" />
+						<i class="clear-text"></i>
+					</p>
+				</div>
+				<div class="items">
+					<p class="pack-middel time">
+						<input class="text flex" type="text" id="time" readonly="readonly" placeholder="出发时间" />
+						<i class="clear-text"></i>
+					</p>
+				</div>
+				<div class="items">
+					<a class="btn submit-btn" href="javascript:void(0);">发起路线</a>
+				</div>
+			</div>
+		</article>
+	</body>
+
+</html>

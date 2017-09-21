@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>专题</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.sliding.js" ></script>
+		<script type="text/javascript" src="js/banner.js" ></script>
+		<script type="text/javascript" src="js/common.js" ></script>
+		<script type="text/javascript" src="js/general.js" ></script>
+		<script type="text/javascript">
+			$(function(){				
+				$(".group-down").find(".inst").click(function(){
+					$(".backp-cover").show();
+					$(".popup-up").show().animate({"marginTop": 0}, 250, "linear");
+				});
+				$(".popup-close,.backp-cover").click(function(){
+					$(".popup-up").animate({"marginTop": "100%"}, 250, "linear", function(){
+						$(this).hide();
+						$(".backp-cover").hide();
+					});
+				});
+				
+				$(".sel").find("span").click(function(){
+					$(this).siblings().removeClass();
+					$(this).addClass("current");
+					Pand();
+				});
+				$(".num").find("a").first().click(function(){
+					if(parseInt($(this).next().html()) <= $("#min").val()){
+						$(this).next().html($("#min").val());
+					} else {
+						$(this).next().html(parseInt($(this).next().html()) - 1);
+					}
+					Pand();
+				});
+				$(".num").find("a").last().click(function(){
+					if(parseInt($(this).prev().html()) >= $("#max").val()){
+						$(this).prev().html($("#max").val());
+					} else {
+						$(this).prev().html(parseInt($(this).prev().html()) + 1);
+					}
+					Pand();
+				});
+				function Pand(){
+					var price = parseFloat($("#pirce").val());
+					var discount = parseFloat($("#discount").val());
+					$(".sel .current").find("input:hidden").each(function(){
+						price += parseFloat($(this).val());
+					});
+					price = price * parseInt($(".num").find("p").find("span").html());
+					var oldprice = price/discount;
+					$(".pack-down").find("em").html("￥" + changeTwoDecimal(price));
+					$(".pack-down").find("label").html("￥" + Math.round(oldprice));
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div class="top">
+			<h1>专题</h1>
+			<a href="personal.html" id="user"><img src="img/user.png" width="48" height="48" alt="用户中心" /></a>
+			<a href="index.html" id="home"><img src="img/home-top.png" width="48" height="48" alt="主页" /></a>
+		</div>
+		<div class="pack-img">
+			<img src="img/package-2.png" width="600" height="280" alt="" />
+		</div>
+		<div class="pack-txt">
+			<p class="tit">新生儿用品包</p>
+			<p class="txt">新生儿用品可是个综合概念！在小天使降临之前，爸爸妈妈就需要为他即将开始的吃喝拉撒睡做好全方位的准备。新手爸妈没有经验？太多太杂无从下手？不怕小奶牛已经为你整理好 了，快来按照清单采购吧！</p>
+		</div>
+		<div class="goods-info">
+			<p class="title">套餐选购</p>
+			<ul>
+				<li>
+					<div class="img">
+						<a href="goodsdetail.html"><img src="img/pic1.png" width="126" height="126" alt="牛奶粉" /></a>
+						<span>7折</span>
+					</div>
+					<p class="tit"><a href="goodsdetail.html">Karicare可瑞康新西兰原装原罐进口2段牛奶粉900g</a></p>
+					<p class="cot"><em>￥220.00</em><span>￥340</span><a href="#"></a></p>
+					<div class="clear"></div>
+				</li>
+				<li>
+					<div class="img">
+						<a href="goodsdetail.html"><img src="img/pic2.png" width="126" height="126" alt="牛奶粉" /></a>
+						<span>7折</span>
+					</div>
+					<p class="tit"><a href="goodsdetail.html">Karicare可瑞康新西兰原装原罐进口2段牛奶粉900g</a></p>
+					<p class="cot"><em>￥220.00</em><span>￥340</span><a href="#"></a></p>
+					<div class="clear"></div>
+				</li>
+				<li>
+					<div class="img">
+						<a href="goodsdetail.html"><img src="img/pic1.png" width="126" height="126" alt="牛奶粉" /></a>
+					</div>
+					<p class="tit"><a href="goodsdetail.html">Karicare可瑞康新西兰原装原罐进口2段牛奶粉900g</a></p>
+					<p class="cot"><em>￥220.00</em><span>￥340</span><a href="#"></a></p>
+					<div class="clear"></div>
+				</li>
+				<li>
+					<div class="img">
+						<a href="goodsdetail.html"><img src="img/pic2.png" width="126" height="126" alt="牛奶粉" /></a>
+					</div>
+					<p class="tit"><a href="goodsdetail.html">Karicare可瑞康新西兰原装原罐进口2段牛奶粉900g</a></p>
+					<p class="cot"><em>￥220.00</em><span>￥340</span><a href="#"></a></p>
+					<div class="clear"></div>
+				</li>
+			</ul>
+			<p style="padding-bottom: 2.8em;"></p>
+		</div>
+		<div class="down-fixed">
+			<p class="group-down"><a href="shopping.html" class="cart"><span>2</span></a><em>￥640.00</em><label style="text-decoration: none;">共5件商品</label><a class="inst">全部承包了!</a></p>
+		</div>
+		<div class="backp-cover"></div>
+		<div class="popup-up">
+			<div class="popup-close"></div>
+			<div class="popup-content">
+				<div class="banner" id="orange">
+					<ul>
+						<li><img src="img/banner-1.png" /></li>
+						<li><img src="img/banner-2.png" /></li>
+						<li><img src="img/banner-3.png" /></li>
+						<li><img src="img/banner-4.png" /></li>
+					</ul>
+				</div>
+				<div class="pack-block">
+					<p class="tit">新西兰Karicare Aptamil爱他美新生儿婴儿奶粉1段2罐 新包装<span>7折</span><input id="discount" type="hidden" value="0.7" /></p>
+					<p class="txt">帮助增强抵抗力，同时益生元能软化大便减少便秘机会。</p>
+					<div class="sel">
+						<label>选择：</label>
+						<p>
+							<span>1段900g<input type="hidden" value="100" /></span>
+							<span class="current">1段900g<input type="hidden" value="200" /></span>
+							<span>1段1800g<input type="hidden" value="300" /></span>
+							<span>1段3600g<input type="hidden" value="400" /></span>
+							<span>1段5400g<input type="hidden" value="500" /></span>
+						</p>
+						<div class="clear"></div>
+					</div>
+					<div class="num">
+						<label>数量：</label>
+						<p><a>-</a><span>1</span><a>+</a></p>
+						<span>剩余238件<input type="hidden" id="min" value="2"><input type="hidden" id="max" value="10"></span>
+						<div class="clear"></div>
+					</div>
+				</div>				
+				<p style="padding-bottom: 2.8em;"></p>
+				<div class="down-fixed">
+					<p class="pack-down"><em>￥640.00</em><label>￥780</label><input id="pirce" type="hidden" value="640" /><a href="#" class="inst">下一个(1/5)</a></p>
+				</div>
+				<!--<div class="popup-loading"><p>努力加载中...</p></div>-->
+			</div>
+		</div>		
+	</body>
+</html>

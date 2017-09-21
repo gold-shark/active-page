@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>图片裁剪</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<style type="text/css">
+			.tailor-body{position:fixed; top:0; right:0; bottom:0; left:0;}
+			.canvas{width:100%; height:100%;}
+		</style>
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var c = document.getElementById("canvas1"),
+					cxt = c.getContext("2d");
+				var pic = new Image();
+				pic.src = "img/beauty.png";
+				pic.onload = function(){
+					cxt.drawImage(pic,0,0,640,1000)
+				}
+				/*var startPosition = {x0: 0, y0: 0,x1: 0,y1: 0};
+				$("#canvas1").on("touchstart", function(e){
+					$.extend(startPosition, {x0: e.touches[0].pageX, y0: e.touches[0].pageY, x1: e.touches[1].pageX, y1: e.touches[1].pageY});
+				});
+				$("#canvas1").on("touchmove", function(e){
+					e.preventDefault();
+				});
+				$("#canvas1").on("touchend", function(e){
+					
+				});*/
+			});
+		</script>
+	</head>
+	<body>
+		<div class="tailor-body">
+			<canvas id="canvas1" width="640" height="1000" class="canvas"></canvas>
+		</div>
+	</body>
+</html>

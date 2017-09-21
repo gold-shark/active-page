@@ -1,0 +1,53 @@
+body{margin: 0; padding: 0; font-size: 62.5%; font-family: "\5fae\8f6f\96c5\9ed1","Microsoft YaHei",helvetica,tahoma,arial,verdana,sans-serif;}
+ul,ol,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd,form,input,fieldset,select,textarea,object,embed{margin:0; padding:0;}
+input{-webkit-appearance:none; -webkit-transition-property:none;outline:none;}
+a{text-decoration: none;}
+.qfang-body{width:auto; height: auto; position: relative;}
+.qfang-body img{width: 100%; height: auto; display: block; border: none;}
+/* logo */
+.qfang-logo{width: 20%; height: auto; position: absolute; left: 40%; top: 0.7%; z-index: 30;}
+/* turntable */
+.qfang-turntable{width: 96%; height: auto; position: absolute; left: 2%; top: 14%; z-index: 30;}
+.qfang-turntable-none{width: 96%; height: auto; position: absolute; left: 2%; top: 14%; z-index: 100; display: none;}
+.qfang-turntable-none p{position: absolute; top:0; left:0; width: 100%; font-size: 2.4em; text-align: center;}
+.qfang-turntable-none p.p1{top: 50%; color: #fff;}
+.qfang-turntable-none p.p2{top: 59%; color: #fc0;}
+/* pointer */
+.qfang-pointer{width: 22.56%; height: auto; position: absolute; left: 38.72%; top: 14.8%; z-index: 50;}
+.pointer a{width: 99%; height: 40%; position: absolute; left: 0.5%; bottom: 1%; display: block;}
+/* state */
+.qfang-state{width: 100%; height: auto; position: fixed; left: 0; bottom: 0; z-index: 100;}
+.lucky{ width: 27.1%; height: auto; position: absolute; left: 6.5%; top: 43.3%;}
+.lucky label{width: 48%; height: auto; position: absolute; right: 1%; top: 1%; font-size: 2.0em; text-align: center; vertical-align: middle; color: #900;}
+.myprize{ width: 17.3%; height: auto; position: absolute; left: 36.5%; top: 43.3%;}
+.invitation{ width: 22.5%; height: auto; position: absolute; left: 60.5%; top: 43.3%;}
+/* translucent */
+.qfang-translucent{position: fixed; top:0; right:0; bottom: 0; left: 0; z-index: 200; background: rgba(0, 0, 0, 0.7);}
+/* winning */
+.qfang-winning{width: 90%; height: auto; position: fixed; top: 25%; left: 5%; z-index: 300;}
+.qfang-winning img{width: 100%; height: auto; display: block; border: none;}
+.qfang-winning .kenken{position: absolute; top: 55%; left: 41%; font-size: 1.2em; text-decoration:underline; color:#007fd0;}
+.qfang-winning .kmove{position:absolute; top: 55%; left: 37.5%; font-size: 1.0em;}
+.qfang-winning .kmove em{font-size:1.6em; font-style: normal; color: #F00;}
+.qfang-winning .kmove a{text-decoration:underline; color:#007fd0;}
+.qfang-winning .know{position:absolute; top: 73.3%; left: 37.5%; width: 25%; height: auto;}
+.qfang-winning .money{position:absolute; top: 32%; left: 50%; width: 25%; height:auto; text-align:center; font-size:4.0em; color:#f00;}
+.qfang-winning .link{ position:absolute; top: 45%; left:32.5%; padding: 0.3em 0.5em; width:50%; overflow: hidden; color: #2e2e2e; border: 1px solid #ccc;}
+.qfang-winning .ok{position:absolute; top:70%; left:32.5%; padding: 0.5em 0.8em; background: #900; color: #fff; cursor: pointer; border-radius: 0.2em;}
+.qfang-winning .close{position:absolute; top:0; right:0.2em; width:2.0em; height: 2.0em; cursor:pointer; background: url("../img/close.jpg") no-repeat scroll 50% 50% / 80% 80%;}
+/* login */
+.qfang-login{position:fixed; top:25%; left:5%; width: 90%; height: auto; z-index:300; background:#fff; border-radius:0.3em;}
+.login-title{padding:0 5%; background:#000; border-bottom:0.2em solid #f5b900; box-sizing: border-box; border-radius:0.3em 0.3em 0 0;}
+.login-title p{font-size:1.4em; line-height:2.0em; color:#fff;}
+.login-text{padding:2.0em 5%;}
+.login-text p{font-size: 1.2em; color:#787878; line-height: 2.5em; text-align: center;}
+.login-text p a.register{display: inline-block; width:6.0em; height: auto; color: #fff; background: #f5b900; border-radius:0.3em;}
+.login-text p a.login{color: #1a66b3;}
+.login-close{position:absolute; top:0; right:0.2em; width:2.5em; height: 2.5em; cursor:pointer; background: url("../img/close.gif") no-repeat scroll 50% 50% / 40% 40%;}
+/* info */
+.qfang-info{position:fixed; top:25%; left:20%; width: 60%; height: auto; z-index:300; background:#fff; border-radius:0.3em;}
+.info-title{padding:0 5%; background:#000; border-bottom:0.2em solid #f5b900; box-sizing: border-box; border-radius:0.3em 0.3em 0 0;}
+.info-title p{font-size:1.4em; line-height:2.0em; color:#fff;}
+.info-text{padding:2.0em 5%;}
+.info-text p{font-size: 1.4em; color:#3e3e3e; line-height: 2.5em; text-align: center;}
+.info-close{position:absolute; top:0; right:0.2em; width:2.5em; height: 2.5em; cursor:pointer; background: url("../img/close.gif") no-repeat scroll 50% 50% / 40% 40%;}

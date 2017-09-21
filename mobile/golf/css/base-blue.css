@@ -1,0 +1,81 @@
+html,body,div,p,ul,ol,dl,input,h1,h2,h3,h4,h5,h6,textarea,select,header,article,aside,nav,section,footer,hgroup,figcaption,figure{margin:0; padding:0;}
+div,header,article,aside,nav,section,footer,hgroup,figcaption,figure,ul,ol{width:auto; height:auto; display:block;}
+html{font-size:62.5%; font-family:"\5fae\8f6f\96c5\9ed1","Microsoft YaHei",helvetica,tahoma,arial,verdana,sans-serif;}
+body{font-size:100%; background:#fff;}
+a{text-decoration:none; line-height:1em; -webkit-tap-highlight-color:rgba(0,0,0,0);}
+ul,ol,dl{list-style-type:none;}
+img{display:block; width:100%; border:none;}
+h1,h2,h3,h4,h5,h6,strong{font-size:100%; font-weight:normal; line-height:1em;}
+em,i{font-style:normal;}
+input,textarea{border-radius:0; line-height:1.2em; -webkit-appearance:none; outline:none; box-sizing:border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);}
+table{width:100%; border-collapse:collapse; border-spacing:0;}
+.clear:after{display:block; content:""; clear:both;}
+.fl{float:left;}
+.fr{float:right;}
+.tc{text-align:center;}
+.tr{text-align:right;}
+.ellips{overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.ellipss{overflow:hidden; text-overflow:ellipsis; display:-webkit-box; display:-moz-box; display:box; -webkit-box-orient:vertical; -moz-box-orient:vertical; box-orient:vertical; -webkit-line-clamp:2; -moz-line-clamp:2; line-clamp:2;}
+.horizontal{display:-webkit-box; display:-moz-box; display:box;}
+.vertical{display:-webkit-box; display:-moz-box; display:box; -webkit-box-orient:vertical; -moz-box-orient:vertical; box-orient:vertical;}
+.pack-align{display:-webkit-box; display:-moz-box; display:box; -webkit-box-align:center; -moz-box-align:center; box-align:center; -webkit-box-pack:center; -moz-box-pack:center; box-pack:center;}
+.pack-middel{display:-webkit-box; display:-moz-box; display:box; -webkit-box-align:center; -moz-box-align:center; box-align:center;}
+.flex{-webkit-box-flex:1; -moz-box-flex:1; box-flex:1;}
+.relative{position:relative;}
+.fixed{position:fixed; top:0; right:0; bottom:0; left:0;}
+.absolute{position:absolute; top:0; right:0; bottom:0; left:0;}
+.translucent{position:fixed; top:0; right:0; bottom:0; left:0; z-index:1000; background:rgba(0,0,0,.7);}
+/* header */
+.header{background:#00abec; box-sizing:border-box;}
+.header .title{position:relative;}
+.header .title h1{padding:1em 0; font-size:1.8em; color:#fff; text-align:center;}
+.header a.go-back{right:auto; display:block; width:4em; background:url(../img/back.png) 50% 50% no-repeat; background-size:50% auto;}
+.header a.add-friend{left:auto; display:block; width:4em; background:url(../img/add.png) 50% 50% no-repeat; background-size:50% auto;}
+.header a.more{left:auto; padding:.5em 1em; font-size:1.6em; color:#fff;}
+.header a.friends-info{left:auto; display:block; width:4em; background:url(../img/personal-w.png) 50% 50% no-repeat; background-size:50% auto;}
+.header a.share{left:auto; display:block; width:4em; background:url(../img/share.png) 50% 50% no-repeat; background-size:50% auto;}
+.header a.editor{left:auto; display:block; width:4em; background:url(../img/editor.png) 50% 50% no-repeat; background-size:50% auto;}
+/* article */
+.article{overflow:auto;}
+/* footer */
+.footer{background:#fff;}
+.footer .nav{border-top:1px solid #ebebeb; box-sizing:border-box;}
+.footer .nav a{display:block; padding:.2em 0; font-size:1.4em; color:#9a9a9a; text-align:center;}
+.footer .nav a.current{color:#00abec;}
+.footer .nav a i{display:block; width:100%; height:2.5em;}
+.footer .nav .message{background:url(../img/message.png) 50% 50% no-repeat; background-size:auto 90%;}
+.footer .nav .friends{background:url(../img/friends.png) 50% 50% no-repeat; background-size:auto 90%;}
+.footer .nav .homes{background:url(../img/homes.png) 50% 50% no-repeat; background-size:auto 90%;}
+.footer .nav .search{background:url(../img/search.png) 50% 50% no-repeat; background-size:auto 90%;}
+.footer .nav .personal{background:url(../img/personal.png) 50% 50% no-repeat; background-size:auto 90%;}
+.footer .nav .circle{background:url(../img/circle.png) 50% 50% no-repeat; background-size:auto 90%;}
+.footer .nav .drill{background:url(../img/drill.png) 50% 50% no-repeat; background-size:auto 90%;}
+.footer .nav .activity{background:url(../img/activity.png) 50% 50% no-repeat; background-size:auto 90%;}
+.footer .nav a.current .message{background:url(../img/message-c.png) 50% 50% no-repeat; background-size:auto 90%;}
+.footer .nav a.current .friends{background:url(../img/friends-c.png) 50% 50% no-repeat; background-size:auto 90%;}
+.footer .nav a.current .homes{background:url(../img/homes-c.png) 50% 50% no-repeat; background-size:auto 90%;}
+.footer .nav a.current .search{background:url(../img/search-c.png) 50% 50% no-repeat; background-size:auto 90%;}
+.footer .nav a.current .personal{background:url(../img/personal-c.png) 50% 50% no-repeat; background-size:auto 90%;}
+.footer .nav a.current .circle{background:url(../img/circle-c.png) 50% 50% no-repeat; background-size:auto 90%;}
+.footer .nav a.current .drill{background:url(../img/drill-c.png) 50% 50% no-repeat; background-size:auto 90%;}
+.footer .nav a.current .activity{background:url(../img/activity-c.png) 50% 50% no-repeat; background-size:auto 90%;}
+.footer .nav a.none-icon{padding:1em 0; width:50%; font-size:1.4em; color:#00abec;}
+.footer .nav a.none-icon:first-child{border-right:1px solid #ebebeb;}
+.footer .nav a.none-icon .red{padding-left:2em; color:#f05e4b;}
+.footer .nav a.none-icon .shopping{background:url(../img/icon17.png) 0 50% no-repeat; background-size:auto 100%;}
+.footer .nav a.none-icon .reserve{background:url(../img/icon18.png) 0 50% no-repeat; background-size:auto 100%;}
+.footer .nav a.none-icon .pay{background:url(../img/icon22.png) 0 50% no-repeat; background-size:auto 100%;}
+.footer .nav a.none-icon .cancel{color:#a3a3a3; background:url(../img/icon23.png) 0 50% no-repeat; background-size:auto 100%;}
+
+@media only screen and (min-width:380px) and (max-width:400px){
+	body{font-size:96%;}
+}
+@media only screen and (min-width:360px) and (max-width:379px){
+	body{font-size:94%;}
+}
+@media only screen and (min-width:340px) and (max-width:359px){
+	body{font-size:92%;}
+}
+@media only screen and (min-width:320px) and (max-width:339px){
+	body{font-size:90%;}
+}

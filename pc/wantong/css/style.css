@@ -1,0 +1,83 @@
+html,body,div,p,ul,ol,dl,input,h1,h2,h3,h4,h5,h6,textarea,select,header,article,aside,nav,section,footer,hgroup,figcaption,figure{margin:0; padding:0;}
+div,header,article,aside,nav,section,footer,hgroup,figcaption,figure,ul,ol{width:auto; height:auto; display:block;}
+html{font-size:12px; font-family:"\5fae\8f6f\96c5\9ed1","Microsoft YaHei",helvetica,tahoma,arial,verdana,sans-serif;}
+body{font-size:100%; background:#fff;}
+a{text-decoration:none;}
+ul,ol,dl{list-style-type:none;}
+img{border:none; display:block;}
+h1,h2,h3,h4,h5,h6,strong{font-size:100%; font-weight:normal;}
+em,i{font-style:normal;}
+input,textarea{border-radius:0; -webkit-appearance:none; outline:none;}
+input[type=radio]{border-radius:50%;}
+input[type=checkbox]{border-radius:30%;}
+table{border-collapse:collapse; border-spacing:0;}
+.fl{float:left;}
+.fr{float:right;}
+.clear:after{content:""; display:block; clear:both;}
+/* 图标 */
+.other-icon{background:url(../img/other-icon.gif) no-repeat;}
+.items-icon{background:url(../img/items-icon.jpg) no-repeat;}
+.share-icon{background:url(../img/share-icon.png) no-repeat;}
+
+.top-body{background:#3b3b3b;}
+.top{margin:0 auto; padding:8px 0; width:1000px;}
+.top .info{height:16px; overflow:hidden;}
+.top .info p{font-size:12px; line-height:1.3em; color:#898989; white-space:nowrap;}
+.top .info i{margin-right:5px; display:block; width:15px; height:15px; line-height:1.0em; vertical-align:middle; background-position:-68px 0;}
+.top .hotline p{padding-right:8px; font-size:12px; line-height:1.3em; color:#898989;}
+.header-body{background:#fff;}
+.header{margin:0 auto; width:1000px;}
+.header .logo{padding:7px 0;}
+.header .logo a{display:block; width:230px; height:70px; background:url(../img/logo.jpg) no-repeat;}
+.header .navigat{padding:28px 0;}
+.header .navigat ul li{margin-left:10px; float:left;}
+.header .navigat ul li a{padding:3px 10px; display:block; font-size:18px; line-height:1.2em; color:#000;}
+.header .navigat ul li a:hover{color:#015ca7;}
+.header .navigat ul li a.current{color:#fff; background:#015ca7;}
+.banner-body{background:#fff;}
+.banner ul li{width:100%; height:510px; background:url(../img/banner.jpg) 50% 50% no-repeat;}
+.article-body{background:#fff;}
+.article{margin:0 auto; width:1000px;}
+.items-module .items{padding:45px 0; width:250px;}
+.items-module .items h3{font-size:30px; line-height:1.2em; color:#000; text-align:center;}
+.items-module .items p{margin-bottom:12px; font-size:17px; line-height:1.2em; color:#7a7a7a; text-align:center;}
+.items-module .items a{display:block; font-size:13px; line-height:1.2em; color:#015ca7; text-decoration:underline; text-align:center;}
+.items-module .items a:hover{color:#437baa;}
+.items-module .items .icon{margin:20px auto; width:160px; height:160px;}
+.items-module .items .icon a{display:block; width:160px; height:160px;}
+.items-module .items .one a{background-position:0 0;}
+.items-module .items .one a:hover{background-position:0 -160px;}
+.items-module .items .two a{background-position:-160px 0;}
+.items-module .items .two a:hover{background-position:-160px -160px;}
+.items-module .items .three a{background-position:-320px 0;}
+.items-module .items .three a:hover{background-position:-320px -160px;}
+.items-module .items .four a{background-position:-480px 0;}
+.items-module .items .four a:hover{background-position:-480px -160px;}
+.footer-body{background:#4a4a4a;}
+.footer{margin:0 auto; padding:30px 0 20px; width:1000px;}
+.footer .hotline{padding:10px 0;}
+.footer .hotline .other-icon{width:48px; height:48px;}
+.footer .hotline p{font-size:16px; line-height:1.3em; color:#fff;}
+.footer .hotline p em{font-size:24px; line-height:1.2em;}
+.footer .copyright p{margin-bottom:8px; font-size:12px; line-height:1.2em; color:#fff; text-align:right;}
+.footer .copyright p a{color:#fff;}
+.footer .copyright p a:hover{color:#ccc;}
+.footer .copyright p i{margin-right:5px; display:inline-block; width:20px; height:20px; background-position:-48px 0; vertical-align:middle;}
+/* 右侧分享 */
+*html body{background:url(about:blank) fixed;}
+*html .share-body{position:absolute; top:expression(eval(document.documentElement.scrollTop) + 200);}
+.share-body{position:fixed; top:25%; right:0; bottom:auto; left:auto; z-index:300;}
+.share .items{position:relative;}
+.share .items a{display:block; width:55px; height:55px;}
+.share .qq a{background-position:0 -55px;}
+.share .qq a:hover{background-position:0 0;}
+.share .tell a{background-position:-55px -55px;}
+.share .tell a:hover{background-position:-55px 0;}
+.share .count a{background-position:-110px -55px;}
+.share .count a:hover{background-position:-110px 0;}
+.share .weixin a{background-position:-165px -55px;}
+.share .weixin a:hover{background-position:-165px 0;}
+.share .items .info{position:absolute; top:0; right:55px; _right:54px; display:none; padding:14px 15px;font-size:18px; line-height:1.5em; color:#fff; white-space:nowrap; background:#015ca7;}
+.share .items .wx{padding:6px; text-align:center;}
+.share .items .wx span{font-size:14px;}
+.share .items a:hover .info{display:block;}

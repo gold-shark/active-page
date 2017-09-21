@@ -1,0 +1,51 @@
+.picture {
+  width: 160px;
+  height: 120px;
+  overflow: hidden;
+}
+
+.picture .add {
+  display: block;
+  width: 160px;
+  height: 120px;
+  background: url(../img/insert-add.png) 50% 50% no-repeat;
+}
+
+.picture img {
+  width: 160px;
+  height: 120px;
+}
+
+.picture:hover .tool {
+  display: block;
+}
+
+.tool {
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.tool a {
+  color: #fff;
+}
+
+.tool a:hover {
+  color: #ccc;
+}
+
+.cover {
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  z-index: 10;
+  width: 62px;
+  height: 62px;
+  background: url(../img/cover.png) 0 0 no-repeat;
+}

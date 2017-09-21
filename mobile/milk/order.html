@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<title>订单确认</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+		<script type="text/javascript" src="js/common.js" ></script>
+		<script type="text/javascript" src="js/general.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				var num = 0;
+				var sun = 0;
+				$(".order-info .cot").find("label").each(function(){
+					num += parseInt($(this).html());
+				});
+				$(".order-info .count").find("label").html(num);
+				$(".order-info .cot").find("span").each(function(){
+					sun += parseFloat($(this).html().replace("￥",""));
+				});
+				$(".order-info .count").find("span").html("￥"+ changeTwoDecimal(sun));
+				$(".order-down").find("em").html("￥"+ changeTwoDecimal(sun));
+				$(".order-down").find("span").html("￥"+ Math.round(changeTwoDecimal(sun/0.7)));
+				
+				$(".courier-adderss").click(function(){
+					$(".courier-block").show();
+					$(".courier-add").hide();
+					$(".back-cover").show();
+					$(".pop-up").slideDown("slow");
+				});
+				$(".courier-block").find(".inst").click(function(){
+					$(this).parent().hide();
+					$("#uname").val("");
+					$("#uphone").val("");
+					$("#uaddress").val(""); 
+					$(".courier-add").slideDown("slow");
+				});
+				$(".courier-block").on("click",".a",function(){
+					var _html = "<a><p>收件人：<label class='uname'>" + $(this).find("span").html()
+					+ "</label><label class='uphone'>" + $(this).find("em").html() 
+					+ "</label></p><p><label class='uaddress'>" + $(this).find("p:last").html() 
+					+ "</label></p></a>";
+					$(".courier-adderss").empty().append(_html);
+					pophide();
+				});
+				$(".courier-block").on("click","a",function(){
+					$(this).parent(".txt").remove();
+				});
+				$("#uname").blur(uname = function(){
+					if($("#uname").val() == ""){
+						alert("收件人不能为空");
+						return false;
+					} else {
+						return true;
+					}
+				});
+				$("#uphone").blur(uphone = function(){
+					var reg = /^1\d{10}$/;
+					if($("#uphone").val() == ""){
+						alert("手机不能为空");
+						return false;
+					} else if (!reg.test($("#uphone").val().trim())) {
+	                    alert("手机格式不对");
+	                    return false;
+                	} else {
+						return true;
+					}
+				});
+				$("#uaddress").blur(uaddress = function(){
+					if($("#uaddress").val() == ""){
+						alert("地址不能为空");
+						return false;
+					} else {
+						return true;
+					}
+				});
+				$(".courier-add").find(".inst").click(function(){					
+					if(uname() && uphone() && uaddress()){
+						var _html = "<a><p>收件人：<label class='uname'>" + $("#uname").val()
+						+ "</label><label class='uphone'>" + $("#uphone").val()
+						+ "</label></p><p><label class='uaddress'>" + $("#uaddress").val() 
+						+ "</label></p></a>";
+						$(".courier-adderss").empty().append(_html);
+						pophide();
+					} 
+				});
+				
+				$(".pay-info").find("a").click(function(){
+					if($(this).css("background-image") == "url(img/select-out.png)"){
+						$(this).css("background-image", "url(img/select-in.png)");
+					} else {
+						$(this).css("background-image", "url(img/select-out.png)");
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="top">
+			<h1>订单确认</h1>
+			<a href="personal.html" id="user"><img src="img/user.png" width="48" height="48" alt="用户中心" /></a>
+			<a href="index.html" id="home"><img src="img/home-top.png" width="48" height="48" alt="主页" /></a>
+		</div>
+		<div class="courier">
+			<div class="courier-adderss">
+				<a>收货地址 </a>
+			</div>
+			<div class="courier-postage">
+				<a>邮费：10.00元</a>
+			</div>
+		</div>
+		<div class="order-info">
+			<p class="title">订单信息</p>
+			<ul>
+				<li>
+					<div class="img">
+						<a href="goodsdetail.html"><img src="img/pic1.png" width="126" height="126" alt="奶牛家" /></a>
+					</div>
+					<p class="tit"><a href="goodsdetail.html">Karicare可瑞康新西兰原装原罐进口2段牛奶粉900g</a></p>
+					<p class="cot">数量：<label>2</label><span>￥220.00</span></p>
+					<div class="clear"></div>
+				</li>
+				<li>
+					<div class="img">
+						<a href="goodsdetail.html"><img src="img/pic2.png" width="126" height="126" alt="奶牛家" /></a>
+					</div>
+					<p class="tit"><a href="goodsdetail.html">新西兰Karicare Aptamil爱他美新生儿婴儿奶粉1段2罐 新包装</a><p>
+					<p class="cot">数量：<label>1</label><span>￥380.00</span></p>
+					<div class="clear"></div>
+				</li>
+			</ul>
+			<p class="count">共<label>2</label>件商品 <font>总计</font>:<span>￥600.00</span></p>
+		</div>
+		<div class="pay-info">
+			<ul>
+				<li>
+					<a><img src="img/pay1.png" width="120" height="74" alt="支付宝" /><span>支付宝支付</span></a>
+				</li>
+			</ul>
+		</div>
+		<p style="padding-bottom: 2.8em;"></p>
+		<div class="down-fixed">
+			<p class="order-down">总计:<em>￥600.00</em><span>￥780</span><a href="pay.html" class="inst">提交订单</a></p>
+		</div>
+		<div class="back-cover"></div>
+		<div class="pop-up">
+			<div class="pop-close"></div>
+			<div class="pop-content">
+				<div class="courier-block">
+					<p class="tit">选择收货地址</p>
+					<div>
+					<div class="txt">
+						<a href="#"></a>
+						<div class="a">
+							<p>收件人：<span>陈明雄</span><em>186 1716 6210</em></p>
+							<p>可瑞康新西兰原装原罐进口2段</p>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="txt">
+						<a href="#"></a>
+						<div class="a">
+							<p>收件人：<span>陈明雄</span><em>186 1716 6210</em></p>
+							<p>可瑞康新西兰原装原罐进口2段可瑞康新西兰原装原罐进口2段</p>
+						</div>
+						<div class="clear"></div>
+					</div>
+					</div>
+					<a class="inst">新增收货地址</a>
+				</div>
+				<div class="courier-add">
+					<p class="tit">新增收货地址</p>
+					<div class="txt">
+						<p><label>收件人：</label><input type="text" id="uname" name="uname" placeholder="请填写收件人" /></p>
+						<p><label>手机：</label><input type="tel" id="uphone" name="uphone" placeholder="请填写手机" /></p>
+						<p><label>详细地址：</label><input type="text" id="uaddress" name="uaddress" placeholder="请填写详细地址" /></p>
+					</div>
+					<a class="inst">确认</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

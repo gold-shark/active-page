@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html class="viewport">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-width=1, maxni-width=1, user-scalable=no">
+        <title>5</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/city.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                var cleardiv = function(){
+                    $(".translucent,.popup-body .close").on("click", function(){
+                        $(".translucent,.popup-body").remove();
+                    });
+                };
+                var okvalue = function(obj){
+                    $(".popup-body .content a").on("click", function(){
+                        obj.html($(this).html());
+                        obj.next().val($(this).html());
+                        $(".translucent,.popup-body").remove();
+                    });
+                };
+                var selectold = function(obj){
+                    $(".popup-body .content a").each(function(i, e){
+                        if($(this).html() === obj.html()){
+                            $(this).addClass("current");
+                        } 
+                    });
+                };            
+                $("#uage").on("click", function(){
+                    var obj = $(this);
+                    var html = "<div class='translucent'></div><div class='popup-body'><div class='tit'><p>选择年龄</p></div><div class='content'><p><a href='javascript:void(0);'>1</a></p><p><a href='javascript:void(0);'>2</a></p><p><a href='javascript:void(0);'>3</a></p><p><a href='javascript:void(0);'>4</a></p><p><a href='javascript:void(0);'>5</a></p><p><a href='javascript:void(0);'>6</a></p><p><a href='javascript:void(0);'>7</a></p><p><a href='javascript:void(0);'>8</a></p><p><a href='javascript:void(0);'>9</a></p><p><a href='javascript:void(0);'>10</a></p><p><a href='javascript:void(0);'>11</a></p><p><a href='javascript:void(0);'>12</a></p></div><div class='close'><a href='javascript:void(0);'><img src='img/1del.png'width='38'height='38'/></a></div></div>";
+                    $("body").append(html);
+                    selectold(obj);
+                    cleardiv();
+                    okvalue(obj);
+                });
+                $("#usex").on("click", function(){
+                    var obj = $(this);
+                    var html = "<div class='translucent'></div><div class='popup-body'><div class='tit'><p>选择性别</p></div><div class='content'><p><a href='javascript:void(0);'>男</a></p><p><a href='javascript:void(0);'>女</a></p></div><div class='close'><a href='javascript:void(0);'><img src='img/1del.png'width='38'height='38'/></a></div></div>";
+                    $("body").append(html);
+                    selectold(obj);
+                    cleardiv();
+                    okvalue(obj);
+                });
+                $("#uprovince").on("click", function(){
+                    var obj = $(this);
+                    var html = "<div class='translucent'></div><div class='popup-body'><div class='tit'><p>选择省份</p></div><div class='content'>";
+                    $.each(province, function(i, e){
+                        html += "<p><a href='javascript:void(0);'>" + e +"</a></p>";
+                    });
+                    html += "</div><div class='close'><a href='javascript:void(0);'><img src='img/1del.png'width='38'height='38'/></a></div></div>";
+                    $("body").append(html);
+                    selectold(obj);
+                    cleardiv();
+                    okvalue(obj);
+                });
+                $("#ucity").on("click", function(){
+                    var obj = $(this);
+                    var index = -1;
+                    var html;
+                    $.each(province, function(i, e){
+                        if($("#uprovince").html() === e){
+                            index = i;
+                        }
+                    });
+                    if(index === -1){
+                        html = "<div class='translucent'></div><div class='popup-body'><div class='tit'><p>选择城市</p></div><div class='content'><p>请选择省份</p></div><div class='close'><a href='javascript:void(0);'><img src='img/1del.png'width='38'height='38'/></a></div></div>";
+                    } else{
+                        html = "<div class='translucent'></div><div class='popup-body'><div class='tit'><p>选择城市</p></div><div class='content'>";
+                        $.each(city[index], function(i, e){
+                            html += "<p><a href='javascript:void(0);'>" + e +"</a></p>";
+                        });
+                        html += "</div><div class='close'><a href='javascript:void(0);'><img src='img/1del.png'width='38'height='38'/></a></div></div>";
+                    }
+                    $("body").append(html);
+                    selectold(obj);
+                    cleardiv();
+                    okvalue(obj);
+                });
+            });
+        </script>
+    </head>
+    <body class="body5">
+        <div class="title">
+            <img src="img/5text.png" width="497" height="147" />
+        </div>
+        <div class="from-body">
+            <img src="img/5bg2.png" width="612" height="611" />
+            <div class="from">
+                <p><label>姓名</label><input type="text" id="uname" name="uname" placeholder="填写姓名" /></p>
+                <p><label>电话</label><input type="tel" id="uphone" name="uphone" placeholder="填写手机号" /></p>
+                <p>
+                    <span><label>宝宝年龄</label><em id="uage" class="icon">1</em><input type="hidden" id="hage" value="1" /></span>
+                    <span><label>宝宝性别</label><em id="usex" class="icon">男</em><input type="hidden" id="hsex" value="男" /></span>
+                </p>
+                <p>
+                    <label>地区</label>
+                    <em id="uprovince" class="icon">省份</em><input type="hidden" id="hprovince" value="" />
+                    <em id="ucity" class="icon">城市</em><input type="hidden" id="hcity" value="" />
+                </p>
+            </div>
+        </div>
+        <div class="buts">
+            <a href="6.html"><img src="img/5btn.png" width="481" height="110" /></a>
+        </div>        
+    </body>
+</html>

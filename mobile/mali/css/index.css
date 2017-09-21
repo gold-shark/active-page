@@ -1,0 +1,73 @@
+body{ background-color: #FFE2E1; font-size: 14px; font-family: arial;}
+.body-block{ padding: 3%; width: auto; height: auto; position: relative; margin:0 auto; max-width:600px;}
+.top-block{ width: auto; height: auto;}
+.left-block{ width: 73%; height: auto; float: left; position: relative;}
+.left-block img{ width: 100%; height: auto;}
+.right-block{ width: 25%; height: auto; float: right;}
+.canvas-block{ position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
+.canvas-block canvas{ width: 100%; height: 100%; border-radius: 1%;}
+.popup-block{ width: auto; height: auto;}
+.popup-block img{ width: 100%; height: auto;}
+.upload-block{ margin-top: 8%; width: auto; height: auto;}
+.upload-block img{ width: 100%; height: auto;}
+.radio-block{ margin-top: 11%; width: auto; height: auto;}
+.radio-title{ width: auto; height: auto;}
+.radio-title img{ width: 100%; height: auto;}
+.radio-text{ margin-top: 8%; width: auto; height: auto; position: relative;}
+.radio-text img{ width: 100%; height: auto;}
+.radio-text a{ position: absolute; width: auto; height: 50%; background: 15% center no-repeat; background-size: auto 70%;}
+.radio-text a.black{ top: 0; right: 0; bottom: 50%; left: 0; background-image: url(../img/black.png);}
+.radio-text a.white{ top: 50%; right: 0; bottom: 0; left: 0; background-image: url(../img/white-not.png);}
+.info-block{ margin-top: 4%; width: auto; height: auto;}
+.info-block img{ width: 88%; height: auto;}
+.text-block{ margin-top: 3%; width: auto; height: auto; position: relative;}
+.text-block img{ width: 100%; height: auto;}
+.input-block{ position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
+.input-block p{ margin-top: 5%;  height: 30%; line-height: 1.0em;}
+.input-block p input{ font-size: 1.0em; height: 100%; color: #2C2C2C; border:none; background: none; box-sizing: border-box;}
+.input-block p input.text1{ padding-left: 4%; width: 25%;}
+.input-block p input.text2{ padding-left: 4%; margin-left: 1%; width: 73%;}
+.input-block p input.text3{ padding-left: 4%; width: 59%;}
+.input-block p label.lable1{ margin-left: 5.5%; width: 8%;}
+.input-block p input.text4{ padding-left: 2%; width: 27%;}
+.button-block{ margin-top: 2.5%; width: 100%; height: auto; display: table;}
+.button-block p{ display: table-cell;}
+.button-block p a{ display: block;}
+.button-block p a.save{ margin-right: 5%;}
+.button-block p a.join{ margin-left: 5%;}
+.button-block p a img{ width: 100%; height: auto;}
+.rule-block{ margin-top: 3%; width: auto; height: auto;}
+.rule-block img{ width: 100%; height: auto;}
+.bottom-block{ position: absolute; top: auto; right: 0; bottom: -4.5%; left: 0; z-index: 100;}
+.bottom-block img{ width: 100%; height: auto;}
+.popup-module{ position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 50; background-color: rgba(0,0,0,0.7);}
+.popup-body{ position: absolute; top: 0; right: 0; bottom: auto; left: 0; z-index: 100; display: none;}
+.popup-content{ margin: 5%; padding: 0.5% 0 2% 0; width: 90%; height: auto; border-radius: 5px; background-color: rgba(255,255,255,1);}
+.popup-close{ position: absolute; top: 1%; right: 10%; bottom: auto; left: auto; z-index: 100; width: 10%; height: auto;}
+.popup-close img{ width: 100%; height: auto;}
+.dog-block{ margin: 5% 2.5%; width: 95%; height: auto; display: table;}
+.dog-block ul{ display: table-row;}
+.dog-block ul li{ width: 33.33%; display: table-cell; position: relative; overflow: hidden;}
+.dog-block ul li .round{ margin: 20% 8% 0 8%; width: auto; height: auto; overflow: hidden; border-radius: 50%; background-clip: padding-box;}
+.dog-block ul li .round img{ width: 100%; height: auto;}
+.dog-block ul li .dog{ position: absolute; top: 20%; right: 8%; left: 8%; bottom: -20%; z-index: 100; border-radius: 0 0 50% 50%; overflow: hidden;}
+.dog-block ul li .current{ top: 0 !important; bottom: 0 !important;}
+.dog-block ul li .dog img{ margin: 0 auto; width: 90%; height: 100%;}
+.dog-block ul li .arc{ position: absolute; top: 20%; right: 8%; left: 8%; bottom: 0; z-index: 200; background: url(../img/ban.png) center bottom no-repeat; background-size: 100% auto;}
+.prompt-block{ position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 200; background-color: rgba(0,0,0,0.7);}
+.prompt-block img{position:absolute; top:2%; right:10%; width: 80%; height: auto;}
+.loading{ position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 200; background-color: rgba(0,0,0,0.7);}
+.loading img{ margin: -1.5em; position: absolute; top:50%; left:50%; width: 3.0em; height: auto;}
+
+.new-block{ position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 500; background-color: rgb(0,0,0);}
+.new-canvas{ margin: 10% auto 0 auto; width: 70%; max-width: 657px; height: auto; border: 1px solid #FFF; position: relative;}
+.new-canvas img{ width: 100%; height: auto;}
+.new-canvas canvas{ position: absolute; width: 100%; height: 100%; top: 0; right: 0; bottom: 0; left: 0; background: #FFF;}
+.new-button{ margin: 5% auto 0 auto; width: 70%; height: auto; display: table;}
+.new-button a{ display: table-cell;}
+.new-button a#xuanzhuan{ width: 40%; height: auto;}
+.new-button a#quxiao{ width: 30%; height: auto;}
+.new-button a#queding{ width: 30%; height: auto;}
+.new-button a#xuanzhuan img{ width: 45%; height: auto;}
+.new-button a#quxiao img{ width: 86%; height: auto;}
+.new-button a#queding img{ width: 100%; height: auto;}

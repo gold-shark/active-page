@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>PC站</title>
+		<link type="text/css" rel="stylesheet" href="../css/base.css" />
+		<link type="text/css" rel="stylesheet" href="../css/table.css" />
+		<link type="text/css" rel="stylesheet" href="../css/pages.css" />
+		<link type="text/css" rel="stylesheet" href="../css/form.css" />
+		<link type="text/css" rel="stylesheet" href="../css/list.css" />
+	</head>
+
+	<body>
+		<div class="p10">
+			<div class="mb10 pt10 pl10 pr10 bs1 bgf8 clear">
+				<div class="mb10 clear">
+					<p class="fl mr10">
+						<label class="label">广告标题：</label>
+						<input class="text long" type="text" />
+					</p>
+					<p class="fl mr10">
+						<label class="label">版面：</label>
+						<select class="select very-small">
+							<option>全部</option>
+						</select>
+					</p>
+					<p class="fl mr10">
+						<label class="label">位置：</label>
+						<select class="select very-small">
+							<option>全部</option>
+						</select>
+					</p>
+					<p class="fl mr10">
+						<label class="label">创建时间：</label>
+						<input class="text date-text small" id="createStratTime" readonly="readonly" type="text" /> -
+						<input class="text date-text small" id="createEndTime" readonly="readonly" type="text" />
+					</p>
+				</div>
+				<div class="mb10 clear">
+					<p class="fl mr10">
+						<label class="label">国家：</label>
+						<select class="select very-small">
+							<option>全部</option>
+						</select>
+					</p>
+					<p class="fl mr10">
+						<label class="label">开始时间：</label>
+						<input class="text date-text small" id="beginStratTime" readonly="readonly" type="text" /> -
+						<input class="text date-text small" id="beginEndTime" readonly="readonly" type="text" />
+					</p>
+					<p class="fl mr10">
+						<label class="label">截止时间：</label>
+						<input class="text date-text small" id="cutoffStratTime" readonly="readonly" type="text" /> -
+						<input class="text date-text small" id="cutoffEndTime" readonly="readonly" type="text" />
+					</p>
+					<p class="fl mr10">
+						<input class="btn" type="button" value="查询" />
+					</p>
+				</div>
+			</div>
+			<div class="clear">
+				<div class="mt10 fl bs1 relative" style="top:2px;">
+					<a class="tab-btn tab-btn-cur fl" href="javascript:void(0);">已上架</a>
+					<a class="tab-btn fl bsl1" href="javascript:void(0);">已下架</a>
+				</div>
+				<div class="mb10 fr">
+					<a class="btn orange-btn" id="add-advertising" href="javascript:void(0);">添加广告</a>
+				</div>
+			</div>
+			<div class="mb10" style="overflow:hidden; overflow-x:auto;">
+				<div class="tab-main" style="min-width:1500px;">
+					<div class="table-head">
+						<table>
+							<tr>
+								<th style="width:40px;">
+									<input class="checkbox" type="checkbox" />
+								</th>
+								<th style="width:auto;">广告图片</th>
+								<th style="width:250px;">广告标题</th>
+								<th style="width:100px;">版面</th>
+								<th style="width:100px;">位置</th>
+								<th style="width:80px;">国家</th>
+								<th style="width:80px;">权重</th>
+								<th style="width:80px;">访问量</th>
+								<th style="width:150px;">创建日期</th>
+								<th style="width:150px;">开始日期</th>
+								<th style="width:150px;">截止日期</th>
+								<th style="width:100px;">操作</th>
+							</tr>
+						</table>
+					</div>
+					<div class="table-body">
+						<table>
+							<tr>
+								<td style="width:40px;">
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td style="width:auto;">
+									<img src="../img/logo.jpg" />
+								</td>
+								<td style="width:250px;">广告标题广告标题广告标题</td>
+								<td style="width:100px;">楼盘列表页</td>
+								<td style="width:100px;">推荐锦囊上面</td>
+								<td style="width:80px;">美国</td>
+								<td style="width:80px;">520</td>
+								<td style="width:80px;">621</td>
+								<td style="width:150px;">2015-01-10 15:30:30</td>
+								<td style="width:150px;">2015-01-10 15:30:30</td>
+								<td style="width:150px;">2015-01-10 15:30:30</td>
+								<td style="width:100px;"><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="tab-main" style="min-width:1500px; display:none;">
+					<div class="table-head">
+						<table>
+							<tr>
+								<th style="width:40px;">
+									<input class="checkbox" type="checkbox" />
+								</th>
+								<th style="width:auto;">广告图片</th>
+								<td style="width:250px;">广告标题</td>
+								<th style="width:100px;">版面</th>
+								<th style="width:100px;">位置</th>
+								<th style="width:80px;">国家</th>
+								<th style="width:80px;">权重</th>
+								<th style="width:80px;">访问量</th>
+								<th style="width:150px;">创建日期</th>
+								<th style="width:150px;">开始日期</th>
+								<th style="width:150px;">截止日期</th>
+								<th style="width:100px;">操作</th>
+							</tr>
+						</table>
+					</div>
+					<div class="table-body">
+						<table>
+							<tr>
+								<td style="width:40px;">
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td style="width:auto;">
+									<img src="../img/logo.jpg" />
+								</td>
+								<td style="width:250px;">广告标题广告标题广告标题</td>
+								<td style="width:100px;">楼盘列表页</td>
+								<td style="width:100px;">推荐锦囊上面</td>
+								<td style="width:80px;">美国</td>
+								<td style="width:80px;">520</td>
+								<td style="width:80px;">621</td>
+								<td style="width:150px;">2015-01-10 15:30:30</td>
+								<td style="width:150px;">2015-01-10 15:30:30</td>
+								<td style="width:150px;">2015-01-10 15:30:30</td>
+								<td style="width:100px;"><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+							<tr>
+								<td>
+									<input class="checkbox" type="checkbox" />
+								</td>
+								<td>
+									<img src="../img/logo.jpg" />
+								</td>
+								<td>广告标题广告标题广告标题</td>
+								<td>楼盘列表页</td>
+								<td>推荐锦囊上面</td>
+								<td>美国</td>
+								<td>520</td>
+								<td>621</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td>2015-01-10 15:30:30</td>
+								<td><a href="javascript:void(0);">编辑</a> | <a href="javascript:void(0);">上架</a></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="pages clear">
+				<div class="page-record fl">
+					<p>每页<em>20</em>条，共有<em>303</em>条记录</p>
+				</div>
+				<div class="page-list fr">
+					<span>首页</span>
+					<span>上一页</span>
+					<span class="current">1</span>
+					<a href="javascript:void(0);">2</a>
+					<a href="javascript:void(0);">3</a>
+					<i>...</i>
+					<a href="javascript:void(0);">12</a>
+					<a href="javascript:void(0);">13</a>
+					<a href="javascript:void(0);">下一页</a>
+					<a href="javascript:void(0);">末页</a>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="../js/laydate/laydate.js"></script>
+		<script type="text/javascript" src="../js/advertising-manage.js"></script>
+	</body>
+
+</html>

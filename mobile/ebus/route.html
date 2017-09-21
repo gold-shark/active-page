@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+		<title>乘车（出票）</title>
+		<link type="text/css" rel="stylesheet" href="css/base.css" />
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#on-off').on('click', function() {
+					if ($(this).hasClass('on')) {
+						$(this).removeClass('on').addClass('off');
+						$('#route-body').css({
+							"-webkit-transform": "translateX(-100%)",
+							"-moz-transform": "translateX(-100%)",
+							"transform": "translateX(-100%)"
+						});
+					} else {
+						$(this).removeClass('off').addClass('on');
+						$('#route-body').css({
+							"-webkit-transform": "translateX(0)",
+							"-moz-transform": "translateX(0)",
+							"transform": "translateX(0)"
+						});
+					}
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<article class="article-body">
+			<div class="title-body">
+				<h1>乘车</h1>
+			</div>
+			<div class="module-header" style="border-top:none;">
+				<p>乘车日期：2015-10-10</p>
+			</div>
+			<div class="classes-body">
+				<div class="time pack-middel">
+					<p class="flex">
+						<em>7:30始发</em>
+						<span>15公里约55分钟</span>
+					</p>
+					<p>￥2元</p>
+				</div>
+				<div class="route relative">
+					<div class="items pack-middel">
+						<i></i>
+						<p class="flex">风和日丽（途径）</p>
+					</div>
+					<div class="items pack-middel">
+						<i></i>
+						<p class="flex">深圳北门（途径）</p>
+					</div>
+					<div class="look absolute">
+						<a href="javascript:void(0);">出票</a>
+						<p>乘车前30分钟出票</p>
+					</div>
+				</div>
+			</div>
+			<div class="map-body relative">
+				<img src="img/map.png" />
+				<div class="absolute route-body" id="route-body" style="-webkit-transform:translateX(0); -moz-transform:translateX(0); transform:translateX(0);">
+					<div class="items pack-middel">
+						<em><i class="start">起</i></em>
+						<p class="flex">龙华汽车站</p>
+						<span>发车时间08:05</span>
+					</div>
+					<div class="items pack-middel">
+						<em><i class="green"></i></em>
+						<p class="flex">上塘</p>
+						<span>到站时间08:05</span>
+					</div>
+					<div class="items pack-middel">
+						<em><i class="green"></i></em>
+						<p class="flex">深圳北站</p>
+						<span>到站时间08:05</span>
+					</div>
+					<div class="items pack-middel">
+						<em><i class="green"></i></em>
+						<p class="flex">梅林检查站</p>
+						<span>到站时间08:05</span>
+					</div>
+					<div class="items pack-middel">
+						<em><i class="yellow"></i></em>
+						<p class="flex">天安数码城</p>
+						<span>到站时间08:05</span>
+					</div>
+					<div class="items pack-middel">
+						<em><i class="yellow"></i></em>
+						<p class="flex">天安数码城</p>
+						<span>到站时间08:05</span>
+					</div>
+					<div class="items pack-middel">
+						<em><i class="yellow"></i></em>
+						<p class="flex">天安数码城</p>
+						<span>到站时间08:05</span>
+					</div>
+					<div class="items pack-middel">
+						<em><i class="end">终</i></em>
+						<p class="flex">天安数码城</p>
+						<span>到站时间08:05</span>
+					</div>
+					<div class="absolute retract">
+						<i class="on" id="on-off"></i>
+					</div>
+				</div>
+			</div>
+		</article>
+	</body>
+
+</html>

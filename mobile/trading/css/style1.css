@@ -1,0 +1,290 @@
+html,body,div,p,ul,ol,dl,input,h1,h2,h3,h4,h5,h6,textarea,select,header,article,aside,nav,section,footer,hgroup,figcaption,figure{margin:0; padding:0;}
+div,header,article,aside,nav,section,footer,hgroup,figcaption,figure,ul,ol{display:block; width:auto; height:auto;}
+html{font-size:16px; font-family:"\5fae\8f6f\96c5\9ed1","Microsoft YaHei",helvetica,tahoma,arial,verdana,sans-serif;}
+body{font-size:100%; background:#fff;}
+a{text-decoration:none; -webkit-tap-highlight-color:rgba(0,0,0,0);}
+ul,ol,dl{list-style-type:none;}
+img{display:block; width:100%; height:auto; border:none;}
+h1,h2,h3,h4,h5,h6,strong{font-size:100%; font-weight:normal;}
+em,i{font-style:normal;}
+input,textarea{line-height:1.2em; border-radius:0; -webkit-appearance:none; outline:none; box-sizing:border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);}
+table{width:100%; border-collapse:collapse; border-spacing:0;}
+.clear:after{display:block; content:""; clear:both;}
+.ellips{overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.box{display:-webkit-box; display:-moz-box; display:box;}
+.box-vertical{display:-webkit-box; display:-moz-box; display:box; -webkit-box-orient:vertical; -moz-box-orient:vertical; box-orient:vertical;}
+.box-middel{display:-webkit-box; display:-moz-box; display:box; -webkit-box-align:center; -moz-box-align:center; box-align:center;}
+.box-align{display:-webkit-box; display:-moz-box; display:box; -webkit-box-align:center; -moz-box-align:center; box-align:center; -webkit-box-pack:center; -moz-box-pack:center; box-pack:center;}
+.flex{-webkit-box-flex:1; -moz-box-flex:1; box-flex:1;}
+
+@media only screen and (min-width:380px) and (max-width:400px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width:360px) and (max-width:379px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width:340px) and (max-width:359px) {
+  body {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (min-width:320px) and (max-width:339px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+.gray-body {
+  background-color: #f5f5f5;
+}
+
+.binding-body {
+  padding: 3em 0;
+}
+
+.info-body {
+  padding: 1em;
+}
+
+.info-body p {
+  font-size: 1em;
+  color: #333;
+  line-height: 1.5;
+}
+
+.text-body {
+  border-top: 1px solid #eee;
+  background-color: #fff;
+}
+
+.text-body p {
+  padding: .5em 1em;
+  border-bottom: 1px solid #eee;
+}
+
+.text-body .text {
+  display: block;
+  padding: .5em 0;
+  font-size: 1em;
+  color: #333;
+  line-height: 1.2;
+  border: none;
+}
+
+.text-body .code {
+  display: block;
+  width: 5em;
+  padding: .5em 1em;
+  font-size: 1em;
+  color: #333;
+  line-height: 1;
+  text-align: center;
+  border: 1px solid #cbcbcb;
+  border-radius: 2em;
+  background-color: #e6e6e6;
+}
+
+.but-body {
+  margin-top: 1.5em;
+}
+
+.but-body .submit {
+  display: block;
+  padding: 1em;
+  font-size: 1em;
+  color: #fff;
+  line-height: 1.2;
+  border: none;
+  background-color: #fda909;
+}
+
+.prompt-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 1em;
+  background-color: #ffe5cc;
+}
+
+.prompt-info p {
+  font-size: 1em;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.prompt-info p.error {
+  color: red;
+}
+
+.list-items {
+  border-bottom: 1px solid #efeded;
+}
+
+.list-items .items {
+  padding: 1em;
+  background: url(../img/6.png) 96% 50% no-repeat #fff;
+  background-size: 1.5em auto;
+}
+
+.list-items .open {
+  background: url(../img/5.png) 96% 50% no-repeat #fda909;
+  background-size: 1.5em auto;
+}
+
+.list-items .items .icon {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 1em;
+  background: url(../img/1.png) 50% 0 no-repeat;
+  background-size: 100% auto;
+}
+
+.list-items .open .icon {
+  background: url(../img/2.png) 50% 0 no-repeat;
+  background-size: 100% auto;
+}
+
+.list-items .items .title,
+.list-items .items .tell {
+  font-size: 1em;
+  color: #333;
+  line-height: 1.5;
+}
+
+.list-items .content {
+  display: none;
+  padding: 2em 1em;
+  background-color: #f5f5f5;
+}
+
+.list-items .content .dealt {
+  position: relative;
+  margin-left: 6em;
+  padding: 0 0 2em 1.5em;
+  border-left: 1px dashed #d8d7d7;
+}
+
+.list-items .dealt .dialog {
+  position: relative;
+  padding: .5em .6em;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+.list-items .dealt .dialog:before {
+  position: absolute;
+  top: .6em;
+  left: -.25em;
+  display: block;
+  content: '';
+  width: .5em;
+  height: .5em;
+  background-color: #fff;
+  -webkit-transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+}
+
+.list-items .dealt .dialog p {
+  padding-left: 1.5em;
+  font-size: 1em;
+  color: #333;
+  line-height: 2;
+}
+
+.list-items .dealt .dialog p.date {
+  background: url(../img/7.png) 0 50% no-repeat;
+  background-size: 1.5em auto;
+}
+
+.list-items .dealt .dialog p.people {
+  background: url(../img/8.png) 0 50% no-repeat;
+  background-size: 1.5em auto;
+}
+
+.list-items .dealt .dialog p.phone {
+  background: url(../img/9.png) 0 50% no-repeat;
+  background-size: 1.5em auto;
+}
+
+.list-items .dealt .icon {
+  position: absolute;
+  top: 0;
+  left: -.9em;
+  width: 1.8em;
+  height: 1.8em;
+  background: url(../img/3.png) 50% 50% no-repeat #a3a19c;
+  background-size: 1.5em auto;
+  border-radius: 50%;
+}
+
+.list-items .dealt .iname {
+  position: absolute;
+  top: 0;
+  left: -6.5em;
+  width: 5em;
+  padding-right: 1.5em;
+  text-align: right;
+}
+
+.list-items .dealt .iname label {
+  font-size: 1em;
+  color: #333;
+  line-height: 1.8;
+}
+
+.list-items .content .complete {
+  position: relative;
+  margin-left: 6em;
+  padding: 0 0 0 1.5em;
+  border-left: 1px solid #d8d7d7;
+}
+
+.list-items .complete .date {
+  padding-bottom: 2.5em;
+}
+
+.list-items .complete:last-child .date {
+  padding: 0;
+}
+
+.list-items .complete p {
+  font-size: 1em;
+  color: #333;
+  line-height: 2;
+}
+
+.list-items .complete .icon {
+  position: absolute;
+  top: 0;
+  left: -1em;
+  width: 2em;
+  height: 2em;
+  background: url(../img/4.png) 50% 50% no-repeat #f5f5f5;
+  background-size: 25px auto;
+}
+
+.list-items .complete .iname {
+  position: absolute;
+  top: 0;
+  left: -6.5em;
+  width: 5em;
+  padding-right: 1.5em;
+  text-align: right;
+}
+
+.list-items .complete .iname label {
+  font-size: 1em;
+  color: #333;
+  line-height: 2;
+}

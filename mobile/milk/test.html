@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>测试</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <style type="text/css">
+			.banner{ position: fixed; top: 0; right: 0; bottom: 0; left: 0; overflow:hidden;}
+			.banner ul{ 
+				-webkit-perspective: 1000px;
+				-webkit-perspective-origin:left bottom;
+			}
+			.banner ul li{ 
+				width: auto; 
+				height: auto; 
+				float: left; 
+				-webkit-backface-visibility:hidden;
+			}			
+			.banner .a{
+				-webkit-animation: a 0.3s 0s linear both;
+			}
+			.banner .b{
+				-webkit-animation: b 0.3s 0s linear both;
+			}
+			.banner .c{
+				-webkit-animation: c 0.3s 0s linear both;
+			}
+			.banner ul li img{ margin:auto; width:100%; height:100%;}
+			
+			@-webkit-keyframes a{
+				to{-webkit-transform: rotateY(-90deg);}
+			}
+			
+			@-webkit-keyframes b{				
+				to{-webkit-transform: rotateY(0deg);}
+			}
+			
+			@-webkit-keyframes c{				
+				to{-webkit-transform: rotateY(90deg);}
+			}
+			
+		</style>
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.transit.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.sliding.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var _width = $(window).width(), _height = $(window).height();				
+				var _first = $(".banner li").first().clone(), _last = $(".banner li").last().clone();
+				$(".banner ul").append(_first).prepend(_last);				
+				var _length = $(".banner").find("img").length;
+				$(".banner ul").css({"width": _width * _length, "height": _height, "margin-left": -_width});
+				$(".banner li").css({"width": _width, "height": _height});
+				var n = 1;
+				$(".banner").touch({
+					start: function(data){
+						//data.obj.find("li").removeClass();
+					},
+					move: function(data){
+						var ANGLE = 60;
+						var move_size = data.spc.x - data.epc.x;
+						var move_percentage = Math.abs(move_size) / _width;
+						if(move_size > 0) {							
+							data.obj.find("ul").css({"margin-left": -(n * _width+ move_size)});
+							data.obj.find("li").eq(n).css({"transform": "rotateY(" + -ANGLE * move_percentage + "deg)", "transform-origin": "right center"});							
+							data.obj.find("li").eq(n+1).css({"transform":"rotateY(" + ANGLE * (1 - move_percentage) + "deg)", "transform-origin": "left center"});
+						} else if(move_size < 0){
+							data.obj.find("ul").css({"margin-left": -(n * _width + move_size)});
+							data.obj.find("li").eq(n).css({"transform": "rotateY(" + ANGLE * move_percentage + "deg)", "transform-origin": "left center"});
+							data.obj.find("li").eq(n-1).css({"transform":"rotateY(" + -ANGLE * (1 - move_percentage) + "deg)", "transform-origin": "right center"});
+						}
+					},
+					end: function(data){
+						var ANGLE = 60;
+						var move_size = data.spc.x - data.epc.x;
+						var move_percentage = Math.abs(move_size) / _width;
+						if(move_size > 0) {
+							if(n >= _length - 2){
+								data.obj.find("ul").stop().animate({"marginLeft": -(_length - 1) * _width}, 300, "linear", function(){
+									$(this).css({"margin-left": -_width});									
+									n = 1;
+								});
+								data.obj.find("li").eq(_length - 1).stop().transition({rotateY: -90}, 300, "linear", function(){
+									data.obj.find("li").css({rotateY : 0})
+								});
+								data.obj.find("li").eq(_length).stop().transition({rotateY: 0}, 300, "linear");
+							} else {
+								n++;
+								data.obj.find("ul").stop().animate({"marginLeft": -n * _width}, 300, "linear");
+								data.obj.find("li").eq(n-1).stop().transition({rotateY: -90}, 300, "linear", function(){
+									data.obj.find("li").css({rotateY : 0})
+								});
+								data.obj.find("li").eq(n).stop().transition({rotateY: 0}, 300, "linear");
+							}
+						} else if(move_size < 0) {
+							if( n <= 1){
+								data.obj.find("ul").stop().animate({"marginLeft": 0}, 300, "linear", function(){
+									$(this).css({"margin-left": -(_length - 2) * _width});									
+									n = _length - 2;
+								});
+								data.obj.find("li").eq(0).stop().transition({rotateY: 0}, 300, "linear");
+								data.obj.find("li").eq(1).stop().transition({rotateY: 90}, 300, "linear", function(){
+									data.obj.find("li").css({rotateY : 0})
+								});
+							} else {
+								n--;
+								data.obj.find("ul").stop().animate({"marginLeft": -n * _width}, 300, "linear");
+								data.obj.find("li").eq(n).stop().transition({rotateY: 0}, 300, "linear");
+								data.obj.find("li").eq(n+1).stop().transition({rotateY: 90}, 300, "linear", function(){
+									data.obj.find("li").css({rotateY : 0})
+								});
+							}
+						}						
+					}
+				});
+			});
+		</script>
+</head>
+<body>
+    <div class="banner">
+        <ul>
+            <li><img src="img/1.png" width="400" height="650" alt="" /></li>
+            <li><img src="img/2.png" width="400" height="650" alt="" /></li>
+            <li><img src="img/3.png" width="400" height="650" alt="" /></li>
+            <li><img src="img/4.png" width="400" height="650" alt="" /></li>
+        </ul>
+    </div>
+    <p style="position: fixed; z-index: 500; top:0; left:0;"></p>
+</body>
+</html>

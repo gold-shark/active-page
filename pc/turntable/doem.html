@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">   
+		<title>转盘</title>
+		<style type="text/css">
+			body{margin:0; padding:0;}
+			ul{margin:0; padding:0; width:300px; height: 200px; overflow: hidden; background: #fee; list-style-type: none;}
+			ul:hover{ overflow-y: auto;}
+			ul li{line-height:20px;}
+			/*---滚动条默认显示样式--*/  
+			::-webkit-scrollbar-thumb{background: #e3e3e3;border-radius:4px;}  
+			/*---鼠标在滚动条显示样式--*/  
+			::-webkit-scrollbar-thumb:hover{  background-color:#fff;  border-radius:4px;}  
+			/*---滚动条大小--*/  
+			::-webkit-scrollbar{width:10px;}  
+			/*---滚动框背景样式--*/  
+			::-webkit-scrollbar-track-piece{background-color:rgba(0,0,0,0.2); border-radius:0;}
+			/*---鼠标按下滚动条显示样式---*/
+			::-webkit-scrollbar-thumb:active{background-color:#000;}
+			.uu{ overflow-y: auto;}
+			.uu::-webkit-scrollbar-thumb{background: #f00;border-radius:4px;}
+			.uu::-webkit-scrollbar-thumb:hover{  background-color:#900;}  
+			.uu::-webkit-scrollbar{width:10px;}  
+			.uu::-webkit-scrollbar-track-piece{background-color:#fee; border-radius:0;}
+			.uu::-webkit-scrollbar-thumb:active{background-color:#000;}
+		</style>
+		<script type="text/javascript" src="js/jquery-2.1.3.min.js" ></script>
+		
+		<script type="text/javascript">
+			$(function(){
+				$(document).mousewheel(function(event, delta, deltaX, deltaY){
+					console.log(delta, deltaX, deltaY);  
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="wrapper">
+	        <div id="scroller">
+				<ul>
+					<li>1111</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+					<li>7</li>
+					<li>8</li>
+					<li>9</li>
+					<li>0</li>
+					<li>q</li>
+					<li>w</li>
+					<li>e</li>
+				</ul>
+				<ul class="uu">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+					<li>7</li>
+					<li>8</li>
+					<li>9</li>
+					<li>0</li>
+					<li>q</li>
+					<li>w</li>
+					<li>e</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+		<title>购票</title>
+		<link type="text/css" rel="stylesheet" href="css/base.css" />
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#buy').on('click', function() {
+					$('#pay-way').show();
+				});
+				$('#close-pay').on('click', function() {
+					$('#pay-way').hide();
+				});
+				$('#date-table .b').on('click', function() {
+					if ($(this).hasClass('c')) {
+						$(this).removeClass('c');
+						$('#all-sel').prop('checked', false);
+						if ($(this).siblings('.d').length) {
+							$('#all-weeks').prop('checked', false);
+						}
+					} else {
+						$(this).addClass('c');
+					}
+				});
+				$('#all-sel').on('click', function() {
+					if ($(this).prop('checked')) {
+						$('#date-table .b').addClass('c');
+					}
+				});
+				$('#all-weeks').on('click', function() {
+					if ($(this).prop('checked')) {
+						$('#date-table .d').siblings('.b').addClass('c');
+					}
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<article class="article-body">
+			<div class="title-body">
+				<h1>购票</h1>
+			</div>
+			<div class="classes-body">
+				<div class="time pack-middel">
+					<p class="flex">
+						<em>7:30始发</em>
+						<span>15公里约55分钟</span>
+					</p>
+				</div>
+				<div class="route relative">
+					<div class="items pack-middel">
+						<i></i>
+						<p class="flex">风和日丽（途径）</p>
+					</div>
+					<div class="items pack-middel">
+						<i></i>
+						<p class="flex">深圳北门（途径）</p>
+					</div>
+					<div class="price absolute">
+						<em>￥2元</em>
+						<span>￥7元</span>
+					</div>
+				</div>
+			</div>
+			<div class="date-body">
+				<div class="date-header pack-middel">
+					<p class="sel-che">选择乘车日期</p>
+					<p class="flex">2015年12月</p>
+					<p class="sel-checkbox">
+						<input class="checkbox" id="all-sel" type="checkbox" />
+						<label for="all-sel">全选</label>
+					</p>
+					<p class="sel-checkbox">
+						<input class="checkbox" id="all-weeks" type="checkbox" />
+						<label for="all-weeks">本周</label>
+					</p>
+				</div>
+				<div class="data-sel" id="date-table">
+					<table>
+						<tr>
+							<th>sun</th>
+							<th>mon</th>
+							<th>tues</th>
+							<th>wednes</th>
+							<th>thurs</th>
+							<th>fri</th>
+							<th>satur</th>
+						</tr>
+						<tr>
+							<td class="a"><span>29</span><span>&nbsp;</span></td>
+							<td class="a"><span>30</span><span>&nbsp;</span></td>
+							<td class="b"><span>1</span><span>8</span></td>
+							<td class="b"><span>2</span><span>8</span></td>
+							<td class="b"><span>3</span><span>8</span></td>
+							<td class="b"><span>4</span><span>8</span></td>
+							<td class="b"><span>5</span><span>8</span></td>
+						</tr>
+						<tr>
+							<td class="b"><span>6</span><span>8</span></td>
+							<td class="b"><span>7</span><span>8</span></td>
+							<td class="b"><span>8</span><span>8</span></td>
+							<td class="b"><span>9</span><span>8</span></td>
+							<td class="b"><span>10</span><span>8</span></td>
+							<td class="d"><span>11</span><span>8</span></td>
+							<td class="b"><span>12</span><span>8</span></td>
+						</tr>
+						<tr>
+
+							<td class="b"><span>13</span><span>8</span></td>
+							<td class="b"><span>14</span><span>8</span></td>
+							<td class="b"><span>15</span><span>8</span></td>
+							<td class="b"><span>16</span><span>8</span></td>
+							<td class="b"><span>17</span><span>8</span></td>
+							<td class="b"><span>18</span><span>8</span></td>
+							<td class="b"><span>19</span><span>8</span></td>
+						</tr>
+						<tr>
+
+							<td class="b"><span>20</span><span>8</span></td>
+							<td class="b"><span>21</span><span>8</span></td>
+							<td class="b"><span>22</span><span>8</span></td>
+							<td class="b"><span>23</span><span>8</span></td>
+							<td class="b"><span>24</span><span>8</span></td>
+							<td class="b"><span>25</span><span>8</span></td>
+							<td class="b"><span>26</span><span>8</span></td>
+						</tr>
+						<tr>
+
+							<td class="b"><span>27</span><span>8</span></td>
+							<td class="b"><span>28</span><span>8</span></td>
+							<td class="b"><span>29</span><span>8</span></td>
+							<td class="b"><span>30</span><span>8</span></td>
+							<td class="e"><span>31</span><span>8</span></td>
+							<td class="a"><span>1</span><span>&nbsp;</span></td>
+							<td class="a"><span>2</span><span>&nbsp;</span></td>
+						</tr>
+						<tr>
+							<td class="a"><span>3</span><span>&nbsp;</span></td>
+							<td class="a"><span>4</span><span>&nbsp;</span></td>
+							<td class="a"><span>5</span><span>&nbsp;</span></td>
+							<td class="a"><span>6</span><span>&nbsp;</span></td>
+							<td class="a"><span>7</span><span>&nbsp;</span></td>
+							<td class="a"><span>8</span><span>&nbsp;</span></td>
+							<td class="a"><span>9</span><span>&nbsp;</span></td>
+						</tr>
+					</table>
+				</div>
+				<div class="date-tip pack-middel">
+					<p class="flex"><i class="white"></i>
+						<label>可选</label>
+					</p>
+					<p class="flex"><i class="blue"></i>
+						<label>已选</label>
+					</p>
+					<p class="flex"><i class="green"></i>
+						<label>已购</label>
+					</p>
+					<p class="flex"><i class="red"></i>
+						<label>已满</label>
+					</p>
+					<p class="flex"><i class="black"></i>
+						<label>不可选</label>
+					</p>
+				</div>
+			</div>
+			<div class="date-sum">
+				<p><span><em>24</em>天</span>共2天</p>
+			</div>
+			<div class="btnes pack-middel">
+				<a class="btn-che" href="javascript:void(0);">我要加车</a>
+				<a class="btn-buy flex" id="buy" href="javascript:void(0);">购买</a>
+			</div>
+		</article>
+		<div class="transparent pack-align" id="pay-way" style="display:none;">
+			<div class="pay-way">
+				<div class="pack-middel">
+					<h3 class="flex">支付方式</h3>
+					<a class="close" id="close-pay" href="javascript:void(0);"></a>
+				</div>
+				<a class="items pack-middel" href="javascript:void(0);">
+					<i class="t1"></i>
+					<span class="flex">支付宝支付</span>
+				</a>
+				<a class="items pack-middel" href="javascript:void(0);">
+					<i class="t2"></i>
+					<span class="flex">微信支付</span>
+				</a>
+				<a class="items pack-middel" href="javascript:void(0);">
+					<i class="t3"></i>
+					<span class="flex">深圳通支付</span>
+				</a>
+				<a class="items pack-middel" href="javascript:void(0);">
+					<i class="t4"></i>
+					<span class="flex">其他<em>（老人证、军人证等）</em></span>
+				</a>
+			</div>
+		</div>
+	</body>
+
+</html>

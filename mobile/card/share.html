@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<title>东海花园一期</title>
+		<link type="text/css" rel="stylesheet" href="css/share.css" />
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript" src="js/banner.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".light-spot .more").find("a").on("tap", function(){
+					if($(".light-spot").find(".txt").css("height") == "auto"){
+						$(".light-spot").find(".txt").css({"height": "150px"});
+						$(this).find("i").css({"-webkit-transform":"rotateZ(0)", "-moz-transform":"rotateZ(0)", "transform":"rotateZ(0)"});		
+						var _top = $($(this).attr("href")).offset().top;
+						document.body.scrollTop = _top;
+					} else {
+						$(".light-spot").find(".txt").css({"height": "auto"});
+						$(this).find("i").css({"-webkit-transform":"rotateZ(180deg)", "-moz-transform":"rotateZ(180deg)", "transform":"rotateZ(180deg)"});						
+					}					
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<article class="article">
+			<div class="banner">
+				<ul>
+					<li><a href="javascript:void(0);"><img src="img/banner.png"/></a></li>
+					<li><a href="javascript:void(0);"><img src="img/banner.png"/></a></li>
+					<li><a href="javascript:void(0);"><img src="img/banner.png"/></a></li>
+				</ul>
+			</div>
+			<div class="title">
+				<h1>东海花园一期，5室2厅，241平米，朝东南</h1>
+			</div>
+			<div class="home-info">
+				<div class="items">
+					<p><label>售价：</label><em>1000万元</em></p>
+					<p><label>单价：</label><span>20000元/㎡</span></p>
+				</div>
+				<div class="items">
+					<p><label>户型：</label><span>3室2厅1卫</span></p>
+					<p><label>面积：</label><span>241㎡</span></p>
+				</div>
+				<div class="items">
+					<p><label>楼层：</label><span>5/30层</span></p>
+					<p><label>朝向：</label><span>东南</span></p>
+				</div>
+				<div class="items">
+					<p><label>装修：</label><span>普通装修</span></p>
+					<p><label>产权：</label><span>现证</span></p>
+				</div>
+				<div class="items">
+					<p><label>物业费：</label><span>2.5元/㎡</span></p>
+					<p><label>年代：</label><span>2010年</span></p>
+				</div>
+				<div class="items">
+					<p><label>小学学位：</label><span>深圳第一小学</span></p>
+					<p><label>中学学位：</label><span>深圳第一中学</span></p>
+				</div>
+			</div>
+			<div class="map-module">
+				<div class="items">
+					<p><label>小区：</label><span>东海花园一期</span></p>
+				</div>
+				<div class="items">
+					<p><label>地址：</label><span>深圳市深南大道68号</span></p>
+				</div>
+				<div class="map">
+					<img src="img/map.png" />
+				</div>
+			</div>
+			<div class="light-spot" id="light-spot">
+				<div class="tit"><p>房源亮点</p></div>
+				<div class="txt">
+					<p>是福田中心区靠山看水的成熟大社区，住家首选！本人承诺，您所看到的房源真实存在，房源基本信息真实准确，包括：房源图片、描述以及价格等是福田中心区靠山看水的成熟大社区，住家首选！</p>
+					<p>是福田中心区靠山看水的成熟大社区，住家首选！本人承诺，您所看到的房源真实存在，房源基本信息真实准确，包括：房源图片、描述以及价格等是福田中心区靠山看水的成熟大社区，住家首选！</p>
+					<p>是福田中心区靠山看水的成熟大社区，住家首选！本人承诺，您所看到的房源真实存在，房源基本信息真实准确，包括：房源图片、描述以及价格等是福田中心区靠山看水的成熟大社区，住家首选！</p>
+				</div>
+				<div class="more"><a href="#light-spot"><i></i></a></div>
+			</div>
+			<div class="chart">
+				<div class="tit"><p>房贷</p></div>
+				<div class="pic">
+					<img src="img/pic5.png" />
+				</div>
+			</div>
+			<div class="chart">
+				<div class="tit"><p>税费</p></div>
+				<div class="pic">
+					<img src="img/pic6.png" />
+				</div>
+			</div>
+		</article>
+		<footer class="footer">
+			<div class="personal-info">
+				<div class="portrait"><img src="img/banner.png"/></div>
+				<div class="txt">
+					<h3>李彤彤<span>（世华地产）</span></h3>
+					<p>158 8949 4988</p>
+				</div>
+			</div>
+			<div class="operation">
+				<div class="items store">
+					<a href="javascript:void(0);"><img src="img/items-icon13.png"/>我的网店</span></a>
+				</div>
+				<div class="items phone">
+					<a href="javascript:void(0);"><img src="img/items-icon14.png"/>电话</span></a>
+				</div>
+				<div class="items note">
+					<a href="javascript:void(0);"><img src="img/items-icon15.png"/>短信</a>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>海外站-管理后台</title>
+		<link type="text/css" rel="stylesheet" href="css/base.css" />
+		<link type="text/css" rel="stylesheet" href="css/index.css" />
+	</head>
+
+	<body>
+		<div class="header-body clear">
+			<div class="logo fl"><img src="img/logo.png" /></div>
+			<div class="admin-info fr">
+				<span>陈大方</span>
+				<span>(管理员)</span>
+				<a class="login-out" href="javascript:void(0);">退出</a>
+			</div>
+		</div>
+		<div class="article-body horizontal">
+			<div class="menu-body">
+				<div class="menu-items">
+					<p class="menu-catalog open">房源管理</p>
+					<div class="menu-item show">
+						<a class="menu-option" data-href="housing-manage/houses-manage.html" data-open="false">楼盘管理</a>
+						<a class="menu-option" data-href="housing-manage/newhouses-manage.html" data-open="false">新房管理</a>
+						<a class="menu-option" data-href="housing-manage/salehouses-manage.html" data-open="false">二手房管理</a>
+					</div>
+				</div>
+				<div class="menu-items">
+					<p class="menu-catalog">锦囊管理</p>
+					<div class="menu-item">
+						<a class="menu-option" data-href="information-manage/important-news.html" data-open="false">要闻</a>
+						<a class="menu-option" data-href="information-manage/shoppers-info.html" data-open="false">导购</a>
+						<a class="menu-option" data-href="information-manage/encyclopaedia-info.html" data-open="false">百科</a>
+					</div>
+				</div>
+				<div class="menu-items">
+					<p class="menu-catalog">地区管理</p>
+					<div class="menu-item">
+						<a class="menu-option" data-href="area-manage/area-manage.html" data-open="false">地区管理</a>
+					</div>
+				</div>
+				<div class="menu-items">
+					<p class="menu-catalog">推荐管理</p>
+					<div class="menu-item">
+						<a class="menu-option" data-href="recommend-manage/home-recommend.html" data-open="false">首页（推荐楼盘）</a>
+					</div>
+				</div>
+				<div class="menu-items">
+					<p class="menu-catalog">广告管理</p>
+					<div class="menu-item">
+						<a class="menu-option" data-href="advertising-manage/advertising-pc.html" data-open="false">PC站</a>
+					</div>
+				</div>
+				<div class="menu-items">
+					<p class="menu-catalog">客户信息管理</p>
+					<div class="menu-item">
+						<a class="menu-option" data-href="customerinfo-manage/buying-trip.html" data-open="false">购房之旅</a>
+						<a class="menu-option" data-href="customerinfo-manage/contact-me.html" data-open="false">联系Q房海外</a>
+						<a class="menu-option" data-href="customerinfo-manage/subscription-info.html" data-open="false">订阅海外资讯</a>
+						<a class="menu-option" data-href="customerinfo-manage/subject-signup.html" data-open="false">专题报名</a>
+					</div>
+				</div>
+				<div class="menu-items">
+					<p class="menu-catalog">权限管理</p>
+					<div class="menu-item">
+						<a class="menu-option" data-href="authority-manage/account-manage.html" data-open="false">账号管理</a>
+						<a class="menu-option" data-href="authority-manage/jobs-manage.html" data-open="false">岗位管理</a>
+					</div>
+				</div>
+			</div>
+			<div class="main-body vertical flex">
+				<div class="option-body horizontal">
+					<div class="option-card flex">
+						<a class="option-items current" id="option-items" data-number="" href="javascript:void(0);">首页</a>
+						<!--<a class="option-items" href="javascript:void(0);">楼盘管理<i class="close-option"></i></a>
+						<a class="option-items" href="javascript:void(0);">新房管理<i class="close-option"></i></a>
+						<a class="option-items" href="javascript:void(0);">二手房管理<i class="close-option"></i></a>-->
+					</div>
+					<div class="option-choose">
+						<a class="choose-left" href="javascript:void(0);"></a>
+						<a class="choose-right" href="javascript:void(0);"></a>
+					</div>
+				</div>
+				<div class="iframe-body vertical flex">
+					<div class="iframe-items show" id="iframe-items">
+						<iframe class="iframe flex" name="iframe" frameborder="no" src="home.html"></iframe>
+					</div>
+				</div>
+				<div class="close-menu" title="隐藏侧边"></div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/layer/layer.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+	</body>
+
+</html>

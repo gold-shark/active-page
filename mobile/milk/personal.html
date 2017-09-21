@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<title>个人中心</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+		<script type="text/javascript" src="js/common.js" ></script>
+		<script type="text/javascript" src="js/general.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				if($(".order-block").length <= 0){
+					$(".order-null").show();
+				}
+				$(".user-id").find("a").click(popshow);
+				$(".user-tab").find("a").click(function(){
+					$(this).siblings().removeClass("current");
+					$(this).addClass("current");
+				});
+				$(".count").find(".del").click(function(){
+					$("body").append("<div class='back-middel'></div><div class='pop-middel'><h2>确定要删除？</h2><p><a class='cal'>取消</a><a href='#' class='ok'>确定</a></p></div>");
+					$(".pop-middel").find(".cal").bind("click", function(){
+						$(".back-middel").remove();
+						$(".pop-middel").remove();
+					});
+				});
+				$("#feedtxt").blur(feedtxt = function(){
+					if($("#feedtxt").val() == ""){
+						alert("评论不能为空");
+						return false;
+					} else {
+						return true;
+					}
+				});
+				$("#feedbut").click(function(){
+					if(feedtxt()){
+						
+					}
+				});
+				
+				$("#staya").click(function(){
+					$("body").append("<div id='sta1' class='back-cover'></div><div id='sta2' class='pop-up'><div class='pop-close'></div><div class='pop-content'><div class='feedback'><p>提交评价</p><textarea id='stayatxt' placeholder='请填写您的购物评价~'></textarea><span>70</span><input type='button' id='stayabut' value='提 交' /></div></div></div>");
+					$("#stayabut").bind("click",function(){
+						$("#sta1").remove();
+						$("#sta2").remove();
+					});
+					$("#sta1,#sta2 .pop-close").bind("click",function(){
+						$("#sta1").remove();
+						$("#sta2").remove();
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="top">
+			<h1>我的奶牛家</h1>
+			<a href="shopping.html" id="user"><img src="img/cart.png" width="48" height="48" alt="购物车" /></a>
+			<a href="index.html" id="home"><img src="img/home-top.png" width="48" height="48" alt="主页" /></a>
+		</div>
+		<div class="user-info">
+			<div class="user-id">
+				<p>UID:6586591465</p>
+				<a>给奶牛家提建议</a>
+			</div>
+			<div class="user-tab">
+				<p><a href="#" class="a">待付款</a><a href="#" class="b current">未收货</a><a href="#" class="c">已收货</a></p>
+			</div>
+		</div>		
+		<div class="order-block">
+			<ul>
+				<li>
+					<div class="img">
+						<a href="orderdetail.html"><img src="img/pic1.png" width="126" height="126" alt="奶牛家" /></a>
+					</div>
+					<p class="tit"><a href="orderdetail.html">Karicare可瑞康新西兰原装原罐进口2段牛奶粉900g</a></p>
+					<p class="cot">数量：1<span>￥220.00</span></p>
+				</li>
+				<li>
+					<div class="img">
+						<a href="orderdetail.html"><img src="img/pic2.png" width="126" height="126" alt="奶牛家" /></a>
+					</div>
+					<p class="tit"><a href="orderdetail.html">Karicare可瑞康新西兰原装原罐进口2段牛奶粉900g</a></p>
+					<p class="cot">数量：1<span>￥220.00</span></p>
+				</li>
+			</ul>
+			<p class="count"><a class="del"></a>共<label>2</label>件商品 <font>总计:</font><span>￥600.00</span><a class="end">已结束</a></p>
+		</div>
+		<div class="order-block">
+			<ul>
+				<li>
+					<div class="img">
+						<a href="orderdetail.html"><img src="img/pic1.png" width="126" height="126" alt="奶牛家" /></a>
+					</div>
+					<p class="tit"><a href="orderdetail.html">Karicare</a></p>
+					<p class="cot">数量：1<span>￥220.00</span></p>
+				</li>
+			</ul>
+			<p class="count"><a class="del"></a>共<label>1</label>件商品 <font>总计:</font><span>￥600.00</span><a id="staya" class="stay">确认收货</a></p>
+		</div>
+		<div class="order-block">
+			<ul>
+				<li>
+					<div class="img">
+						<a href="orderdetail.html"><img src="img/pic2.png" width="126" height="126" alt="奶牛家" /></a>
+					</div>
+					<p class="tit"><a href="orderdetail.html">Karicare可瑞康新西兰原装原罐进口2段牛奶粉900g</a></p>
+					<p class="cot">数量：1<span>￥220.00</span></p>
+				</li>
+			</ul>
+			<p class="count"><a class="del"></a>共<label>1</label>件商品 <font>总计:</font><span>￥600.00</span><a class="stay">付款</a></p>
+		</div>
+		<div class="order-null">
+			<img src="img/milk1.png" />
+			<p>你还没有相关的订单</p>
+			<a href="index.html">返回首页</a>
+		</div>
+		<div class="back-cover"></div>
+		<div class="pop-up">
+			<div class="pop-close"></div>
+			<div class="pop-content">
+				<div class="feedback">
+					<p>提交建议</p>
+					<textarea id="feedtxt" placeholder="请给奶牛提一些建议~"></textarea>
+					<span>70</span>
+					<input type="button" id="feedbut" value="提 交" />
+				</div>
+			</div>
+		</div>
+		<!--<div class="back-cover"></div>
+		<div class="pop-up">
+			<div class="pop-close"></div>
+			<div class="pop-content">
+				<div class="feedback">
+					<p>提交评价</p>
+					<textarea id="feedtxt" placeholder="请填写您的购物评价~"></textarea>
+					<span>70</span>
+					<input type="button" id="feedbut" value="提 交" />
+				</div>
+			</div>
+		</div>-->
+		<!--<div class="back-middel"></div>
+		<div class="pop-middel">
+			<h2>确定要删除？</h2>
+			<p>
+				<a href="#" class="cal" />取消</a>
+				<a href="#" class="ok" />确定</a>				
+			</p>
+		</div>-->
+	</body>
+</html>

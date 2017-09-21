@@ -1,0 +1,166 @@
+$inline-block: inline-block;
+$size: 30px;
+$border: 1px solid #ddd;
+$border-box: border-box;
+$pointer: pointer;
+$text-top: text-top;
+$orange: #f90;
+$blue: #388bff;
+$date-url: url(../img/date-icon.png);
+/* form style */
+
+input,
+textarea,
+select {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	outline: none;
+}
+
+.label {
+	display: $inline-block;
+	height: $size;
+	line-height: $size;
+}
+
+.for-label {
+	display: $inline-block;
+	height: $size;
+	line-height: $size;
+	cursor: $pointer;
+}
+
+.red-i {
+	margin-right: 5px;
+	color: red;
+	font-style: normal;
+}
+
+.text {
+	display: $inline-block;
+	width: 200px;
+	height: $size;
+	padding: 0 5px;
+	line-height: $size;
+	vertical-align: top;
+	border: $border;
+	background: #fff;
+	box-sizing: $border-box;
+}
+
+.small-five {
+	width: 60px;
+}
+
+.small-six {
+	width: 80px;
+}
+
+.very-small {
+	width: 100px;
+}
+
+.small {
+	width: 150px;
+}
+
+.default {
+	width: 200px;
+}
+
+.long {
+	width: 250px;
+}
+
+.very-long {
+	width: 300px;
+}
+
+.five-width {
+	width: 500px;
+}
+
+.date-text {
+	cursor: text;
+	background: $date-url 100% 50% no-repeat #fff;
+}
+
+.ke-container {
+	display: $inline-block !important;
+	vertical-align: $text-top !important;
+	width: 670px !important;
+}
+
+.btn {
+	display: $inline-block;
+	padding: 0 15px;
+	height: $size;
+	line-height: $size;
+	cursor: $pointer;
+	color: #333;
+	text-align: center;
+	border: $border;
+	background: #fff;
+	box-sizing: $border-box;
+}
+
+.btn:hover {
+	color: #1a66b3;
+	background: #fff;
+}
+
+.orange-btn {
+	color: #fff;
+	border: 1px solid #f60;
+	background: $orange;
+}
+
+.orange-btn:hover {
+	color: #fff;
+	background: #fa0;
+}
+
+.blue-btn {
+	color: #fff;
+	border: 1px solid $blue;
+	background: $blue;
+}
+
+.blue-btn:hover {
+	color: #fff;
+	background: #69a6fc;
+}
+
+.select {
+	display: $inline-block;
+	height: $size;
+	padding: 0 5px;
+	line-height: $size;
+	vertical-align: top;
+	border: $border;
+	box-sizing: $border-box;
+}
+
+.radio {
+	display: $inline-block;
+	vertical-align: $text-top;
+	cursor: $pointer;
+}
+
+.checkbox {
+	display: $inline-block;
+	vertical-align: $text-top;
+	cursor: $pointer;
+}
+
+.textarea {
+	display: $inline-block;
+	width: 500px;
+	height: 200px;
+	padding: 0 5px;
+	line-height: $size;
+	vertical-align: $text-top;
+	border: $border;
+	background: #fff;
+	box-sizing: $border-box;
+	resize: none;
+}

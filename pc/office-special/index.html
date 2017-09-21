@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>写字楼</title>
+    <link type="text/css" rel="stylesheet" href="http://shenzhen.qfang.com/themes/default/styles/frontend/qfang-base.css?qv=1461234257500" />
+    <link type="text/css" rel="stylesheet" href="http://shenzhen.qfang.com/themes/default/styles/frontend/common/v2.4/qfang-basic3.css?qv=1461234257500" />
+    <link type="text/css" rel="stylesheet" href="http://shenzhen.qfang.com/themes/default/styles/frontend/office/qfang-office-index3.css?qv=1461234257500" />
+    <link type="text/css" rel="stylesheet" href="css/office-special.css" />
+
+  </head>
+
+  <body>
+    <!--写字楼通用头部放此-->
+    <!-- mainnav 2016 -->
+    <div class="qfang-navmain qfang-navmain-small">
+      <div class="qfang-navmain-inner">
+        <!-- registered  -->
+        <p class="registered-link fr clearfix" id="register">
+          <i class="v_line"></i>
+          <a href="http://user.qfang.com/userRegisert/register/registger?fromCity=SHENZHEN">注册</a>
+        </p>
+        <!-- /registered  -->
+        <!-- after login -->
+        <p class="after-login dn fr" id="hasLogin">
+        </p>
+        <!-- /after login -->
+        <!-- login -->
+        <div class="top-navmenu fr clearfix" id="topNavMenuRight">
+          <ul>
+            <li class="navmenu-item">
+              <p class="navmenu-link navmenu-link-login">
+                <a href="http://user.qfang.com?fromCity=SHENZHEN">登录</a>
+              </p>
+              <div class="navmenu-linksub">
+                <i class="icons cities-layer-arrow"></i>
+                <p>
+                  <a href="http://user.qfang.com?fromCity=SHENZHEN">我的Q房</a>
+                  <a href="http://my.qfang.com">经纪人后台</a>
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- /login -->
+        <!-- menu -->
+        <div class="top-navmenu fl clearfix" id="topNavMenu">
+          <ul>
+            <li class="navmenu-item">
+              <p class="navmenu-link navmenu-link-index">
+                <a href="http://shenzhen.qfang.com/">首页</a>
+              </p>
+            </li>
+
+            <li class="navmenu-item">
+              <p class="navmenu-link">
+                <a href="http://shenzhen.qfang.com/sale">二手房</a>
+              </p>
+              <div class="navmenu-linksub">
+                <i class="icons cities-layer-arrow"></i>
+                <p>
+                  <a href="http://shenzhen.qfang.com/sale">房源</a>
+                  <a href="http://shenzhen.qfang.com/garden">小区</a>
+                  <a href="http://shenzhen.qfang.com/tycoon">经纪人</a>
+                  <a href="http://shenzhen.qfang.com/map/sale" target="_blank">地图找房</a>
+                </p>
+              </div>
+            </li>
+
+            <li class="navmenu-item">
+              <p class="navmenu-link">
+                <a href="http://shenzhen.qfang.com/newhouse">新房</a>
+              </p>
+              <div class="navmenu-linksub">
+                <i class="icons cities-layer-arrow"></i>
+                <p>
+                  <a href="http://shenzhen.qfang.com/newhouse">新房首页</a>
+                  <a href="http://shenzhen.qfang.com/groupbuy">特惠团购</a>
+                  <a href="http://shenzhen.qfang.com/newhouse/list">深圳新房</a>
+                  <a href="http://shenzhen.qfang.com/newhouse/info">楼盘导购</a>
+                  <a target="_blank" target="_blank" href="http://xf.qfang.com/dsp">Q客云投</a>
+                </p>
+              </div>
+            </li>
+
+            <li class="navmenu-item">
+              <p class="navmenu-link">
+                <a href="http://shenzhen.qfang.com/rent">租房</a>
+              </p>
+              <div class="navmenu-linksub">
+                <i class="icons cities-layer-arrow"></i>
+                <p>
+                  <a href="http://shenzhen.qfang.com/rent">房源</a>
+                  <a href="http://shenzhen.qfang.com/gardenRent">小区</a>
+                  <a href="http://shenzhen.qfang.com/tycoonRent">经纪人</a>
+                  <a href="http://shenzhen.qfang.com/map/rent" target="_blank">地图找房</a>
+                </p>
+              </div>
+            </li>
+
+            <li class="navmenu-item">
+              <p class="navmenu-link">
+                <a href="http://shenzhen.qfang.com/housePriceQuery/queryPage">查房价</a>
+              </p>
+            </li>
+
+            <li class="navmenu-item">
+              <p class="navmenu-link">
+                <a href="http://shenzhen.qfang.com/office">写字楼</a>
+              </p>
+              <div class="navmenu-linksub">
+                <i class="icons cities-layer-arrow"></i>
+                <p>
+                  <a href="http://shenzhen.qfang.com/office">写字楼首页</a>
+                  <a href="http://shenzhen.qfang.com/office/rent">写字楼出租</a>
+                  <a href="http://shenzhen.qfang.com/office/sale">写字楼出售</a>
+                  <a href="http://shenzhen.qfang.com/office/garden/rent">写字楼楼盘</a>
+                  <a href="http://shenzhen.qfang.com/office/tycoon/index?from_office=1">写字楼经纪人</a>
+                </p>
+              </div>
+            </li>
+
+            <li class="navmenu-item">
+              <p class="navmenu-link">
+                <a href="http://hw.qfang.com/">海外</a>
+              </p>
+            </li>
+
+            <!--
+          <li class="navmenu-item">
+            <p class="navmenu-link">
+              <a href="javascript:;">金融</a>
+            </p>
+          </li>
+          -->
+
+            <li class="navmenu-item ">
+              <p class="navmenu-link">
+                <a href="http://shenzhen.qfang.com/authorize?biztype=sale">业主委托</a>
+              </p>
+            </li>
+            <li class="navmenu-item">
+              <p class="navmenu-link">
+                <a href="http://app.qfang.com/" target="_blank">掌上Q房</a>
+              </p>
+              <div class="navmenu-linksub">
+                <i class="icons cities-layer-arrow"></i>
+                <p class="top-app">
+                  <em class="icons"></em>
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- /menu -->
+      </div>
+    </div>
+    <!-- /mainnav 2016 -->
+    <!-- nav mid -->
+    <div class="qfang-navmid">
+      <div class="qfang-navmid-inner clearfix">
+        <!-- logo -->
+        <p class="navmain-logo navmid-logo fl">
+          <a href="http://shenzhen.qfang.com/">
+            <i class="icons-qfanglogo logo-area fl"></i>
+            <i class="icons-qfanglogo slogan-area fl"></i>
+          </a>
+        </p>
+        <!-- /logo -->
+        <p class="channelname fl clearfix">
+          <span>
+    写字楼
+    </span>
+          <i class="v_line"></i>
+        </p>
+        <!-- switch city -->
+        <div class="qfang-cities clearfix">
+          <i class="v_line fl"></i>
+          <div class="city-area fl">
+            <div class="cur-city fl clearfix" data-type="navmid-city" id="curCity">
+              <span class="cur-city-name">深圳</span>
+              <span class="swicth-txt">[切换]</span>
+            </div>
+            <!-- cities -->
+            <div class="cities-layer" id="cityLayer">
+              <i class="icons cities-layer-arrow"></i>
+              <a class="icons cities-layer-close"><i class="icons"></i></a>
+              <div class="cities-con">
+                <div class="cities-con">
+                  <p class="tit">选择城市</p>
+                  <ul class="cities-opts clearfix">
+                    <li class="clearfix">
+                      <em class="icons">B</em>
+                      <p>
+                        <a class="highlight" href="http://beijing.qfang.com/office/rent">北京</a>
+                        <a href="http://baoshan.qfang.com">保山</a>
+
+                      </p>
+                    </li>
+                    <li class="clearfix">
+                      <em class="icons">N</em>
+                      <p>
+                        <a class="highlight" href="http://nanjing.qfang.com">南京</a>
+                        <a href="http://nanning.qfang.com">南宁</a>
+                        <a href="http://nanchang.qfang.com">南昌</a>
+                        <a href="http://nantong.qfang.com">南通</a>
+                        <a href="http://ningbo.qfang.com">宁波</a>
+                      </p>
+                    </li>
+                    <li class="clearfix">
+                      <em class="icons">C</em>
+                      <p>
+                        <a class="highlight" href="http://chengdu.qfang.com">成都</a>
+                        <a href="http://chongqing.qfang.com">重庆</a>
+                        <a href="http://changchun.qfang.com">长春</a>
+                        <a href="http://changsha.qfang.com">长沙</a>
+                        <a href="http://changzhou.qfang.com">常州</a>
+                      </p>
+                    </li>
+                    <li class="clearfix">
+                      <em class="icons">P</em>
+                      <p>
+                        <a href="http://pingdingshan.qfang.com">平顶山</a>
+                      </p>
+                    </li>
+                    <li class="clearfix">
+                      <em class="icons">D</em>
+                      <p>
+                        <a href="http://dongguan.qfang.com">东莞</a>
+                      </p>
+                    </li>
+                    <li class="clearfix">
+                      <em class="icons">Q</em>
+                      <p>
+                        <a class="highlight" href="http://qingdao.qfang.com">青岛 </a>
+                      </p>
+                    </li>
+                    <li class="learfix">
+                      <em class="icons">F</em>
+                      <p>
+                        <a class="highlight" href="http://foshan.qfang.com">佛山</a>
+                        <a href="http://fuzhou.qfang.com">福州</a>
+                      </p>
+                    </li>
+                    <li class="clearfix">
+                      <em class="icons">S</em>
+                      <p>
+                        <a class="highlight" href="http://shenzhen.qfang.com/office/rent">深圳</a>
+                        <a class="highlight" href="http://shanghai.qfang.com/office/rent">上海</a>
+                        <a class="highlight" href="http://suzhou.qfang.com">苏州</a>
+                        <a href="http://sanya.qfang.com">三亚</a>
+                        <a href="http://shenyang.qfang.com">沈阳</a>
+                      </p>
+                    </li>
+                    <li class="clearfix">
+                      <em class="icons">G</em>
+                      <p>
+                        <a class="highlight" href="http://guangzhou.qfang.com/office/rent">广州</a>
+                        <a href="http://guiyang.qfang.com">贵阳</a>
+                      </p>
+                    </li>
+                    <li class="clearfix">
+                      <em class="icons">T</em>
+                      <p>
+                        <a href="http://taiyuan.qfang.com">太原 </a>
+                        <a href="http://tianjin.qfang.com">天津 </a>
+                      </p>
+                    </li>
+                    <li class="clearfix">
+                      <em class="icons">H</em>
+                      <p>
+                        <a class="highlight" href="http://hangzhou.qfang.com/office/rent">杭州</a>
+                        <a href="http://huizhou.qfang.com">惠州</a>
+                        <a href="http://haerbin.qfang.com">哈尔滨</a>
+                        <a href="http://haikou.qfang.com">海口</a>
+                        <a href="http://hefei.qfang.com">合肥</a>
+                        <a href="http://huainan.qfang.com">淮南</a>
+                        <a href="http://honghe.qfang.com">红河</a>
+                      </p>
+                    </li>
+                    <li class="clearfix">
+                      <em class="icons">W</em>
+                      <p>
+                        <a href="http://wuhan.qfang.com">武汉</a>
+                        <a href="http://wuxi.qfang.com">无锡</a>
+                        <a href="http://wenzhou.qfang.com">温州</a>
+                      </p>
+                    </li>
+                    <li class="clearfix">
+                      <em class="icons">J</em>
+                      <p>
+                        <a href="http://jinan.qfang.com">济南</a>
+                      </p>
+                    </li>
+                    <li class="clearfix">
+                      <em class="icons">X</em>
+                      <p>
+                        <a href="http://xiamen.qfang.com">厦门</a>
+                        <a href="http://xian.qfang.com">西安</a>
+                        <a href="http://hk.qfang.com/ws/index">香港</a>
+                      </p>
+                    </li>
+                    <li class="clearfix">
+                      <em class="icons">K</em>
+                      <p>
+                        <a href="http://kunming.qfang.com">昆明</a>
+                        <a href="http://kunshan.qfang.com">昆山</a>
+                      </p>
+                    </li>
+                    <li class="clearfix">
+                      <em class="icons">Y</em>
+                      <p>
+                        <a href="http://yantai.qfang.com">烟台</a>
+                      </p>
+                    </li>
+                    <li class="clearfix">
+                      <em class="icons">L</em>
+                      <p>
+                        <a href="http://lanzhou.qfang.com">兰州</a>
+                      </p>
+                    </li>
+                    <li class="clearfix">
+                      <em class="icons">Z</em>
+                      <p>
+                        <a class="highlight" href="http://zh.qfang.com">珠海</a>
+                        <a class="highlight" href="http://zhongshan.qfang.com">中山</a>
+                        <a href="http://zhengzhou.qfang.com">郑州</a>
+                        <a href="http://zibo.qfang.com">淄博</a>
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- end cities -->
+          </div>
+        </div>
+        <!-- /switch city -->
+        <p class="qfang-navmid-link fl clearfix">
+          <a class="cur" href="http://shenzhen.qfang.com/office">首页</a>
+          <a href="http://shenzhen.qfang.com/office/rent">出租</a>
+          <a href="http://shenzhen.qfang.com/office/sale">出售</a>
+          <a href="http://shenzhen.qfang.com/office/garden/rent">楼盘</a>
+          <a href="http://shenzhen.qfang.com/office/tycoon/index?from_office=1">经纪人</a>
+        </p>
+      </div>
+    </div>
+    <!-- /nav mid 2016 -->
+
+    <!--head end-->
+    <!--view-1-->
+    <div class="view view-1 tc">
+      <h3 class="con-t">找写字楼 上<span class="f-arial">Q</span>房网</h3>
+      <div class="con-c">
+        <h2>租客免佣</h2>
+        <p>Free Commission</p>
+      </div>
+      <div class="con-b contact-btn">
+        <p>咨询热线：400-930-3339</p>
+        <a href="http://shenzhen.qfang.com/office/rent">马上找房</a>
+      </div>
+    </div>
+    <!--view-1-->
+    <!--view-2-->
+    <div class="view view-2 tc">
+      <p class="con-t">免租佣：<span class="f-arial">Q</span>房网首批向深圳地区开放写字楼租赁客户免佣服务</p>
+      <h2 class="con-c">千人团队 高效服务</h2>
+      <div class="con-b clearfix">
+        <div class="service-item tc">
+          <div class="service-inner">
+            <h3>一对一服务</h3>
+            <p>千余人专业团队，提供一对一贴<br/>心服务，保障交易顺利进行</p>
+          </div>
+        </div>
+        <div class="service-item tc">
+          <div class="service-inner">
+            <h3><span class="f-arial">10</span>分钟响应</h3>
+            <p>客户通过<span class="f-arial">Q</span>房网<span class="f-arial">APP</span>、<span class="f-arial">400</span>电话或 <br/>线下商业任意门店提出租赁需求后，<br/><span class="f-arial">Q</span>房网经纪人将在<span class="f-arial">10</span>分钟内致电<br/>客户，并预约带看。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--view-2-->
+    <!--view-3-->
+    <div class="view view-3 tc">
+      <div class="con-t">
+        <h2>一网打尽 深圳房源</h2>
+        <p>真房源：云房源大数据支持，一房一号，精准建模，网罗真实房源信息</p>
+        <p>房源多：通过云房源大数据库，线下门店等渠道，实时更新在租写字楼信息</p>
+      </div>
+      <div class="con-lr">
+        <img src="images/map.png" alt="地图" />
+      </div>
+    </div>
+    <!--view-3-->
+    <!--view-4-->
+    <div class="view view-4 tc">
+      <div class="con-t">
+        <h2>线上线下 双重保障</h2>
+        <p>线上委托租赁、预约看房，便捷高效</p>
+        <p>线下带看、签约，一对一贴心服务保障</p>
+      </div>
+      <div class="con-b">
+        <img src="images/view4_b.jpg" alt="线上线下" />
+      </div>
+    </div>
+    <!--view-4-->
+    <!--view-5-->
+    <div class="view view-5 tc">
+      <div class="con-t">
+        <h2>全渠道打通 畅享优质服务体验</h2>
+        <p>四大放盘渠道：<span class="f-arial">Q</span>房网<span class="f-arial">APP</span>、<span class="f-arial">Q</span>房网<span class="f-arial">PC</span>端、<span class="f-arial">400</span>电话、线下商业门店</p>
+        <p>四大找房渠道：<span class="f-arial">Q</span>房网<span class="f-arial">APP</span>、<span class="f-arial">Q</span>房网<span class="f-arial">PC</span>端、<span class="f-arial">400</span>电话、线下商业门店</p>
+      </div>
+      <div class="con-b">
+        <img src="images/channel.png" alt="渠道" />
+      </div>
+    </div>
+    <!--view-5-->
+    <div class="contact-box">
+      <div class="contact-inner clearfix">
+        <div class="contact-ewm fl clearfix">
+          <img src="images/ewm.jpg" alt="二维码" />
+          <div class="fl contact-ewmtxt">
+            <span>扫一扫</span>
+            <p>轻松下载<span class="f-arial">Q</span>房<span class="f-arial">APP</span></p>
+          </div>
+        </div>
+        <div class="contact-btn fr">
+          <p>咨询热线：400-930-3339</p>
+          <a href="http://shenzhen.qfang.com/office/rent">马上找房</a>
+        </div>
+      </div>
+    </div>
+    <!--写字楼通用尾部放此-->
+    <!-- footer 2016 -->
+    <div class="footer-features clearfix">
+      <ul class="footer-features-inner">
+        <li>
+          <div class="footer-features-item really clearfix">
+            <i class="icons icons-feature"></i>
+            <p class="feature-text">
+              <span class="title simhei">真实</span>
+              <span class="description">高清图片，真实成交，真实<br>信息展现真实二手房</span>
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="footer-features-item timely clearfix">
+            <i class="icons icons-feature"></i>
+            <p class="feature-text">
+              <span class="title simhei">及时</span>
+              <span class="description">即时在线咨询直联房产顾问<br>个人手机，沟通快，无骚扰</span>
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="footer-features-item pro clearfix">
+            <i class="icons icons-feature"></i>
+            <p class="feature-text">
+              <span class="title simhei">专业</span>
+              <span class="description">十万名考核认证社区专家<br>您的专职房产顾问</span>
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="footer-features-item free clearfix">
+            <i class="icons icons-feature"></i>
+            <p class="feature-text">
+              <span class="title simhei">自由</span>
+              <span class="description">关注，收藏，转发，信息分享<br>随心所欲</span>
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-2016 mt-40">
+      <div class="footer-2016-inner">
+        <!-- nav links -->
+        <div class="footer-top clearfix">
+          <p class="footer-top-nav fl clearfix">
+            <a target="_blank" rel="nofollow" href="http://shenzhen.qfang.com/aboutQfang">关于Q房</a>
+            <a target="_blank" rel="nofollow" href="http://shenzhen.qfang.com/contactus">联系我们</a>
+            <a target="_blank" rel="nofollow" href="http://shenzhen.qfang.com/recruit">人才招聘</a>
+            <a target="_blank" rel="nofollow" href="http://shenzhen.qfang.com/agreement">用户协议</a>
+            <a target="_blank" rel="nofollow" href="http://shenzhen.qfang.com/friendLink">友情链接</a>
+            <a target="_blank" href="http://baike.qfang.com/">房产百科</a>
+            <a target="_blank" href="http://shenzhen.qfang.com/ask">房产问答</a>
+            <a target="_blank" href="http://shenzhen.qfang.com/info">房产资讯</a>
+            <a target="_blank" href="http://shenzhen.qfang.com/join">特许加盟</a>
+          </p>
+
+          <p class="footer-top-hotline fr">服务热线：4009-000-999</p>
+        </div>
+        <!-- nav links -->
+        <!-- friendlylinks -->
+        <div class="links-friendly" id="linksFriendly">
+          <div class="links-friendly-inner">
+            <div class="links-friendly-tabs clearfix">
+              <ul id="linksfriendlyTabs">
+                <!--二手房----begin------>
+                <!--二手房----end------>
+
+                <!--租房----begin------>
+                <!--租房----end------>
+
+                <!--新房----begin------>
+                <!--新房----end------>
+
+                <!--写字楼----begin------>
+                <li class="cur">
+                  <a href="javascript:;">深圳写字楼出租推荐</a>
+                </li>
+                <li>
+                  <a href="javascript:;">深圳周边写字楼出租推荐</a>
+                </li>
+                <li>
+                  <a href="javascript:;">深圳周边写字楼出售推荐</a>
+                </li>
+                <!--写字楼----end------>
+
+              </ul>
+            </div>
+            <div class="links-friendly-tabcon">
+              <!-- 二手房--内容 ----------------------------------------------------------------->
+              <!-- end 二手房内容 ------------------------------------------------------------------->
+
+              <!-- 租房--内容 -------------------------------------------------------------------->
+              <!-- end 二手房内容  -------------------------------------------------------------------->
+
+              <!-- 新房--内容 -------------------------------------------------------------------->
+              <!-- end 内容 -->
+              <!-- 新房    end-----内容 -------------------------------------------------------------------->
+
+              <!-- 写字楼---begin--内容 -------------------------------------------------------------------->
+              <!-- 内容 --写字楼-->
+              <div class="links-friendly-item clearfix">
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/nanshan" title="南山写字楼">南山写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/luohu" title="罗湖写字楼">罗湖写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/futian" title="福田写字楼">福田写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/baoan" title="宝安写字楼">宝安写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/longgang" title="龙岗写字楼">龙岗写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/yantiana" title="盐田写字楼">盐田写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/longhuaxinqu" title="龙华写字楼">龙华写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/guangmingxinqu" title="光明写字楼">光明写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/futian-chegongmiao" title="车公庙写字楼">车公庙写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/nanshan-houhai" title="后海写字楼">后海写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/nanshan-huaqiaocheng" title="华侨城写字楼">华侨城写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/nanshan-kejiyuanzhong" title="科技园写字楼">科技园写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/nanshan-nanshanzhongxinqu" title="南山中心区写字楼">南山中心区写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/nanshan-shekou" title="蛇口写字楼">蛇口写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/nanshan-qianhai" title="前海写字楼">前海写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/futian-baoshuiqu" title="保税区写字楼">保税区写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/futian-futianzhongxinqu" title="福田中心区写字楼">福田中心区写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/futian-huaqiangbei" title="华强北写字楼">华强北写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/futian-zhuzilin" title="竹子林写字楼">竹子林写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/luohu-diwangshangquan" title="地王写字楼">地王写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/luohu-dongmenshangquan" title="东门写字楼">东门写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/baoan-xixiang" title="西乡写字楼">西乡写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/baoan-baoanzhongxinqu" title="宝安中心区写字楼">宝安中心区写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/baoan-xinan" title="新安写字楼">新安写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/longgang-buji" title="布吉写字楼">布吉写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/longgang-longgangzhongxincheng" title="龙岗中心城写字楼">龙岗中心城写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/longgang-pinghu" title="平湖写字楼">平湖写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/luohu-renminnan" title="人民南写字楼">人民南写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/luohu-sungang" title="笋岗写字楼">笋岗写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/nanshan-xili" title="西丽写字楼">西丽写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/nanshan-nanyou" title="南油写字楼">南油写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/nanshan-kejiyuanbei" title="科技园北写字楼">科技园北写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/futian-meilin" title="梅林写字楼">梅林写字楼</a></p>
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/rent/futian-huanggang" title="皇岗写字楼">皇岗写字楼</a></p>
+              </div>
+
+              <!-- 周边租房推荐--内容 -->
+              <div class="links-friendly-item dn clearfix">
+                <p><a target="_blank" href="http://beijing.qfang.com/office/rent" title="北京写字楼出租">北京写字楼出租</a></p>
+                <p><a target="_blank" href="http://shanghai.qfang.com/office/rent" title="上海写字楼出租">上海写字楼出租</a></p>
+                <p><a target="_blank" href="http://guangzhou.qfang.com/office/rent" title="广州写字楼出租">广州写字楼出租</a></p>
+                <p><a target="_blank" href="http://hangzhou.qfang.com/office/rent" title="杭州写字楼出租">杭州写字楼出租</a></p>
+              </div>
+
+              <!-- 周边租房推荐--内容 -->
+              <div class="links-friendly-item dn clearfix">
+                <p><a target="_blank" href="http://shenzhen.qfang.com/office/sale" title="北京写字楼出售">北京写字楼出售</a></p>
+                <p><a target="_blank" href="http://shanghai.qfang.com/office/sale" title="上海写字楼出售">上海写字楼出售</a></p>
+                <p><a target="_blank" href="http://guangzhou.qfang.com/office/sale" title="广州写字楼出售">广州写字楼出售</a></p>
+                <p><a target="_blank" href="http://hangzhou.qfang.com/office/sale" title="杭州写字楼出售">杭州写字楼出售</a></p>
+              </div>
+              <!-- end 内容 -->
+              <!-- 写字楼---end--内容 -------------------------------------------------------------------->
+
+            </div>
+          </div>
+        </div>
+        <!-- end friendlylinks -->
+        <!-- copyright -->
+        <div class="footer-bottom">
+          <p class="footer-bottom-letter">
+            <span>按字母检索：</span>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/A"><span>A</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/B"><span>B</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/C"><span>C</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/D"><span>D</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/E"><span>E</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/F"><span>F</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/G"><span>G</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/H"><span>H</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/I"><span>I</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/J"><span>J</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/K"><span>K</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/L"><span>L</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/M"><span>M</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/N"><span>N</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/O"><span>O</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/P"><span>P</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/Q"><span>Q</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/R"><span>R</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/S"><span>S</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/T"><span>T</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/U"><span>U</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/V"><span>V</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/W"><span>W</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/X"><span>X</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/Y"><span>Y</span></a>
+            <a target="_blank" href="http://shenzhen.qfang.com/letter/Z"><span>Z</span></a>
+          </p>
+          <p class="footer-bottom-copyright">Copyright © 2016 www.qfang.com. All Rights Reserved ICP备案号：<a target="_blank" style="color:#999" href="http://www.miitbeian.gov.cn" rel="nofollow">粤ICP备05067219号-3</a></p>
+          <p class="footer-bottom-cpyname">公司名称：深圳市云房网络科技有限公司</p>
+        </div>
+        <!-- /copyright -->
+      </div>
+    </div>
+    <!-- /footer 2016 -->
+    <!-- Google Tag Manager -->
+    <noscript>
+  <iframe src="http://shenzhen.qfang.com//www.googletagmanager.com/ns.html?id=GTM-5NGTRL"
+    height="0" width="0" style="display: none; visibility: hidden"></iframe>
+</noscript>
+    <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-5NGTRL');
+    </script>
+    <!-- End Google Tag Manager -->
+    <div style="display:none;">
+
+      <script type="text/javascript">
+        var _mvq = window._mvq || [];
+        window._mvq = _mvq;
+        _mvq.push(['$setAccount', 'm-28150-0']);
+        _mvq.push(['$logConversion']);
+        (function() {
+          var mvl = document.createElement('script');
+          mvl.type = 'text/javascript';
+          mvl.async = true;
+          mvl.src = ('https:' == document.location.protocol ? 'https://static-ssl.mediav.com/mvl.js' : 'http://static.mediav.com/mvl.js');
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(mvl, s);
+        })();
+      </script>
+
+      <script src="http://www.anquan.org/static/outer/js/anquan_authen_83x30.js?qv=1461234229031"></script>
+
+      <div class="Home" id="PageType"></div>
+      <div class="Shenzhen" id="PageCity"></div>
+      <div class="Office" id="BusiType"></div>
+      <script>
+        var PageType = "Home";
+        var PageCity = "Shenzhen";
+        var BusiType = "Office";
+      </script>
+    </div>
+
+    <!--除二手房，租房，写字楼，新房，其他的与首页的一致,但需隐藏”友情链接-->
+
+    <!-- end 写字楼价格走势 -->
+
+    <script type="text/javascript" src="http://shenzhen.qfang.com/themes/default/scripts/frontend/common/v2.4/qfang-libs.js?qv=1461234257500"></script>
+    <script type="text/javascript" src="http://shenzhen.qfang.com/themes/default/scripts/frontend/office/qfang-office-index.js?qv=1461234257500"></script>
+    <script type="text/javascript" src="http://shenzhen.qfang.com/themes/default/scripts/frontend/common/echarts/echarts-2.2.7/echarts.js?qv=1461234257500"></script>
+    <script type="text/javascript" src="http://shenzhen.qfang.com/themes/default/scripts/frontend/common/guide/guide.js?qv=1461234257500"></script>
+
+    <!--头部公共文件 end-->
+    <script type="text/javascript">
+      var ctx = "";
+      var city = "SHENZHEN";
+      var shenzhenPath = "http://shenzhen.qfang.com";
+      var cityName = "深圳";
+      var frontUserName = $.cookie("userName");
+      var sid = $.cookie("fuid");
+      var userCenterUrl = "http://user.qfang.com/userManager/collectQuery";
+      var userExit = "http://user.qfang.com/userLogin/exit";
+      var userId = $.cookie("userId");
+    </script>
+    <script type="text/javascript">
+      var ctx = "";
+      var base = "http://shenzhen.qfang.com/themes/default";
+    </script>
+
+    <!--本页js-->
+    <script src="js/offices.js"></script>
+
+  </body>
+
+</html>

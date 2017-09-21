@@ -1,0 +1,109 @@
+<!DOCTYPE html>  
+<html>  
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+		<title>在线经纪人数</title>  
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+	</head>  
+	 
+	<body>
+		<div class="map-dwon">
+			<div class="logo clear">
+				<p class="fl"><img src="img/logo.png"/></p>
+				<p class="fr"><i></i><time>12:30:31</time></p>
+			</div>
+			<div class="title"><h3>Q房同时在线经纪人数</h3></div>
+			<div class="content">
+				<p class="number">9,999,999</p>
+				<p class="text">历史最高在线：1,203,502 人</p>
+			</div>
+		</div>
+		<div class="map-ranking" style="top:430px">
+			<div class="table-head">
+				<table>
+					<tr>
+						<th style="width:10%">&nbsp;</th>
+						<th style="width:45%">产品</th>
+						<th style="width:45%">在线人数</th>
+					</tr>
+				</table>
+			</div>
+			<div class="table-body">
+				<table>
+					<tr class="tr0">
+						<td class="tc" style="width:10%">1</td>
+						<td class="tl" style="width:45%">盘客通</td>
+						<td class="tr" style="width:45%">1235122</td>
+					</tr>
+					<tr class="tr1">
+						<td class="tc">2</td>
+						<td class="tl">Q房网</td>
+						<td class="tr">1235122</td>
+					</tr>
+					<tr class="tr0">
+						<td class="tc">3</td>
+						<td class="tl">新盘通</td>
+						<td class="tr">1235122</td>
+					</tr>
+					<tr class="tr1">
+						<td class="tc">4</td>
+						<td class="tl">移动盘客通</td>
+						<td class="tr">1235122</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div id="main" class="container"></div>
+		<script type="text/javascript" src="echarts-2.2.3/doc/example/www/js/echarts.js"></script>
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+        <script type="text/javascript" src="echarts-2.2.3/doc/asset/js/jquery.min.js"></script>
+        <script type="text/javascript">
+        
+        	var datajson = [
+	            	{name: "海门", value: 0},
+	                {name: "鄂尔多斯", value: 1},
+	                {name: "招远", value: 2},
+	                {name: "舟山", value: 3}
+                ], 
+                coordjson = {
+                	"海门":[121.15,31.89],
+	                "鄂尔多斯":[109.781327,39.608266],
+	                "招远":[120.38,37.35],
+	                "舟山":[122.207216,29.985295]
+            	};
+        </script>
+        <script type="text/javascript" src="echarts-2.2.3/extension/BMap/doc/example1.js"></script>
+        <script type="text/javascript">
+        	$(function(){
+        		var leg = $(".table-body").find("tr").length;
+        		if(leg > 5){
+	        		var tr = "<tr class='tr0'><td class='tc'>&nbsp;</td><td class='tl'>&nbsp;</td><td class='tr'>&nbsp;</td>";
+	        			tr0 = "<tr class='tr1'><td class='tc'>&nbsp;</td><td class='tl'>&nbsp;</td><td class='tr'>&nbsp;</td>";
+	        			tr1 = $(".table-body").find("tr").eq(0).clone(),
+		        		tr2 = $(".table-body").find("tr").eq(1).clone(),
+		        		tr3 = $(".table-body").find("tr").eq(2).clone(),
+		        		tr4 = $(".table-body").find("tr").eq(3).clone(),
+		        		tr5 = $(".table-body").find("tr").eq(4).clone();		        		
+	        		switch(leg % 5){
+	        			case 0 : $(".table-body").find("table").append(tr1, tr2, tr3, tr4, tr5); break;
+	        			case 1 : $(".table-body").find("table").append(tr, tr0, tr, tr0, tr1, tr2, tr3, tr4, tr5); break;
+	        			case 2 : $(".table-body").find("table").append(tr, tr0, tr, tr1, tr2, tr3, tr4, tr5); break;
+	        			case 3 : $(".table-body").find("table").append(tr, tr0, tr1, tr2, tr3, tr4, tr5); break;
+	        			case 4 : $(".table-body").find("table").append(tr, tr1, tr2, tr3, tr4, tr5); break;
+	        		}
+	        		var n = 0;
+	        		var a = setInterval(function(){
+	        			n++;
+	        			$(".table-body").find("table").animate({"marginTop": -n * 315}, 300, "linear", function(){
+	        				if(n >= Math.ceil(leg / 5)){
+	        					n = 0;
+	        					$(".table-body").find("table").css({"marginTop": -n * 315});
+	        				}
+	        			});
+	        		}, 3000);
+        		}
+        	});
+        </script>
+	</body>  
+</html>

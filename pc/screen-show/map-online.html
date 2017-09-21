@@ -1,0 +1,216 @@
+<!DOCTYPE html>  
+<html>  
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+		<title>全国放盘</title>  
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+	</head>  
+	 
+	<body>
+		<div class="map-up">
+			<div class="logo"><img src="img/logo.png"/></div>
+			<div class="title"><h3>当前全国放盘</h3></div>
+			<div class="content">
+				<div class="items one">
+					<p><label>租</label>2,223,131</p>					
+				</div>
+				<div class="items">
+					<p><label>售</label>5,223,131</p>					
+				</div>
+			</div>
+		</div>
+		<div class="map-ranking">
+			<div class="table-head">
+				<table>
+					<tr>
+						<th style="width:10%;">&nbsp;</th>
+						<th style="width:20%;">城市</th>
+						<th style="width:35%;">租</th>
+						<th style="width:35%;">售</th>
+					</tr>
+				</table>
+			</div>
+			<div class="table-body">
+				<table>
+					<tbody></tbody>
+					<!--<tr class="tr0">
+						<td class="tc" style="width:10%;">1</td>
+						<td class="tc" style="width:20%;">深圳</td>
+						<td class="tr" style="width:35%;">1235122</td>
+						<td class="tr" style="width:35%;">1235122</td>
+					</tr>
+					<tr class="tr1">
+						<td class="tc">2</td>
+						<td class="tc">南京</td>
+						<td class="tr">1235122</td>
+						<td class="tr">1235122</td>
+					</tr>
+					<tr class="tr0">
+						<td class="tc">3</td>
+						<td class="tc">苏州</td>
+						<td class="tr">1235122</td>
+						<td class="tr">1235122</td>
+					</tr>
+					<tr class="tr1">
+						<td class="tc">4</td>
+						<td class="tc">青岛</td>
+						<td class="tr">1235122</td>
+						<td class="tr">1235122</td>
+					</tr>
+					<tr class="tr0">
+						<td class="tc">5</td>
+						<td class="tc">上海</td>
+						<td class="tr">1235122</td>
+						<td class="tr">1235122</td>
+					</tr>
+					<tr class="tr1">
+						<td class="tc">6</td>
+						<td class="tc">青岛</td>
+						<td class="tr">1235122</td>
+						<td class="tr">1235122</td>
+					</tr>
+					<tr class="tr0">
+						<td class="tc">7</td>
+						<td class="tc">深圳</td>
+						<td class="tr">1235122</td>
+						<td class="tr">1235122</td>
+					</tr>
+					<tr class="tr1">
+						<td class="tc">8</td>
+						<td class="tc">南京</td>
+						<td class="tr">1235122</td>
+						<td class="tr">1235122</td>
+					</tr>
+					<tr class="tr0">
+						<td class="tc">9</td>
+						<td class="tc">苏州</td>
+						<td class="tr">1235122</td>
+						<td class="tr">1235122</td>
+					</tr>
+					<tr class="tr1">
+						<td class="tc">10</td>
+						<td class="tc">青岛</td>
+						<td class="tr">1235122</td>
+						<td class="tr">1235122</td>
+					</tr>
+					<tr class="tr0">
+						<td class="tc">11</td>
+						<td class="tc">上海</td>
+						<td class="tr">1235122</td>
+						<td class="tr">1235122</td>
+					</tr>-->
+				</table>
+			</div>
+		</div>
+		<div class="map-tip">
+			<p><span>深圳</span><span>顾虑斌</span><span>2015年3月23日 12:30</span><span>新增</span><span>天雅名苑</span><span>出售盘源一套</span></p>
+		</div>
+		<div id="main" class="container"></div>
+		<script type="text/javascript" src="echarts-2.2.3/doc/example/www/js/echarts.js"></script>
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+        <script type="text/javascript" src="echarts-2.2.3/doc/asset/js/jquery.min.js"></script>
+        <script type="text/javascript">
+        	var datajson = [
+	            	{name: "海门", value: 0},
+	                {name: "鄂尔多斯", value: 1},
+	                {name: "招远", value: 2},
+	                {name: "舟山", value: 3}
+                ], 
+                coordjson = {
+                	"海门":[121.15,31.89],
+	                "鄂尔多斯":[109.781327,39.608266],
+	                "招远":[120.38,37.35],
+	                "舟山":[122.207216,29.985295]
+            	},
+            	showdatajson = [
+	            	{name: "海门", value: 0},
+	                {name: "鄂尔多斯", value: 1},
+	                {name: "招远", value: 2}
+                ];
+        </script>
+        <script type="text/javascript" src="echarts-2.2.3/extension/BMap/doc/example.js"></script>
+        <script type="text/javascript">
+        	$(function(){
+        		var jsona = [
+        			{no: 1, name: "南京", p1: "1235214", p2: "1235412"},
+        			{no: 2, name: "苏州", p1: "1235214", p2: "1235412"},
+        			{no: 3, name: "青岛", p1: "1235214", p2: "1235412"},
+        			{no: 4, name: "上海", p1: "1235214", p2: "1235412"},
+        			{no: 5, name: "深圳", p1: "1235214", p2: "1235412"},
+        			{no: 6, name: "南京", p1: "1235214", p2: "1235412"}
+        		];
+        		var jsonb = [
+        			{no: 1, name: "南京", p1: "1235214", p2: "1235412"},
+        			{no: 2, name: "苏州", p1: "1235214", p2: "1235412"},
+        			{no: 3, name: "青岛", p1: "1235214", p2: "1235412"},
+        			{no: 4, name: "上海", p1: "1235214", p2: "1235412"},
+        			{no: 5, name: "深圳", p1: "1235214", p2: "1235412"},
+        			{no: 6, name: "南京", p1: "1235214", p2: "1235412"},
+        			{no: 7, name: "苏州", p1: "1235214", p2: "1235412"},
+        			{no: 8, name: "青岛", p1: "1235214", p2: "1235412"},
+        			{no: 9, name: "上海", p1: "1235214", p2: "1235412"},
+        			{no: 10, name: "深圳", p1: "1235214", p2: "1235412"},
+        			{no: 11, name: "南京", p1: "1235214", p2: "1235412"}
+        		];
+        		//加载数据
+        		function loadData(arr){
+        			var str = "";
+        			var nonejson = {no: "&nbsp;", name: "&nbsp;", p1: "&nbsp;", p2: "&nbsp;"};
+        			switch(arr.length % 5){
+        				case 1: arr.push(nonejson, nonejson, nonejson, nonejson); break;
+        				case 2: arr.push(nonejson, nonejson, nonejson); break;
+        				case 3: arr.push(nonejson, nonejson); break;
+        				case 4: arr.push(nonejson); break;
+        			}
+        			$.each(arr, function(i, e){
+        				str += "<tr class='" + (i % 2 === 0 ? "tr1" : "tr0") 
+        					+ "'><td class='tc' style='width:10%;'>" + e.no
+    						+ "</td><td class='tc' style='width:20%;'>" + e.name
+    						+ "</td><td class='tr' style='width:35%;'>" + e.p1
+    						+ "</td><td class='tr' style='width:35%;'>" + e.p2
+    						+ "</td></tr>";
+        			});
+        			$(".table-body").find("tbody").empty().append(str);
+        		}
+        		//表格滚动
+        		function animTable(){
+        			var n = 0, heg = $(".table-body").height(), leg = $(".table-body").find("tr").length;
+        			if(leg > 5){
+        				getClone();
+        				var a = setInterval(function(){
+		        			n++;
+		        			$(".table-body").find("table").animate({"marginTop": -n * heg}, 300, "linear", function(){
+		        				if(n >= Math.ceil(leg / 5)){
+		        					n = 0;
+		        					$(".table-body").find("table").css({"marginTop": 0});
+		        					clearInterval(a);
+		        					loadData(jsonb);
+		        					animTable();
+		        				}
+		        			});
+	        			}, 3000);
+        			} else {
+        				setTimeout(function(){
+        					loadData(jsonb);
+		        			animTable();
+        				}, 3000);
+        			}
+        		};
+        		//添加克隆数据
+        		function getClone(){
+        			var obja = $(".table-body").find("tr"),
+        				objb = $(".table-body").find("tbody"),
+	        			tr1 = obja.eq(0).clone(),
+		        		tr2 = obja.eq(1).clone(),
+		        		tr3 = obja.eq(2).clone(),
+		        		tr4 = obja.eq(3).clone(),
+		        		tr5 = obja.eq(4).clone();
+		        	objb.append(tr1, tr2, tr3, tr4, tr5);
+        		};
+        		loadData(jsona);
+        		animTable();
+        	});
+        </script>
+	</body>  
+</html>
